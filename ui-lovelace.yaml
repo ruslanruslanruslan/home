@@ -14,6 +14,24 @@ views:
           - entity: sensor.illumination_04cf8caa433e
             name: illumination
         title: Kitchen_Hub
+    
+      - type: entities
+        entities:
+          - entity: alarm_control_panel.0xec1bbdfffe7a0fd8_alarm
+            name: alarm
+        title: Hallway_Gateway
+
+      - type: entities
+        entities:
+          - entity: sensor.0x158d00044a0171_temperature
+            name: temperature
+          - entity: sensor.0x158d00044a0171_humidity
+            name: humidity
+          - entity: sensor.0x158d00044a0171_pressure
+            name: pressure
+          - entity: sensor.0x158d00044a0171_battery
+            name: battery
+        title: Temperature
 
 
 
@@ -31,8 +49,37 @@ views:
             name: nightlight
           - entity: light.bedroom_strip
             name: strip
-        title: Bedroom_Light
+        title: Light
 
+      - type: entities
+        entities:
+          - entity: cover.0x158d0004117b14_motor
+            name: motor
+        title: Curtain
+
+      - type: entities
+        entities:
+          - entity: binary_sensor.0x158d00045fa45e_motion
+            name: motion
+          - entity: sensor.0x158d00045fa45e_battery
+            name: battery
+          - entity: sensor.0x158d00045fa45e_illuminance
+            name: illuminance
+          - entity: sensor.0x158d00045fa45e_zigbee
+            name: zigbee
+        title: Motion
+
+      - type: entities
+        entities:
+          - entity: sensor.0x158d0003f134b1_temperature
+            name: temperature
+          - entity: sensor.0x158d0003f134b1_humidity
+            name: humidity
+          - entity: sensor.0x158d0003f134b1_pressure
+            name: pressure
+          - entity: sensor.0x158d0003f134b1_battery
+            name: battery
+        title: Temperature
 
 
 
@@ -52,4 +99,217 @@ views:
             name: ambilight_2
           - entity: light.livingroom_strip
             name: strip
-        title: Livingroom_Light
+        title: Light
+
+      - type: entities
+        entities:
+          - entity: cover.0x158d0004117c61_motor
+            name: motor
+        title: Curtain
+
+      - type: entities
+        entities:
+          - entity: binary_sensor.0x158d00045f6eb9_motion
+            name: motion
+          - entity: sensor.0x158d00045f6eb9_battery
+            name: battery
+          - entity: sensor.0x158d00045f6eb9_illuminance
+            name: illuminance
+          - entity: sensor.0x158d00045f6eb9_zigbee
+            name: zigbee
+        title: Motion
+
+
+
+
+  - title: Hallway
+    cards:
+
+      - type: entities
+        entities:
+          - entity: binary_sensor.0x158d00042cfa44_motion
+            name: motion
+          - entity: sensor.0x158d00042cfa44_battery
+            name: battery
+          - entity: sensor.0x158d00042cfa44_illuminance
+            name: illuminance
+          - entity: sensor.0x158d00042cfa44_zigbee
+            name: zigbee
+        title: Motion1
+
+      - type: entities
+        entities:
+          - entity: binary_sensor.0x158d00047ba4d8_motion
+            name: motion
+          - entity: sensor.0x158d00047ba4d8_battery
+            name: battery
+          - entity: sensor.0x158d00047ba4d8_illuminance
+            name: illuminance
+          - entity: sensor.0x158d00047ba4d8_zigbee
+            name: zigbee
+        title: Motion2
+
+      - type: entities
+        entities:
+          - entity: binary_sensor.0x158d00047d447d_motion
+            name: motion
+          - entity: sensor.0x158d00047d447d_battery
+            name: battery
+          - entity: sensor.0x158d00047d447d_illuminance
+            name: illuminance
+          - entity: sensor.0x158d00047d447d_zigbee
+            name: zigbee
+        title: Motion3
+
+        entities:
+          - entity: light.50ec50d897bc_light
+            name: point1
+          - entity: light.50ec50d8b136_light
+            name: point2
+          - entity: light.50ec50d8889d_light
+            name: point3
+          - entity: light.50ec50d88656_light
+            name: point4
+          - entity: light.50ec50d5e2e3_light
+            name: point5
+          - entity: light.50ec50d86c7b_light
+            name: point6
+        title: Light
+
+
+
+
+  - title: Kitchen
+    cards:
+
+      - type: entities
+        entities:
+          - entity: sensor.087cbe88ab96_ble
+            name: Ble
+          - entity: binary_sensor.087cbe88ab96_power
+            name: Power
+          - entity: sensor.087cbe88ab96_temperature
+            name: Temperature
+        title: Kettle
+
+        entities:
+          - entity: light.50ec50d838c8_light
+            name: point1
+          - entity: light.50ec50d6ab9d_light
+            name: point2
+        title: Light
+        
+      - type: entities
+        entities:
+          - entity: light.50ec50ca3317_light
+            name: bulb1
+          - entity: light.50ec50c8bbf8_light
+            name: bulb2
+          - entity: light.50ec50ca32e0_light
+            name: bulb3
+          - entity: light.50ec50c8c5a1_light
+            name: bulb4
+          - entity: light.50ec50c9b92e_light
+            name: bulb5
+          - entity: light.50ec50ca4891_light
+            name: bulb6
+          - entity: light.1141a442a18ab000_light
+            name: group
+        title: chandelier
+
+
+      - type: entities
+        entities:
+          - entity: binary_sensor.0x158d000476cc4f_motion
+            name: motion
+          - entity: sensor.0x158d000476cc4f_battery
+            name: battery
+          - entity: sensor.0x158d000476cc4f_illuminance
+            name: illuminance
+          - entity: sensor.0x158d000476cc4f_zigbee
+            name: zigbee
+        title: Motion1
+
+      - type: entities
+        entities:
+          - entity: binary_sensor.0x158d00045f3ec3_motion
+            name: motion
+          - entity: sensor.0x158d00045f3ec3_battery
+            name: battery
+          - entity: sensor.0x158d00045f3ec3_illuminance
+            name: illuminance
+          - entity: sensor.0x158d00045f3ec3_zigbee
+            name: zigbee
+        title: Motion2
+
+
+
+
+  - title: Toilet
+    cards:
+
+      - type: entities
+        entities:
+          - entity: binary_sensor.0x158d000476d283_motion
+            name: motion
+          - entity: sensor.0x158d000476d283_battery
+            name: battery
+          - entity: sensor.0x158d000476d283_illuminance
+            name: illuminance
+          - entity: sensor.0x158d000476d283_zigbee
+            name: zigbee
+        title: Motion
+
+        entities:
+          - entity: light.50ec50d8a05d_light
+            name: point1
+          - entity: light.50ec50d8869e_light
+            name: point2
+        title: Light
+
+
+
+
+  - title: Bathroom
+    cards:
+
+      - type: entities
+        entities:
+          - entity: binary_sensor.0x158d000476cc04_motion
+            name: motion
+          - entity: sensor.0x158d000476cc04_battery
+            name: battery
+          - entity: sensor.0x158d000476cc04_illuminance
+            name: illuminance
+          - entity: sensor.0x158d000476cc04_zigbee
+            name: zigbee
+        title: Motion
+
+      - type: entities
+        entities:
+          - entity: light.50ec50d849cf_light
+            name: point1
+          - entity: light.50ec50d888ad_light
+            name: point2
+          - entity: light.50ec50d838cc_light
+            name: point3
+          - entity: light.1142ed4e3482e000_light
+            name: group
+        title: Light
+
+
+
+  - title: Balcony
+    cards:
+
+      - type: entities
+        entities:
+          - entity: sensor.0x158d0003f0fc26_temperature
+            name: temperature
+          - entity: sensor.0x158d0003f0fc26_humidity
+            name: humidity
+          - entity: sensor.0x158d0003f0fc26_pressure
+            name: pressure
+          - entity: sensor.0x158d0003f0fc26_battery
+            name: battery
+        title: Temperature
