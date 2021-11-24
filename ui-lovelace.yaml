@@ -46,6 +46,8 @@ views:
         
       - type: entities
         entities:
-          - entity: light.livingroom_strip
-            name: main
-        title: Livingroom_Strip
+          - entity: light.gateway_light_04cf8caa433e
+            name: light
+          - entity: sensor.illumination_04cf8caa433e
+            name: illumination
+        title: Kitchen_Hub

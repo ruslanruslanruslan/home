@@ -6,6 +6,9 @@ default_config:
 tts:
   - platform: google_translate
 
+logger:
+  default: debug
+
 lovelace:
   mode: yaml
   dashboards:
@@ -40,6 +43,14 @@ yeelight:
     192.168.2.231:
       name: bedroom_strip
       model: strip1
+
+xiaomi_aqara:
+  discovery_retry: 5
+  gateways:
+    - name: kitchen_hub
+      host: 192.168.2.210
+      key: 268v4556jdn0xehg
+    
 
 
  
