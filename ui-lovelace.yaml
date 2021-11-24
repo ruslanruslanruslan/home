@@ -1,45 +1,12 @@
 title: Home
 views:
-  - path: default_view
-    title: Home
+
+
+
+
+  - title: Main
     cards:
     
-      - type: entities
-        entities:
-          - entity: light.bedroom_ceiling
-            name: main
-          - entity: light.bedroom_ceiling_ambilight
-            name: ambilight
-          - entity: binary_sensor.bedroom_ceiling_nightlight
-            name: nightlight
-        title: Bedroom_Ceiling
-        
-      - type: entities
-        entities:
-          - entity: light.bedroom_strip
-            name: main
-        title: Bedroom_Strip
-        
-      - type: entities
-        entities:
-          - entity: light.livingroom_ceiling_1
-            name: main
-          - entity: light.livingroom_ceiling_1_ambilight
-            name: ambilight
-          - entity: light.livingroom_ceiling_1_nightlight
-            name: nightlight
-        title: Livingroom_Ceiling_1
-        
-      - type: entities
-        entities:
-          - entity: light.livingroom_ceiling_2
-            name: main
-          - entity: light.livingroom_ceiling_2_ambilight
-            name: ambilight
-          - entity: light.livingroom_ceiling_2_nightlight
-            name: nightlight
-        title: Livingroom_Ceiling_2
-        
       - type: entities
         entities:
           - entity: light.gateway_light_04cf8caa433e
@@ -47,3 +14,42 @@ views:
           - entity: sensor.illumination_04cf8caa433e
             name: illumination
         title: Kitchen_Hub
+
+
+
+
+  - title: Bedroom
+    cards:
+    
+      - type: entities
+        entities:
+          - entity: light.bedroom_ceiling
+            name: ceiling
+          - entity: light.bedroom_ceiling_ambilight
+            name: ambilight
+          - entity: binary_sensor.bedroom_ceiling_nightlight
+            name: nightlight
+          - entity: light.bedroom_strip
+            name: strip
+        title: Bedroom_Light
+
+
+
+
+
+  - title: Livingroom
+    cards:
+        
+      - type: entities
+        entities:
+          - entity: light.livingroom_ceiling_1
+            name: ceiling_1
+          - entity: light.livingroom_ceiling_1_ambilight
+            name: ambilight_1
+          - entity: light.livingroom_ceiling_2
+            name: ceiling_2
+          - entity: light.livingroom_ceiling_2_ambilight
+            name: ambilight_2
+          - entity: light.livingroom_strip
+            name: strip
+        title: Livingroom_Light
