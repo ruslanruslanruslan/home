@@ -1,0 +1,26 @@
+{
+    "version": 1,
+    "key": "core.restore_state",
+    "data": [
+        {
+            "state": {
+                "entity_id": "person.home",
+                "state": "unknown",
+                "attributes": {
+                    "editable": false,
+                    "id": "home",
+                    "user_id": "3c9ba1c837c241f39b54c0909ba215cc",
+                    "friendly_name": "home"
+                },
+                "last_changed": "2021-11-24T08:09:02.824842+00:00",
+                "last_updated": "2021-11-24T08:09:02.824842+00:00",
+                "context": {
+                    "id": "b9d31c4dce828e4e5b646e1e0aa75d96",
+                    "parent_id": null,
+                    "user_id": null
+                }
+            },
+            "last_seen": "2021-11-24T08:54:02.829081+00:00"
+        }
+    ]
+}
