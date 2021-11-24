@@ -28,8 +28,6 @@ views:
             name: ambilight
           - entity: light.livingroom_ceiling_1_nightlight
             name: nightlight
-          - entity: binary_sensor.livingroom_ceiling_1_nightlight
-            name: nightlight
         title: Livingroom_Ceiling_1
         
       - type: entities
@@ -39,8 +37,6 @@ views:
           - entity: light.livingroom_ceiling_2_ambilight
             name: ambilight
           - entity: light.livingroom_ceiling_2_nightlight
-            name: nightlight
-          - entity: binary_sensor.livingroom_ceiling_2_nightlight
             name: nightlight
         title: Livingroom_Ceiling_2
         
