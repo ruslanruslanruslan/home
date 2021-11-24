@@ -16,10 +16,6 @@ lovelace:
       require_admin: true
       filename: hidden.yaml
 
- 
-hacs:
-  token: e39a49dfc433939c550f3ddfcad68beb1c7503ef
-
 homeassistant:
   name: Amur
   latitude: 55.7997
