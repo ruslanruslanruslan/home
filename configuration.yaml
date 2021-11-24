@@ -43,6 +43,10 @@ yeelight:
     192.168.2.231:
       name: bedroom_strip
       model: strip1
+    192.168.2.217:
+      name: hallway_gateway
+      model: lumi.gateway.mgl03
+      key: 6f794172766f6a4a45674f6c7032334c
 
 xiaomi_aqara:
   discovery_retry: 5
