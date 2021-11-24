@@ -1,1 +1,178 @@
-[]
+- alias: moving livingroom on
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.0x158d00045f6eb9_motion
+    to: 'on'
+  action:
+    service: light.turn_on
+    entity_id: light.livingroom_ceiling_1
+
+- alias: moving livingroom off
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.0x158d00045f6eb9_motion
+    to: 'off'
+    for:
+      seconds: 1
+  action:
+    service: light.turn_off
+    entity_id: light.livingroom_ceiling_1
+
+
+- alias: moving hallway on
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id: 
+      - binary_sensor.0x158d00042cfa44_motion
+      - binary_sensor.0x158d00047ba4d8_motion
+    to: 'on'
+  action:
+    service: light.turn_on
+    entity_id:
+      - light.50ec50d897bc_light
+      - light.50ec50d8b136_light
+      - light.50ec50d8889d_light
+
+- alias: moving hallway off
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id:
+      - binary_sensor.0x158d00042cfa44_motion
+      - binary_sensor.0x158d00047ba4d8_motion
+    to: 'off'
+    for:
+      seconds: 1
+  action:
+    service: light.turn_off
+    entity_id:
+      - light.50ec50d897bc_light
+      - light.50ec50d8b136_light
+      - light.50ec50d8889d_light
+
+
+- alias: moving walkthrough on
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.0x158d00047d447d_motion
+    to: 'on'
+  action:
+    service: light.turn_on
+    entity_id:
+      - light.50ec50d88656_light
+      - light.50ec50d5e2e3_light
+      - light.50ec50d86c7b_light
+
+- alias: moving walkthrough off
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.0x158d00047d447d_motion
+    to: 'off'
+    for:
+      seconds: 1
+  action:
+    service: light.turn_off
+    entity_id:
+      - light.50ec50d88656_light
+      - light.50ec50d5e2e3_light
+      - light.50ec50d86c7b_light
+
+
+- alias: moving kitchen on
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id:
+      - binary_sensor.0x158d000476cc4f_motion
+      - binary_sensor.0x158d00045f3ec3_motion
+    to: 'on'
+  action:
+    - service: light.turn_on
+      entity_id:
+        - light.50ec50d838c8_light
+        - light.50ec50d6ab9d_light
+    - service: switch.turn_on
+      entity_id: switch.0x158d0003cb8f6f_channel_1
+
+- alias: moving kitchen off
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id:
+      - binary_sensor.0x158d000476cc4f_motion
+      - binary_sensor.0x158d00045f3ec3_motion
+    to: 'off'
+    for:
+      seconds: 1
+  action:
+    - service: light.turn_off
+      entity_id:
+        - light.50ec50d838c8_light
+        - light.50ec50d6ab9d_light
+    - service: switch.turn_off
+      entity_id: switch.0x158d0003cb8f6f_channel_1
+
+
+- alias: moving bathroom on
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.0x158d000476cc04_motion
+    to: 'on'
+  action:
+    service: light.turn_on
+    entity_id:
+      - light.50ec50d849cf_light
+      - light.50ec50d888ad_light
+      - light.50ec50d838cc_light
+
+- alias: moving bathroom off
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.0x158d000476cc04_motion
+    to: 'off'
+    for:
+      seconds: 1
+  action:
+    service: light.turn_off
+    entity_id:
+      - light.50ec50d849cf_light
+      - light.50ec50d888ad_light
+      - light.50ec50d838cc_light
+
+
+- alias: moving toilet on
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.0x158d000476d283_motion
+    to: 'on'
+  action:
+    - service: light.turn_on
+      entity_id:
+        - light.50ec50d8a05d_light
+        - light.50ec50d8869e_light
+    - service: switch.turn_on
+      entity_id: switch.0x158d000444ed42_channel_2
+
+- alias: moving toilet off
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id: binary_sensor.0x158d000476d283_motion
+    to: 'off'
+    for:
+      seconds: 1
+  action:
+    - service: light.turn_off
+      entity_id:
+        - light.50ec50d8a05d_light
+        - light.50ec50d8869e_light
+    - service: switch.turn_off
+      entity_id: switch.0x158d000444ed42_channel_2
