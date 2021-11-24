@@ -161,6 +161,7 @@ views:
             name: zigbee
         title: Motion3
 
+      - type: entities
         entities:
           - entity: light.50ec50d897bc_light
             name: point1
@@ -175,6 +176,16 @@ views:
           - entity: light.50ec50d86c7b_light
             name: point6
         title: Light
+
+      - type: entities
+        entities:
+          - entity: sensor.0x158d000312ec22_action
+            name: Action
+          - entity: sensor.0x158d000312ec22_battery
+            name: battery
+          - entity: sensor.0x158d000312ec22_zigbee
+            name: Zigbee
+        title: Vibration
 
 
 
@@ -217,6 +228,25 @@ views:
             name: group
         title: chandelier
 
+      - type: entities
+        entities:
+          - entity: switch.0x158d0003cb8f6f_channel_1
+            name: Channel1
+          - entity: switch.0x158d0003cb8f6f_channel_2
+            name: Channel2
+          - entity: sensor.0x158d0003cb8f6f_action
+            name: Action
+          - entity: sensor.0x158d0003cb8f6f_current
+            name: Current
+          - entity: sensor.0x158d0003cb8f6f_energy
+            name: Energy
+          - entity: sensor.0x158d0003cb8f6f_power
+            name: Power
+          - entity: sensor.0x158d0003cb8f6f_voltage
+            name: Voltage
+          - entity: sensor.0x158d0003cb8f6f_zigbee
+            name: Zigbee
+        title: Ledline
 
       - type: entities
         entities:
@@ -267,6 +297,36 @@ views:
             name: point2
         title: Light
 
+      - type: entities
+        entities:
+          - entity: switch.0x158d000444ed42_channel_1
+            name: Channel1
+          - entity: switch.0x158d000444ed42_channel_2
+            name: Channel2
+          - entity: sensor.0x158d000444ed42_action
+            name: Action
+          - entity: sensor.0x158d000444ed42_current
+            name: Current
+          - entity: sensor.0x158d000444ed42_energy
+            name: Energy
+          - entity: sensor.0x158d000444ed42_power
+            name: Power
+          - entity: sensor.0x158d000444ed42_voltage
+            name: Voltage
+          - entity: sensor.0x158d000444ed42_zigbee
+            name: Zigbee
+        title: Hood
+
+      - type: entities
+        entities:
+          - entity: binary_sensor.0x158d00035aa8e1_moisture
+            name: moisture
+          - entity: sensor.0x158d00035aa8e1_battery
+            name: battery
+          - entity: sensor.0x158d00035aa8e1_zigbee
+            name: zigbee
+        title: WaterLeak
+
 
 
 
@@ -296,6 +356,47 @@ views:
           - entity: light.1142ed4e3482e000_light
             name: group
         title: Light
+
+      - type: entities
+        entities:
+          - entity: switch.0x158d0003f3ebe0_channel_1
+            name: Channel1
+          - entity: switch.0x158d0003f3ebe0_channel_2
+            name: Channel2
+          - entity: sensor.0x158d0003f3ebe0_action
+            name: Action
+          - entity: sensor.0x158d0003f3ebe0_current
+            name: Current
+          - entity: sensor.0x158d0003f3ebe0_energy
+            name: Energy
+          - entity: sensor.0x158d0003f3ebe0_power
+            name: Power
+          - entity: sensor.0x158d0003f3ebe0_voltage
+            name: Voltage
+          - entity: sensor.0x158d0003f3ebe0_zigbee
+            name: Zigbee
+        title: Hood
+
+      - type: entities
+        entities:
+          - entity: switch.0x158d00040d34fe_channel_1
+            name: Channel1
+          - entity: switch.0x158d00040d34fe_channel_2
+            name: Channel2
+          - entity: sensor.0x158d00040d34fe_action
+            name: Action
+          - entity: sensor.0x158d00040d34fe_current
+            name: Current
+          - entity: sensor.0x158d00040d34fe_energy
+            name: Energy
+          - entity: sensor.0x158d00040d34fe_power
+            name: Power
+          - entity: sensor.0x158d00040d34fe_voltage
+            name: Voltage
+          - entity: sensor.0x158d00040d34fe_zigbee
+            name: Zigbee
+        title: Towelheat
+
 
 
 
