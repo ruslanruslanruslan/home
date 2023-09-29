@@ -1,5 +1,10 @@
 home-assistant:
   nodeSelector: {kubernetes.io/hostname: "kube02"}
+  persistence:
+    config:
+      enabled: true
+      storageClass: local-storage
+      size: 8Gi
   service:
     main:
       type: NodePort
