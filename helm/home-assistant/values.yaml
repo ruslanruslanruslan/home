@@ -1,0 +1,7 @@
+service:
+  main:
+    type: NodePort
+    ports:
+      http:
+        port: 8123
+        nodePort: 30016
