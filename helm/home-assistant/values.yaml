@@ -3,5 +3,5 @@ service:
     type: NodePort
     ports:
       http:
-        port: 8123
+        port: 8125
         nodePort: 30016
