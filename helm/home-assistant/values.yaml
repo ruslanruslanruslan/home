@@ -4,5 +4,5 @@ home-assistant:
       type: NodePort
       ports:
         http:
-          port: 8125
-          nodePort: 30016
+          port: 8123
+          nodePort: 30017
