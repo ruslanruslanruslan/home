@@ -1,4 +1,5 @@
 home-assistant:
+  nodeSelector: {kubernetes.io/hostname: "kube02"}
   service:
     main:
       type: NodePort
