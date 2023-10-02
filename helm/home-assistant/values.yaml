@@ -12,3 +12,6 @@ home-assistant:
         http:
           port: 8123
           nodePort: 30017
+  addons:
+    codeserver:
+      enabled: true
