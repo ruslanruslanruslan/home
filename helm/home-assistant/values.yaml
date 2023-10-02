@@ -15,3 +15,11 @@ home-assistant:
   addons:
     codeserver:
       enabled: true
+      args:
+        - --auth
+        - none
+        - --user-data-dir
+        - /data/config/.vscode
+      volumeMounts:
+      - name: config
+        mountPath: /data/config
