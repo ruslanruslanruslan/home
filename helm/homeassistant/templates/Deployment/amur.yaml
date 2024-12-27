@@ -27,7 +27,7 @@ spec:
               topologyKey: "kubernetes.io/hostname"
       containers:
       - name: amur
-        image: amur:master
+        image: homeassistant/amur:master
         imagePullPolicy: Always
         env:
         - name: ENV
