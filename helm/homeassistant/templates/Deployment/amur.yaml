@@ -27,7 +27,7 @@ spec:
               topologyKey: "kubernetes.io/hostname"
       containers:
       - name: amur
-        image: joxit-registry-server.joxit:5000/homeassistant/amur:master
+        image: 192.168.2.129:30002/homeassistant/amur:master
         imagePullPolicy: Always
         env:
         - name: ENV
