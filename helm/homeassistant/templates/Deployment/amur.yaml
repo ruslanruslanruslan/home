@@ -31,7 +31,10 @@ spec:
         imagePullPolicy: {{ index .Values "amur" "image" "pullPolicy" }}
         env:
         - name: MYSQL_URL
-          value: mysql://homeassistant:QwEn8RFc3RwhQt@mysql.mysql:3607/homeassistant
+          valueFrom:
+            secretKeyRef:
+              name: mysql
+              key: url
         livenessProbe:
           httpGet:
             path: /
