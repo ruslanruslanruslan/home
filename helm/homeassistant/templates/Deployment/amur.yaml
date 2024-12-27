@@ -30,8 +30,8 @@ spec:
         image: {{ index .Values "amur" "image" "name" }}:{{ index .Values "amur" "image" "tag" }}
         imagePullPolicy: {{ index .Values "amur" "image" "pullPolicy" }}
         env:
-        - name: ENV
-          value: master
+        - name: MYSQL_URL
+          value: mysql://homeassistant:QwEn8RFc3RwhQt@mysql.mysql:3607/homeassistant
         livenessProbe:
           httpGet:
             path: /

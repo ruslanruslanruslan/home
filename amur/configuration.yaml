@@ -1,6 +1,6 @@
 
 recorder:
-  db_url:  mysql://homeassistant:QwEn8RFc3RwhQt@mysql:3607/homeassistant
+  db_url: !env_var MYSQL_URL
 
 # Text to speech
 tts:
