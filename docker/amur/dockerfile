@@ -5,4 +5,3 @@ WORKDIR /usr/src/app
 COPY ./amur .
 RUN pip install --no-cache-dir -r requirements.txt
 RUN chmod -R +x .
- ##///////
