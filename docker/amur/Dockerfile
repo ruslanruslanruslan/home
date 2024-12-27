@@ -1,7 +1,6 @@
 FROM homeassistant/home-assistant:latest
 
-WORKDIR /usr/src/app
+WORKDIR /config
 
 COPY ./amur .
-RUN chmod -R +x .
-#///
+
