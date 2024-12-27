@@ -1,0 +1,62 @@
+apiVersion: argoproj.io/v1alpha1
+kind: WorkflowTemplate
+metadata:
+  name: build-home-assistant
+  namespace: home-assistant-ci
+spec:
+  ttlStrategy:
+    secondsAfterCompletion: 604800
+  entrypoint: wf
+  onExit: slack
+  arguments:
+    parameters:
+    - name: app
+      enum:
+        - amur
+    - name: env
+      enum:
+        - master
+
+  templates:
+
+    - name: wf
+      steps:
+      - - name: build
+          template: build
+          arguments:
+            parameters:
+            - name: env
+              value: "{{`{{ workflow.parameters.env }}`}}"
+            - name: project
+              value: home-assistant
+            - name: alias
+              value: "{{`{{ workflow.parameters.app }}`}}"
+
+    - name: build
+      inputs:
+        parameters:
+        - name: project
+        - name: alias
+        - name: env
+      steps:
+        - - name: build
+            templateRef:
+              name: build
+              template: process
+              clusterScope: true
+            arguments:
+              parameters:
+                - name: project
+                  value: "{{`{{ inputs.parameters.project }}`}}"
+                - name: alias
+                  value: "{{`{{ inputs.parameters.alias }}`}}"
+                - name: env
+                  value: "{{`{{ inputs.parameters.env }}`}}"
+
+    - name: slack
+      steps:
+        - - name: slack
+            templateRef:
+              name: slack
+              template: send
+              clusterScope: true
