@@ -28,7 +28,7 @@ spec:
       containers:
       - name: amur
         image: {{ index .Values "amur" "image" "name" }}:{{ index .Values "amur" "image" "tag" }}
-        imagePullPolicy: {{ index .Values "api-datakeeper" "image" "pullPolicy" }}
+        imagePullPolicy: {{ index .Values "amur" "image" "pullPolicy" }}
         env:
         - name: ENV
           value: master
