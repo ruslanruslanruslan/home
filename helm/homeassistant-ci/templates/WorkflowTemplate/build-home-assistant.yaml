@@ -1,8 +1,8 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: build-home-assistant
-  namespace: home-assistant-ci
+  name: build-homeassistant
+  namespace: homeassistant-ci
 spec:
   ttlStrategy:
     secondsAfterCompletion: 604800
@@ -28,7 +28,7 @@ spec:
             - name: env
               value: "{{`{{ workflow.parameters.env }}`}}"
             - name: project
-              value: home-assistant
+              value: homeassistant
             - name: alias
               value: "{{`{{ workflow.parameters.app }}`}}"
 

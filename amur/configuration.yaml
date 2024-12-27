@@ -2,6 +2,9 @@
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 
+recorder:
+  db_url:  mysql://homeassistant:QwEn8RFc3RwhQt@mysql.mysql:3607/homeassistant
+
 # Text to speech
 tts:
   - platform: google_translate
