@@ -25,10 +25,6 @@ spec:
                     values:
                       - kube03
               topologyKey: "kubernetes.io/hostname"
-      volumes:
-        - name: storage
-          persistentVolumeClaim:
-            claimName: pvc-homeassistant-amur
       containers:
       - name: amur
         image: {{ index .Values "amur" "image" "name" }}:{{ index .Values "amur" "image" "tag" }}
@@ -39,9 +35,6 @@ spec:
             secretKeyRef:
               name: mysql
               key: url
-        volumeMounts:
-          - name: storage
-            mountPath: "/config/.storage"
         livenessProbe:
           httpGet:
             path: /
