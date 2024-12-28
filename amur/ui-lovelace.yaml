@@ -157,15 +157,15 @@ views:
 
       - type: entities
         entities:
-          - entity: light.50ec50d897bc_light
+          - entity: light.hallway_light_1_light
             name: point1
-          - entity: light.50ec50d8b136_light
+          - entity: light.hallway_light_2_light
             name: point2
-          - entity: light.50ec50d8889d_light
+          - entity: light.hallway_light_3_light
             name: point3
-          - entity: light.50ec50d88656_light
+          - entity: light.hallway_light_4_light
             name: point4
-          - entity: light.50ec50d5e2e3_light
+          - entity: light.hallway_light_5_light
             name: point5
           - entity: light.50ec50d86c7b_light
             name: point6

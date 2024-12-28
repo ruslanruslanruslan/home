@@ -100,6 +100,16 @@ xiaomi_gateway3:
     "0x00158d00045f3ec3":
       entity_name: kitchen_motion_2
     # hallway
+    "50ec50d897bc":
+      entity_name: hallway_light_1
+    "50ec50d8b136":
+      entity_name: hallway_light_2
+    "50ec50d8889d":
+      entity_name: hallway_light_3
+    "50ec50d88656":
+      entity_name: hallway_light_4
+    "50ec50d5e2e3":
+      entity_name: hallway_light_5
     "0x00158d00047ba4d8":
       entity_name: hallway_motion_1
     "0x00158d00042cfa44":
