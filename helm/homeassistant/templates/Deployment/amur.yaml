@@ -25,15 +25,8 @@ spec:
                     values:
                       - kube03
               topologyKey: "kubernetes.io/hostname"
-      volumes:
-        - name: integrations
-          persistentVolumeClaim:
-            claimName: pvc-homeassistant-amur
       containers:
       - name: amur
-        volumeMounts:
-          - name: integrations
-            mountPath: "/config/custom_components"
         image: {{ index .Values "amur" "image" "name" }}:{{ index .Values "amur" "image" "tag" }}
         imagePullPolicy: {{ index .Values "amur" "image" "pullPolicy" }}
         env:
@@ -49,24 +42,3 @@ spec:
           initialDelaySeconds: 10
           periodSeconds: 10
           timeoutSeconds: 3
-      initContainers:
-        - name: git-clone
-          image: alpine/git:latest
-          command: ["/bin/sh"]
-          args:
-          - -c
-          - >-
-              rm -rf /tmp/git &&
-              git clone https://ruslanruslanruslan:$GITHUB_KEY@github.com/AlexxIT/XiaomiGateway3.git /tmp/git/XiaomiGateway3 &&
-              rm -rf /config/custom_components &&
-              mkdir /config/custom_components &&
-              cp -r /tmp/git/XiaomiGateway3/custom_components/* /config/custom_components
-          env:
-            - name: GITHUB_KEY
-              valueFrom:
-                secretKeyRef:
-                  name: github
-                  key: key
-          volumeMounts:
-            - name: integrations
-              mountPath: "/config/custom_components"
