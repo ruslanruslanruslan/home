@@ -6,22 +6,6 @@ views:
 
   - title: Main
     cards:
-    
-      - type: entities
-        entities:
-          - entity: light.gateway_light_04cf8caa433e
-            name: light
-          - entity: sensor.illumination_04cf8caa433e
-            name: illumination
-        title: Kitchen_Hub
-    
-      - type: entities
-        entities:
-          - entity: alarm_control_panel.6490c176b86e_alarm
-            name: alarm
-          - entity: switch.6490c176b86e_alarm_trigger
-            name: alarm
-        title: Hallway_Gateway
 
       - type: entities
         entities:
@@ -61,14 +45,12 @@ views:
 
       - type: entities
         entities:
-          - entity: binary_sensor.0x158d00045fa45e_motion
+          - entity: binary_sensor.bedroom_motion_1_motion
             name: motion
-          - entity: sensor.0x158d00045fa45e_battery
+          - entity: sensor.bedroom_motion_1_battery
             name: battery
-          - entity: sensor.0x158d00045fa45e_illuminance
+          - entity: sensor.bedroom_motion_1_illuminance
             name: illuminance
-          - entity: sensor.0x158d00045fa45e_zigbee
-            name: zigbee
         title: Motion
 
       - type: entities
@@ -124,6 +106,14 @@ views:
 
   - title: Hallway
     cards:
+
+      - type: entities
+        entities:
+          - entity: alarm_control_panel.6490c176b86e_alarm
+            name: alarm
+          - entity: switch.6490c176b86e_alarm_trigger
+            name: alarm
+        title: Gateway
 
       - type: entities
         entities:
@@ -225,17 +215,17 @@ views:
 
       - type: entities
         entities:
-          - entity: switch.kitchen_relay_channel_1
+          - entity: switch.kitchen_relay_1_channel_1
             name: Channel1
-          - entity: switch.kitchen_relay_channel_2
+          - entity: switch.kitchen_relay_1_channel_2
             name: Channel2
-          - entity: sensor.kitchen_relay_current
+          - entity: sensor.kitchen_relay_1_current
             name: Current
-          - entity: sensor.kitchen_relay_energy
+          - entity: sensor.kitchen_relay_1_energy
             name: Energy
-          - entity: sensor.kitchen_relay_power
+          - entity: sensor.kitchen_relay_1_power
             name: Power
-          - entity: sensor.kitchen_relay_voltage
+          - entity: sensor.kitchen_relay_1_voltage
             name: Voltage
         title: Ledline
 
@@ -287,21 +277,21 @@ views:
 
       - type: entities
         entities:
-          - entity: switch.toilet_relay_channel_1
+          - entity: switch.toilet_relay_1_channel_1
             name: Channel1
-          - entity: switch.toilet_relay_channel_2
+          - entity: switch.toilet_relay_1_channel_2
             name: Channel2
-          - entity: sensor.toilet_relay_action
+          - entity: sensor.toilet_relay_1_action
             name: Action
-          - entity: sensor.toilet_relay_current
+          - entity: sensor.toilet_relay_1_current
             name: Current
-          - entity: sensor.toilet_relay_energy
+          - entity: sensor.toilet_relay_1_energy
             name: Energy
-          - entity: sensor.toilet_relay_power
+          - entity: sensor.toilet_relay_1_power
             name: Power
-          - entity: sensor.toilet_relay_voltage
+          - entity: sensor.toilet_relay_1_voltage
             name: Voltage
-          - entity: sensor.toilet_relay_zigbee
+          - entity: sensor.toilet_relay_1_zigbee
             name: Zigbee
         title: Hood
 
@@ -323,25 +313,23 @@ views:
 
       - type: entities
         entities:
-          - entity: binary_sensor.0x158d000476cc04_motion
+          - entity: binary_sensor.bathroom_motion_1_motion
             name: motion
-          - entity: sensor.0x158d000476cc04_battery
+          - entity: sensor.bathroom_motion_1_battery
             name: battery
-          - entity: sensor.0x158d000476cc04_illuminance
+          - entity: sensor.bathroom_motion_1_illuminance
             name: illuminance
-          - entity: sensor.0x158d000476cc04_zigbee
-            name: zigbee
         title: Motion
 
       - type: entities
         entities:
-          - entity: light.50ec50d849cf_light
+          - entity: light.bathroom_light_1_light
             name: point1
-          - entity: light.50ec50d888ad_light
+          - entity: light.bathroom_light_2_light
             name: point2
-          - entity: light.50ec50d838cc_light
+          - entity: light.bathroom_light_3_light
             name: point3
-          - entity: light.1142ed4e3482e000_light
+          - entity: light.bathroom_lights_light
             name: group
         title: Light
 

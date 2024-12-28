@@ -65,6 +65,8 @@ xiaomi_gateway3:
     # bedroom
     "0x00158d0004117b14":
       entity_name: bedroom_curtain
+    "0x00158d00045fa45e":
+      entity_name: bedroom_motion_1
     # livingroom
     "0x00158d0004117c61":
       entity_name: livingroom_curtain
@@ -92,7 +94,7 @@ xiaomi_gateway3:
     "50ec50d6ab9d":
       entity_name: kitchen_light_2
     "0x00158d0003cb8f6f":
-      entity_name: kitchen_relay
+      entity_name: kitchen_relay_1
     "0x00158d000476cc4f":
       entity_name: kitchen_motion_1
     "0x00158d00045f3ec3":
@@ -121,9 +123,19 @@ xiaomi_gateway3:
       entity_name: bathroom_relay_2
     "0x00158d00035aa8e1":
       entity_name: bathroom_moisture
+    "0x00158d000476cc04":
+      entity_name: bathroom_motion_1
+    "50ec50d849cf":
+      entity_name: bathroom_light_1
+    "50ec50d888ad":
+      entity_name: bathroom_light_2
+    "50ec50d838cc":
+      entity_name: bathroom_light_3
+    "1243817367251902464":
+      entity_name: bathroom_lights
     # toilet
     "0x00158d000444ed42":
-      entity_name: toilet_relay
+      entity_name: toilet_relay_1
     "50ec50d8a05d":
       entity_name: toilet_light_1
     "50ec50d8869e":
