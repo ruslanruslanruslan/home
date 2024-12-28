@@ -32,7 +32,7 @@ spec:
       containers:
       - name: amur
         volumeMounts:
-          - name: custom_components
+          - name: pvc-homeassistant-amur
             mountPath: "/config/custom_components"
         image: {{ index .Values "amur" "image" "name" }}:{{ index .Values "amur" "image" "tag" }}
         imagePullPolicy: {{ index .Values "amur" "image" "pullPolicy" }}
@@ -67,5 +67,5 @@ spec:
                   name: github
                   key: key
           volumeMounts:
-            - name: custom_components
+            - name: pvc-homeassistant-amur
               mountPath: "/config/custom_components"
