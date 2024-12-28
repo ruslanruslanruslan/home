@@ -17,9 +17,9 @@ views:
     
       - type: entities
         entities:
-          - entity: alarm_control_panel.6490c176b86e_alarm
+          - entity: alarm_control_panel.hallway_gateway_alarm
             name: alarm
-          - entity: switch.6490c176b86e_alarm_trigger
+          - entity: switch.hallway_gateway_alarm_trigger
             name: alarm
         title: Hallway_Gateway
 
@@ -55,7 +55,7 @@ views:
 
       - type: entities
         entities:
-          - entity: cover.0x00158d0004117b14_motor
+          - entity: cover.bedroom_curtain_motor
             name: motor
         title: Curtain
 
@@ -105,7 +105,7 @@ views:
 
       - type: entities
         entities:
-          - entity: cover.0x00158d0004117c61_motor
+          - entity: cover.livingroom_curtain_motor
             name: motor
         title: Curtain
 
