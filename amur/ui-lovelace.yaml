@@ -17,9 +17,9 @@ views:
     
       - type: entities
         entities:
-          - entity: alarm_control_panel.hallway_gateway_alarm
+          - entity: alarm_control_panel.6490c176b86e_alarm
             name: alarm
-          - entity: switch.hallway_gateway_alarm_trigger
+          - entity: switch.6490c176b86e_alarm_trigger
             name: alarm
         title: Hallway_Gateway
 
@@ -111,14 +111,12 @@ views:
 
       - type: entities
         entities:
-          - entity: binary_sensor.0x158d00045f6eb9_motion
+          - entity: binary_sensor.livingroom_motion_1_motion
             name: motion
-          - entity: sensor.0x158d00045f6eb9_battery
+          - entity: sensor.livingroom_motion_1_battery
             name: battery
-          - entity: sensor.0x158d00045f6eb9_illuminance
+          - entity: sensor.livingroom_motion_1_illuminance
             name: illuminance
-          - entity: sensor.0x158d00045f6eb9_zigbee
-            name: zigbee
         title: Motion
 
 
@@ -129,14 +127,12 @@ views:
 
       - type: entities
         entities:
-          - entity: binary_sensor.0x158d00042cfa44_motion
+          - entity: binary_sensor.hallway_motion_1_motion
             name: motion
-          - entity: sensor.0x158d00042cfa44_battery
+          - entity: sensor.hallway_motion_1_battery
             name: battery
-          - entity: sensor.0x158d00042cfa44_illuminance
+          - entity: sensor.hallway_motion_1_illuminance
             name: illuminance
-          - entity: sensor.0x158d00042cfa44_zigbee
-            name: zigbee
         title: Motion1
 
       - type: entities
@@ -197,14 +193,15 @@ views:
 
       - type: entities
         entities:
-          - entity: sensor.087cbe88ab96_ble
-            name: Ble
-          - entity: binary_sensor.087cbe88ab96_power
+          - entity: sensor.kitchen_kettle_state
+            name: State
+          - entity: binary_sensor.kitchen_kettle_power
             name: Power
-          - entity: sensor.087cbe88ab96_temperature
+          - entity: sensor.kitchen_kettle_temperature
             name: Temperature
         title: Kettle
 
+      - type: entities
         entities:
           - entity: light.50ec50d838c8_light
             name: point1
@@ -226,7 +223,7 @@ views:
             name: bulb5
           - entity: light.50ec50ca4891_light
             name: bulb6
-          - entity: light.1141a442a18ab000_light
+          - entity: light.1708917941049368576_light
             name: group
         title: chandelier
 
@@ -292,6 +289,7 @@ views:
             name: zigbee
         title: Motion
 
+      - type: entities
         entities:
           - entity: light.50ec50d8a05d_light
             name: point1
@@ -321,11 +319,11 @@ views:
 
       - type: entities
         entities:
-          - entity: binary_sensor.0x158d00035aa8e1_moisture
+          - entity: binary_sensor.bathroom_moisture_moisture
             name: moisture
-          - entity: sensor.0x158d00035aa8e1_battery
+          - entity: sensor.bathroom_moisture_battery
             name: battery
-          - entity: sensor.0x158d00035aa8e1_zigbee
+          - entity: sensor.bathroom_moisture_zigbee
             name: zigbee
         title: WaterLeak
 
@@ -398,7 +396,6 @@ views:
           - entity: sensor.0x158d00040d34fe_zigbee
             name: Zigbee
         title: Towelheat
-
 
 
 
