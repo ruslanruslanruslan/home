@@ -279,29 +279,29 @@ views:
 
       - type: entities
         entities:
-          - entity: light.50ec50d8a05d_light
+          - entity: light.toilet_light_1_light
             name: point1
-          - entity: light.50ec50d8869e_light
+          - entity: light.toilet_light_2_light
             name: point2
         title: Light
 
       - type: entities
         entities:
-          - entity: switch.0x158d000444ed42_channel_1
+          - entity: switch.toilet_relay_channel_1
             name: Channel1
-          - entity: switch.0x158d000444ed42_channel_2
+          - entity: switch.toilet_relay_channel_2
             name: Channel2
-          - entity: sensor.0x158d000444ed42_action
+          - entity: sensor.toilet_relay_action
             name: Action
-          - entity: sensor.0x158d000444ed42_current
+          - entity: sensor.toilet_relay_current
             name: Current
-          - entity: sensor.0x158d000444ed42_energy
+          - entity: sensor.toilet_relay_energy
             name: Energy
-          - entity: sensor.0x158d000444ed42_power
+          - entity: sensor.toilet_relay_power
             name: Power
-          - entity: sensor.0x158d000444ed42_voltage
+          - entity: sensor.toilet_relay_voltage
             name: Voltage
-          - entity: sensor.0x158d000444ed42_zigbee
+          - entity: sensor.toilet_relay_zigbee
             name: Zigbee
         title: Hood
 
