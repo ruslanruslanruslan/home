@@ -50,5 +50,11 @@ spec:
           - -c
           - >-
               rm -rf /tmp/git/XiaomiGateway3 &&
-              git clone git@github.com:AlexxIT/XiaomiGateway3.git /tmp/git/XiaomiGateway3 &&
+              git clone https://ruslanruslanruslan:$GITHUB_KEY@github.com/AlexxIT/XiaomiGateway3.git /tmp/git/XiaomiGateway3 &&
               cp -r /tmp/git/XiaomiGateway3/custom_components* /config/custom_components
+          env:
+            - name: GITHUB_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: github
+                  key: key
