@@ -370,12 +370,12 @@ views:
 
       - type: entities
         entities:
-          - entity: sensor.0x158d0003f0fc26_temperature
+          - entity: sensor.balcony_temperature_temperature
             name: temperature
-          - entity: sensor.0x158d0003f0fc26_humidity
+          - entity: sensor.balcony_temperature_humidity
             name: humidity
-          - entity: sensor.0x158d0003f0fc26_pressure
+          - entity: sensor.balcony_temperature_pressure
             name: pressure
-          - entity: sensor.0x158d0003f0fc26_battery
+          - entity: sensor.balcony_temperature_battery
             name: battery
         title: Temperature

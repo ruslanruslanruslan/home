@@ -142,6 +142,10 @@ xiaomi_gateway3:
       entity_name: toilet_light_1
     "50ec50d8869e":
       entity_name: toilet_light_2
+    # balcony
+    "0x00158d0003f0fc26":
+      entity_name: balcony_temperature
+
 
 
 #xiaomi_aqara:
