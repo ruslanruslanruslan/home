@@ -42,3 +42,13 @@ spec:
           initialDelaySeconds: 10
           periodSeconds: 10
           timeoutSeconds: 3
+      initContainers:
+        - name: git-clone
+          image: alpine/git:latest
+          command: ["/bin/sh"]
+          args:
+          - -c
+          - >-
+              rm -rf /tmp/git/XiaomiGateway3 &&
+              git clone git@github.com:AlexxIT/XiaomiGateway3.git /tmp/git/XiaomiGateway3 &&
+              cp -r /tmp/git/XiaomiGateway3/custom_components* /config/custom_components
