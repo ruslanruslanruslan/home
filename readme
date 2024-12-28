@@ -1,4 +1,5 @@
 # 1. create user in UI
+# 2. install xiaomi_gateway3 and yeelight (if not installed automatically)
 
 # for testing config
 C:\Users\OTHER\kubectl cp configuration.yaml homeassistant/amur-564b8b64d6-lbczt:/config

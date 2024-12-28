@@ -1,6 +1,5 @@
-
-recorder:
-  db_url: !env_var MYSQL_URL
+#recorder:
+#  db_url: !env_var MYSQL_URL
 
 # Text to speech
 tts:
@@ -45,10 +44,18 @@ yeelight:
     192.168.2.231:
       name: bedroom_strip
       model: strip1
-    192.168.2.217:
-      name: hallway_gateway
-      model: lumi.gateway.mgl03
+#    192.168.2.217:
+#      name: hallway_gateway
+#      model: lumi.gateway.mgl03
 #      token: 6f794172766f6a4a45674f6c7032334c
+#      key: VdGkKtZlgeJJc9UN
+
+xiaomi_gateway3:
+  devices:
+    "64:90:C1:76:B8:6E":  # match device by IEEE or MAC
+      model: lumi.gateway.mgl03
+      name: hallway_gateway
+
 
 #xiaomi_aqara:
 #  discovery_retry: 5
