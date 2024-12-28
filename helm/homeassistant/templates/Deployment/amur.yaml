@@ -32,7 +32,7 @@ spec:
       containers:
       - name: amur
         volumeMounts:
-          - mountPath: "/config"
+          - mountPath: "/config/.storage"
             name: storage
         image: {{ index .Values "amur" "image" "name" }}:{{ index .Values "amur" "image" "tag" }}
         imagePullPolicy: {{ index .Values "amur" "image" "pullPolicy" }}
