@@ -1,0 +1,2 @@
+# for testing config
+C:\Users\OTHER\kubectl cp configuration.yaml homeassistant/amur-564b8b64d6-lbczt:/config
