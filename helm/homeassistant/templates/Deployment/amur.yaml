@@ -25,10 +25,6 @@ spec:
                     values:
                       - kube03
               topologyKey: "kubernetes.io/hostname"
-      volumes:
-        - name: integrations
-          persistentVolumeClaim:
-            claimName: pvc-homeassistant-amur
       containers:
       - name: amur
         volumeMounts:
