@@ -62,18 +62,44 @@ xiaomi_gateway3:
   devices:
     "6490c176b86e":
       name: hallway_gateway # not work
+    # livingroom
     "0x00158d0004117c61":
       entity_name: livingroom_curtain
     "0x00158d00045f6eb9":
       entity_name: livingroom_motion_1
+    # bathroom
     "0x00158d0004117b14":
       entity_name: bedroom_curtain
     "0x00158d00035aa8e1":
       entity_name: bathroom_moisture
+    # kitchen
     "087cbe88ab96":
       entity_name: kitchen_kettle
+    "50ec50ca3317":
+      entity_name: kitchen_bulb_1
+    "50ec50c8bbf8":
+      entity_name: kitchen_bulb_2
+    "50ec50ca32e0":
+      entity_name: kitchen_bulb_3
+    "50ec50c8c5a1":
+      entity_name: kitchen_bulb_4
+    "50ec50c9b92e":
+      entity_name: kitchen_bulb_5
+    "50ec50ca4891":
+      entity_name: kitchen_bulb_6
+    "1708917941049368576":
+      entity_name: kitchen_chandelier_6
+    "50ec50d838c8":
+      entity_name: kitchen_light_1
+    "50ec50d6ab9d":
+      entity_name: kitchen_light_2
+    "0x00158d0003cb8f6f":
+      entity_name: kitchen_relay
+    "0x00158d000476cc4f":
+      entity_name: kitchen_motion_1
     "0x00158d00045f3ec3":
       entity_name: kitchen_motion_2
+    # hallway
     "0x00158d00047ba4d8":
       entity_name: hallway_motion_1
     "0x00158d00042cfa44":

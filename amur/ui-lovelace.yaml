@@ -189,70 +189,64 @@ views:
 
       - type: entities
         entities:
-          - entity: sensor.087cbe88ab96_state
+          - entity: sensor.kitchen_kettle_state
             name: State
-          - entity: binary_sensor.087cbe88ab96_power
+          - entity: binary_sensor.kitchen_kettle_power
             name: Power
-          - entity: sensor.087cbe88ab96_temperature
+          - entity: sensor.kitchen_kettle_temperature
             name: Temperature
         title: Kettle
 
       - type: entities
         entities:
-          - entity: light.50ec50d838c8_light
+          - entity: light.kitchen_light_1_light
             name: point1
-          - entity: light.50ec50d6ab9d_light
+          - entity: light.kitchen_light_2_light
             name: point2
         title: Light
         
       - type: entities
         entities:
-          - entity: light.50ec50ca3317_light
+          - entity: light.kitchen_bulb_1_light
             name: bulb1
-          - entity: light.50ec50c8bbf8_light
+          - entity: light.kitchen_bulb_2_light
             name: bulb2
-          - entity: light.50ec50ca32e0_light
+          - entity: light.kitchen_bulb_3_light
             name: bulb3
-          - entity: light.50ec50c8c5a1_light
+          - entity: light.kitchen_bulb_4_light
             name: bulb4
-          - entity: light.50ec50c9b92e_light
+          - entity: light.kitchen_bulb_5_light
             name: bulb5
-          - entity: light.50ec50ca4891_light
+          - entity: light.kitchen_bulb_6_light
             name: bulb6
-          - entity: light.1708917941049368576_light
+          - entity: light.kitchen_chandelier_light
             name: group
         title: chandelier
 
       - type: entities
         entities:
-          - entity: switch.0x158d0003cb8f6f_channel_1
+          - entity: switch.kitchen_relay_channel_1
             name: Channel1
-          - entity: switch.0x158d0003cb8f6f_channel_2
+          - entity: switch.kitchen_relay_channel_2
             name: Channel2
-          - entity: sensor.0x158d0003cb8f6f_action
-            name: Action
-          - entity: sensor.0x158d0003cb8f6f_current
+          - entity: sensor.kitchen_relay_current
             name: Current
-          - entity: sensor.0x158d0003cb8f6f_energy
+          - entity: sensor.kitchen_relay_energy
             name: Energy
-          - entity: sensor.0x158d0003cb8f6f_power
+          - entity: sensor.kitchen_relay_power
             name: Power
-          - entity: sensor.0x158d0003cb8f6f_voltage
+          - entity: sensor.kitchen_relay_voltage
             name: Voltage
-          - entity: sensor.0x158d0003cb8f6f_zigbee
-            name: Zigbee
         title: Ledline
 
       - type: entities
         entities:
-          - entity: binary_sensor.0x158d000476cc4f_motion
+          - entity: binary_sensor.kitchen_motion_1_motion
             name: motion
-          - entity: sensor.0x158d000476cc4f_battery
+          - entity: sensor.kitchen_motion_1_battery
             name: battery
-          - entity: sensor.0x158d000476cc4f_illuminance
+          - entity: sensor.kitchen_motion_1_illuminance
             name: illuminance
-          - entity: sensor.0x158d000476cc4f_zigbee
-            name: zigbee
         title: Motion1
 
       - type: entities
