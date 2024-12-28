@@ -1,4 +1,5 @@
-image:
-  pullPolicy: Always
-  name: 192.168.2.129:30002/homeassistant/amur
-  tag: master
+amur:
+  image:
+    pullPolicy: Always
+    name: 192.168.2.129:30002/homeassistant/amur
+    tag: master
