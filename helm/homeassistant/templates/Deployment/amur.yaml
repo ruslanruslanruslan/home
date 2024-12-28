@@ -32,8 +32,8 @@ spec:
       containers:
       - name: amur
         volumeMounts:
-          - mountPath: "/config/.storage"
-            name: storage
+          - name: custom_components
+            mountPath: "/config/custom_components"
         image: {{ index .Values "amur" "image" "name" }}:{{ index .Values "amur" "image" "tag" }}
         imagePullPolicy: {{ index .Values "amur" "image" "pullPolicy" }}
         env:
@@ -66,3 +66,6 @@ spec:
                 secretKeyRef:
                   name: github
                   key: key
+          volumeMounts:
+            - name: custom_components
+              mountPath: "/config/custom_components"
