@@ -1,3 +1,5 @@
+mobile_app:
+
 #recorder:
 #  db_url: !env_var MYSQL_URL
 
@@ -58,7 +60,7 @@ yeelight:
 
 xiaomi_gateway3:
   devices:
-    "64:90:C1:76:B8:6E":  # match device by IEEE or MAC
+    "64:90:C1:76:B8:6E":
       model: lumi.gateway.mgl03
       name: hallway_gateway
 
