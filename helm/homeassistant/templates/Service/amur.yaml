@@ -10,6 +10,6 @@ spec:
   type: NodePort
   ports:
   - port: 8123
-    nodePort: 30021
+    nodePort: 30017
   selector:
     app: amur
