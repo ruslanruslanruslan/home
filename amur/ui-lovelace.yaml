@@ -347,42 +347,34 @@ views:
 
       - type: entities
         entities:
-          - entity: switch.0x158d0003f3ebe0_channel_1
+          - entity: switch.bathroom_relay_1_channel_1
             name: Channel1
-          - entity: switch.0x158d0003f3ebe0_channel_2
+          - entity: switch.bathroom_relay_1_channel_2
             name: Channel2
-          - entity: sensor.0x158d0003f3ebe0_action
-            name: Action
-          - entity: sensor.0x158d0003f3ebe0_current
+          - entity: sensor.bathroom_relay_1_current
             name: Current
-          - entity: sensor.0x158d0003f3ebe0_energy
+          - entity: sensor.bathroom_relay_1_energy
             name: Energy
-          - entity: sensor.0x158d0003f3ebe0_power
+          - entity: sensor.bathroom_relay_1_power
             name: Power
-          - entity: sensor.0x158d0003f3ebe0_voltage
+          - entity: sensor.bathroom_relay_1_voltage
             name: Voltage
-          - entity: sensor.0x158d0003f3ebe0_zigbee
-            name: Zigbee
         title: Hood
 
       - type: entities
         entities:
-          - entity: switch.0x158d00040d34fe_channel_1
+          - entity: switch.bathroom_relay_2_channel_1
             name: Channel1
-          - entity: switch.0x158d00040d34fe_channel_2
+          - entity: switch.bathroom_relay_2_channel_2
             name: Channel2
-          - entity: sensor.0x158d00040d34fe_action
-            name: Action
-          - entity: sensor.0x158d00040d34fe_current
+          - entity: sensor.bathroom_relay_2_action
             name: Current
-          - entity: sensor.0x158d00040d34fe_energy
+          - entity: sensor.bathroom_relay_2_energy
             name: Energy
-          - entity: sensor.0x158d00040d34fe_power
+          - entity: sensor.bathroom_relay_2_power
             name: Power
-          - entity: sensor.0x158d00040d34fe_voltage
+          - entity: sensor.bathroom_relay_2_voltage
             name: Voltage
-          - entity: sensor.0x158d00040d34fe_zigbee
-            name: Zigbee
         title: Towelheat
 
 

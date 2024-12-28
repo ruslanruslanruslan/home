@@ -62,6 +62,9 @@ xiaomi_gateway3:
   devices:
     "6490c176b86e":
       name: hallway_gateway # not work
+    # bedroom
+    "0x00158d0004117b14":
+      entity_name: bedroom_curtain
     # livingroom
     "0x00158d0004117c61":
       entity_name: livingroom_curtain
@@ -112,8 +115,10 @@ xiaomi_gateway3:
     "0x00158d00047d447d":
       entity_name: hallway_motion_3
     # bathroom
-    "0x00158d0004117b14":
-      entity_name: bedroom_curtain
+    "0x00158d0003f3ebe0":
+      entity_name: bathroom_relay_1
+    "0x00158d00040d34fe":
+      entity_name: bathroom_relay_2
     "0x00158d00035aa8e1":
       entity_name: bathroom_moisture
     # toilet
