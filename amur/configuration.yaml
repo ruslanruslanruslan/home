@@ -2,6 +2,11 @@
 recorder:
   db_url: !env_var MYSQL_URL
 
+rest:
+  - authentication: basic
+    username: "ruslan2"
+    password: "oMaJmT25zHFbLmLn"
+
 # Text to speech
 tts:
   - platform: google_translate
