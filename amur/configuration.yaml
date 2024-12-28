@@ -2,11 +2,6 @@
 recorder:
   db_url: !env_var MYSQL_URL
 
-rest:
-  - authentication: basic
-    username: "ruslan2"
-    password: "oMaJmT25zHFbLmLn"
-
 # Text to speech
 tts:
   - platform: google_translate
@@ -30,6 +25,8 @@ homeassistant:
   longitude: 37.7835
   unit_system: metric
   time_zone: Europe/Moscow
+  currency: RUB
+  country: RU
   
 yeelight:
   devices:
@@ -61,8 +58,6 @@ xiaomi_aqara:
       key: 268v4556jdn0xehg
     
 
-
- 
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
