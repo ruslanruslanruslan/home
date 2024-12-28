@@ -16,7 +16,13 @@ lovelace:
       title: hidden
       show_in_sidebar: false
       require_admin: true
-      filename: hidden.yaml
+      filename: ui-hidden.yaml
+    lovelace-main:
+      mode: yaml
+      title: main
+      show_in_sidebar: true
+      require_admin: true
+      filename: ui-main.yaml
 
 homeassistant:
   name: Amur
