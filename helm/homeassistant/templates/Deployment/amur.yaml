@@ -26,13 +26,13 @@ spec:
                       - kube03
               topologyKey: "kubernetes.io/hostname"
       volumes:
-        - name: custom_components
+        - name: integrations
           persistentVolumeClaim:
             claimName: pvc-homeassistant-amur
       containers:
       - name: amur
         volumeMounts:
-          - name: custom_components
+          - name: integrations
             mountPath: "/config/custom_components"
         image: {{ index .Values "amur" "image" "name" }}:{{ index .Values "amur" "image" "tag" }}
         imagePullPolicy: {{ index .Values "amur" "image" "pullPolicy" }}
@@ -67,5 +67,5 @@ spec:
                   name: github
                   key: key
           volumeMounts:
-            - name: custom_components
+            - name: integrations
               mountPath: "/config/custom_components"
