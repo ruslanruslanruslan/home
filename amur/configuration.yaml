@@ -70,12 +70,16 @@ xiaomi_gateway3:
       entity_name: bedroom_curtain
     "0x00158d00035aa8e1":
       entity_name: bathroom_moisture
-    "08:7C:BE:88:AB:96":
+    "087cbe88ab96":
       entity_name: kitchen_kettle
+    "x00158d00045f3ec3":
+      entity_name: kitchen_motion_2
     "0x00158d00047ba4d8":
       entity_name: hallway_motion_1
-    "???":
+    "0x00158d00042cfa44":
       entity_name: hallway_motion_2
+    "0x00158d00047d447d":
+      entity_name: hallway_motion_3
 
 
 #xiaomi_aqara:

@@ -137,26 +137,22 @@ views:
 
       - type: entities
         entities:
-          - entity: binary_sensor.0x158d00047ba4d8_motion
+          - entity: binary_sensor.hallway_motion_2_motion
             name: motion
-          - entity: sensor.0x158d00047ba4d8_battery
+          - entity: sensor.hallway_motion_2_battery
             name: battery
-          - entity: sensor.0x158d00047ba4d8_illuminance
+          - entity: sensor.hallway_motion_2_illuminance
             name: illuminance
-          - entity: sensor.0x158d00047ba4d8_zigbee
-            name: zigbee
         title: Motion2
 
       - type: entities
         entities:
-          - entity: binary_sensor.0x158d00047d447d_motion
+          - entity: binary_sensor.hallway_motion_3_motion
             name: motion
-          - entity: sensor.0x158d00047d447d_battery
+          - entity: sensor.hallway_motion_3_battery
             name: battery
-          - entity: sensor.0x158d00047d447d_illuminance
+          - entity: sensor.hallway_motion_3_illuminance
             name: illuminance
-          - entity: sensor.0x158d00047d447d_zigbee
-            name: zigbee
         title: Motion3
 
       - type: entities
@@ -261,14 +257,12 @@ views:
 
       - type: entities
         entities:
-          - entity: binary_sensor.0x158d00045f3ec3_motion
+          - entity: binary_sensor.kitchen_motion_2_motion
             name: motion
-          - entity: sensor.0x158d00045f3ec3_battery
+          - entity: sensor.kitchen_motion_2_battery
             name: battery
-          - entity: sensor.0x158d00045f3ec3_illuminance
+          - entity: sensor.kitchen_motion_2_illuminance
             name: illuminance
-          - entity: sensor.0x158d00045f3ec3_zigbee
-            name: zigbee
         title: Motion2
 
 
