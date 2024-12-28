@@ -55,13 +55,13 @@ views:
 
       - type: entities
         entities:
-          - entity: sensor.0x158d0003f134b1_temperature
+          - entity: sensor.bedroom_temperature_temperature
             name: temperature
-          - entity: sensor.0x158d0003f134b1_humidity
+          - entity: sensor.bedroom_temperature_humidity
             name: humidity
-          - entity: sensor.0x158d0003f134b1_pressure
+          - entity: sensor.bedroom_temperature_pressure
             name: pressure
-          - entity: sensor.0x158d0003f134b1_battery
+          - entity: sensor.bedroom_temperature_battery
             name: battery
         title: Temperature
 

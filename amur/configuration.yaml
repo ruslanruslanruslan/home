@@ -67,6 +67,8 @@ xiaomi_gateway3:
       entity_name: bedroom_curtain
     "0x00158d00045fa45e":
       entity_name: bedroom_motion_1
+    "0x00158d0003f134b1":
+      entity_name: bedroom_temperature
     # livingroom
     "0x00158d0004117c61":
       entity_name: livingroom_curtain
