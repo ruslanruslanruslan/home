@@ -189,11 +189,11 @@ views:
 
       - type: entities
         entities:
-          - entity: sensor.kitchen_kettle_state
+          - entity: sensor.087cbe88ab96_state
             name: State
-          - entity: binary_sensor.kitchen_kettle_power
+          - entity: binary_sensor.087cbe88ab96_power
             name: Power
-          - entity: sensor.kitchen_kettle_temperature
+          - entity: sensor.087cbe88ab96_temperature
             name: Temperature
         title: Kettle
 

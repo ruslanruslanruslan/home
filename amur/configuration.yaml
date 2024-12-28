@@ -60,7 +60,7 @@ yeelight:
 
 xiaomi_gateway3:
   devices:
-    "64:90:C1:76:B8:6E":
+    "6490c176b86e":
       name: hallway_gateway # not work
     "0x00158d0004117c61":
       entity_name: livingroom_curtain
@@ -72,7 +72,7 @@ xiaomi_gateway3:
       entity_name: bathroom_moisture
     "087cbe88ab96":
       entity_name: kitchen_kettle
-    "x00158d00045f3ec3":
+    "0x00158d00045f3ec3":
       entity_name: kitchen_motion_2
     "0x00158d00047ba4d8":
       entity_name: hallway_motion_1
