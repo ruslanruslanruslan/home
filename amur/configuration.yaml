@@ -112,6 +112,8 @@ xiaomi_gateway3:
       entity_name: hallway_light_4
     "50ec50d5e2e3":
       entity_name: hallway_light_5
+    "50ec50d86c7b":
+      entity_name: hallway_light_6
     "0x00158d00047ba4d8":
       entity_name: hallway_motion_1
     "0x00158d00042cfa44":
@@ -144,6 +146,8 @@ xiaomi_gateway3:
       entity_name: toilet_light_1
     "50ec50d8869e":
       entity_name: toilet_light_2
+    "0x00158d000476d283":
+      entity_name: toilet_motion_1
     # balcony
     "0x00158d0003f0fc26":
       entity_name: balcony_temperature

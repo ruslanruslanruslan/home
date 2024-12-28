@@ -157,7 +157,7 @@ views:
             name: point4
           - entity: light.hallway_light_5_light
             name: point5
-          - entity: light.50ec50d86c7b_light
+          - entity: light.hallway_light_6_light
             name: point6
         title: Light
 
@@ -255,14 +255,12 @@ views:
 
       - type: entities
         entities:
-          - entity: binary_sensor.0x158d000476d283_motion
+          - entity: binary_sensor.toilet_motion_1_motion
             name: motion
-          - entity: sensor.0x158d000476d283_battery
+          - entity: sensor.toilet_motion_1_battery
             name: battery
-          - entity: sensor.0x158d000476d283_illuminance
+          - entity: sensor.toilet_motion_1_illuminance
             name: illuminance
-          - entity: sensor.0x158d000476d283_zigbee
-            name: zigbee
         title: Motion
 
       - type: entities
