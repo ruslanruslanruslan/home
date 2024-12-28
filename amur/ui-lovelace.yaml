@@ -163,12 +163,10 @@ views:
 
       - type: entities
         entities:
-          - entity: sensor.0x158d000312ec22_action
+          - entity: sensor.hallway_vibration_action
             name: Action
-          - entity: sensor.0x158d000312ec22_battery
+          - entity: sensor.hallway_vibration_battery
             name: battery
-          - entity: sensor.0x158d000312ec22_zigbee
-            name: Zigbee
         title: Vibration
 
 

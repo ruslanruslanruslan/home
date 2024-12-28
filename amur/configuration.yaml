@@ -116,6 +116,8 @@ xiaomi_gateway3:
       entity_name: hallway_motion_2
     "0x00158d00047d447d":
       entity_name: hallway_motion_3
+    "0x00158d000312ec22":
+      entity_name: hallway_vibration
     # bathroom
     "0x00158d0003f3ebe0":
       entity_name: bathroom_relay_1
