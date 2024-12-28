@@ -55,7 +55,7 @@ views:
 
       - type: entities
         entities:
-          - entity: sensor.bedroom_temperature_temperature
+          - entity: sensor.bedroom_temperature
             name: temperature
           - entity: sensor.bedroom_temperature_humidity
             name: humidity
@@ -287,18 +287,14 @@ views:
             name: Power
           - entity: sensor.toilet_relay_1_voltage
             name: Voltage
-          - entity: sensor.toilet_relay_1_zigbee
-            name: Zigbee
         title: Hood
 
       - type: entities
         entities:
-          - entity: binary_sensor.bathroom_moisture_moisture
+          - entity: binary_sensor.bathroom_moisture
             name: moisture
           - entity: sensor.bathroom_moisture_battery
             name: battery
-          - entity: sensor.bathroom_moisture_zigbee
-            name: zigbee
         title: WaterLeak
 
 
@@ -368,7 +364,7 @@ views:
 
       - type: entities
         entities:
-          - entity: sensor.balcony_temperature_temperature
+          - entity: sensor.balcony_temperature
             name: temperature
           - entity: sensor.balcony_temperature_humidity
             name: humidity

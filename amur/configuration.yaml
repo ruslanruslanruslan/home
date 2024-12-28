@@ -90,7 +90,7 @@ xiaomi_gateway3:
     "50ec50ca4891":
       entity_name: kitchen_bulb_6
     "1708917941049368576":
-      entity_name: kitchen_chandelier_6
+      entity_name: kitchen_chandelier
     "50ec50d838c8":
       entity_name: kitchen_light_1
     "50ec50d6ab9d":
