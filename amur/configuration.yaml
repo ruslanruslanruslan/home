@@ -48,14 +48,14 @@ yeelight:
     192.168.2.217:
       name: hallway_gateway
       model: lumi.gateway.mgl03
-#      token: 6f794172766f6a4a45674f6c7032334c
+      token: 6f794172766f6a4a45674f6c7032334c
 
-xiaomi_aqara:
-  discovery_retry: 5
-  gateways:
-    - name: kitchen_hub
-      host: 192.168.2.210
-      key: 268v4556jdn0xehg
+#xiaomi_aqara:
+#  discovery_retry: 5
+#  gateways:
+#    - name: kitchen_hub
+#      host: 192.168.2.210
+#      key: 268v4556jdn0xehg
     
 
 group: !include groups.yaml
