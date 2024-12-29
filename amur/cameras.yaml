@@ -1,0 +1,4 @@
+- platform: generic
+  name: Wetter Schweiz
+  still_image_url: http://data.meteomedia.de/data/maps/generated/schweiz_sytl_uwz-ch_de.png
+  scan_interval: 600
