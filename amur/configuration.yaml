@@ -1,7 +1,7 @@
 default_config:
 
-#recorder:
-#  db_url: !env_var MYSQL_URL
+recorder:
+  db_url: !env_var MYSQL_URL
 
 # Text to speech
 tts:
@@ -53,11 +53,11 @@ homeassistant:
 #    host: 192.168.2.224
 #    token: 9fa6fe7d196728292081ca0320f937f5
 
-vacuum:
-  - platform: xiaomi_viomi
-    host: 192.168.2.225
-    token: 454739385548567552494e66664d3259
-    name: vacuum
+#vacuum:
+#  - platform: xiaomi_viomi
+#    host: 192.168.2.225
+#    token: 5846525164554c577645373869363677
+#    name: vaccum
 
 #   NAME:     Mi IH Pressure Rice Cooker
 #   ID:       102869718
@@ -66,7 +66,7 @@ vacuum:
 #   TOKEN:    203ce771bb9287860eb18be9424b9202
 #   MODEL:    chunmi.cooker.press2
 #
-  
+
 yeelight:
   devices:
     192.168.2.219:
