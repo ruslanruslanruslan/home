@@ -160,11 +160,11 @@ views:
       - type: entities
         entities:
           - entity: light.hallway_light_4_light
-            name: point4
+            name: point1
           - entity: light.walkthrough_light_1_light
-            name: point5
+            name: point2
           - entity: light.walkthrough_light_2_light
-            name: point6
+            name: point3
           - entity: light.walkthrough_lights_light
             name: group
         title: Light
@@ -279,6 +279,8 @@ views:
             name: point1
           - entity: light.toilet_light_2_light
             name: point2
+          - entity: light.toilet_lights_light
+            name: group
         title: Light
 
       - type: entities

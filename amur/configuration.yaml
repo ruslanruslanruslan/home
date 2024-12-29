@@ -185,6 +185,8 @@ xiaomi_gateway3:
       entity_name: toilet_light_1
     "50ec50d8869e":
       entity_name: toilet_light_2
+    "1246411413024075776":
+      entity_name: toilet_lights
     "0x00158d000476d283":
       entity_name: toilet_motion_1
     # balcony
