@@ -2,6 +2,10 @@ FROM homeassistant/home-assistant:latest
 
 WORKDIR /config
 
+RUN apt-get -y update
+RUN apt-get -y upgrade
+RUN apt-get install -y ffmpeg
+
 COPY ./amur .
 
 RUN git clone https://ruslanruslanruslan:$GITHUB_KEY@github.com/AlexxIT/XiaomiGateway3.git /tmp/git/XiaomiGateway3

@@ -1,7 +1,7 @@
 # 1. create user in UI
 # 2. install xiaomi_gateway3 and yeelight (if not installed automatically)
 # 3. Yeelight should import lights automatically
-# 4. Gateway3 import main gaitway (fill ip, token, key) and it will import all devices
+# 4. Gateway3 import main gateway (fill ip, token, key) and it will import all devices
 
 # for testing config
 C:\Users\OTHER\kubectl cp configuration.yaml homeassistant/amur-564b8b64d6-lbczt:/config
