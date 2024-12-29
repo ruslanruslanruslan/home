@@ -137,11 +137,11 @@ views:
 
       - type: entities
         entities:
-          - entity: binary_sensor.hallway_motion_3_motion
+          - entity: binary_sensor.walkthrough_motion_1_motion
             name: motion
-          - entity: sensor.hallway_motion_3_battery
+          - entity: sensor.walkthrough_motion_1_battery
             name: battery
-          - entity: sensor.hallway_motion_3_illuminance
+          - entity: sensor.walkthrough_motion_1_illuminance
             name: illuminance
         title: Motion3
 
@@ -153,12 +153,20 @@ views:
             name: point2
           - entity: light.hallway_light_3_light
             name: point3
+          - entity: light.hallway_lights_light
+            name: group
+        title: Light
+
+      - type: entities
+        entities:
           - entity: light.hallway_light_4_light
             name: point4
-          - entity: light.hallway_light_5_light
+          - entity: light.walkthrough_light_1_light
             name: point5
-          - entity: light.hallway_light_6_light
+          - entity: light.walkthrough_light_2_light
             name: point6
+          - entity: light.walkthrough_lights_light
+            name: group
         title: Light
 
       - type: entities
@@ -191,6 +199,8 @@ views:
             name: point1
           - entity: light.kitchen_light_2_light
             name: point2
+          - entity: light.kitchen_lights_light
+            name: group
         title: Light
         
       - type: entities

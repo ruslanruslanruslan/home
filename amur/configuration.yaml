@@ -37,10 +37,10 @@ homeassistant:
   
 yeelight:
   devices:
-    192.168.2.218:
+    192.168.2.219:
       name: livingroom_ceiling_1
       model: ceiling4
-    192.168.2.219:
+    192.168.2.218:
       name: livingroom_ceiling_2
       model: ceiling4
     192.168.2.232:
@@ -95,6 +95,8 @@ xiaomi_gateway3:
       entity_name: kitchen_light_1
     "50ec50d6ab9d":
       entity_name: kitchen_light_2
+    "1243803959987204096":
+      entity_name: kitchen_lights
     "0x00158d0003cb8f6f":
       entity_name: kitchen_relay_1
     "0x00158d000476cc4f":
@@ -108,18 +110,22 @@ xiaomi_gateway3:
       entity_name: hallway_light_2
     "50ec50d8889d":
       entity_name: hallway_light_3
+    "1246405497222508544":
+      entity_name: hallway_lights
     "50ec50d88656":
       entity_name: hallway_light_4
     "50ec50d5e2e3":
-      entity_name: hallway_light_5
+      entity_name: walkthrough_light_1
     "50ec50d86c7b":
-      entity_name: hallway_light_6
+      entity_name: walkthrough_light_2
+    "1246410642622177281":
+      entity_name: walkthrough_lights
     "0x00158d00047ba4d8":
       entity_name: hallway_motion_1
     "0x00158d00042cfa44":
       entity_name: hallway_motion_2
     "0x00158d00047d447d":
-      entity_name: hallway_motion_3
+      entity_name: walkthrough_motion_1
     "0x00158d000312ec22":
       entity_name: hallway_vibration
     # bathroom

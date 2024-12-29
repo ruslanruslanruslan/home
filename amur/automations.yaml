@@ -2,23 +2,23 @@
   initial_state: 'on'
   trigger:
     platform: state
-    entity_id: binary_sensor.0x158d00045f6eb9_motion
+    entity_id: binary_sensor.livingroom_motion_1_motion
     to: 'on'
   action:
     service: light.turn_on
-    entity_id: light.livingroom_ceiling_1
+    entity_id: light.livingroom_ceiling_2
 
 - alias: moving livingroom off
   initial_state: 'on'
   trigger:
     platform: state
-    entity_id: binary_sensor.0x158d00045f6eb9_motion
+    entity_id: binary_sensor.livingroom_motion_1_motion
     to: 'off'
     for:
       seconds: 1
   action:
     service: light.turn_off
-    entity_id: light.livingroom_ceiling_1
+    entity_id: light.livingroom_ceiling_2
 
 
 - alias: moving hallway on
@@ -26,61 +26,53 @@
   trigger:
     platform: state
     entity_id: 
-      - binary_sensor.0x158d00042cfa44_motion
-      - binary_sensor.0x158d00047ba4d8_motion
+      - binary_sensor.hallway_motion_1_motion
+      - binary_sensor.hallway_motion_2_motion
     to: 'on'
   action:
     service: light.turn_on
     entity_id:
-      - light.50ec50d897bc_light
-      - light.50ec50d8b136_light
-      - light.50ec50d8889d_light
+      - light.hallway_lights
 
 - alias: moving hallway off
   initial_state: 'on'
   trigger:
     platform: state
     entity_id:
-      - binary_sensor.0x158d00042cfa44_motion
-      - binary_sensor.0x158d00047ba4d8_motion
+      - binary_sensor.hallway_motion_1_motion
+      - binary_sensor.hallway_motion_2_motion
     to: 'off'
     for:
       seconds: 1
   action:
     service: light.turn_off
     entity_id:
-      - light.50ec50d897bc_light
-      - light.50ec50d8b136_light
-      - light.50ec50d8889d_light
+      - light.hallway_lights
 
 
 - alias: moving walkthrough on
   initial_state: 'on'
   trigger:
     platform: state
-    entity_id: binary_sensor.0x158d00047d447d_motion
+    entity_id: binary_sensor.walkthrough_motion_1_motion
     to: 'on'
   action:
     service: light.turn_on
     entity_id:
-      - light.50ec50d88656_light
-      - light.50ec50d5e2e3_light
-      - light.50ec50d86c7b_light
+      - light.walkthrough_light
 
 - alias: moving walkthrough off
   initial_state: 'on'
   trigger:
     platform: state
-    entity_id: binary_sensor.0x158d00047d447d_motion
+    entity_id: binary_sensor.hallway_motion_1_motion
     to: 'off'
     for:
       seconds: 1
   action:
     service: light.turn_off
     entity_id:
-      - light.50ec50d88656_light
-      - light.50ec50d5e2e3_light
-      - light.50ec50d86c7b_light
+      - light.walkthrough_light
 
 
 - alias: moving kitchen on
@@ -88,91 +80,84 @@
   trigger:
     platform: state
     entity_id:
-      - binary_sensor.0x158d000476cc4f_motion
-      - binary_sensor.0x158d00045f3ec3_motion
+      - binary_sensor.kitchen_motion_1_motion
+      - binary_sensor.kitchen_motion_2_motion
     to: 'on'
   action:
     - service: light.turn_on
       entity_id:
-        - light.50ec50d838c8_light
-        - light.50ec50d6ab9d_light
+        - light.kitchen_lights
     - service: switch.turn_on
-      entity_id: switch.0x158d0003cb8f6f_channel_1
+      entity_id: switch.kitchen_relay_1_channel_1
 
 - alias: moving kitchen off
   initial_state: 'on'
   trigger:
     platform: state
     entity_id:
-      - binary_sensor.0x158d000476cc4f_motion
-      - binary_sensor.0x158d00045f3ec3_motion
+      - binary_sensor.kitchen_motion_1_motion
+      - binary_sensor.kitchen_motion_2_motion
     to: 'off'
     for:
       seconds: 1
   action:
     - service: light.turn_off
       entity_id:
-        - light.50ec50d838c8_light
+        - light.kitchen_lights
         - light.50ec50d6ab9d_light
     - service: switch.turn_off
-      entity_id: switch.0x158d0003cb8f6f_channel_1
+      entity_id: switch.kitchen_relay_1_channel_1
 
 
 - alias: moving bathroom on
   initial_state: 'on'
   trigger:
     platform: state
-    entity_id: binary_sensor.0x158d000476cc04_motion
+    entity_id: binary_sensor.bathroom_motion_1_motion
     to: 'on'
   action:
     service: light.turn_on
     entity_id:
-      - light.50ec50d849cf_light
-      - light.50ec50d888ad_light
-      - light.50ec50d838cc_light
+      - light.bathroom_lights
 
 - alias: moving bathroom off
   initial_state: 'on'
   trigger:
     platform: state
-    entity_id: binary_sensor.0x158d000476cc04_motion
+    entity_id: binary_sensor.bathroom_motion_1_motion
     to: 'off'
     for:
       seconds: 1
   action:
     service: light.turn_off
     entity_id:
-      - light.50ec50d849cf_light
-      - light.50ec50d888ad_light
-      - light.50ec50d838cc_light
+      - light.bathroom_lights
 
 
 - alias: moving toilet on
   initial_state: 'on'
   trigger:
     platform: state
-    entity_id: binary_sensor.0x158d000476d283_motion
+    entity_id: binary_sensor.toilet_motion_1_motion
     to: 'on'
   action:
     - service: light.turn_on
       entity_id:
-        - light.50ec50d8a05d_light
-        - light.50ec50d8869e_light
+      - light.toilet_lights
     - service: switch.turn_on
-      entity_id: switch.0x158d000444ed42_channel_2
+      entity_id: switch.toilet_relay_1_channel_2
 
 - alias: moving toilet off
   initial_state: 'on'
   trigger:
     platform: state
-    entity_id: binary_sensor.0x158d000476d283_motion
+    entity_id: binary_sensor.toilet_motion_1_motion
     to: 'off'
     for:
       seconds: 1
   action:
     - service: light.turn_off
       entity_id:
-        - light.50ec50d8a05d_light
-        - light.50ec50d8869e_light
+        - light.toilet_lights
     - service: switch.turn_off
-      entity_id: switch.0x158d000444ed42_channel_2
+      entity_id: switch.toilet_relay_1_channel_2
