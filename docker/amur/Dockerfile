@@ -8,4 +8,4 @@ RUN git clone https://ruslanruslanruslan:$GITHUB_KEY@github.com/AlexxIT/XiaomiGa
 RUN mkdir /config/custom_components
 RUN cp -r /tmp/git/XiaomiGateway3/custom_components/* /config/custom_components
 RUN git clone https://ruslanruslanruslan:$GITHUB_KEY@github.com/nergal/homeassistant-vacuum-viomi.git /tmp/git/homeassistant-vacuum-viomi
-RUN cp -r /tmp/git/xiaomi_miot_raw/custom_components/* /config/custom_components
+RUN cp -r /tmp/git/homeassistant-vacuum-viomi/custom_components/* /config/custom_components
