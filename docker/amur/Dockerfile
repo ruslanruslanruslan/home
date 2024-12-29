@@ -2,9 +2,9 @@ FROM homeassistant/home-assistant:latest
 
 WORKDIR /config
 
-RUN apk -y update
-RUN apk -y upgrade
-RUN apk install -y ffmpeg
+RUN apk update
+RUN apk upgrade
+RUN apk install ffmpeg
 
 COPY ./amur .
 
