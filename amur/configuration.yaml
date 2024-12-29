@@ -202,8 +202,7 @@ xiaomi_gateway3:
 #    - name: kitchen_hub
 #      host: 192.168.2.210
 #      key: 268v4556jdn0xehg
-    
-rtsp://192.168.2.111:554/live1.sdp
+
 
 group: !include groups.yaml
 automation: !include automations.yaml
