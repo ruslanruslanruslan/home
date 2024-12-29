@@ -34,6 +34,36 @@ homeassistant:
   time_zone: Europe/Moscow
   currency: RUB
   country: RU
+
+remote:
+  - platform: xiaomi_miio
+#    type: chuangmi.plug.v1
+    host: 192.168.2.221
+    token: 76692257e2d37e4705e702508b223206
+  - platform: xiaomi_miio
+    host: 192.168.2.222
+    token: 6e14e4ce773c0a36478b72284f2ee012
+  - platform: xiaomi_miio
+    host: 192.168.2.223
+    token: 7578dc435db618c020d8de9f548a0c30
+  - platform: xiaomi_miio
+    host: 192.168.2.224
+    token: 9fa6fe7d196728292081ca0320f937f5
+
+
+#   NAME:     Mi IH Pressure Rice Cooker
+#   ID:       102869718
+#   MAC:      7C:49:EB:CC:F1:89
+#   IP:       192.168.2.214
+#   TOKEN:    203ce771bb9287860eb18be9424b9202
+#   MODEL:    chunmi.cooker.press2
+#
+#   NAME:     Mi Robot Vacuum-Mop P
+#   ID:       308978867
+#   MAC:      5C:E5:0C:7D:2F:27
+#   IP:       192.168.2.222
+#   TOKEN:    454739385548567552494e66664d3259
+#   MODEL:    viomi.vacuum.v7
   
 yeelight:
   devices:
@@ -157,6 +187,8 @@ xiaomi_gateway3:
     # balcony
     "0x00158d0003f0fc26":
       entity_name: balcony_temperature
+
+
 
 
 
