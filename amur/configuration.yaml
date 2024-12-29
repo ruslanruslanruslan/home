@@ -1,4 +1,4 @@
-mobile_app:
+default_config:
 
 #recorder:
 #  db_url: !env_var MYSQL_URL
@@ -66,12 +66,6 @@ vacuum:
 #   TOKEN:    203ce771bb9287860eb18be9424b9202
 #   MODEL:    chunmi.cooker.press2
 #
-#   NAME:     Mi Robot Vacuum-Mop P
-#   ID:       308978867
-#   MAC:      5C:E5:0C:7D:2F:27
-#   IP:       192.168.2.222
-#   TOKEN:    454739385548567552494e66664d3259
-#   MODEL:    viomi.vacuum.v7
   
 yeelight:
   devices:
@@ -209,6 +203,7 @@ xiaomi_gateway3:
 #      host: 192.168.2.210
 #      key: 268v4556jdn0xehg
     
+rtsp://192.168.2.111:554/live1.sdp
 
 group: !include groups.yaml
 automation: !include automations.yaml

@@ -1,4 +1,4 @@
-- alias: moving livingroom on
+- alias: moving_livingroom on
   initial_state: 'on'
   trigger:
     platform: state
@@ -8,7 +8,7 @@
     service: light.turn_on
     entity_id: light.livingroom_ceiling_2
 
-- alias: moving livingroom off
+- alias: moving_livingroom off
   initial_state: 'on'
   trigger:
     platform: state
@@ -21,7 +21,7 @@
     entity_id: light.livingroom_ceiling_2
 
 
-- alias: moving hallway on
+- alias: moving_hallway on
   initial_state: 'on'
   trigger:
     platform: state
@@ -32,9 +32,9 @@
   action:
     service: light.turn_on
     entity_id:
-      - light.hallway_lights
+      - light.hallway_lights_light
 
-- alias: moving hallway off
+- alias: moving_hallway off
   initial_state: 'on'
   trigger:
     platform: state
@@ -47,10 +47,10 @@
   action:
     service: light.turn_off
     entity_id:
-      - light.hallway_lights
+      - light.hallway_lights_light
 
 
-- alias: moving walkthrough on
+- alias: moving_walkthrough on
   initial_state: 'on'
   trigger:
     platform: state
@@ -59,43 +59,71 @@
   action:
     service: light.turn_on
     entity_id:
-      - light.walkthrough_light
+      - light.walkthrough_lights_light
 
-- alias: moving walkthrough off
+- alias: moving_walkthrough off
   initial_state: 'on'
   trigger:
     platform: state
-    entity_id: binary_sensor.hallway_motion_1_motion
+    entity_id: binary_sensor.walkthrough_motion_1_motion
     to: 'off'
     for:
       seconds: 1
   action:
     service: light.turn_off
     entity_id:
-      - light.walkthrough_light
+      - light.walkthrough_lights_light
 
 
-- alias: moving kitchen on
+- alias: moving_kitche_1 on
   initial_state: 'on'
   trigger:
     platform: state
     entity_id:
       - binary_sensor.kitchen_motion_1_motion
+    to: 'on'
+  action:
+    - service: light.turn_on
+      entity_id:
+        - switch.kitchen_relay_1_channel_1
+    - service: switch.turn_on
+      entity_id: switch.kitchen_relay_1_channel_1
+
+- alias: moving_kitchen_1 off
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id:
+      - binary_sensor.kitchen_motion_1_motion
+    to: 'off'
+    for:
+      seconds: 1
+  action:
+    - service: light.turn_off
+      entity_id:
+        - switch.kitchen_relay_1_channel_1
+    - service: switch.turn_off
+      entity_id: switch.kitchen_relay_1_channel_1
+
+- alias: moving_kitche_2 on
+  initial_state: 'on'
+  trigger:
+    platform: state
+    entity_id:
       - binary_sensor.kitchen_motion_2_motion
     to: 'on'
   action:
     - service: light.turn_on
       entity_id:
-        - light.kitchen_lights
+        - light.kitchen_lights_light
     - service: switch.turn_on
       entity_id: switch.kitchen_relay_1_channel_1
 
-- alias: moving kitchen off
+- alias: moving_kitchen_2 off
   initial_state: 'on'
   trigger:
     platform: state
     entity_id:
-      - binary_sensor.kitchen_motion_1_motion
       - binary_sensor.kitchen_motion_2_motion
     to: 'off'
     for:
@@ -103,13 +131,11 @@
   action:
     - service: light.turn_off
       entity_id:
-        - light.kitchen_lights
-        - light.50ec50d6ab9d_light
+        - light.kitchen_lights_light
     - service: switch.turn_off
       entity_id: switch.kitchen_relay_1_channel_1
 
-
-- alias: moving bathroom on
+- alias: moving_bathroom on
   initial_state: 'on'
   trigger:
     platform: state
@@ -118,9 +144,9 @@
   action:
     service: light.turn_on
     entity_id:
-      - light.bathroom_lights
+      - light.bathroom_lights_light
 
-- alias: moving bathroom off
+- alias: moving_bathroom off
   initial_state: 'on'
   trigger:
     platform: state
@@ -131,7 +157,7 @@
   action:
     service: light.turn_off
     entity_id:
-      - light.bathroom_lights
+      - light.bathroom_lights_light
 
 
 - alias: moving toilet on
@@ -143,11 +169,11 @@
   action:
     - service: light.turn_on
       entity_id:
-      - light.toilet_lights
+      - light.toilet_lights_light
     - service: switch.turn_on
       entity_id: switch.toilet_relay_1_channel_2
 
-- alias: moving toilet off
+- alias: moving_toilet off
   initial_state: 'on'
   trigger:
     platform: state
@@ -158,6 +184,6 @@
   action:
     - service: light.turn_off
       entity_id:
-        - light.toilet_lights
+        - light.toilet_lights_light
     - service: switch.turn_off
       entity_id: switch.toilet_relay_1_channel_2

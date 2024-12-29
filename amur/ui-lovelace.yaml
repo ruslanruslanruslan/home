@@ -9,15 +9,39 @@ views:
 
       - type: entities
         entities:
-          - entity: sensor.0x158d00044a0171_temperature
-            name: temperature
-          - entity: sensor.0x158d00044a0171_humidity
-            name: humidity
-          - entity: sensor.0x158d00044a0171_pressure
-            name: pressure
-          - entity: sensor.0x158d00044a0171_battery
-            name: battery
-        title: Temperature
+          - entity: light.bedroom_ceiling
+            name: bedroom_ceiling
+          - entity: light.bedroom_ceiling_ambilight
+            name: bedroom_ambilight
+          - entity: light.bedroom_strip
+            name: bedroom_strip
+          - entity: light.livingroom_ceiling_1
+            name: livingroom_ceiling_1
+          - entity: light.livingroom_ceiling_1_ambilight
+            name: livingroom_ambilight_1
+          - entity: light.livingroom_ceiling_2
+            name: livingroom_ceiling_2
+          - entity: light.livingroom_ceiling_2_ambilight
+            name: livingroom_ambilight_2
+          - entity: light.livingroom_strip
+            name: livingroom_strip
+          - entity: light.kitchen_lights_light
+            name: kitchen_lights
+          - entity: light.kitchen_chandelier_light
+            name: kitchen_chandelier
+          - entity: switch.kitchen_relay_1_channel_1
+            name: kitchen_strip
+          - entity: light.bathroom_lights_light
+            name: bathroom_lights
+          - entity: light.toilet_lights_light
+            name: toilet_lights
+          - entity: light.walkthrough_lights_light
+            name: walkthrough_lights
+          - entity: light.hallway_lights_light
+            name: hallway_lights
+          - entity: light.hallway_lights_light
+            name: hallway_lights
+        title: Light
 
 
 
@@ -260,58 +284,6 @@ views:
 
 
 
-  - title: Toilet
-    cards:
-
-      - type: entities
-        entities:
-          - entity: binary_sensor.toilet_motion_1_motion
-            name: motion
-          - entity: sensor.toilet_motion_1_battery
-            name: battery
-          - entity: sensor.toilet_motion_1_illuminance
-            name: illuminance
-        title: Motion
-
-      - type: entities
-        entities:
-          - entity: light.toilet_light_1_light
-            name: point1
-          - entity: light.toilet_light_2_light
-            name: point2
-          - entity: light.toilet_lights_light
-            name: group
-        title: Light
-
-      - type: entities
-        entities:
-          - entity: switch.toilet_relay_1_channel_1
-            name: Channel1
-          - entity: switch.toilet_relay_1_channel_2
-            name: Channel2
-          - entity: sensor.toilet_relay_1_action
-            name: Action
-          - entity: sensor.toilet_relay_1_current
-            name: Current
-          - entity: sensor.toilet_relay_1_energy
-            name: Energy
-          - entity: sensor.toilet_relay_1_power
-            name: Power
-          - entity: sensor.toilet_relay_1_voltage
-            name: Voltage
-        title: Hood
-
-      - type: entities
-        entities:
-          - entity: binary_sensor.bathroom_moisture
-            name: moisture
-          - entity: sensor.bathroom_moisture_battery
-            name: battery
-        title: WaterLeak
-
-
-
-
   - title: Bathroom
     cards:
 
@@ -368,6 +340,58 @@ views:
           - entity: sensor.bathroom_relay_2_voltage
             name: Voltage
         title: Towelheat
+
+
+
+
+  - title: Toilet
+    cards:
+
+      - type: entities
+        entities:
+          - entity: binary_sensor.toilet_motion_1_motion
+            name: motion
+          - entity: sensor.toilet_motion_1_battery
+            name: battery
+          - entity: sensor.toilet_motion_1_illuminance
+            name: illuminance
+        title: Motion
+
+      - type: entities
+        entities:
+          - entity: light.toilet_light_1_light
+            name: point1
+          - entity: light.toilet_light_2_light
+            name: point2
+          - entity: light.toilet_lights_light
+            name: group
+        title: Light
+
+      - type: entities
+        entities:
+          - entity: switch.toilet_relay_1_channel_1
+            name: Channel1
+          - entity: switch.toilet_relay_1_channel_2
+            name: Channel2
+          - entity: sensor.toilet_relay_1_action
+            name: Action
+          - entity: sensor.toilet_relay_1_current
+            name: Current
+          - entity: sensor.toilet_relay_1_energy
+            name: Energy
+          - entity: sensor.toilet_relay_1_power
+            name: Power
+          - entity: sensor.toilet_relay_1_voltage
+            name: Voltage
+        title: Hood
+
+      - type: entities
+        entities:
+          - entity: binary_sensor.bathroom_moisture
+            name: moisture
+          - entity: sensor.bathroom_moisture_battery
+            name: battery
+        title: WaterLeak
 
 
 
