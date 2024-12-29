@@ -37,16 +37,19 @@ homeassistant:
 
 remote:
   - platform: xiaomi_miio
-#    type: chuangmi.plug.v1
+    name: livingroom_power_1
     host: 192.168.2.221
     token: 76692257e2d37e4705e702508b223206
   - platform: xiaomi_miio
+    name: livingroom_power_2
     host: 192.168.2.222
     token: 6e14e4ce773c0a36478b72284f2ee012
   - platform: xiaomi_miio
+    name: livingroom_power_3
     host: 192.168.2.223
     token: 7578dc435db618c020d8de9f548a0c30
   - platform: xiaomi_miio
+    name: livingroom_power_4
     host: 192.168.2.224
     token: 9fa6fe7d196728292081ca0320f937f5
 
