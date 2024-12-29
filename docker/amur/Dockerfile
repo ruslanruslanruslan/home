@@ -4,7 +4,7 @@ WORKDIR /config
 
 RUN apk update
 RUN apk upgrade
-RUN apk install ffmpeg
+RUN apk add ffmpeg
 
 COPY ./amur .
 
