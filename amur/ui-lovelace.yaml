@@ -142,6 +142,24 @@ views:
             name: illuminance
         title: Motion
 
+      - type: entities
+        entities:
+          - entity: sensor.livingroom_air_temperature
+            name: temperature
+          - entity: sensor.livingroom_air_humidity
+            name: humidity
+          - entity: sensor.livingroom_air_co2
+            name: co2
+          - entity: sensor.livingroom_air_pm10
+            name: pm10
+          - entity: sensor.livingroom_air_pm25
+            name: pm25
+          - entity: sensor.livingroom_air_tvoc
+            name: tvoc
+          - entity: sensor.livingroom_air_battery
+            name: battery
+        title: Air
+
       - type: picture-entity
         entity: camera.livingroom_camera_mainstream
         name: video
