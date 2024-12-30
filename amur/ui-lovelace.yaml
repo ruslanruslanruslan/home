@@ -43,7 +43,20 @@ views:
             name: hallway_lights
         title: Light
 
+      - type: picture-entity
+        entity: camera.vestibule_camera_mainstream
+        show_name: false
+        show_state: false
 
+      - type: picture-entity
+        entity: camera.192_168_2_111
+        show_name: false
+        show_state: false
+
+      - type: picture-entity
+        entity: camera.intercom_camera_mainstream
+        show_name: false
+        show_state: false
 
 
   - title: Bedroom
@@ -89,6 +102,10 @@ views:
             name: battery
         title: Temperature
 
+      - type: picture-entity
+        entity: camera.bedroom_camera_mainstream
+        show_name: false
+        show_state: false
 
 
 
@@ -125,6 +142,11 @@ views:
             name: illuminance
         title: Motion
 
+      - type: picture-entity
+        entity: camera.livingroom_camera_mainstream
+        name: video
+        show_name: false
+        show_state: false
 
 
 
@@ -201,6 +223,11 @@ views:
             name: battery
         title: Vibration
 
+      - type: picture-entity
+        entity: camera.hallway_camera_mainstream
+        name: video
+        show_name: false
+        show_state: false
 
 
 
@@ -281,6 +308,11 @@ views:
             name: illuminance
         title: Motion2
 
+      - type: picture-entity
+        entity: camera.kitchen_camera_mainstream
+        name: video
+        show_name: false
+        show_state: false
 
 
 
@@ -409,3 +441,9 @@ views:
           - entity: sensor.balcony_temperature_battery
             name: battery
         title: Temperature
+
+      - type: picture-entity
+        entity: camera.balcony_camera_mainstream
+        name: video
+        show_name: false
+        show_state: false

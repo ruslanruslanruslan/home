@@ -1,7 +1,6 @@
-- platform: onvif
+- platform: generic
   name: elevators_camera
-  host: 192.168.2.111
-  port: 80
+  host: rtsp://192.168.2.111:554/live.sdp
   username: homeassistant
   password: aP5n8XdebfKeDn
 - platform: onvif
