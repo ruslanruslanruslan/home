@@ -192,6 +192,11 @@ xiaomi_gateway3:
     "0x00158d0003f0fc26":
       entity_name: balcony_temperature
 
+lock:
+  - platform: zk_teco
+    name: hallway_lock
+    host: 192.168.2.227
+    password: 245578
 
 
 
