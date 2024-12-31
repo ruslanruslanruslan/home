@@ -3,8 +3,9 @@
 # 4. Install Gateway3 and import main gateway (fill ip, token, key) and it will import all devices
 # 5. Install MQTT (mosquitto.mosquitto 1883 homeassistant FLS3GD8Qc8xJWp)
 # 6. Qinqpong pro add manually (livingroom_air 582D34006AAA). Need to be sure that device send data in mqtt using mqtt explorer.
-# 7. Install ONVIF add all cameras manually
-# 8. Generic camera add elevators camera manually and change name additionaly
+# 7. (If lock not work then maybe need to install pyzk inside container because zk_teco very old)
+# 8. Install ONVIF add all cameras manually
+# 9. Generic camera add elevators camera manually and change name additionaly
 
 # for testing config
 C:\Users\OTHER\kubectl cp configuration.yaml homeassistant/amur-564b8b64d6-lbczt:/config
