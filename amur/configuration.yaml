@@ -35,37 +35,32 @@ homeassistant:
   currency: RUB
   country: RU
 
-#remote:
-#  - platform: xiaomi_miio
-#    name: livingroom_power_1
-#    host: 192.168.2.221
-#    token: 76692257e2d37e4705e702508b223206
-#  - platform: xiaomi_miio
-#    name: livingroom_power_2
-#    host: 192.168.2.222
-#    token: 6e14e4ce773c0a36478b72284f2ee012
-#  - platform: xiaomi_miio
-#    name: livingroom_power_3
-#    host: 192.168.2.223
-#    token: 7578dc435db618c020d8de9f548a0c30
-#  - platform: xiaomi_miio
-#    name: livingroom_power_4
-#    host: 192.168.2.224
-#    token: 9fa6fe7d196728292081ca0320f937f5
+xiaomi_miot:
+  - platform: xiaomi_miio
+    name: livingroom_power_1
+    host: 192.168.2.221
+    token: 76692257e2d37e4705e702508b223206
+  - platform: xiaomi_miio
+    name: livingroom_power_2
+    host: 192.168.2.222
+    token: 6e14e4ce773c0a36478b72284f2ee012
+  - platform: xiaomi_miio
+    name: livingroom_power_3
+    host: 192.168.2.223
+    token: 7578dc435db618c020d8de9f548a0c30
+  - platform: xiaomi_miio
+    name: livingroom_power_4
+    host: 192.168.2.224
+    token: 9fa6fe7d196728292081ca0320f937f5
+  - platform: xiaomi_miio
+    name: kithcen_cooker
+    host: 192.168.2.224
+    token: 203ce771bb9287860eb18be9424b9202
+  - platform: xiaomi_viomi
+    name: hallway_vaccum
+    host: 192.168.2.225
+    token: 5846525164554c577645373869363677
 
-#vacuum:
-#  - platform: xiaomi_viomi
-#    host: 192.168.2.225
-#    token: 5846525164554c577645373869363677
-#    name: vaccum
-
-#   NAME:     Mi IH Pressure Rice Cooker
-#   ID:       102869718
-#   MAC:      7C:49:EB:CC:F1:89
-#   IP:       192.168.2.214
-#   TOKEN:    203ce771bb9287860eb18be9424b9202
-#   MODEL:    chunmi.cooker.press2
-#
 
 yeelight:
   devices:
