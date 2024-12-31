@@ -241,6 +241,12 @@ views:
             name: battery
         title: Vibration
 
+      - type: entities
+        entities:
+          - entity: lock.hallway_lock
+            name: Lock
+        title: Lock
+
       - type: picture-entity
         entity: camera.hallway_camera_mainstream
         name: video
