@@ -1,7 +1,7 @@
 # 1. create user in UI
 # 3. Yeelight should import lights automatically
 # 4. Install Gateway3 and import main gateway (fill ip, token, key) and it will import all devices
-# 5. Install xiaomi-miot and login to mi account, add all local devices
+# 5. Install xiaomi-miot and login to mi account, add local devices, filte mop, cooker, power plugs
 # 6. Install MQTT (mosquitto.mosquitto 1883 homeassistant FLS3GD8Qc8xJWp) (needed for Qinqpong only)
 # 7. Qinqpong pro add manually (livingroom_air (should get automatically 582D34006AAA)). Need to be sure that device send data in mqtt using mqtt explorer.
 # 8. Install ONVIF add all cameras manually

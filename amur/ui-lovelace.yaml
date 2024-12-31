@@ -3,7 +3,9 @@ views:
 
 
 
-
+# -------------------------------------------------------------
+# -------------------------main--------------------------------
+# -------------------------------------------------------------
   - title: Main
     cards:
 
@@ -59,6 +61,9 @@ views:
         show_state: false
 
 
+# -------------------------------------------------------------
+# -----------------------bedroom-------------------------------
+# -------------------------------------------------------------
   - title: Bedroom
     cards:
     
@@ -108,7 +113,9 @@ views:
         show_state: false
 
 
-
+# -------------------------------------------------------------
+# ----------------------livingroom-----------------------------
+# -------------------------------------------------------------
   - title: Livingroom
     cards:
         
@@ -160,6 +167,62 @@ views:
             name: battery
         title: Air
 
+      - type: entities
+        entities:
+          - entity: switch.chuangmi_212a01_5bd0_switch_status
+            name: status
+          - entity: light.chuangmi_212a01_5bd0_switch_status
+            name: light
+          - entity: sensor.chuangmi_212a01_5bd0_electric_power
+            name: current
+          - entity: sensor.chuangmi_212a01_5bd0_power_cost_month
+            name: month
+          - entity: sensor.chuangmi_212a01_5bd0_temperature
+            name: power
+        title: Power_eGPU
+
+      - type: entities
+        entities:
+          - entity: switch.chuangmi_212a01_f148_switch_status
+            name: status
+          - entity: light.chuangmi_212a01_f148_switch_status
+            name: light
+          - entity: sensor.chuangmi_212a01_f148_electric_power
+            name: current
+          - entity: sensor.chuangmi_212a01_f148_power_cost_month
+            name: month
+          - entity: sensor.chuangmi_212a01_f148_temperature
+            name: power
+        title: Power_LCD
+
+      - type: entities
+        entities:
+          - entity: switch.chuangmi_212a01_d2fd_switch_status
+            name: status
+          - entity: light.chuangmi_212a01_d2fd_switch_status
+            name: light
+          - entity: sensor.chuangmi_212a01_d2fd_electric_power
+            name: current
+          - entity: sensor.chuangmi_212a01_d2fd_power_cost_month
+            name: month
+          - entity: sensor.chuangmi_212a01_d2fd_temperature
+            name: power
+        title: Power_Table
+
+      - type: entities
+        entities:
+          - entity: switch.chuangmi_212a01_690a_switch_status
+            name: status
+          - entity: light.chuangmi_212a01_690a_switch_status
+            name: light
+          - entity: sensor.chuangmi_212a01_690a_electric_power
+            name: current
+          - entity: sensor.chuangmi_212a01_690a_power_cost_month
+            name: month
+          - entity: sensor.chuangmi_212a01_690a_temperature
+            name: power
+        title: Power_MOTU
+
       - type: picture-entity
         entity: camera.livingroom_camera_mainstream
         name: video
@@ -167,7 +230,9 @@ views:
         show_state: false
 
 
-
+# -------------------------------------------------------------
+# -----------------------hallway-------------------------------
+# -------------------------------------------------------------
   - title: Hallway
     cards:
 
@@ -243,6 +308,28 @@ views:
 
       - type: entities
         entities:
+          - entity: vacuum.viomi_v7_2f27_robot_cleaner
+            name: clean
+          - entity: sensor.viomi_v7_2f27_battery_level
+            name: battery
+          - entity: sensor.viomi_v7_2f27_clean_area
+            name: area
+          - entity: sensor.viomi_v7_2f27_clean_time
+            name: time
+          - entity: sensor.viomi_v7_2f27_hypa_life
+            name: hypa
+          - entity: sensor.viomi_v7_2f27_main_brush_life
+            name: main_brush
+          - entity: sensor.viomi_v7_2f27_mop_life
+            name: mop
+          - entity: sensor.viomi_v7_2f27_side_brush_life
+            name: side_brush
+          - entity: sensor.viomi_v7_2f27_status
+            name: status
+        title: Vacuum
+
+      - type: entities
+        entities:
           - entity: lock.hallway_lock
             name: Lock
         title: Lock
@@ -254,7 +341,9 @@ views:
         show_state: false
 
 
-
+# -------------------------------------------------------------
+# -----------------------kitchen-------------------------------
+# -------------------------------------------------------------
   - title: Kitchen
     cards:
 
@@ -314,6 +403,16 @@ views:
 
       - type: entities
         entities:
+          - entity: select.chunmi_press2_f189_start_cook
+            name: cook
+          - entity: button.chunmi_press2_f189_cancel_cooking
+            name: cancel
+          - entity: sensor.chunmi_press2_f189_status
+            name: status
+        title: Cooker
+
+      - type: entities
+        entities:
           - entity: binary_sensor.kitchen_motion_1_motion
             name: motion
           - entity: sensor.kitchen_motion_1_battery
@@ -339,7 +438,9 @@ views:
         show_state: false
 
 
-
+# -------------------------------------------------------------
+# -----------------------bathroom------------------------------
+# -------------------------------------------------------------
   - title: Bathroom
     cards:
 
@@ -398,8 +499,9 @@ views:
         title: Towelheat
 
 
-
-
+# -------------------------------------------------------------
+# ------------------------toilet-------------------------------
+# -------------------------------------------------------------
   - title: Toilet
     cards:
 
@@ -450,7 +552,9 @@ views:
         title: WaterLeak
 
 
-
+# -------------------------------------------------------------
+# -----------------------balcony-------------------------------
+# -------------------------------------------------------------
   - title: Balcony
     cards:
 

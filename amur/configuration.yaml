@@ -57,7 +57,7 @@ homeassistant:
 #    host: 192.168.2.224
 #    token: 203ce771bb9287860eb18be9424b9202
 #  - platform: xiaomi_viomi
-#    name: hallway_vaccum
+#    name: hallway_vacuum
 #    host: 192.168.2.225
 #    token: 5846525164554c577645373869363677
 
