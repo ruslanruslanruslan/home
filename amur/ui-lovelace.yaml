@@ -9,6 +9,15 @@ views:
   - title: Main
     cards:
 
+      - type: button
+        entity: scene.Romantic
+        name: Full brightness v2
+        tap_action:
+          action: call-service
+          service: scene.turn_on
+          service_data:
+            entity_id: scene.morning_full_lights
+
       - type: entities
         entities:
           - entity: light.bedroom_ceiling
