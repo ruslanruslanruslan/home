@@ -36,6 +36,8 @@
       state: on
       brightness: 255
       color_temp: 100
+    cover.bedroom_curtain_motor:
+      state: open
     light.hallway_lights_light:
       state: on
       brightness: 255
@@ -106,6 +108,8 @@
       state: on
       brightness: 1
       color_temp: 500
+    cover.bedroom_curtain_motor:
+      state: closed
     light.hallway_lights_light:
       state: on
       brightness: 1
@@ -165,6 +169,8 @@
       state: off
     light.bedroom_strip:
       state: off
+    cover.bedroom_curtain_motor:
+      state: open
     light.hallway_lights_light:
       state: off
     vacuum.viomi_v7_2f27_robot_cleaner:
