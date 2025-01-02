@@ -1,4 +1,5 @@
 - name: romantic
+  icon: 'mdi:candle'
   entities:
     light.livingroom_ceiling_1:
       state: off
@@ -70,6 +71,7 @@
 
 
 - name: bright
+  icon: 'mdi:white-balance-sunny'
   entities:
     light.livingroom_ceiling_1_nightlight:
       state: off
@@ -137,6 +139,7 @@
 
 
 - name: away
+  icon: 'mdi:human-greeting-variant'
   entities:
     light.livingroom_ceiling_1_nightlight:
       state: off
