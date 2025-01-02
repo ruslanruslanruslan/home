@@ -17,9 +17,16 @@ views:
             show_icon: true
             tap_action:
               action: toggle
-          - type: bright
+          - type: button
             entity: scene.bright
             name: Bright
+            show_name: true
+            show_icon: true
+            tap_action:
+              action: toggle
+          - type: button
+            entity: scene.away
+            name: Away
             show_name: true
             show_icon: true
             tap_action:
