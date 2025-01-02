@@ -8,30 +8,43 @@ views:
 # -------------------------------------------------------------
   - title: Main
     cards:
-
-      - type: button
-        entity: scene.romantic
-        name: Full brightness v2
-        tap_action:
-          action: call-service
-          service: scene.turn_on
-          service_data:
-            entity_id: scene.morning_full_lights
+      - type: grid
+        cards:
+          - type: button
+            entity: scene.romantic
+            name: Romantic
+            show_name: true
+            show_icon: true
+            tap_action:
+              action: toggle
+          - type: bright
+            entity: scene.bright
+            name: Bright
+            show_name: true
+            show_icon: true
+            tap_action:
+              action: toggle
 
       - type: entities
         entities:
           - entity: light.bedroom_ceiling
             name: bedroom_ceiling
+          - entity: light.bedroom_ceiling_nightlight
+            name: bedroom_nightlight
           - entity: light.bedroom_ceiling_ambilight
             name: bedroom_ambilight
           - entity: light.bedroom_strip
             name: bedroom_strip
           - entity: light.livingroom_ceiling_1
             name: livingroom_ceiling_1
+          - entity: light.livingroom_ceiling_1_nightlight
+            name: livingroom_nightlight_1
           - entity: light.livingroom_ceiling_1_ambilight
             name: livingroom_ambilight_1
           - entity: light.livingroom_ceiling_2
             name: livingroom_ceiling_2
+          - entity: light.livingroom_ceiling_2_nightlight
+            name: livingroom_nightlight_2
           - entity: light.livingroom_ceiling_2_ambilight
             name: livingroom_ambilight_2
           - entity: light.livingroom_strip
@@ -80,6 +93,8 @@ views:
         entities:
           - entity: light.bedroom_ceiling
             name: ceiling
+          - entity: light.bedroom_ceiling_nightlight
+            name: nightlight
           - entity: light.bedroom_ceiling_ambilight
             name: ambilight
           - entity: binary_sensor.bedroom_ceiling_nightlight
@@ -132,10 +147,14 @@ views:
         entities:
           - entity: light.livingroom_ceiling_1
             name: ceiling_1
+          - entity: light.livingroom_ceiling_1_nightlight
+            name: nightlight_1
           - entity: light.livingroom_ceiling_1_ambilight
             name: ambilight_1
           - entity: light.livingroom_ceiling_2
             name: ceiling_2
+          - entity: light.livingroom_ceiling_2_nightlight
+            name: nightlight_2
           - entity: light.livingroom_ceiling_2_ambilight
             name: ambilight_2
           - entity: light.livingroom_strip

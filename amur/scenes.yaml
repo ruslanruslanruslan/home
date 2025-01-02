@@ -1,21 +1,77 @@
 - name: romantic
   entities:
     light.livingroom_ceiling_1:
+      state: "off"
+    light.livingroom_ceiling_1_nightlight:
       state: "on"
-      mode: "normal"
       brightness: 60
     light.livingroom_ceiling_1_ambilight:
       state: "on"
-      xy_color: [0.4, 0.2]
+      rgb_color: [200, 50, 250]
       brightness: 60
     light.livingroom_ceiling_2:
+      state: "off"
+    light.livingroom_ceiling_2_nightlight:
       state: "on"
-      mode: "normal"
       brightness: 60
     light.livingroom_ceiling_2_ambilight:
       state: "on"
-      xy_color: [0.4, 0.2]
+      rgb_color: [200, 50, 250]
       brightness: 60
     light.livingroom_strip:
       state: "on"
       brightness: 1
+      kelvin: 2000
+    light.bedroom_ceiling:
+      state: "off"
+    light.bedroom_ceiling_nightlight:
+      state: "on"
+      brightness: 60
+    light.bedroom_ceiling_ambilight:
+      state: "on"
+      rgb_color: [200, 50, 250]
+      brightness: 60
+    light.bedroom_strip:
+      state: "on"
+      brightness: 1
+      kelvin: 2000
+
+- name: romantic_parent
+  entities:
+    scene.romantic: "off"
+    scene.bright: "on"
+
+- name: bright
+  entities:
+    light.livingroom_ceiling_1_nightlight:
+      state: "off"
+    light.livingroom_ceiling_1:
+      state: "on"
+      brightness: 100
+      kelvin: 6000
+    light.livingroom_ceiling_1_ambilight:
+      state: "off"
+    light.livingroom_ceiling_2_nightlight:
+      state: "off"
+    light.livingroom_ceiling_2:
+      state: "on"
+      brightness: 100
+      kelvin: 6000
+    light.livingroom_ceiling_2_ambilight:
+      state: "off"
+    light.livingroom_strip:
+      state: "on"
+      brightness: 100
+      kelvin: 6000
+    light.bedroom_ceiling_nightlight:
+      state: "off"
+    light.bedroom_ceiling:
+      state: "on"
+      brightness: 100
+      kelvin: 6000
+    light.bedroom_ceiling_ambilight:
+      state: "off"
+      brightness: 100
+    light.bedroom_strip:
+      state: "on"
+      brightness: 100
