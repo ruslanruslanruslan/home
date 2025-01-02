@@ -335,8 +335,16 @@ views:
 
       - type: entities
         entities:
+          - entity: sensor.hallway_button_action
+            name: action
+          - entity: sensor.hallway_button_battery
+            name: battery
+        title: Button
+
+      - type: entities
+        entities:
           - entity: sensor.hallway_vibration_action
-            name: Action
+            name: action
           - entity: sensor.hallway_vibration_battery
             name: battery
         title: Vibration
@@ -567,7 +575,7 @@ views:
           - entity: switch.toilet_relay_1_channel_2
             name: Channel2
           - entity: sensor.toilet_relay_1_action
-            name: Action
+            name: action
           - entity: sensor.toilet_relay_1_current
             name: Current
           - entity: sensor.toilet_relay_1_energy
