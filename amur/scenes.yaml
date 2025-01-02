@@ -41,6 +41,8 @@
       state: on
       brightness: 1
       color_temp: 500
+    vacuum.viomi_v7_2f27_robot_cleaner:
+      state: docked
     light.walkthrough_lights_light:
       state: on
       brightness: 1
@@ -49,6 +51,8 @@
       state: on
       brightness: 1
       color_temp: 500
+    switch.bathroom_relay_1_channel_1:
+      state: off
     light.toilet_lights_light:
       state: on
       brightness: 1
@@ -114,6 +118,8 @@
       state: on
       brightness: 255
       color_temp: 100
+    switch.bathroom_relay_1_channel_1:
+      state: off
     light.toilet_lights_light:
       state: on
       brightness: 255
@@ -158,10 +164,14 @@
       state: off
     light.hallway_lights_light:
       state: off
+    vacuum.viomi_v7_2f27_robot_cleaner:
+      state: cleaning
     light.walkthrough_lights_light:
       state: off
     light.bathroom_lights_light:
       state: off
+    switch.bathroom_relay_1_channel_1:
+      state: on
     light.toilet_lights_light:
       state: off
     light.kitchen_lights_light:
