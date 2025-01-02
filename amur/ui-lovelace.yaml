@@ -10,7 +10,7 @@ views:
     cards:
 
       - type: button
-        entity: scene.Romantic
+        entity: scene.romantic
         name: Full brightness v2
         tap_action:
           action: call-service

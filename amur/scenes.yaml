@@ -1,6 +1,21 @@
-- name: Romantic
+- name: romantic
   entities:
-    - light.livingroom_ceiling_2:
-        state: "on"
-#          xy_color: [0.33, 0.66]
-#          brightness: 200
+    light.livingroom_ceiling_1:
+      state: "on"
+      mode: "normal"
+      brightness: 60
+    light.livingroom_ceiling_1_ambilight:
+      state: "on"
+      xy_color: [0.4, 0.2]
+      brightness: 60
+    light.livingroom_ceiling_2:
+      state: "on"
+      mode: "normal"
+      brightness: 60
+    light.livingroom_ceiling_2_ambilight:
+      state: "on"
+      xy_color: [0.4, 0.2]
+      brightness: 60
+    light.livingroom_strip:
+      state: "on"
+      brightness: 1
