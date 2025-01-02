@@ -1,12 +1,12 @@
 - alias: moving_livingroom
-  initial_state: 'on'
+  initial_state: on
   trigger:
     - platform: state
       entity_id: binary_sensor.livingroom_motion_1_motion
-      to: 'on'
+      to: on
     - platform: state
       entity_id: binary_sensor.livingroom_motion_1_motion
-      to: 'off'
+      to: off
       for:
         minutes: 1
   action:
@@ -17,14 +17,14 @@
 
 
 - alias: moving_bedroom
-  initial_state: 'on'
+  initial_state: on
   trigger:
     - platform: state
       entity_id: binary_sensor.bedroom_motion_1_motion
-      to: 'on'
+      to: on
     - platform: state
       entity_id: binary_sensor.bedroom_motion_1_motion
-      to: 'off'
+      to: off
       for:
         minutes: 1
   action:
@@ -35,18 +35,18 @@
 
 
 - alias: moving_hallway
-  initial_state: 'on'
+  initial_state: on
   trigger:
     - platform: state
       entity_id:
         - binary_sensor.hallway_motion_1_motion
         - binary_sensor.hallway_motion_2_motion
-      to: 'on'
+      to: on
     - platform: state
       entity_id:
         - binary_sensor.hallway_motion_1_motion
         - binary_sensor.hallway_motion_2_motion
-      to: 'off'
+      to: off
       for:
         minutes: 3
   action:
@@ -57,14 +57,14 @@
 
 
 - alias: moving_walkthrough
-  initial_state: 'on'
+  initial_state: on
   trigger:
     - platform: state
       entity_id: binary_sensor.walkthrough_motion_1_motion
-      to: 'on'
+      to: on
     - platform: state
       entity_id: binary_sensor.walkthrough_motion_1_motion
-      to: 'off'
+      to: off
       for:
         seconds: 1
   action:
@@ -75,14 +75,14 @@
 
 
 - alias: moving_kitchen_1
-  initial_state: 'on'
+  initial_state: on
   trigger:
     - platform: state
       entity_id: binary_sensor.kitchen_motion_1_motion
-      to: 'on'
+      to: on
     - platform: state
       entity_id: binary_sensor.kitchen_motion_1_motion
-      to: 'off'
+      to: off
       for:
         minutes: 1
   action:
@@ -92,16 +92,16 @@
   mode: single
 
 - alias: moving_kitchen_2
-  initial_state: 'on'
+  initial_state: on
   trigger:
     - platform: state
       entity_id: binary_sensor.kitchen_motion_2_motion
-      to: 'on'
+      to: on
     - platform: state
       entity_id:
         - binary_sensor.kitchen_motion_1_motion
         - binary_sensor.kitchen_motion_2_motion
-      to: 'off'
+      to: off
       for:
         minutes: 5
   action:
@@ -112,14 +112,14 @@
 
 
 - alias: moving_bathroom
-  initial_state: 'on'
+  initial_state: on
   trigger:
     - platform: state
       entity_id: binary_sensor.bathroom_motion_1_motion
-      to: 'on'
+      to: on
     - platform: state
       entity_id: binary_sensor.bathroom_motion_1_motion
-      to: 'off'
+      to: off
       for:
         minutes: 5
   action:
@@ -130,14 +130,14 @@
 
 
 - alias: moving_toilet
-  initial_state: 'on'
+  initial_state: on
   trigger:
     - platform: state
       entity_id: binary_sensor.toilet_motion_1_motion
-      to: 'on'
+      to: on
     - platform: state
       entity_id: binary_sensor.toilet_motion_1_motion
-      to: 'off'
+      to: off
       for:
         minutes: 5
   action:
@@ -150,12 +150,44 @@
   mode: single
 
 
-- alias: button_hallway
-  initial_state: 'on'
+- alias: button_bright
+  initial_state: on
   trigger:
-    - platform: state
-      entity_id: sensor.hallway_button_action
-      to: 'on'
+    - platform: event
+      event_type: xiaomi_aqara.click
+      event_data:
+          entity_id: sensor.hallway_button_action
+          click_type: single
+  action:
+    - service: scene.turn_on
+      target:
+        entity_id: scene.bright
+  mode: single
+
+
+- alias: button_romantic
+  initial_state: on
+  trigger:
+    - platform: event
+      event_type: xiaomi_aqara.click
+      event_data:
+          entity_id: sensor.hallway_button_action
+          click_type: double
+  action:
+    - service: scene.turn_on
+      target:
+        entity_id: scene.romantic
+  mode: single
+
+
+- alias: button_away
+  initial_state: on
+  trigger:
+    - platform: event
+      event_type: xiaomi_aqara.click
+      event_data:
+          entity_id: sensor.hallway_button_action
+          click_type: triple
   action:
     - service: scene.turn_on
       target:

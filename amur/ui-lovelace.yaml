@@ -11,15 +11,15 @@ views:
       - type: grid
         cards:
           - type: button
-            entity: scene.romantic
-            name: Romantic
+            entity: scene.bright
+            name: Bright
             show_name: true
             show_icon: true
             tap_action:
               action: toggle
           - type: button
-            entity: scene.bright
-            name: Bright
+            entity: scene.romantic
+            name: Romantic
             show_name: true
             show_icon: true
             tap_action:
