@@ -246,6 +246,26 @@ views:
 
       - type: entities
         entities:
+          - entity: switch.livingroom_power_5_plug
+            name: status
+          - entity: light.livingroom_power_5_energy
+            name: energy
+          - entity: sensor.livingroom_power_5_power
+            name: power
+        title: Power_Amp
+
+      - type: entities
+        entities:
+          - entity: switch.livingroom_power_6_plug
+            name: status
+          - entity: light.livingroom_power_6_energy
+            name: energy
+          - entity: sensor.livingroom_power_6_power
+            name: power
+        title: Power_6
+
+      - type: entities
+        entities:
           - entity: switch.chuangmi_212a01_690a_switch_status
             name: status
           - entity: light.chuangmi_212a01_690a_switch_status

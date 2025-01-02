@@ -35,32 +35,12 @@ homeassistant:
   currency: RUB
   country: RU
 
-#xiaomi_miot:
-#  - platform: xiaomi_miio
-#    name: livingroom_power_1
-#    host: 192.168.2.221
-#    token: 76692257e2d37e4705e702508b223206
-#  - platform: xiaomi_miio
-#    name: livingroom_power_2
-#    host: 192.168.2.222
-#    token: 6e14e4ce773c0a36478b72284f2ee012
-#  - platform: xiaomi_miio
-#    name: livingroom_power_3
-#    host: 192.168.2.223
-#    token: 7578dc435db618c020d8de9f548a0c30
-#  - platform: xiaomi_miio
-#    name: livingroom_power_4
-#    host: 192.168.2.224
-#    token: 9fa6fe7d196728292081ca0320f937f5
-#  - platform: xiaomi_miio
-#    name: kithcen_cooker
-#    host: 192.168.2.224
-#    token: 203ce771bb9287860eb18be9424b9202
-#  - platform: xiaomi_viomi
-#    name: hallway_vacuum
-#    host: 192.168.2.225
-#    token: 5846525164554c577645373869363677
-
+#  gateway:
+#    192.168.2.217:
+#      name: hallway_gateway
+#      model: lumi.gateway.mgl03
+#      token: 6f794172766f6a4a45674f6c7032334c
+#      key: VdGkKtZlgeJJc9UN
 
 yeelight:
   devices:
@@ -82,11 +62,6 @@ yeelight:
     192.168.2.231:
       name: bedroom_strip
       model: strip1
-#    192.168.2.217:
-#      name: hallway_gateway
-#      model: lumi.gateway.mgl03
-#      token: 6f794172766f6a4a45674f6c7032334c
-#      key: VdGkKtZlgeJJc9UN
 
 xiaomi_gateway3:
   devices:
@@ -104,6 +79,10 @@ xiaomi_gateway3:
       entity_name: livingroom_curtain
     "0x00158d00045f6eb9":
       entity_name: livingroom_motion_1
+    "0x00158d00015dcc71":
+      entity_name: livingroom_power_5
+    "0x00158d00015f0deb":
+      entity_name: livingroom_power_6
     # kitchen
     "087cbe88ab96":
       entity_name: kitchen_kettle
