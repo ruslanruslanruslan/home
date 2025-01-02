@@ -148,3 +148,16 @@
       target:
         entity_id: switch.toilet_relay_1_channel_2
   mode: single
+
+
+- alias: button_hallway
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: sensor.hallway_button_action
+      to: 'on'
+  action:
+    - service: scene.turn_on
+      target:
+        entity_id: scene.away
+  mode: single
