@@ -162,6 +162,86 @@
       state: off
 
 
+- name: work
+  icon: 'mdi:account-hard-hat'
+  entities:
+    light.livingroom_ceiling_1_nightlight:
+      state: off
+    light.livingroom_ceiling_1:
+      state: off
+      brightness: 255
+      kelvin: 6000
+    light.livingroom_ceiling_1_ambilight:
+      state: off
+    light.livingroom_ceiling_2_nightlight:
+      state: off
+    light.livingroom_ceiling_2:
+      state: off
+      brightness: 255
+      kelvin: 6000
+    light.livingroom_ceiling_2_ambilight:
+      state: off
+    light.livingroom_strip:
+      state: off
+      brightness: 255
+      color_temp: 100
+    cover.livingroom_curtain_motor:
+      state: open
+    switch.chuangmi_212a01_f148_switch_status: #LCD
+      state: on
+    switch.chuangmi_212a01_d2fd_switch_status: #Table
+      state: on
+    switch.chuangmi_212a01_690a_switch_status: #MOTU
+      state: on
+    switch.livingroom_power_5_plug: #Amp
+      state: on
+    switch.livingroom_power_6_plug: #TV
+      state: on
+    light.bedroom_ceiling_nightlight:
+      state: off
+    light.bedroom_ceiling:
+      state: off
+      brightness: 100
+      kelvin: 6000
+    light.bedroom_ceiling_ambilight:
+      state: off
+      brightness: 255
+    light.bedroom_strip:
+      state: off
+      brightness: 255
+      color_temp: 100
+    cover.bedroom_curtain_motor:
+      state: open
+    light.hallway_lights_light:
+      state: off
+      brightness: 255
+      color_temp: 100
+    light.walkthrough_lights_light:
+      state: off
+      brightness: 255
+      color_temp: 100
+    light.bathroom_lights_light:
+      state: off
+      brightness: 255
+      color_temp: 100
+    switch.bathroom_relay_1_channel_1:
+      state: off
+    light.toilet_lights_light:
+      state: off
+      brightness: 255
+      color_temp: 100
+    light.kitchen_lights_light:
+      state: off
+      brightness: 255
+      color_temp: 100
+    light.kitchen_chandelier_light:
+      state: off
+      brightness: 255
+      color_temp: 100
+    switch.kitchen_relay_1_channel_1:
+      state: off
+
+
 - name: away
   icon: 'mdi:human-greeting-variant'
   entities:
