@@ -3,10 +3,10 @@
   trigger:
     - platform: state
       entity_id: binary_sensor.livingroom_motion_1_motion
-      to: on
+      to: "on"
     - platform: state
       entity_id: binary_sensor.livingroom_motion_1_motion
-      to: off
+      to: "off"
       for:
         minutes: 1
   action:
@@ -21,10 +21,10 @@
   trigger:
     - platform: state
       entity_id: binary_sensor.bedroom_motion_1_motion
-      to: on
+      to: "on"
     - platform: state
       entity_id: binary_sensor.bedroom_motion_1_motion
-      to: off
+      to: "off"
       for:
         minutes: 1
   action:
@@ -41,12 +41,12 @@
       entity_id:
         - binary_sensor.hallway_motion_1_motion
         - binary_sensor.hallway_motion_2_motion
-      to: on
+      to: "on"
     - platform: state
       entity_id:
         - binary_sensor.hallway_motion_1_motion
         - binary_sensor.hallway_motion_2_motion
-      to: off
+      to: "off"
       for:
         minutes: 3
   action:
@@ -61,10 +61,10 @@
   trigger:
     - platform: state
       entity_id: binary_sensor.walkthrough_motion_1_motion
-      to: on
+      to: "on"
     - platform: state
       entity_id: binary_sensor.walkthrough_motion_1_motion
-      to: off
+      to: "off"
       for:
         seconds: 1
   action:
@@ -79,10 +79,10 @@
   trigger:
     - platform: state
       entity_id: binary_sensor.kitchen_motion_1_motion
-      to: on
+      to: "on"
     - platform: state
       entity_id: binary_sensor.kitchen_motion_1_motion
-      to: off
+      to: "off"
       for:
         minutes: 1
   action:
@@ -96,12 +96,12 @@
   trigger:
     - platform: state
       entity_id: binary_sensor.kitchen_motion_2_motion
-      to: on
+      to: "on"
     - platform: state
       entity_id:
         - binary_sensor.kitchen_motion_1_motion
         - binary_sensor.kitchen_motion_2_motion
-      to: off
+      to: "off"
       for:
         minutes: 5
   action:
@@ -116,10 +116,10 @@
   trigger:
     - platform: state
       entity_id: binary_sensor.bathroom_motion_1_motion
-      to: on
+      to: "on"
     - platform: state
       entity_id: binary_sensor.bathroom_motion_1_motion
-      to: off
+      to: "off"
       for:
         minutes: 5
   action:
@@ -134,10 +134,10 @@
   trigger:
     - platform: state
       entity_id: binary_sensor.toilet_motion_1_motion
-      to: on
+      to: "on"
     - platform: state
       entity_id: binary_sensor.toilet_motion_1_motion
-      to: off
+      to: "off"
       for:
         minutes: 5
   action:
