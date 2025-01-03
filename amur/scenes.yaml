@@ -216,6 +216,8 @@
       state: off
       brightness: 255
       color_temp: 100
+    vacuum.viomi_v7_2f27_robot_cleaner:
+      state: docked
     light.walkthrough_lights_light:
       state: off
       brightness: 255
