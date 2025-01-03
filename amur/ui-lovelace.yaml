@@ -31,6 +31,13 @@ views:
             show_icon: true
             tap_action:
               action: toggle
+          - type: button
+            entity: scene.sleep
+            name: Sleep
+            show_name: true
+            show_icon: true
+            tap_action:
+              action: toggle
 
       - type: entities
         entities:
@@ -246,6 +253,20 @@ views:
 
       - type: entities
         entities:
+          - entity: switch.chuangmi_212a01_690a_switch_status
+            name: status
+          - entity: light.chuangmi_212a01_690a_switch_status
+            name: light
+          - entity: sensor.chuangmi_212a01_690a_electric_power
+            name: current
+          - entity: sensor.chuangmi_212a01_690a_power_cost_month
+            name: month
+          - entity: sensor.chuangmi_212a01_690a_temperature
+            name: power
+        title: Power_MOTU
+
+      - type: entities
+        entities:
           - entity: switch.livingroom_power_5_plug
             name: status
           - entity: sensor.livingroom_power_5_energy
@@ -263,20 +284,6 @@ views:
           - entity: sensor.livingroom_power_6_power
             name: power
         title: Power_TV
-
-      - type: entities
-        entities:
-          - entity: switch.chuangmi_212a01_690a_switch_status
-            name: status
-          - entity: light.chuangmi_212a01_690a_switch_status
-            name: light
-          - entity: sensor.chuangmi_212a01_690a_electric_power
-            name: current
-          - entity: sensor.chuangmi_212a01_690a_power_cost_month
-            name: month
-          - entity: sensor.chuangmi_212a01_690a_temperature
-            name: power
-        title: Power_MOTU
 
       - type: picture-entity
         entity: camera.livingroom_camera_mainstream

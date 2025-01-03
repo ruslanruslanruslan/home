@@ -23,6 +23,16 @@
       color_temp: 100
     cover.livingroom_curtain_motor:
       state: open
+    switch.chuangmi_212a01_f148_switch_status: #LCD
+      state: on
+    switch.chuangmi_212a01_d2fd_switch_status: #Table
+      state: on
+    switch.chuangmi_212a01_690a_switch_status: #MOTU
+      state: on
+    switch.livingroom_power_5_plug: #Amp
+      state: on
+    switch.livingroom_power_6_plug: #TV
+      state: on
     light.bedroom_ceiling_nightlight:
       state: off
     light.bedroom_ceiling:
@@ -95,6 +105,16 @@
       color_temp: 500
     cover.livingroom_curtain_motor:
       state: closed
+    switch.chuangmi_212a01_f148_switch_status: #LCD
+      state: on
+    switch.chuangmi_212a01_d2fd_switch_status: #Table
+      state: on
+    switch.chuangmi_212a01_690a_switch_status: #MOTU
+      state: on
+    switch.livingroom_power_5_plug: #Amp
+      state: on
+    switch.livingroom_power_6_plug: #TV
+      state: on
     light.bedroom_ceiling:
       state: off
     light.bedroom_ceiling_nightlight:
@@ -161,6 +181,16 @@
       state: off
     cover.livingroom_curtain_motor:
       state: open
+    switch.chuangmi_212a01_f148_switch_status: #LCD
+      state: off
+    switch.chuangmi_212a01_d2fd_switch_status: #Table
+      state: off
+    switch.chuangmi_212a01_690a_switch_status: #MOTU
+      state: off
+    switch.livingroom_power_5_plug: #Amp
+      state: off
+    switch.livingroom_power_6_plug: #TV
+      state: off
     light.bedroom_ceiling_nightlight:
       state: off
     light.bedroom_ceiling:
@@ -181,6 +211,65 @@
       state: off
     switch.bathroom_relay_1_channel_1:
       state: on
+    light.toilet_lights_light:
+      state: off
+    light.kitchen_lights_light:
+      state: off
+    light.kitchen_chandelier_light:
+      state: off
+    switch.kitchen_relay_1_channel_1:
+      state: off
+
+
+- name: sleep
+  icon: 'mdi:power-sleep'
+  entities:
+    light.livingroom_ceiling_1_nightlight:
+      state: off
+    light.livingroom_ceiling_1:
+      state: off
+    light.livingroom_ceiling_1_ambilight:
+      state: off
+    light.livingroom_ceiling_2_nightlight:
+      state: off
+    light.livingroom_ceiling_2:
+      state: off
+    light.livingroom_ceiling_2_ambilight:
+      state: off
+    light.livingroom_strip:
+      state: off
+    cover.livingroom_curtain_motor:
+      state: closed
+    switch.chuangmi_212a01_f148_switch_status: #LCD
+      state: off
+    switch.chuangmi_212a01_d2fd_switch_status: #Table
+      state: off
+    switch.chuangmi_212a01_690a_switch_status: #MOTU
+      state: off
+    switch.livingroom_power_5_plug: #Amp
+      state: off
+    switch.livingroom_power_6_plug: #TV
+      state: off
+    light.bedroom_ceiling_nightlight:
+      state: off
+    light.bedroom_ceiling:
+      state: off
+    light.bedroom_ceiling_ambilight:
+      state: off
+    light.bedroom_strip:
+      state: off
+    cover.bedroom_curtain_motor:
+      state: closed
+    light.hallway_lights_light:
+      state: off
+    vacuum.viomi_v7_2f27_robot_cleaner:
+      state: docked
+    light.walkthrough_lights_light:
+      state: off
+    light.bathroom_lights_light:
+      state: off
+    switch.bathroom_relay_1_channel_1:
+      state: off
     light.toilet_lights_light:
       state: off
     light.kitchen_lights_light:

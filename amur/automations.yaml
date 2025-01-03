@@ -195,6 +195,21 @@
   mode: single
 
 
+- alias: button_sleep
+  initial_state: on
+  trigger:
+    - platform: event
+      event_type: xiaomi_aqara.click
+      event_data:
+          entity_id: sensor.hallway_button_action
+          click_type: quadruple
+  action:
+    - service: scene.turn_on
+      target:
+        entity_id: scene.sleep
+  mode: single
+
+
 - alias: button_bell
   initial_state: on
   trigger:
