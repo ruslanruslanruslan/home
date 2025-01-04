@@ -1,27 +1,3 @@
-- alias: scene_input
-  trigger:
-    platform: state
-    entity_id: input_select.scene_amur
-    to: # null to triggers on all state changes
-  action:
-  - service: homeassistant.turn_on
-    data:
-      entity_id: >
-        {% if is_state('input_select.scene_amur','bright') %}
-          scene.bright
-        {% elif is_state('input_select.scene_amur','romantic') %}
-          script.romantic
-        {% elif is_state('input_select.scene_amur','work') %}
-          scene.work
-        {% elif is_state('input_select.scene_amur','away') %}
-          scene.away
-        {% elif is_state('input_select.scene_amur','sleep') %}
-          scene.sleep
-        {% else %}
-          scene.away
-        {% endif %}
-
-
 - alias: moving_livingroom
   initial_state: on
   trigger:
@@ -301,4 +277,113 @@
     - service: switch.turn_off
       target:
         entity_id: switch.6490c176b86e_alarm_trigger
+  mode: single
+
+
+- alias: scene_input
+  trigger:
+    platform: state
+    entity_id: input_select.scene_amur
+    to: # null to triggers on all state changes
+  action:
+  - service: homeassistant.turn_on
+    data:
+      entity_id: >
+        {% if is_state('input_select.scene_amur','bright') %}
+          scene.bright
+        {% elif is_state('input_select.scene_amur','romantic') %}
+          scene.romantic
+        {% elif is_state('input_select.scene_amur','work') %}
+          scene.work
+        {% elif is_state('input_select.scene_amur','away') %}
+          scene.away
+        {% elif is_state('input_select.scene_amur','sleep') %}
+          scene.sleep
+        {% else %}
+          scene.away
+        {% endif %}
+
+
+- alias: button_bright
+  initial_state: on
+  trigger:
+    - platform: event
+      event_type: xiaomi_aqara.click
+      event_data:
+          entity_id: sensor.hallway_button_action
+          click_type: single
+  action:
+    - service: input_select.select_option
+      target:
+        entity_id: input_select.scene_amur
+      data:
+        option: 'bright'
+  mode: single
+
+
+- alias: button_romantic
+  initial_state: on
+  trigger:
+    - platform: event
+      event_type: xiaomi_aqara.click
+      event_data:
+          entity_id: sensor.hallway_button_action
+          click_type: double
+  action:
+    - service: input_select.select_option
+      target:
+        entity_id: input_select.scene_amur
+      data:
+        option: 'romantic'
+  mode: single
+
+
+- alias: button_work
+  initial_state: on
+  trigger:
+    - platform: event
+      event_type: xiaomi_aqara.click
+      event_data:
+          entity_id: sensor.hallway_button_action
+          click_type: triple
+  action:
+    - service: input_select.select_option
+      target:
+        entity_id: input_select.scene_amur
+      data:
+        option: 'work'
+  mode: single
+
+
+- alias: button_away
+  initial_state: on
+  trigger:
+    - platform: event
+      event_type: xiaomi_aqara.click
+      event_data:
+          entity_id: sensor.hallway_button_action
+          click_type: quadruple
+  action:
+    - service: input_select.select_option
+      target:
+        entity_id: input_select.scene_amur
+      data:
+        option: 'away'
+  mode: single
+
+
+- alias: button_sleep
+  initial_state: on
+  trigger:
+    - platform: event
+      event_type: xiaomi_aqara.click
+      event_data:
+          entity_id: sensor.hallway_button_action
+          click_type: hold
+  action:
+    - service: input_select.select_option
+      target:
+        entity_id: input_select.scene_amur
+      data:
+        option: 'sleep'
   mode: single
