@@ -244,18 +244,6 @@
     - service: scene.turn_on
       target:
         entity_id: scene.bright
-    - service: scene.turn_off
-      target:
-        entity_id: scene.romantic
-    - service: scene.turn_off
-      target:
-        entity_id: scene.work
-    - service: scene.turn_off
-      target:
-        entity_id: scene.away
-    - service: scene.turn_off
-      target:
-        entity_id: scene.sleep
   mode: single
 
 
@@ -268,21 +256,9 @@
           entity_id: sensor.hallway_button_action
           click_type: double
   action:
-    - service: scene.turn_off
-      target:
-        entity_id: scene.bright
     - service: scene.turn_on
       target:
         entity_id: scene.romantic
-    - service: scene.turn_off
-      target:
-        entity_id: scene.work
-    - service: scene.turn_off
-      target:
-        entity_id: scene.away
-    - service: scene.turn_off
-      target:
-        entity_id: scene.sleep
   mode: single
 
 
@@ -297,19 +273,8 @@
   action:
     - service: scene.turn_off
       target:
-        entity_id: scene.bright
-    - service: scene.turn_off
-      target:
         entity_id: scene.romantic
     - service: scene.turn_on
-      target:
-        entity_id: scene.work
-    - service: scene.turn_off
-      target:
-        entity_id: scene.away
-    - service: scene.turn_off
-      target:
-        entity_id: scene.sleep
   mode: single
 
 
@@ -322,21 +287,9 @@
           entity_id: sensor.hallway_button_action
           click_type: quadruple
   action:
-    - service: scene.turn_off
-      target:
-        entity_id: scene.bright
-    - service: scene.turn_off
-      target:
-        entity_id: scene.romantic
-    - service: scene.turn_off
-      target:
-        entity_id: scene.work
     - service: scene.turn_on
       target:
         entity_id: scene.away
-    - service: scene.turn_off
-      target:
-        entity_id: scene.sleep
   mode: single
 
 
@@ -349,18 +302,6 @@
           entity_id: sensor.hallway_button_action
           click_type: hold
   action:
-    - service: scene.turn_off
-      target:
-        entity_id: scene.bright
-    - service: scene.turn_off
-      target:
-        entity_id: scene.romantic
-    - service: scene.turn_off
-      target:
-        entity_id: scene.work
-    - service: scene.turn_off
-      target:
-        entity_id: scene.away
     - service: scene.turn_on
       target:
         entity_id: scene.sleep
