@@ -135,9 +135,9 @@
         entity_id: input_select.scene_amur
         state: "romantic"
   action:
-    - service: "light.turn_{{ trigger.to_state.state }}"
-      target:
-        entity_id: light.kitchen_relay_1_channel_1
+    - service: "switch.turn_{{ trigger.to_state.state }}"
+      data:
+        entity_id: switch.kitchen_relay_1_channel_1
   mode: single
 
 - alias: moving_kitchen_2
@@ -289,7 +289,7 @@
     to: # null to triggers on all state changes
   action:
     sequence:
-      - service: homeassistant.turn_on
+      - service: scene.turn_on
         data:
           entity_id: >
             {% if is_state('input_select.scene_amur','bright') %}
@@ -306,12 +306,12 @@
               scene.away
             {% endif %}
       - delay:
-          seconds: 10
+          minutes: 30
       - service: switch.turn_off
-        target:
+        data:
           entity_id: switch.bathroom_relay_1_channel_1
       - service: switch.turn_off
-        target:
+        data:
           entity_id: switch.bathroom_relay_1_channel_2
 
 
