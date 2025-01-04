@@ -270,17 +270,15 @@
           entity_id: sensor.elevators_button_action
           click_type: quadruple
   action:
-    - service: switch.turn_on
-      target:
-        entity_id: switch.6490c176b86e_alarm_trigger
-    - delay:
-        hours: 0
-        minutes: 0
-        seconds: 2
-        milliseconds: 0
-    - service: switch.turn_off
-      target:
-        entity_id: switch.6490c176b86e_alarm_trigger
+    sequence:
+      - service: switch.turn_on
+        target:
+          entity_id: switch.6490c176b86e_alarm_trigger
+      - delay:
+          seconds: 2
+      - service: switch.turn_off
+        target:
+          entity_id: switch.6490c176b86e_alarm_trigger
   mode: single
 
 
@@ -290,22 +288,31 @@
     entity_id: input_select.scene_amur
     to: # null to triggers on all state changes
   action:
-  - service: homeassistant.turn_on
-    data:
-      entity_id: >
-        {% if is_state('input_select.scene_amur','bright') %}
-          scene.bright
-        {% elif is_state('input_select.scene_amur','romantic') %}
-          scene.romantic
-        {% elif is_state('input_select.scene_amur','work') %}
-          scene.work
-        {% elif is_state('input_select.scene_amur','away') %}
-          scene.away
-        {% elif is_state('input_select.scene_amur','sleep') %}
-          scene.sleep
-        {% else %}
-          scene.away
-        {% endif %}
+    sequence:
+      - service: homeassistant.turn_on
+        data:
+          entity_id: >
+            {% if is_state('input_select.scene_amur','bright') %}
+              scene.bright
+            {% elif is_state('input_select.scene_amur','romantic') %}
+              scene.romantic
+            {% elif is_state('input_select.scene_amur','work') %}
+              scene.work
+            {% elif is_state('input_select.scene_amur','away') %}
+              scene.away
+            {% elif is_state('input_select.scene_amur','sleep') %}
+              scene.sleep
+            {% else %}
+              scene.away
+            {% endif %}
+      - delay:
+          seconds: 10
+      - service: switch.turn_off
+        target:
+          entity_id: switch.bathroom_relay_1_channel_1
+      - service: switch.turn_off
+        target:
+          entity_id: switch.bathroom_relay_1_channel_2
 
 
 - alias: button_bright
