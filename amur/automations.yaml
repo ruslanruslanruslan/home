@@ -9,14 +9,6 @@
       to: "off"
       for:
         minutes: 1
-  conditions:
-    - not:
-      - condition: state
-        entity_id: scene.bright
-        state: on
-      - condition: state
-        entity_id: scene.romantic
-        state: on
   action:
     - service: "light.turn_{{ trigger.to_state.state }}"
       target:
@@ -35,17 +27,6 @@
       to: "off"
       for:
         minutes: 1
-  conditions:
-    - not:
-      - condition: state
-        entity_id: scene.bright
-        state: on
-      - condition: state
-        entity_id: scene.romantic
-        state: on
-      - condition: state
-        entity_id: scene.sleep
-        state: on
   action:
     - service: "light.turn_{{ trigger.to_state.state }}"
       target:
@@ -68,14 +49,6 @@
       to: "off"
       for:
         minutes: 3
-  conditions:
-    - not:
-      - condition: state
-        entity_id: scene.bright
-        state: on
-      - condition: state
-        entity_id: scene.romantic
-        state: on
   action:
     - service: "light.turn_{{ trigger.to_state.state }}"
       target:
@@ -94,14 +67,6 @@
       to: "off"
       for:
         seconds: 1
-  conditions:
-    - not:
-      - condition: state
-        entity_id: scene.bright
-        state: on
-      - condition: state
-        entity_id: scene.romantic
-        state: on
   action:
     - service: "light.turn_{{ trigger.to_state.state }}"
       target:
@@ -120,14 +85,6 @@
       to: "off"
       for:
         minutes: 1
-  conditions:
-    - not:
-      - condition: state
-        entity_id: scene.bright
-        state: on
-      - condition: state
-        entity_id: scene.romantic
-        state: on
   action:
     - service: "light.turn_{{ trigger.to_state.state }}"
       target:
@@ -147,14 +104,6 @@
       to: "off"
       for:
         minutes: 5
-  conditions:
-    - not:
-      - condition: state
-        entity_id: scene.bright
-        state: on
-      - condition: state
-        entity_id: scene.romantic
-        state: on
   action:
     - service: "light.turn_{{ trigger.to_state.state }}"
       target:
@@ -173,14 +122,6 @@
       to: "off"
       for:
         minutes: 5
-  conditions:
-    - not:
-      - condition: state
-        entity_id: scene.bright
-        state: on
-      - condition: state
-        entity_id: scene.romantic
-        state: on
   action:
     - service: "light.turn_{{ trigger.to_state.state }}"
       target:
@@ -199,14 +140,6 @@
       to: "off"
       for:
         minutes: 5
-  conditions:
-    - not:
-      - condition: state
-        entity_id: scene.bright
-        state: on
-      - condition: state
-        entity_id: scene.romantic
-        state: on
   action:
     - service: "light.turn_{{ trigger.to_state.state }}"
       target:

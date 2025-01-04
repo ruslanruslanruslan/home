@@ -48,6 +48,12 @@ views:
 
       - type: entities
         entities:
+          - entity: input_select.scene_amur
+            name: scene
+        title: Light
+
+      - type: entities
+        entities:
           - entity: light.bedroom_ceiling
             name: bedroom_ceiling
           - entity: light.bedroom_ceiling_nightlight

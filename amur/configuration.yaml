@@ -35,6 +35,17 @@ homeassistant:
   currency: RUB
   country: RU
 
+input_select:
+  scene_amur:
+    name: Scene Amur
+    options:
+      - 'bright'
+      - 'romantic'
+      - 'work'
+      - 'away'
+      - 'sleep'
+    icon: mdi:format-list-bulleted
+
 #  gateway:
 #    192.168.2.217:
 #      name: hallway_gateway
