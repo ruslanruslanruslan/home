@@ -13,11 +13,11 @@
     - not:
       - condition: state
         entity_id: input_select.scene_amur
-        state: bright
+        state: "bright"
     - not:
       - condition: state
         entity_id: input_select.scene_amur
-        state: romantic
+        state: "romantic"
   action:
     - service: "light.turn_{{ trigger.to_state.state }}"
       target:
@@ -40,11 +40,15 @@
     - not:
       - condition: state
         entity_id: input_select.scene_amur
-        state: bright
+        state: "bright"
     - not:
       - condition: state
         entity_id: input_select.scene_amur
-        state: romantic
+        state: "romantic"
+    - not:
+      - condition: state
+        entity_id: input_select.scene_amur
+        state: "sleep"
   action:
     - service: "light.turn_{{ trigger.to_state.state }}"
       target:
@@ -71,11 +75,11 @@
     - not:
       - condition: state
         entity_id: input_select.scene_amur
-        state: bright
+        state: "bright"
     - not:
       - condition: state
         entity_id: input_select.scene_amur
-        state: romantic
+        state: "romantic"
   action:
     - service: "light.turn_{{ trigger.to_state.state }}"
       target:
@@ -98,11 +102,11 @@
     - not:
       - condition: state
         entity_id: input_select.scene_amur
-        state: bright
+        state: "bright"
     - not:
       - condition: state
         entity_id: input_select.scene_amur
-        state: romantic
+        state: "romantic"
   action:
     - service: "light.turn_{{ trigger.to_state.state }}"
       target:
@@ -125,11 +129,11 @@
     - not:
       - condition: state
         entity_id: input_select.scene_amur
-        state: bright
+        state: "bright"
     - not:
       - condition: state
         entity_id: input_select.scene_amur
-        state: romantic
+        state: "romantic"
   action:
     - service: "light.turn_{{ trigger.to_state.state }}"
       target:
@@ -171,11 +175,11 @@
     - not:
       - condition: state
         entity_id: input_select.scene_amur
-        state: bright
+        state: "bright"
     - not:
       - condition: state
         entity_id: input_select.scene_amur
-        state: romantic
+        state: "romantic"
   action:
     - service: "light.turn_{{ trigger.to_state.state }}"
       target:
@@ -198,11 +202,11 @@
     - not:
       - condition: state
         entity_id: input_select.scene_amur
-        state: bright
+        state: "bright"
     - not:
       - condition: state
         entity_id: input_select.scene_amur
-        state: romantic
+        state: "romantic"
   action:
     - service: "light.turn_{{ trigger.to_state.state }}"
       target:
@@ -225,11 +229,11 @@
     - not:
       - condition: state
         entity_id: input_select.scene_amur
-        state: bright
+        state: "bright"
     - not:
       - condition: state
         entity_id: input_select.scene_amur
-        state: romantic
+        state: "romantic"
   action:
     - service: "switch.turn_{{ trigger.to_state.state }}"
       target:

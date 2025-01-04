@@ -1,0 +1,37 @@
+title: Home
+views:
+
+  - title: Balcony
+    cards:
+
+      - type: entities
+        entities:
+          - entity: sensor.balcony_temperature
+            name: temperature
+          - entity: sensor.balcony_temperature_humidity
+            name: humidity
+          - entity: sensor.balcony_temperature_pressure
+            name: pressure
+          - entity: sensor.balcony_temperature_battery
+            name: battery
+        title: Temperature
+
+      - type: entities
+        entities:
+          - entity: switch.zimi_v2_8df3_switch_status
+            name: status
+          - entity: light.zimi_v2_8df3_store_powercost_today
+            name: today
+          - entity: sensor.zimi_v2_8df3_store_powercost_month
+            name: month
+          - entity: sensor.zimi_v2_8df3_electric_power
+            name: power
+          - entity: sensor.zimi_v2_8df3_surge_power
+            name: surge
+        title: Power_Server
+
+      - type: picture-entity
+        entity: camera.balcony_camera_mainstream
+        name: video
+        show_name: false
+        show_state: false

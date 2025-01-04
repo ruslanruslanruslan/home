@@ -1,0 +1,139 @@
+title: Home
+views:
+
+  - title: Livingroom
+    cards:
+        
+      - type: entities
+        entities:
+          - entity: light.livingroom_ceiling_1
+            name: ceiling_1
+          - entity: light.livingroom_ceiling_1_nightlight
+            name: nightlight_1
+          - entity: light.livingroom_ceiling_1_ambilight
+            name: ambilight_1
+          - entity: light.livingroom_ceiling_2
+            name: ceiling_2
+          - entity: light.livingroom_ceiling_2_nightlight
+            name: nightlight_2
+          - entity: light.livingroom_ceiling_2_ambilight
+            name: ambilight_2
+          - entity: light.livingroom_strip
+            name: strip
+        title: Light
+
+      - type: entities
+        entities:
+          - entity: cover.livingroom_curtain_motor
+            name: motor
+        title: Curtain
+
+      - type: entities
+        entities:
+          - entity: binary_sensor.livingroom_motion_1_motion
+            name: motion
+          - entity: sensor.livingroom_motion_1_battery
+            name: battery
+          - entity: sensor.livingroom_motion_1_illuminance
+            name: illuminance
+        title: Motion
+
+      - type: entities
+        entities:
+          - entity: sensor.livingroom_air_temperature
+            name: temperature
+          - entity: sensor.livingroom_air_humidity
+            name: humidity
+          - entity: sensor.livingroom_air_co2
+            name: co2
+          - entity: sensor.livingroom_air_pm10
+            name: pm10
+          - entity: sensor.livingroom_air_pm25
+            name: pm25
+          - entity: sensor.livingroom_air_tvoc
+            name: tvoc
+          - entity: sensor.livingroom_air_battery
+            name: battery
+        title: Air
+
+      - type: entities
+        entities:
+          - entity: switch.chuangmi_212a01_5bd0_switch_status
+            name: status
+          - entity: light.chuangmi_212a01_5bd0_switch_status
+            name: light
+          - entity: sensor.chuangmi_212a01_5bd0_electric_power
+            name: current
+          - entity: sensor.chuangmi_212a01_5bd0_power_cost_month
+            name: month
+          - entity: sensor.chuangmi_212a01_5bd0_temperature
+            name: power
+        title: Power_eGPU
+
+      - type: entities
+        entities:
+          - entity: switch.chuangmi_212a01_f148_switch_status
+            name: status
+          - entity: light.chuangmi_212a01_f148_switch_status
+            name: light
+          - entity: sensor.chuangmi_212a01_f148_electric_power
+            name: current
+          - entity: sensor.chuangmi_212a01_f148_power_cost_month
+            name: month
+          - entity: sensor.chuangmi_212a01_f148_temperature
+            name: power
+        title: Power_LCD
+
+      - type: entities
+        entities:
+          - entity: switch.chuangmi_212a01_d2fd_switch_status
+            name: status
+          - entity: light.chuangmi_212a01_d2fd_switch_status
+            name: light
+          - entity: sensor.chuangmi_212a01_d2fd_electric_power
+            name: current
+          - entity: sensor.chuangmi_212a01_d2fd_power_cost_month
+            name: month
+          - entity: sensor.chuangmi_212a01_d2fd_temperature
+            name: power
+        title: Power_Table
+
+      - type: entities
+        entities:
+          - entity: switch.chuangmi_212a01_690a_switch_status
+            name: status
+          - entity: light.chuangmi_212a01_690a_switch_status
+            name: light
+          - entity: sensor.chuangmi_212a01_690a_electric_power
+            name: current
+          - entity: sensor.chuangmi_212a01_690a_power_cost_month
+            name: month
+          - entity: sensor.chuangmi_212a01_690a_temperature
+            name: power
+        title: Power_MOTU
+
+      - type: entities
+        entities:
+          - entity: switch.livingroom_power_5_plug
+            name: status
+          - entity: sensor.livingroom_power_5_energy
+            name: energy
+          - entity: sensor.livingroom_power_5_power
+            name: power
+        title: Power_Amp
+
+      - type: entities
+        entities:
+          - entity: switch.livingroom_power_6_plug
+            name: status
+          - entity: sensor.livingroom_power_6_energy
+            name: energy
+          - entity: sensor.livingroom_power_6_power
+            name: power
+        title: Power_TV
+
+      - type: picture-entity
+        entity: camera.livingroom_camera_mainstream
+        name: video
+        show_name: false
+        show_state: false

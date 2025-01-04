@@ -13,18 +13,48 @@ logger:
 lovelace:
   mode: yaml
   dashboards:
-    lovelace-hidden:
+    lovelace-bedroom:
       mode: yaml
-      title: hidden
-      show_in_sidebar: false
-      require_admin: true
-      filename: ui-hidden.yaml
-    lovelace-main:
-      mode: yaml
-      title: main
+      title: bedroom
       show_in_sidebar: true
       require_admin: true
-      filename: ui-main.yaml
+      filename: ui-bedroom.yaml
+    lovelace-livingroom:
+      mode: yaml
+      title: livingroom
+      show_in_sidebar: true
+      require_admin: true
+      filename: ui-livingroom.yaml
+    lovelace-kitchen:
+      mode: yaml
+      title: kitchen
+      show_in_sidebar: true
+      require_admin: true
+      filename: ui-kitchen.yaml
+    lovelace-hallway:
+      mode: yaml
+      title: hallway
+      show_in_sidebar: true
+      require_admin: true
+      filename: ui-hallway.yaml
+    lovelace-bathroom:
+      mode: yaml
+      title: bathroom
+      show_in_sidebar: true
+      require_admin: true
+      filename: ui-bathroom.yaml
+    lovelace-toilet:
+      mode: yaml
+      title: toilet
+      show_in_sidebar: true
+      require_admin: true
+      filename: ui-toilet.yaml
+    lovelace-balcony:
+      mode: yaml
+      title: balcony
+      show_in_sidebar: true
+      require_admin: true
+      filename: ui-balcony.yaml
 
 homeassistant:
   name: Amur

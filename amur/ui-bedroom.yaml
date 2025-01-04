@@ -1,0 +1,52 @@
+title: Home
+views:
+
+  - title: Bedroom
+    cards:
+    
+      - type: entities
+        entities:
+          - entity: light.bedroom_ceiling
+            name: ceiling
+          - entity: light.bedroom_ceiling_nightlight
+            name: nightlight
+          - entity: light.bedroom_ceiling_ambilight
+            name: ambilight
+          - entity: binary_sensor.bedroom_ceiling_nightlight
+            name: nightlight
+          - entity: light.bedroom_strip
+            name: strip
+        title: Light
+
+      - type: entities
+        entities:
+          - entity: cover.bedroom_curtain_motor
+            name: motor
+        title: Curtain
+
+      - type: entities
+        entities:
+          - entity: binary_sensor.bedroom_motion_1_motion
+            name: motion
+          - entity: sensor.bedroom_motion_1_battery
+            name: battery
+          - entity: sensor.bedroom_motion_1_illuminance
+            name: illuminance
+        title: Motion
+
+      - type: entities
+        entities:
+          - entity: sensor.bedroom_temperature
+            name: temperature
+          - entity: sensor.bedroom_temperature_humidity
+            name: humidity
+          - entity: sensor.bedroom_temperature_pressure
+            name: pressure
+          - entity: sensor.bedroom_temperature_battery
+            name: battery
+        title: Temperature
+
+      - type: picture-entity
+        entity: camera.bedroom_camera_mainstream
+        show_name: false
+        show_state: false
