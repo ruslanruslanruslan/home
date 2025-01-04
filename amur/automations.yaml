@@ -288,23 +288,22 @@
     entity_id: input_select.scene_amur
     to: # null to triggers on all state changes
   action:
-    sequence:
-      - service: scene.turn_on
-        data:
-          entity_id: >
-            {% if is_state('input_select.scene_amur','bright') %}
-              scene.bright
-            {% elif is_state('input_select.scene_amur','romantic') %}
-              scene.romantic
-            {% elif is_state('input_select.scene_amur','work') %}
-              scene.work
-            {% elif is_state('input_select.scene_amur','away') %}
-              scene.away
-            {% elif is_state('input_select.scene_amur','sleep') %}
-              scene.sleep
-            {% else %}
-              scene.away
-            {% endif %}
+    - service: scene.turn_on
+      data:
+        entity_id: >
+          {% if is_state('input_select.scene_amur','bright') %}
+            scene.bright
+          {% elif is_state('input_select.scene_amur','romantic') %}
+            scene.romantic
+          {% elif is_state('input_select.scene_amur','work') %}
+            scene.work
+          {% elif is_state('input_select.scene_amur','away') %}
+            scene.away
+          {% elif is_state('input_select.scene_amur','sleep') %}
+            scene.sleep
+          {% else %}
+            scene.away
+          {% endif %}
 #      problem: it blocks next changes for delay time
 #      - delay:
 #          minutes: 30
@@ -314,6 +313,23 @@
 #      - service: switch.turn_off
 #        data:
 #          entity_id: switch.bathroom_relay_1_channel_2
+
+
+- alias: scene_input_away
+  trigger:
+    platform: state
+    entity_id: input_select.scene_amur
+    to: "away"
+  action:
+    sequence:
+      - delay:
+          seconds: 20
+      - service: switch.turn_off
+        data:
+          entity_id: switch.bathroom_relay_1_channel_1
+      - service: switch.turn_off
+        data:
+          entity_id: switch.bathroom_relay_1_channel_2
 
 
 - alias: button_bright
