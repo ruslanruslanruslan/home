@@ -316,18 +316,26 @@
   entities:
     light.livingroom_ceiling_1_nightlight:
       state: off
+      brightness: 60
     light.livingroom_ceiling_1:
       state: off
     light.livingroom_ceiling_1_ambilight:
       state: off
+      rgb_color: [200, 50, 250]
+      brightness: 60
     light.livingroom_ceiling_2_nightlight:
       state: off
+      brightness: 60
     light.livingroom_ceiling_2:
       state: off
     light.livingroom_ceiling_2_ambilight:
       state: off
+      rgb_color: [200, 50, 250]
+      brightness: 60
     light.livingroom_strip:
       state: off
+      brightness: 1
+      color_temp: 500
     cover.livingroom_curtain_motor:
       state: closed
     switch.chuangmi_212a01_f148_switch_status: #LCD
@@ -342,31 +350,48 @@
       state: off
     light.bedroom_ceiling_nightlight:
       state: off
+      brightness: 60
     light.bedroom_ceiling:
       state: off
     light.bedroom_ceiling_ambilight:
       state: off
+      rgb_color: [200, 50, 250]
+      brightness: 60
     light.bedroom_strip:
       state: off
+      brightness: 1
+      color_temp: 500
     cover.bedroom_curtain_motor:
       state: closed
     light.hallway_lights_light:
       state: off
+      brightness: 1
+      color_temp: 500
     vacuum.viomi_v7_2f27_robot_cleaner:
       state: docked
     light.walkthrough_lights_light:
       state: off
+      brightness: 1
+      color_temp: 500
     light.bathroom_lights_light:
       state: off
+      brightness: 1
+      color_temp: 500
     switch.bathroom_relay_1_channel_1:
       state: off
     switch.bathroom_relay_2_channel_1:
       state: off
     light.toilet_lights_light:
       state: off
+      brightness: 1
+      color_temp: 500
     light.kitchen_lights_light:
       state: off
+      brightness: 1
+      color_temp: 500
     light.kitchen_chandelier_light:
       state: off
+      brightness: 1
+      color_temp: 500
     switch.kitchen_relay_1_channel_1:
       state: off

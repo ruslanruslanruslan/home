@@ -43,6 +43,9 @@
         - condition: state
           entity_id: scene.romantic
           state: on
+        - condition: state
+          entity_id: scene.sleep
+          state: on
   action:
     - service: "light.turn_{{ trigger.to_state.state }}"
       target:
