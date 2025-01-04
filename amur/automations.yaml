@@ -305,14 +305,15 @@
             {% else %}
               scene.away
             {% endif %}
-      - delay:
-          minutes: 30
-      - service: switch.turn_off
-        data:
-          entity_id: switch.bathroom_relay_1_channel_1
-      - service: switch.turn_off
-        data:
-          entity_id: switch.bathroom_relay_1_channel_2
+#      problem: it blocks next changes for delay time
+#      - delay:
+#          minutes: 30
+#      - service: switch.turn_off
+#        data:
+#          entity_id: switch.bathroom_relay_1_channel_1
+#      - service: switch.turn_off
+#        data:
+#          entity_id: switch.bathroom_relay_1_channel_2
 
 
 - alias: button_bright
