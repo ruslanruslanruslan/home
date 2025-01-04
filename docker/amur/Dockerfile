@@ -2,7 +2,7 @@ FROM homeassistant/home-assistant:latest
 
 WORKDIR /config
 
-RUN apk update
+RUN apk update --no-cache --ignore alpine-baselayout
 RUN apk upgrade
 RUN apk add ffmpeg
 
