@@ -62,6 +62,8 @@
       color_temp: 100
     switch.bathroom_relay_1_channel_1:
       state: off
+    switch.bathroom_relay_2_channel_1:
+      state: on
     light.toilet_lights_light:
       state: on
       brightness: 255
@@ -146,6 +148,8 @@
       color_temp: 500
     switch.bathroom_relay_1_channel_1:
       state: off
+    switch.bathroom_relay_2_channel_1:
+      state: on
     light.toilet_lights_light:
       state: on
       brightness: 1
@@ -228,6 +232,8 @@
       color_temp: 100
     switch.bathroom_relay_1_channel_1:
       state: off
+    switch.bathroom_relay_2_channel_1:
+      state: off
     light.toilet_lights_light:
       state: off
       brightness: 255
@@ -293,6 +299,8 @@
       state: off
     switch.bathroom_relay_1_channel_1:
       state: on
+    switch.bathroom_relay_2_channel_1:
+      state: off
     light.toilet_lights_light:
       state: off
     light.kitchen_lights_light:
@@ -351,6 +359,8 @@
     light.bathroom_lights_light:
       state: off
     switch.bathroom_relay_1_channel_1:
+      state: off
+    switch.bathroom_relay_2_channel_1:
       state: off
     light.toilet_lights_light:
       state: off
