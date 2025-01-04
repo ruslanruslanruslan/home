@@ -323,7 +323,7 @@
   action:
     sequence:
       - delay:
-          seconds: 20
+          minutes: 30
       - service: switch.turn_off
         data:
           entity_id: switch.bathroom_relay_1_channel_1
