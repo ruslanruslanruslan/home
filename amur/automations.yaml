@@ -271,9 +271,9 @@
           entity_id: sensor.hallway_button_action
           click_type: triple
   action:
-    - service: scene.turn_off
+    - service: scene.turn_on
       target:
-        entity_id: scene.romantic
+        entity_id: scene.work
     - service: scene.turn_on
   mode: single
 
