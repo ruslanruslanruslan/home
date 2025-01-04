@@ -1,5 +1,6 @@
 title: Home
 views:
+
   - title: Main
     cards:
       - type: grid
@@ -89,6 +90,7 @@ views:
         show_state: false
 
   - title: Lights
+    cards:
       - type: entities
         entities:
           - entity: light.bedroom_ceiling
