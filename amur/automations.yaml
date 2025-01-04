@@ -1,3 +1,27 @@
+- alias: scene_input
+  trigger:
+    platform: state
+    entity_id: input_select.scene_amur
+    to: # null to triggers on all state changes
+  action:
+  - service: homeassistant.turn_on
+    data:
+      entity_id: >
+        {% if is_state('input_select.scene_amur','bright') %}
+          scene.bright
+        {% elif is_state('input_select.scene_amur','romantic') %}
+          script.romantic
+        {% elif is_state('input_select.scene_amur','work') %}
+          scene.work
+        {% elif is_state('input_select.scene_amur','away') %}
+          scene.away
+        {% elif is_state('input_select.scene_amur','sleep') %}
+          scene.sleep
+        {% else %}
+          scene.away
+        {% endif %}
+
+
 - alias: moving_livingroom
   initial_state: on
   trigger:
@@ -9,6 +33,15 @@
       to: "off"
       for:
         minutes: 1
+  conditions:
+    - not:
+      - condition: state
+        entity_id: input_select.scene_amur
+        state: bright
+    - not:
+      - condition: state
+        entity_id: input_select.scene_amur
+        state: romantic
   action:
     - service: "light.turn_{{ trigger.to_state.state }}"
       target:
@@ -27,6 +60,15 @@
       to: "off"
       for:
         minutes: 1
+  conditions:
+    - not:
+      - condition: state
+        entity_id: input_select.scene_amur
+        state: bright
+    - not:
+      - condition: state
+        entity_id: input_select.scene_amur
+        state: romantic
   action:
     - service: "light.turn_{{ trigger.to_state.state }}"
       target:
@@ -49,6 +91,15 @@
       to: "off"
       for:
         minutes: 3
+  conditions:
+    - not:
+      - condition: state
+        entity_id: input_select.scene_amur
+        state: bright
+    - not:
+      - condition: state
+        entity_id: input_select.scene_amur
+        state: romantic
   action:
     - service: "light.turn_{{ trigger.to_state.state }}"
       target:
@@ -67,6 +118,15 @@
       to: "off"
       for:
         seconds: 1
+  conditions:
+    - not:
+      - condition: state
+        entity_id: input_select.scene_amur
+        state: bright
+    - not:
+      - condition: state
+        entity_id: input_select.scene_amur
+        state: romantic
   action:
     - service: "light.turn_{{ trigger.to_state.state }}"
       target:
@@ -85,6 +145,15 @@
       to: "off"
       for:
         minutes: 1
+  conditions:
+    - not:
+      - condition: state
+        entity_id: input_select.scene_amur
+        state: bright
+    - not:
+      - condition: state
+        entity_id: input_select.scene_amur
+        state: romantic
   action:
     - service: "light.turn_{{ trigger.to_state.state }}"
       target:
@@ -122,6 +191,15 @@
       to: "off"
       for:
         minutes: 5
+  conditions:
+    - not:
+      - condition: state
+        entity_id: input_select.scene_amur
+        state: bright
+    - not:
+      - condition: state
+        entity_id: input_select.scene_amur
+        state: romantic
   action:
     - service: "light.turn_{{ trigger.to_state.state }}"
       target:
@@ -140,6 +218,15 @@
       to: "off"
       for:
         minutes: 5
+  conditions:
+    - not:
+      - condition: state
+        entity_id: input_select.scene_amur
+        state: bright
+    - not:
+      - condition: state
+        entity_id: input_select.scene_amur
+        state: romantic
   action:
     - service: "light.turn_{{ trigger.to_state.state }}"
       target:
@@ -158,86 +245,19 @@
       to: "off"
       for:
         minutes: 5
+  conditions:
+    - not:
+      - condition: state
+        entity_id: input_select.scene_amur
+        state: bright
+    - not:
+      - condition: state
+        entity_id: input_select.scene_amur
+        state: romantic
   action:
     - service: "switch.turn_{{ trigger.to_state.state }}"
       target:
         entity_id: switch.toilet_relay_1_channel_1
-  mode: single
-
-
-- alias: button_bright
-  initial_state: on
-  trigger:
-    - platform: event
-      event_type: xiaomi_aqara.click
-      event_data:
-          entity_id: sensor.hallway_button_action
-          click_type: single
-  action:
-    - service: scene.turn_on
-      target:
-        entity_id: scene.bright
-  mode: single
-
-
-- alias: button_romantic
-  initial_state: on
-  trigger:
-    - platform: event
-      event_type: xiaomi_aqara.click
-      event_data:
-          entity_id: sensor.hallway_button_action
-          click_type: double
-  action:
-    - service: scene.turn_on
-      target:
-        entity_id: scene.romantic
-  mode: single
-
-
-- alias: button_work
-  initial_state: on
-  trigger:
-    - platform: event
-      event_type: xiaomi_aqara.click
-      event_data:
-          entity_id: sensor.hallway_button_action
-          click_type: triple
-  action:
-    - service: scene.turn_on
-      target:
-        entity_id: scene.work
-    - service: scene.turn_on
-  mode: single
-
-
-- alias: button_away
-  initial_state: on
-  trigger:
-    - platform: event
-      event_type: xiaomi_aqara.click
-      event_data:
-          entity_id: sensor.hallway_button_action
-          click_type: quadruple
-  action:
-    - service: scene.turn_on
-      target:
-        entity_id: scene.away
-  mode: single
-
-
-- alias: button_sleep
-  initial_state: on
-  trigger:
-    - platform: event
-      event_type: xiaomi_aqara.click
-      event_data:
-          entity_id: sensor.hallway_button_action
-          click_type: hold
-  action:
-    - service: scene.turn_on
-      target:
-        entity_id: scene.sleep
   mode: single
 
 

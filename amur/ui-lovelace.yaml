@@ -16,41 +16,68 @@ views:
             show_name: true
             show_icon: true
             tap_action:
-              action: toggle
+              action: call-service
+              service: input_select.select_option
+              target:
+                entity_id:
+                  - input_select.scene_amur
+              data:
+                option: 'bright'
           - type: button
             entity: scene.romantic
             name: Romantic
             show_name: true
             show_icon: true
             tap_action:
-              action: toggle
+              action: call-service
+              service: input_select.select_option
+              target:
+                entity_id:
+                  - input_select.scene_amur
+              data:
+                option: 'romantic'
           - type: button
             entity: scene.work
             name: Work
             show_name: true
             show_icon: true
             tap_action:
-              action: toggle
+              action: call-service
+              service: input_select.select_option
+              target:
+                entity_id:
+                  - input_select.scene_amur
+              data:
+                option: 'work'
           - type: button
             entity: scene.away
             name: Away
             show_name: true
             show_icon: true
             tap_action:
-              action: toggle
+              action: call-service
+              service: input_select.select_option
+              target:
+                entity_id:
+                  - input_select.scene_amur
+              data:
+                option: 'away'
           - type: button
             entity: scene.sleep
             name: Sleep
             show_name: true
             show_icon: true
             tap_action:
-              action: toggle
-
-      - type: entities
-        entities:
-          - entity: input_select.scene_amur
+              action: call-service
+              service: input_select.select_option
+              target:
+                entity_id:
+                  - input_select.scene_amur
+              data:
+                option: 'sleep'
+          - type: entity
+            entity: input_select.scene_amur
             name: scene
-        title: Light
 
       - type: entities
         entities:
