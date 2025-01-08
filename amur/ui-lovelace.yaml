@@ -144,3 +144,43 @@ views:
           - entity: light.hallway_lights_light
             name: hallway_lights
         title: Light
+
+
+  - title: Battery
+    cards:
+      - type: entities
+        entities:
+          - entity: sensor.balcony_temperature_battery
+            name: balcony_temperature
+          - entity: sensor.bathroom_motion_1_battery
+            name: bathroom_motion_1
+          - entity: sensor.bedroom_motion_1_battery
+            name: bedroom_motion_1
+          - entity: sensor.bedroom_temperature_battery
+            name: bedroom_temperature
+          - entity: sensor.hallway_motion_1_battery
+            name: hallway_motion_1
+          - entity: sensor.hallway_motion_2_battery
+            name: hallway_motion_2
+          - entity: sensor.walkthrough_motion_1_battery
+            name: walkthrough_motion_1
+          - entity: sensor.hallway_button_battery
+            name: hallway_button
+          - entity: sensor.hallway_vibration_battery
+            name: hallway_vibration
+          - entity: sensor.viomi_v7_2f27_battery_level
+            name: viomi_v7_2f27_battery
+          - entity: sensor.kitchen_motion_1_battery
+            name: kitchen_motion_1
+          - entity: sensor.kitchen_motion_2_battery
+            name: kitchen_motion_2
+          - entity: sensor.kitchen_temperature_battery
+            name: kitchen_temperature
+          - entity: sensor.livingroom_motion_1_battery
+            name: livingroom_motion_1
+          - entity: sensor.livingroom_air_battery
+            name: livingroom_air
+          - entity: sensor.toilet_motion_1_battery
+            name: toilet_motion_1
+          - entity: sensor.bathroom_moisture_battery
+            name: bathroom_moisture
