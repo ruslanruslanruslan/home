@@ -74,6 +74,18 @@ views:
             entity: input_select.scene_amur
             name: scene
 
+      - type: entities
+        entities:
+          - entity: sensor.kitchen_temperature
+            name: outside
+          - entity: sensor.balcony_temperature
+            name: balcony
+          - entity: sensor.bedroom_temperature
+            name: bedroom
+          - entity: sensor.bedroom_temperature_humidity
+            name: humidity
+        title: Temperature
+
       - type: picture-entity
         entity: camera.vestibule_camera_mainstream
         show_name: false

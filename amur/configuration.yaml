@@ -153,6 +153,8 @@ xiaomi_gateway3:
       entity_name: kitchen_motion_1
     "0x00158d00045f3ec3":
       entity_name: kitchen_motion_2
+    "0x00158d00044a1810":
+      entity_name: kitchen_temperature
     # hallway
     "50ec50d897bc":
       entity_name: hallway_light_1

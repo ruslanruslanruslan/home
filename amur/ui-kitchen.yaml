@@ -88,6 +88,18 @@ views:
             name: illuminance
         title: Motion2
 
+      - type: entities
+        entities:
+          - entity: sensor.kitchen_temperature
+            name: temperature
+          - entity: sensor.kitchen_temperature_humidity
+            name: humidity
+          - entity: sensor.kitchen_temperature_pressure
+            name: pressure
+          - entity: sensor.kitchen_temperature_battery
+            name: battery
+        title: Temperature
+
       - type: picture-entity
         entity: camera.kitchen_camera_mainstream
         name: video
