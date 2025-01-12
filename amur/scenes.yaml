@@ -181,8 +181,8 @@
       state: off
     light.livingroom_ceiling_2:
       state: on
-      brightness: 200
-      kelvin: 5500
+      brightness: 150
+      kelvin: 4000
     light.livingroom_ceiling_2_ambilight:
       state: off
     light.livingroom_strip:
