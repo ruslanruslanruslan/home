@@ -58,9 +58,9 @@ views:
 
       - type: entities
         entities:
-          - entity: switch.chuangmi_212a01_5bd0_switch_status
+          - entity: switch.chuangmi_212a01_5bd0_switch
             name: status
-          - entity: light.chuangmi_212a01_5bd0_switch_status
+          - entity: light.chuangmi_212a01_5bd0_indicator_light
             name: light
           - entity: sensor.chuangmi_212a01_5bd0_electric_power
             name: current
@@ -72,9 +72,9 @@ views:
 
       - type: entities
         entities:
-          - entity: switch.chuangmi_212a01_f148_switch_status
+          - entity: switch.chuangmi_212a01_f148_switch
             name: status
-          - entity: light.chuangmi_212a01_f148_switch_status
+          - entity: light.chuangmi_212a01_f148_indicator_light
             name: light
           - entity: sensor.chuangmi_212a01_f148_electric_power
             name: current
@@ -86,9 +86,9 @@ views:
 
       - type: entities
         entities:
-          - entity: switch.chuangmi_212a01_d2fd_switch_status
+          - entity: switch.chuangmi_212a01_d2fd_switch
             name: status
-          - entity: light.chuangmi_212a01_d2fd_switch_status
+          - entity: light.chuangmi_212a01_d2fd_indicator_light
             name: light
           - entity: sensor.chuangmi_212a01_d2fd_electric_power
             name: current
@@ -100,9 +100,9 @@ views:
 
       - type: entities
         entities:
-          - entity: switch.chuangmi_212a01_690a_switch_status
+          - entity: switch.chuangmi_212a01_690a_switch
             name: status
-          - entity: light.chuangmi_212a01_690a_switch_status
+          - entity: light.chuangmi_212a01_690a_indicator_light
             name: light
           - entity: sensor.chuangmi_212a01_690a_electric_power
             name: current

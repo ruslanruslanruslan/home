@@ -23,11 +23,11 @@
       color_temp: 100
     cover.livingroom_curtain_motor:
       state: open
-    switch.chuangmi_212a01_f148_switch_status: #LCD
+    switch.chuangmi_212a01_f148_switch: #LCD
       state: on
-    switch.chuangmi_212a01_d2fd_switch_status: #Table
+    switch.chuangmi_212a01_d2fd_switch: #Table
       state: on
-    switch.chuangmi_212a01_690a_switch_status: #MOTU
+    switch.chuangmi_212a01_690a_switch: #MOTU
       state: on
     switch.livingroom_power_5_plug: #Amp
       state: on
@@ -107,11 +107,11 @@
       color_temp: 500
     cover.livingroom_curtain_motor:
       state: closed
-    switch.chuangmi_212a01_f148_switch_status: #LCD
+    switch.chuangmi_212a01_f148_switch: #LCD
       state: on
-    switch.chuangmi_212a01_d2fd_switch_status: #Table
+    switch.chuangmi_212a01_d2fd_switch: #Table
       state: on
-    switch.chuangmi_212a01_690a_switch_status: #MOTU
+    switch.chuangmi_212a01_690a_switch: #MOTU
       state: on
     switch.livingroom_power_5_plug: #Amp
       state: on
@@ -191,11 +191,11 @@
       color_temp: 100
     cover.livingroom_curtain_motor:
       state: open
-    switch.chuangmi_212a01_f148_switch_status: #LCD
+    switch.chuangmi_212a01_f148_switch: #LCD
       state: on
-    switch.chuangmi_212a01_d2fd_switch_status: #Table
+    switch.chuangmi_212a01_d2fd_switch: #Table
       state: on
-    switch.chuangmi_212a01_690a_switch_status: #MOTU
+    switch.chuangmi_212a01_690a_switch: #MOTU
       state: on
     switch.livingroom_power_5_plug: #Amp
       state: on
@@ -269,11 +269,11 @@
       state: off
     cover.livingroom_curtain_motor:
       state: open
-    switch.chuangmi_212a01_f148_switch_status: #LCD
+    switch.chuangmi_212a01_f148_switch: #LCD
       state: off
-    switch.chuangmi_212a01_d2fd_switch_status: #Table
+    switch.chuangmi_212a01_d2fd_switch: #Table
       state: off
-    switch.chuangmi_212a01_690a_switch_status: #MOTU
+    switch.chuangmi_212a01_690a_switch: #MOTU
       state: off
     switch.livingroom_power_5_plug: #Amp
       state: off
@@ -338,11 +338,11 @@
       color_temp: 500
     cover.livingroom_curtain_motor:
       state: closed
-    switch.chuangmi_212a01_f148_switch_status: #LCD
+    switch.chuangmi_212a01_f148_switch: #LCD
       state: off
-    switch.chuangmi_212a01_d2fd_switch_status: #Table
+    switch.chuangmi_212a01_d2fd_switch: #Table
       state: off
-    switch.chuangmi_212a01_690a_switch_status: #MOTU
+    switch.chuangmi_212a01_690a_switch: #MOTU
       state: off
     switch.livingroom_power_5_plug: #Amp
       state: off
