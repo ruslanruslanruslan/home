@@ -80,7 +80,7 @@ input_select:
 #    192.168.2.217:
 #      name: hallway_gateway
 #      model: lumi.gateway.mgl03
-#      token: 6f794172766f6a4a45674f6c7032334c
+#      token: 6f794172766f6a4a45674f6c7032334c / 5463376734326d64426f31724971564c
 #      key: VdGkKtZlgeJJc9UN
 
 yeelight:
