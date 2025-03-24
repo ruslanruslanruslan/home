@@ -415,3 +415,21 @@
       data:
         option: 'sleep'
   mode: single
+
+- alias: 'Wake Up at 10 AM (Weekdays)'
+  trigger:
+    - platform: time
+      at: "10:00:00"
+  condition:
+    - condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+  action:
+    - service: cover.open_cover
+      entity_id: cover.livingroom_curtain_motor
+      data:
+        position: 100
