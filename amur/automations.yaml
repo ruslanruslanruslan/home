@@ -431,9 +431,5 @@
   action:
     - service: cover.open_cover
       entity_id: cover.livingroom_curtain_motor
-      data:
-        position: 100
     - service: cover.open_cover
       entity_id: cover.bedroom_curtain_motor
-      data:
-        position: 100
