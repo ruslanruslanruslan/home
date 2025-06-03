@@ -6,7 +6,7 @@ WORKDIR /config
 # RUN apk upgrade
 RUN apk add ffmpeg
 
-COPY ./amur .
+COPY ./application/homeassistant/amur .
 
 RUN mkdir /config/custom_components
 RUN git clone https://ruslanruslanruslan:$GITHUB_KEY@github.com/AlexxIT/XiaomiGateway3.git /tmp/git/XiaomiGateway3
