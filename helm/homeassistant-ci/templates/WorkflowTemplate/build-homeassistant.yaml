@@ -10,7 +10,7 @@ spec:
   onExit: slack
   arguments:
     parameters:
-    - name: app
+    - name: service
       enum:
         - amur
     - name: env
@@ -25,18 +25,21 @@ spec:
           template: build
           arguments:
             parameters:
+            - name: project
+              value: home
+            - name: application
+              value: homeassistant
+            - name: service
+              value: "{{`{{ workflow.parameters.service }}`}}"
             - name: env
               value: "{{`{{ workflow.parameters.env }}`}}"
-            - name: project
-              value: homeassistant
-            - name: alias
-              value: "{{`{{ workflow.parameters.app }}`}}"
 
     - name: build
       inputs:
         parameters:
         - name: project
-        - name: alias
+        - name: application
+        - name: service
         - name: env
       steps:
         - - name: build
@@ -48,8 +51,10 @@ spec:
               parameters:
                 - name: project
                   value: "{{`{{ inputs.parameters.project }}`}}"
-                - name: alias
-                  value: "{{`{{ inputs.parameters.alias }}`}}"
+                - name: application
+                  value: "{{`{{ inputs.parameters.application }}`}}"
+                - name: service
+                  value: "{{`{{ inputs.parameters.service }}`}}"
                 - name: env
                   value: "{{`{{ inputs.parameters.env }}`}}"
 
