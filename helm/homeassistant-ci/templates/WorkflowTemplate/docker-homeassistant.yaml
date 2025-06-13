@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: build-homeassistant
+  name: docker-homeassistant
   namespace: homeassistant-ci
 spec:
   ttlStrategy:
@@ -21,8 +21,8 @@ spec:
 
     - name: wf
       steps:
-      - - name: build
-          template: build
+      - - name: docker
+          template: docker
           arguments:
             parameters:
             - name: project
@@ -34,7 +34,7 @@ spec:
             - name: env
               value: "{{`{{ workflow.parameters.env }}`}}"
 
-    - name: build
+    - name: docker
       inputs:
         parameters:
         - name: project
@@ -42,9 +42,9 @@ spec:
         - name: service
         - name: env
       steps:
-        - - name: build
+        - - name: docker
             templateRef:
-              name: build
+              name: docker
               template: process
               clusterScope: true
             arguments:
