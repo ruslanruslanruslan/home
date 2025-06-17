@@ -18,13 +18,13 @@ spec:
       affinity:
         podAntiAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
-            - labelSelector:
-                matchExpressions:
-                  - key: kubernetes.io/hostname
-                    operator: In
-                    values:
-                      - kube03
-              topologyKey: "kubernetes.io/hostname"
+          - labelSelector:
+              matchExpressions:
+              - key: kubernetes.io/hostname
+                operator: In
+                values:
+                - kube03
+            topologyKey: "kubernetes.io/hostname"
       volumes:
         - name: storage
           persistentVolumeClaim:
