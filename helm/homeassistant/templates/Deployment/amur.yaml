@@ -28,7 +28,7 @@ spec:
       volumes:
         - name: storage
           persistentVolumeClaim:
-            claimName: pvc-homeassistant-amur
+            claimName: home-homeassistant-amur-pvc
       containers:
       - name: amur
         volumeMounts:
