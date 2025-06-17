@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: home-homeassistant-amur-pvc
+  name: home-homeassistant-amur
 spec:
   storageClassName: directpv-min-io
   accessModes:
