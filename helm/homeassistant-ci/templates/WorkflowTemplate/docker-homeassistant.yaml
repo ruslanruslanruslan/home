@@ -23,6 +23,10 @@ spec:
       steps:
       - - name: docker
           template: docker
+          templateRef:
+            name: docker
+            template: process
+            clusterScope: true
           arguments:
             parameters:
             - name: project
@@ -33,30 +37,6 @@ spec:
               value: "{{`{{ workflow.parameters.service }}`}}"
             - name: env
               value: "{{`{{ workflow.parameters.env }}`}}"
-
-    - name: docker
-      inputs:
-        parameters:
-        - name: project
-        - name: application
-        - name: service
-        - name: env
-      steps:
-        - - name: docker
-            templateRef:
-              name: docker
-              template: process
-              clusterScope: true
-            arguments:
-              parameters:
-                - name: project
-                  value: "{{`{{ inputs.parameters.project }}`}}"
-                - name: application
-                  value: "{{`{{ inputs.parameters.application }}`}}"
-                - name: service
-                  value: "{{`{{ inputs.parameters.service }}`}}"
-                - name: env
-                  value: "{{`{{ inputs.parameters.env }}`}}"
 
     - name: slack
       steps:
