@@ -3,7 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: home-homeassistant-amur
 spec:
-  storageClassName: directpv-min-io
+  storageClassName: directpv-retain
   accessModes:
     - ReadWriteOnce
   resources:
