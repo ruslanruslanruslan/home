@@ -22,7 +22,6 @@ spec:
     - name: wf
       steps:
       - - name: docker
-          template: docker
           templateRef:
             name: docker
             template: process
