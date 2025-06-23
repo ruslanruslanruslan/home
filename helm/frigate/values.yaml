@@ -9,9 +9,15 @@ frigate:
       user: homeassistant
       password: "FLS3GD8Qc8xJWp"
     cameras:
+      elevators:
+        ffmpeg:
+          inputs:
+            - path: rtsp://homeassistant:aP5n8XdebfKeDn@192.168.2.111:554/live.sdp
+              roles:
+                - detect
       vestibule:
-        onvif:
-          host: 192.168.2.113
-          port: 80
-          user: homeassistant
-          password: aP5n8XdebfKeDn
+        ffmpeg:
+          inputs:
+            - path: rtsp://homeassistant:aP5n8XdebfKeDn@192.168.2.113:554/Streaming/Channels/1
+              roles:
+                - detect
