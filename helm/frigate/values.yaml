@@ -1,7 +1,7 @@
 frigate:
   nodeSelector: {kubernetes.io/hostname: "kube03"}
   service:
-    type: NodePort
+    type: ClusterIP
   config: |
     mqtt:
       host: "mosquitto.mosquitto"
