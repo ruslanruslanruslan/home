@@ -12,6 +12,9 @@ logger:
 
 lovelace:
   mode: yaml
+  resources:
+    - url: /config/custom_components/advanced-camera-card/advanced-camera-card.js
+      type: module
   dashboards:
     lovelace-bedroom:
       mode: yaml
@@ -55,9 +58,6 @@ lovelace:
       show_in_sidebar: true
       require_admin: false
       filename: ui-balcony.yaml
-  resources:
-    - url: /config/custom_components/advanced-camera-card/advanced-camera-card.js
-      type: module
 
 homeassistant:
   name: Amur
