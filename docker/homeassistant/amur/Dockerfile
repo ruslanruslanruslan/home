@@ -20,4 +20,4 @@ RUN git clone https://ruslanruslanruslan:$GITHUB_KEY@github.com/icarome/zk_teco.
 RUN cp -r /tmp/git/zk_teco/custom_components/* /config/custom_components
 RUN git clone https://ruslanruslanruslan:$GITHUB_KEY@github.com/blakeblackshear/frigate-hass-integration.git /tmp/git/frigate
 RUN cp -r /tmp/git/frigate/custom_components/* /config/custom_components
-RUN cp -r advanced-camera-card /config/custom_components
+
