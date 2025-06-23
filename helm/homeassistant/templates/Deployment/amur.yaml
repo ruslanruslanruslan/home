@@ -28,6 +28,8 @@ spec:
         - name: storage
           persistentVolumeClaim:
             claimName: home-homeassistant-amur
+      imagePullSecrets:
+        - name: registry
       containers:
       - name: amur
         volumeMounts:
