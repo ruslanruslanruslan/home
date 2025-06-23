@@ -111,7 +111,7 @@ views:
         title: Lock
 
       - type: picture-entity
-        entity: camera.hallway_camera_mainstream
+        entity: camera.hallway
         name: video
         show_name: false
         show_state: false

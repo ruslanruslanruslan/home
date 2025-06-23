@@ -133,7 +133,7 @@ views:
         title: Power_TV
 
       - type: picture-entity
-        entity: camera.livingroom_camera_mainstream
+        entity: camera.livingroom
         name: video
         show_name: false
         show_state: false

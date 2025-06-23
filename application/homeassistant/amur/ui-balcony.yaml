@@ -32,7 +32,7 @@ views:
         title: Power_Server
 
       - type: picture-entity
-        entity: camera.balcony_camera_mainstream
+        entity: camera.balcony
         name: video
         show_name: false
         show_state: false

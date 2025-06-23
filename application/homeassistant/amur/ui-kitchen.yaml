@@ -101,7 +101,7 @@ views:
         title: Temperature
 
       - type: picture-entity
-        entity: camera.kitchen_camera_mainstream
+        entity: camera.kitchen
         name: video
         show_name: false
         show_state: false
