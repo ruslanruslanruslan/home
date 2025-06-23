@@ -1,3 +1,4 @@
+# old. Not working. just for info
 - platform: generic
   name: elevators_camera
   host: rtsp://192.168.2.111:554/live.sdp
