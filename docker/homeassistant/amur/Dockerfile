@@ -16,7 +16,8 @@ RUN cp -r /tmp/git/qingping_cgs1/custom_components/* /config/custom_components
 RUN pip3 install pyzk
 RUN git clone https://ruslanruslanruslan:$GITHUB_KEY@github.com/icarome/zk_teco.git /tmp/git/zk_teco/custom_components/zk_teco
 RUN cp -r /tmp/git/zk_teco/custom_components/* /config/custom_components
-RUN git clone https://ruslanruslanruslan:$GITHUB_KEY@github.com/blakeblackshear/frigate-hass-integration.git /tmp/git/frigate
+RUN git clone https://ruslanruslanruslan:$GITHUB_KEY@github.com/blakeblackshear/frigate-hass-integration.git /tmp/git/advanced-camera-card
+RUN cp -r /tmp/git/advanced-camera-card/custom_components/* /config/custom_components
 
 COPY ./docker/homeassistant/amur /tmp/docker
 RUN cp -r /tmp/docker/* /config
