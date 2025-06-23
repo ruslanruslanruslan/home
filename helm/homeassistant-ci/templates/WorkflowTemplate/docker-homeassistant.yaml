@@ -21,9 +21,9 @@ spec:
 
     - name: wf
       steps:
-      - - name: docker-build
+      - - name: docker
           templateRef:
-            name: docker-build
+            name: docker
             template: process
             clusterScope: true
           arguments:
