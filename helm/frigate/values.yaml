@@ -22,10 +22,6 @@ frigate:
         retain:
           days: 30
           mode: motion
-      detections:
-        retain:
-          days: 360
-          mode: motion
     snapshots:
       enabled: True
       retain:
