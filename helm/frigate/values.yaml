@@ -2,7 +2,7 @@ frigate:
   nodeSelector: {kubernetes.io/hostname: "kube03"}
   service:
     type: NodePort
-    nodePort: 30024
+    nodePort: 30025
   config: |
     mqtt:
       host: "mosquitto.mosquitto"
