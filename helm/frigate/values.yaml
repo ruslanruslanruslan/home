@@ -18,6 +18,10 @@ frigate:
       retain:
         days: 7
         mode: motion
+    snapshots:
+      enabled: True
+      retain:
+        default: 30
     cameras:
       elevators:
         ffmpeg:
