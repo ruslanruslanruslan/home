@@ -89,12 +89,12 @@ views:
       - type: custom:advanced-camera-card
         entity: camera.vestibule
         cameras:
-          - camera.vestibule
-          - camera.elevators
+          - camera_entity: camera.vestibule
+          - camera_entity: camera.elevators
 
       - type: custom:advanced-camera-card
         cameras:
-          - camera.intercom
+          - camera_entity: camera.intercom
 
   - title: Lights
     cards:
