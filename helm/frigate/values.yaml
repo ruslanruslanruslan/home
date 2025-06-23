@@ -3,6 +3,8 @@ frigate:
   service:
     type: ClusterIP
   config: |
+    logger:
+      default: debug
     mqtt:
       host: "mosquitto.mosquitto"
       port: 1883
