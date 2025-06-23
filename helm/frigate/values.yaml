@@ -13,12 +13,6 @@ frigate:
       retain:
         days: 7
         mode: motion
-      alerts:
-        retain:
-          days: 30
-      detections:
-        retain:
-          days: 30
     cameras:
       elevators:
         ffmpeg:
