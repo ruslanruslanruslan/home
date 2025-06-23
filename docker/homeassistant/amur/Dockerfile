@@ -6,8 +6,6 @@ WORKDIR /config
 # RUN apk upgrade
 RUN apk add ffmpeg
 
-COPY ./application/homeassistant/amur .
-
 RUN mkdir /config/custom_components
 RUN git clone https://ruslanruslanruslan:$GITHUB_KEY@github.com/AlexxIT/XiaomiGateway3.git /tmp/git/XiaomiGateway3
 RUN cp -r /tmp/git/XiaomiGateway3/custom_components/* /config/custom_components
@@ -19,5 +17,8 @@ RUN pip3 install pyzk
 RUN git clone https://ruslanruslanruslan:$GITHUB_KEY@github.com/icarome/zk_teco.git /tmp/git/zk_teco/custom_components/zk_teco
 RUN cp -r /tmp/git/zk_teco/custom_components/* /config/custom_components
 RUN git clone https://ruslanruslanruslan:$GITHUB_KEY@github.com/blakeblackshear/frigate-hass-integration.git /tmp/git/frigate
-RUN cp -r /tmp/git/frigate/custom_components/* /config/custom_components
 
+COPY ./docker/homeassistant/amur /tmp/docker
+RUN cp -r /tmp/docker/custom_components/* /config/custom_components
+
+COPY ./application/homeassistant/amur .
