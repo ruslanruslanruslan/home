@@ -16,9 +16,8 @@ frigate:
               roles:
                 - detect
       vestibule:
-        ffmpeg:
-          onvif:
-            host: 192.168.2.113
-            port: 80
-            user: homeassistant
-            password: aP5n8XdebfKeDn
+        onvif:
+          host: 192.168.2.113
+          port: 80
+          user: homeassistant
+          password: aP5n8XdebfKeDn
