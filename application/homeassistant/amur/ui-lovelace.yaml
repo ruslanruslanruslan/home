@@ -86,20 +86,15 @@ views:
             name: humidity
         title: Temperature
 
-      - type: picture-entity
+      - type: custom:advanced-camera-card
         entity: camera.vestibule
-        show_name: false
-        show_state: false
+        cameras:
+          - camera.vestibule
+          - camera.elevators
 
-      - type: picture-entity
-        entity: camera.elevators
-        show_name: false
-        show_state: false
-
-      - type: picture-entity
-        entity: camera.intercom
-        show_name: false
-        show_state: false
+      - type: custom:advanced-camera-card
+        cameras:
+          - camera.intercom
 
   - title: Lights
     cards:
