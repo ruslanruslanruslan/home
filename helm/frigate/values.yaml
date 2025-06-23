@@ -1,7 +1,12 @@
 frigate:
   nodeSelector: {kubernetes.io/hostname: "kube03"}
   service:
+    # bug with NodePort assigne same port for all services
     type: ClusterIP
+  persistence:
+    media:
+      enabled: true
+      existingClaim: home-frigate-amur
   config: |
     mqtt:
       host: "mosquitto.mosquitto"
