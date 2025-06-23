@@ -8,6 +8,17 @@ frigate:
       port: 1883
       user: homeassistant
       password: "FLS3GD8Qc8xJWp"
+    record:
+    enabled: True
+    retain:
+      days: 7
+      mode: motion
+    alerts:
+      retain:
+        days: 30
+    detections:
+      retain:
+        days: 30
     cameras:
       elevators:
         ffmpeg:
