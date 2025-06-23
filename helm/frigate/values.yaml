@@ -28,33 +28,18 @@ frigate:
       vestibule:
         ffmpeg:
           inputs:
-            - path: rtsp://homeassistant:aP5n8XdebfKeDn@192.168.2.113:554/Streaming/Channels/1
+            - path: rtsp://homeassistant:aP5n8XdebfKeDn@192.168.2.113:554/Streaming/Channels/101
               roles:
                 - detect
-        onvif:
-          host: 192.168.2.113
-          port: 80
-          user: homeassistant
-          password: aP5n8XdebfKeDn
       intercom:
         ffmpeg:
           inputs:
-            - path: rtsp://homeassistant:aP5n8XdebfKeDn@192.168.2.116:554/Streaming/Channels/1
+            - path: rtsp://homeassistant:aP5n8XdebfKeDn@192.168.2.116:554/Streaming/Channels/101
               roles:
                 - detect
-        onvif:
-          host: 192.168.2.116
-          port: 80
-          user: homeassistant
-          password: aP5n8XdebfKeDn
       balcony:
         ffmpeg:
           inputs:
-            - path: rtsp://homeassistant:aP5n8XdebfKeDn@192.168.2.117:554/Streaming/Channels/1
+            - path: rtsp://homeassistant:aP5n8XdebfKeDn@192.168.2.117:554/Streaming/Channels/101
               roles:
                 - detect
-        onvif:
-          host: 192.168.2.117
-          port: 80
-          user: homeassistant
-          password: aP5n8XdebfKeDn
