@@ -4,8 +4,9 @@
 # 5. Install xiaomi-miot and login to mi account, add local devices, filte mop, cooker, 4 power plugs + powerstrip
 # 6. Install MQTT (mosquitto.mosquitto 1883 homeassistant FLS3GD8Qc8xJWp) (needed for Qinqpong only)
 # 7. Qinqping Pro AQM add manually (livingroom_air, v2 (should get automatically 582D34006AAA)). Need to be sure that device send data in mqtt using mqtt explorer.
-# 8. Install ONVIF add all cameras manually
-# 9. Generic camera add elevators camera manually and change name additionaly
+# 8.
+# old. Install ONVIF add all cameras manually
+# old. Generic camera add elevators camera manually and change name additionaly
 
 # for testing config
 C:\Users\OTHER\kubectl cp configuration.yaml homeassistant/amur-564b8b64d6-lbczt:/config
