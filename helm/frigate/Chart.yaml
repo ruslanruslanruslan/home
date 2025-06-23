@@ -4,4 +4,4 @@ version: 1.0.0
 dependencies:
   - name: frigate
     version: ~7.8.0
-    repository: https://blakeblackshear.github.io/
+    repository: https://blakeblackshear.github.io/blakeblackshear/
