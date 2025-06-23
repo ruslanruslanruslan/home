@@ -16,8 +16,16 @@ frigate:
     record:
       enabled: True
       retain:
-        days: 7
-        mode: motion
+        days: 2
+        mode: all
+      alerts:
+        retain:
+          days: 30
+          mode: motion
+      detections:
+        retain:
+          days: 360
+          mode: motion
     snapshots:
       enabled: True
       retain:
