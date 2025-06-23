@@ -86,12 +86,11 @@ views:
             name: humidity
         title: Temperature
 
-  - title: Cameras
-    cards:
       - type: custom:advanced-camera-card
         cameras:
           - camera_entity: camera.vestibule
           - camera_entity: camera.elevators
+
       - type: custom:advanced-camera-card
         cameras:
           - camera_entity: camera.office
