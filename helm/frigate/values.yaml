@@ -18,10 +18,10 @@ frigate:
       retain:
         days: 2
         mode: all
-      alerts:
-        retain:
-          days: 30
-          mode: motion
+    alerts:
+      retain:
+        days: 30
+        mode: motion
     snapshots:
       enabled: True
       retain:
