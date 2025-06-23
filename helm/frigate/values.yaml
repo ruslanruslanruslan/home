@@ -4,9 +4,12 @@ frigate:
     # bug with NodePort assigne same port for all services
     type: ClusterIP
   persistence:
+    config:
+      enabled: true
+      existingClaim: home-frigate-amur-config
     media:
       enabled: true
-      existingClaim: home-frigate-amur
+      existingClaim: home-frigate-amur-media
   config: |
     mqtt:
       host: "mosquitto.mosquitto"
