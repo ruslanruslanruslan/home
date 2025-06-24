@@ -36,6 +36,8 @@ data:
                 - record
                 - detect
                 - audio
+          output_args:
+            record: preset-record-generic-audio-aac
         detect:
           fps: 2
       vestibule:
@@ -45,7 +47,6 @@ data:
               roles:
                 - record
                 - detect
-                - audio
         detect:
           fps: 2
       intercom:
@@ -56,6 +57,8 @@ data:
                 - record
                 - detect
                 - audio
+          output_args:
+            record: preset-record-generic-audio-aac
         detect:
           fps: 3
       balcony:
@@ -66,5 +69,7 @@ data:
                 - record
                 - detect
                 - audio
+          output_args:
+            record: preset-record-generic-audio-aac
         detect:
           fps: 1
