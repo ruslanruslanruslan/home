@@ -34,3 +34,4 @@ views:
       - type: custom:advanced-camera-card
         cameras:
           - camera_entity: camera.balcony
+            live_provider: go2rtc

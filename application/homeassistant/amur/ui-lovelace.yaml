@@ -89,14 +89,17 @@ views:
       - type: custom:advanced-camera-card
         cameras:
           - camera_entity: camera.elevators
+            live_provider: go2rtc
 
       - type: custom:advanced-camera-card
         cameras:
           - camera_entity: camera.vestibule
+            live_provider: go2rtc
 
       - type: custom:advanced-camera-card
         cameras:
           - camera_entity: camera.intercom
+            live_provider: go2rtc
 
   - title: Lights
     cards:
