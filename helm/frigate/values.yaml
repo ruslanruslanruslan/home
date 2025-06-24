@@ -27,11 +27,18 @@ frigate:
         default: 30
     audio:
       enabled: True
+    go2rtc:
+      streams:
+        elevators: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.111:80
+        vestibule: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.113:80
+        intercom: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.116:80
+        balcony: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.117:80
     cameras:
       elevators:
         ffmpeg:
           inputs:
-            - path: http://go2rtc:1984/stream.html?src=elevators&mode=webrtc,mse,hls,mjpeg
+            - path: rtsp://127.0.0.1:8554/elevators
+              input_args: preset-rtsp-restream
               roles:
                 - record
                 - detect
