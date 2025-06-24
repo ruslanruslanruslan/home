@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: frigate-ui
+  namespace: {{ .Release.Namespace }}
+  annotations:
+    prometheus.io/port: "8000"
+    prometheus.io/scrape: "false"
+spec:
+  type: ClusterIP
+  ports:
+  - name: http
+    port: 8971
+    targetPort: 8971
+    protocol: TCP
+  selector:
+    app: frigate
