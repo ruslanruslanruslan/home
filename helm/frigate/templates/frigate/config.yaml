@@ -21,10 +21,16 @@ data:
         default: 30
     go2rtc:
       streams:
-        elevators: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.111:80
-        vestibule: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.113:80
-        intercom: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.116:80
-        balcony: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.117:80
+        elevators:
+          - onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.111:80
+        vestibule:
+          - onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.113:80
+        intercom:
+          - onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.116:80
+          - "ffmpeg:elevators#audio=aac"
+        balcony:
+          - onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.117:80
+          - "ffmpeg:elevators#audio=aac"
     cameras:
       elevators:
         ffmpeg:
