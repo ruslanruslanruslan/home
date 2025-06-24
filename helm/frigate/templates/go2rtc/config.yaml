@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: config
+  name: go2rtc
   namespace: {{ .Release.Namespace }}
 data:
   go2rtc.yaml: |
