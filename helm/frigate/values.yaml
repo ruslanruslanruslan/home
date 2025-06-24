@@ -33,4 +33,6 @@ frigate:
           inputs:
             - path: rtsp://homeassistant:aP5n8XdebfKeDn@192.168.2.111:554/live.sdp
               roles:
+                - record
                 - detect
+                - audio
