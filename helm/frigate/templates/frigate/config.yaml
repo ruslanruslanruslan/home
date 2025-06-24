@@ -19,8 +19,6 @@ data:
       enabled: True
       retain:
         default: 30
-    audio:
-      enabled: True
     go2rtc:
       streams:
         elevators: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.111:80
@@ -32,6 +30,8 @@ data:
         ffmpeg:
           inputs:
             - path: rtsp://go2rtc-rtsp:8554/elevators
+              audio:
+                enabled: True
               roles:
                 - record
                 - detect
@@ -53,6 +53,8 @@ data:
         ffmpeg:
           inputs:
             - path: rtsp://go2rtc-rtsp:8554/intercom
+              audio:
+                enabled: True
               roles:
                 - record
                 - detect
@@ -65,6 +67,8 @@ data:
         ffmpeg:
           inputs:
             - path: rtsp://go2rtc-rtsp:8554/balcony
+              audio:
+                enabled: True
               roles:
                 - record
                 - detect
