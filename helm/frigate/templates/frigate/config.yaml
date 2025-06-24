@@ -38,7 +38,7 @@ data:
       intercom:
         ffmpeg:
           inputs:
-            - path: rtsp://go2rtc-rtsp:8554/intercom
+            - path: rtsp://127.0.0.1:8554/intercom
               input_args: preset-rtsp-restream
               roles:
                 - record
