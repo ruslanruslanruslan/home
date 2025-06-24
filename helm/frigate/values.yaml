@@ -31,7 +31,7 @@ frigate:
       elevators:
         ffmpeg:
           inputs:
-            - path: rtsp://homeassistant:aP5n8XdebfKeDn@192.168.2.111:554/live1.sdp
+            - path: rtsp://homeassistant:aP5n8XdebfKeDn@192.168.2.111:554/live.sdp
               roles:
                 - record
             - path: rtsp://homeassistant:aP5n8XdebfKeDn@192.168.2.111:554/live2.sdp
