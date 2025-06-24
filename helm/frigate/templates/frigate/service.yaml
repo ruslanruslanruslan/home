@@ -7,11 +7,9 @@ metadata:
     prometheus.io/port: "8000"
     prometheus.io/scrape: "false"
 spec:
-  type: ClusterIP
+  type: NodePort
   ports:
-  - name: http
-    port: 8971
-    targetPort: 8971
-    protocol: TCP
+  - port: 8973
+    nodePort: 30024
   selector:
     app: frigate
