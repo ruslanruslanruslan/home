@@ -60,14 +60,14 @@ spec:
           livenessProbe:
             httpGet:
               path: /
-              port: 8971
+              port: 30024
             initialDelaySeconds: 30
             failureThreshold: 5
             timeoutSeconds: 10
           readinessProbe:
             httpGet:
               path: /
-              port: 8971
+              port: 30024
             initialDelaySeconds: 20
             failureThreshold: 5
             timeoutSeconds: 10
