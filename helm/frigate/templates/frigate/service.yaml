@@ -50,7 +50,6 @@ spec:
     protocol: TCP
   selector:
     app: frigate
-
 ---
 apiVersion: v1
 kind: Service
