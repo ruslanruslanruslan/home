@@ -34,30 +34,42 @@ spec:
         - name: media
           persistentVolumeClaim:
             claimName: home-frigate-amur-media
+      initContainers:
+        - name: copyconfig
+          image: ghcr.io/blakeblackshear/frigate:stable
+          imagePullPolicy: IfNotPresent
+          volumeMounts:
+            - mountPath: /config.yml
+              subPath: config.yml
+              name: configmap
+            - mountPath: /config
+              name: config
+          command: [ "cp" ]
+          args: [ "-v", "/config.yml", "/config/config.yml" ]
       containers:
-      - name: frigate
-        image: ghcr.io/blakeblackshear/frigate:stable
-        imagePullPolicy: Always
-        securityContext:
-          privileged: true
-        volumeMounts:
-        - name: config
-          mountPath: /config
-        - mountPath: /media
-          name: media
-        livenessProbe:
-          httpGet:
-            path: /
-            port: http
-            scheme: HTTP
-          initialDelaySeconds: 30
-          failureThreshold: 5
-          timeoutSeconds: 10
-        readinessProbe:
-          httpGet:
-            path: /
-            port: http
-            scheme: HTTP
-          initialDelaySeconds: 30
-          failureThreshold: 5
-          timeoutSeconds: 10
+        - name: frigate
+          image: ghcr.io/blakeblackshear/frigate:stable
+          imagePullPolicy: Always
+          securityContext:
+            privileged: true
+          volumeMounts:
+          - name: config
+            mountPath: /config
+          - mountPath: /media
+            name: media
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+              scheme: HTTP
+            initialDelaySeconds: 30
+            failureThreshold: 5
+            timeoutSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+              scheme: HTTP
+            initialDelaySeconds: 30
+            failureThreshold: 5
+            timeoutSeconds: 10
