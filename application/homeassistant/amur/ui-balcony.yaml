@@ -19,9 +19,11 @@ views:
 
       - type: entities
         entities:
-          - entity: switch.zimi_v2_8df3_switch_status
+          - entity: switch.zimi_v2_8df3_switch
             name: status
-          - entity: light.zimi_v2_8df3_store_powercost_today
+          - entity: light.zimi_v2_8df3_indicator_light
+            name: light
+          - entity: sensor.zimi_v2_8df3_store_powercost_today
             name: today
           - entity: sensor.zimi_v2_8df3_store_powercost_month
             name: month
