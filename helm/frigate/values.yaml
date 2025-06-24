@@ -27,17 +27,11 @@ frigate:
         default: 30
     audio:
       enabled: True
-    go2rtc:
-      streams:
-        elevators: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.111:80
-        vestibule: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.113:80
-        intercom: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.116:80
-        balcony: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.117:80
     cameras:
       elevators:
         ffmpeg:
           inputs:
-            - path: rtsp://127.0.0.1:8554/elevators
+            - path: rtsp://go2rtc-rtsp:8554/elevators
               roles:
                 - record
                 - detect
@@ -47,7 +41,7 @@ frigate:
       vestibule:
         ffmpeg:
           inputs:
-            - path: rtsp://127.0.0.1:8554/vestibule
+            - path: rtsp://go2rtc-rtsp:8554/vestibule
               roles:
                 - record
                 - detect
@@ -57,7 +51,7 @@ frigate:
       intercom:
         ffmpeg:
           inputs:
-            - path: rtsp://127.0.0.1:8554/intercom
+            - path: rtsp://go2rtc-rtsp:8554/intercom
               roles:
                 - record
                 - detect
@@ -67,7 +61,7 @@ frigate:
       balcony:
         ffmpeg:
           inputs:
-            - path: rtsp://127.0.0.1:8554/balcony
+            - path: rtsp://go2rtc-rtsp:8554/balcony
               roles:
                 - record
                 - detect
