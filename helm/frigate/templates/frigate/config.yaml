@@ -29,8 +29,7 @@ data:
           - rtsp://homeassistant:aP5n8XdebfKeDn@192.168.2.113:554/Streaming/Channels/101
         intercom:
     #      - onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.116:80
-          - rtsp://homeassistant:aP5n8XdebfKeDn@192.168.2.116:554/Streaming/Channels/101
-          - "ffmpeg:intercom#audio=aac"
+          - "ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.2.116:554/Streaming/Channels/101#video=copy#audio=copy#audio=aac#hardware"
         balcony:
     #      - onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.117:80
           - rtsp://homeassistant:aP5n8XdebfKeDn@192.168.2.117:554/Streaming/Channels/101
