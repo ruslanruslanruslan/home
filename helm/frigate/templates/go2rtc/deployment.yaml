@@ -26,20 +26,17 @@ spec:
                 - kube03
       imagePullSecrets:
         - name: registry
+      volumes:
+      - name: config-volume
+        configMap:
+          name: config
       containers:
       - name: go2rtc
         image: alexxit/go2rtc:latest
         imagePullPolicy: Always
-        command: ["/bin/sh","-ce"]
-        args:
-          - "echo $CONFIG &&
-             echo $CONFIG > /config/go2rtc.yaml"
-        env:
-          - name: CONFIG
-            valueFrom:
-              configMapKeyRef:
-                name: config
-                key: config
+        volumeMounts:
+        - name: config-volume
+          mountPath: /config/go2rtc.yaml
         livenessProbe:
           httpGet:
             path: /
