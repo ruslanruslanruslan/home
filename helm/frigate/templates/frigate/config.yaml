@@ -27,10 +27,10 @@ data:
           - onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.113:80
         intercom:
           - onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.116:80
-          - "ffmpeg:elevators#audio=aac"
+          - "ffmpeg:intercom#audio=aac"
         balcony:
           - onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.117:80
-          - "ffmpeg:elevators#audio=aac"
+          - "ffmpeg:balcony#audio=aac"
     cameras:
       elevators:
         ffmpeg:
