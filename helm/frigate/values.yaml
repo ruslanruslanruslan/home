@@ -37,7 +37,7 @@ frigate:
                 - detect
                 - audio
         detect:
-          fps: 1
+          fps: 2
       vestibule:
         ffmpeg:
           inputs:
@@ -47,7 +47,7 @@ frigate:
                 - detect
                 - audio
         detect:
-          fps: 1
+          fps: 2
       intercom:
         ffmpeg:
           inputs:
@@ -57,7 +57,7 @@ frigate:
                 - detect
                 - audio
         detect:
-          fps: 1
+          fps: 3
       balcony:
         ffmpeg:
           inputs:
