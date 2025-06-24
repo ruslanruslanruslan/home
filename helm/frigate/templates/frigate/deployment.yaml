@@ -39,8 +39,8 @@ spec:
           image: ghcr.io/blakeblackshear/frigate:stable
           imagePullPolicy: IfNotPresent
           volumeMounts:
-            - mountPath: /config.yml
-              subPath: config.yml
+            - mountPath: /config.yaml
+              subPath: config.yaml
               name: config-volume
             - mountPath: /config
               name: config
