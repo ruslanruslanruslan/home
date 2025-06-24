@@ -7,6 +7,9 @@ data:
   go2rtc.yaml: |
     streams:
       elevators: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.111:80
+      hallway: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.112:80
       vestibule: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.113:80
+      livingroom: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.114:80
+      kitchen: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.115:80
       intercom: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.116:80
       balcony: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.117:80
