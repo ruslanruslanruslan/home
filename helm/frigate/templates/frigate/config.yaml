@@ -30,14 +30,14 @@ data:
         ffmpeg:
           inputs:
             - path: rtsp://go2rtc-rtsp:8554/elevators
-              audio:
-                enabled: True
               roles:
                 - record
                 - detect
                 - audio
           output_args:
             record: preset-record-generic-audio-aac
+        audio:
+          enabled: True
         detect:
           fps: 2
       vestibule:
@@ -53,27 +53,27 @@ data:
         ffmpeg:
           inputs:
             - path: rtsp://go2rtc-rtsp:8554/intercom
-              audio:
-                enabled: True
               roles:
                 - record
                 - detect
                 - audio
           output_args:
             record: preset-record-generic-audio-aac
+        audio:
+          enabled: True
         detect:
           fps: 3
       balcony:
         ffmpeg:
           inputs:
             - path: rtsp://go2rtc-rtsp:8554/balcony
-              audio:
-                enabled: True
               roles:
                 - record
                 - detect
                 - audio
           output_args:
             record: preset-record-generic-audio-aac
+        audio:
+          enabled: True
         detect:
           fps: 1
