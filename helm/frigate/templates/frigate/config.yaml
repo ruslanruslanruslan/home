@@ -23,10 +23,10 @@ data:
       enabled: True
     go2rtc:
       streams:
-        elevators: ffmpeg:onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.111:80
-        vestibule: ffmpeg:onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.113:80
-        intercom: ffmpeg:onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.116:80
-        balcony: ffmpeg:onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.117:80
+        elevators: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.111:80
+        vestibule: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.113:80
+        intercom: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.116:80
+        balcony: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.117:80
     cameras:
       elevators:
         ffmpeg:
