@@ -32,7 +32,7 @@ spec:
         imagePullPolicy: Always
         command: ["/bin/sh","-ce"]
         args:
-          - "cat > /config//config/go2rtc.yaml.yaml<< EOF
+          - "cat > /config/go2rtc.yaml<< EOF
               streams:
                 elevators: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.111:80
                 vestibule: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.113:80
