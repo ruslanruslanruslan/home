@@ -18,6 +18,24 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  name: endpoint
+  namespace: {{ .Release.Namespace }}
+  annotations:
+    prometheus.io/port: "8000"
+    prometheus.io/scrape: "false"
+spec:
+  type: ClusterIP
+  ports:
+  - name: http
+    port: 5000
+    targetPort: 5000
+    protocol: TCP
+  selector:
+    app: frigate
+---
+apiVersion: v1
+kind: Service
+metadata:
   name: rtsp
   namespace: {{ .Release.Namespace }}
   annotations:
