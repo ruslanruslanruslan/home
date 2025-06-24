@@ -60,16 +60,14 @@ spec:
           livenessProbe:
             httpGet:
               path: /
-              port: http
-              scheme: HTTP
-            initialDelaySeconds: 30
+              port: 8554
+            initialDelaySeconds: 320
             failureThreshold: 5
             timeoutSeconds: 10
           readinessProbe:
             httpGet:
               path: /
-              port: http
-              scheme: HTTP
-            initialDelaySeconds: 30
+              port: 8554
+            initialDelaySeconds: 20
             failureThreshold: 5
             timeoutSeconds: 10
