@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go2rtc
+  namespace: frigate
+  labels:
+    app: go2rtc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: go2rtc
+  template:
+    metadata:
+      labels:
+        app: go2rtc
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/hostname
+                operator: In
+                values:
+                - kube03
+      imagePullSecrets:
+        - name: registry
+      containers:
+      - name: go2rtc
+        image: alexxit/go2rtc:latest
+        imagePullPolicy: Always
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 1984
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          timeoutSeconds: 3
