@@ -33,7 +33,7 @@ spec:
         command: ["/bin/sh","-ce"]
         args:
           - "echo $CONFIG &&
-             cat > /config/go2rtc.yaml<< echo $CONFIG"
+             echo $CONFIG > /config/go2rtc.yaml"
         env:
           - name: CONFIG
             valueFrom:
