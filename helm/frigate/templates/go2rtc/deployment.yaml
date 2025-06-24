@@ -34,7 +34,10 @@ spec:
         args:
           - "cat > /config//config/go2rtc.yaml.yaml<< EOF
               streams:
-                test: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.113:80
+                elevators: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.111:80
+                vestibule: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.113:80
+                intercom: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.116:80
+                balcony: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.117:80
               EOF"
         livenessProbe:
           httpGet:
