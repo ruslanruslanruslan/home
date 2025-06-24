@@ -57,3 +57,19 @@ spec:
             mountPath: /config
           - mountPath: /media
             name: media
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 8971
+              scheme: HTTPS
+            initialDelaySeconds: 30
+            failureThreshold: 5
+            timeoutSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 8971
+              scheme: HTTPS
+            initialDelaySeconds: 20
+            failureThreshold: 5
+            timeoutSeconds: 10
