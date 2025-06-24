@@ -37,7 +37,7 @@ frigate:
       elevators:
         ffmpeg:
           inputs:
-            - path: rtsp://127.0.0.1:8554/elevators
+            - path: rtsp://go2rtc:1984/elevators
               input_args: preset-rtsp-restream
               roles:
                 - record
