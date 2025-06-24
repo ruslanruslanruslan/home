@@ -21,11 +21,20 @@ data:
         default: 30
     audio:
       enabled: True
+    go2rtc:
+      streams:
+        elevators: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.111:80
+        hallway: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.112:80
+        vestibule: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.113:80
+        livingroom: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.114:80
+        kitchen: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.115:80
+        intercom: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.116:80
+        balcony: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.117:80
     cameras:
       elevators:
         ffmpeg:
           inputs:
-            - path: rtsp://go2rtc-rtsp:8554/elevators
+            - path: rtsp://rtsp:8554/elevators
               roles:
                 - record
                 - detect
@@ -35,7 +44,7 @@ data:
       vestibule:
         ffmpeg:
           inputs:
-            - path: rtsp://go2rtc-rtsp:8554/vestibule
+            - path: rtsp://rtsp:8554/vestibule
               roles:
                 - record
                 - detect
@@ -45,7 +54,7 @@ data:
       intercom:
         ffmpeg:
           inputs:
-            - path: rtsp://go2rtc-rtsp:8554/intercom
+            - path: rtsp://rtsp:8554/intercom
               roles:
                 - record
                 - detect
@@ -55,7 +64,7 @@ data:
       balcony:
         ffmpeg:
           inputs:
-            - path: rtsp://go2rtc-rtsp:8554/balcony
+            - path: rtsp://rtsp:8554/balcony
               roles:
                 - record
                 - detect
