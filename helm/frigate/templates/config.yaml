@@ -29,10 +29,10 @@ data:
           - rtsp://homeassistant:aP5n8XdebfKeDn@192.168.2.113:554/Streaming/Channels/101
         intercom:
     #      - onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.116:80
-          - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.2.116:554/Streaming/Channels/101#video=copy#audio=copy#audio=aac#hardware
+          - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.2.116:554/Streaming/Channels/101#audio=aac
         balcony:
     #      - onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.117:80
-          - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.2.117:554/Streaming/Channels/101#video=copy#audio=copy#audio=aac#hardware
+          - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.2.117:554/Streaming/Channels/101#audio=aac
     cameras:
       elevators:
         ffmpeg:
