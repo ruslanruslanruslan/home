@@ -59,7 +59,7 @@ spec:
             name: media
           resources:
             requests:
-              cpu: "500"
+              cpu: "500m"
           livenessProbe:
             httpGet:
               path: /
