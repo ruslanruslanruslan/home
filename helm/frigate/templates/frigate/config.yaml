@@ -31,7 +31,7 @@ data:
       elevators:
         ffmpeg:
           inputs:
-            - path: rtsp://rtsp:8554/elevators
+            - path: rtsp://go2rtc-rtsp:8554/elevators
               roles:
                 - record
                 - detect
@@ -41,7 +41,7 @@ data:
       vestibule:
         ffmpeg:
           inputs:
-            - path: rtsp://rtsp:8554/vestibule
+            - path: rtsp://go2rtc-rtsp:8554/vestibule
               roles:
                 - record
                 - detect
@@ -51,7 +51,7 @@ data:
       intercom:
         ffmpeg:
           inputs:
-            - path: rtsp://rtsp:8554/intercom
+            - path: rtsp://go2rtc-rtsp:8554/intercom
               roles:
                 - record
                 - detect
@@ -61,7 +61,7 @@ data:
       balcony:
         ffmpeg:
           inputs:
-            - path: rtsp://rtsp:8554/balcony
+            - path: rtsp://go2rtc-rtsp:8554/balcony
               roles:
                 - record
                 - detect
