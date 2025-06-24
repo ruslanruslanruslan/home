@@ -30,9 +30,11 @@ data:
         intercom:
     #      - onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.116:80
           - rtsp://homeassistant:aP5n8XdebfKeDn@192.168.2.116:554/Streaming/Channels/101
+          - "ffmpeg:intercom#audio=aac"
         balcony:
     #      - onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.117:80
           - rtsp://homeassistant:aP5n8XdebfKeDn@192.168.2.117:554/Streaming/Channels/101
+          - "ffmpeg:intercom#audio=aac"
     cameras:
       elevators:
         ffmpeg:
@@ -69,7 +71,7 @@ data:
                 - detect
                 - audio
           output_args:
-            record: preset-record-generic-audio-aac
+            record: preset-record-generic-audio-copy
         audio:
           enabled: True
         detect:
@@ -84,7 +86,7 @@ data:
                 - detect
                 - audio
           output_args:
-            record: preset-record-generic-audio-aac
+            record: preset-record-generic-audio-copy
         audio:
           enabled: True
         detect:
