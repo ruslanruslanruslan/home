@@ -41,8 +41,10 @@ spec:
         securityContext:
           privileged: true
         volumeMounts:
-        - name: config-volume
+        - name: config
           mountPath: /config
+        - mountPath: /media
+          name: media
         livenessProbe:
           httpGet:
             path: /
