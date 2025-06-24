@@ -9,7 +9,8 @@ metadata:
 spec:
   type: NodePort
   ports:
-  - port: 8971
-    nodePort: 30024
+    - name: https
+      port: 8971
+      nodePort: 30024
   selector:
     app: frigate
