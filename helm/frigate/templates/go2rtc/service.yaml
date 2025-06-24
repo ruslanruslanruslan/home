@@ -14,7 +14,7 @@ spec:
     targetPort: 1984
     protocol: TCP
   selector:
-    app: go2rtc-ui
+    app: go2rtc
 ---
 apiVersion: v1
 kind: Service
@@ -32,4 +32,4 @@ spec:
     targetPort: 8554
     protocol: TCP
   selector:
-    app: go2rtc-rtsp
+    app: go2rtc
