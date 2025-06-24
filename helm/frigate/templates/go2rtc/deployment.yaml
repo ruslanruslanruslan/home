@@ -30,6 +30,12 @@ spec:
       - name: go2rtc
         image: alexxit/go2rtc:latest
         imagePullPolicy: Always
+        command: ["/bin/sh","-ce"]
+        args:
+          - "cat > /config//config/go2rtc.yaml.yaml<< EOF
+              streams:
+                test: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.113:80
+              EOF"
         livenessProbe:
           httpGet:
             path: /
