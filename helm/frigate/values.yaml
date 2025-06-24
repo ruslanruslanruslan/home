@@ -25,6 +25,8 @@ frigate:
       enabled: True
       retain:
         default: 30
+    audio:
+      enabled: True
     cameras:
       elevators:
         ffmpeg:
