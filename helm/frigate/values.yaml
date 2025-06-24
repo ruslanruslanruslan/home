@@ -31,11 +31,9 @@ frigate:
       elevators:
         ffmpeg:
           inputs:
-            - path: rtsp://homeassistant:aP5n8XdebfKeDn@192.168.2.111:554/live.sdp
+            - path: http://go2rtc:1984/stream.html?src=elevators&mode=webrtc,mse,hls,mjpeg
               roles:
                 - record
-            - path: rtsp://homeassistant:aP5n8XdebfKeDn@192.168.2.111:554/live2.sdp
-              roles:
                 - detect
                 - audio
         detect:
