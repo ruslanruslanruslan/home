@@ -42,7 +42,7 @@ data:
                 - detect
                 - audio
           output_args:
-            record: preset-record-generic-audio-aac
+            record: preset-record-generic-audio-copy
         audio:
           enabled: True
         detect:
@@ -67,7 +67,7 @@ data:
                 - detect
                 - audio
           output_args:
-            record: preset-record-generic-audio-aac
+            record: preset-record-generic-audio-copy
         audio:
           enabled: True
         detect:
@@ -82,7 +82,7 @@ data:
                 - detect
                 - audio
           output_args:
-            record: preset-record-generic-audio-aac
+            record: preset-record-generic-audio-copy
         audio:
           enabled: True
         detect:
