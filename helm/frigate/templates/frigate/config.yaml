@@ -29,12 +29,53 @@ data:
           - rtsp://homeassistant:aP5n8XdebfKeDn@192.168.2.113:554/Streaming/Channels/101
         intercom:
     #      - onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.116:80
-          - "ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.2.116:554/Streaming/Channels/101#video=copy#audio=copy#audio=aac#hardware"
+          - rtsp://homeassistant:aP5n8XdebfKeDn@192.168.2.116:554/Streaming/Channels/101
+          - "ffmpeg:intercom#audio=aac"
         balcony:
     #      - onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.117:80
           - rtsp://homeassistant:aP5n8XdebfKeDn@192.168.2.117:554/Streaming/Channels/101
           - "ffmpeg:balcony#audio=aac"
     cameras:
+      elevators:
+        ffmpeg:
+          inputs:
+            - path: rtsp://127.0.0.1:8554/elevators
+              input_args: preset-rtsp-restream
+              roles:
+                - record
+                - detect
+                - audio
+          output_args:
+            record: preset-record-generic-audio-copy
+        audio:
+          enabled: True
+        detect:
+          fps: 2
+      vestibule:
+        ffmpeg:
+          inputs:
+            - path: rtsp://127.0.0.1:8554/vestibule
+              input_args: preset-rtsp-restream
+              roles:
+                - record
+                - detect
+        detect:
+          fps: 2
+      balcony:
+        ffmpeg:
+          inputs:
+            - path: rtsp://127.0.0.1:8554/balcony
+              input_args: preset-rtsp-restream
+              roles:
+                - record
+                - detect
+                - audio
+          output_args:
+            record: preset-record-generic-audio-copy
+        audio:
+          enabled: True
+        detect:
+          fps: 1
       intercom:
         ffmpeg:
           inputs:
@@ -45,7 +86,7 @@ data:
                 - detect
                 - audio
           output_args:
-            record: preset-record-generic-audio-aac
+            record: preset-record-generic-audio-copy
         audio:
           enabled: True
         detect:

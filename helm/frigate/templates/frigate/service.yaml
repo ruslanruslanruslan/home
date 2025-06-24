@@ -50,21 +50,3 @@ spec:
     protocol: TCP
   selector:
     app: frigate
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: go2rtc-rtsp
-  namespace: {{ .Release.Namespace }}
-  annotations:
-    prometheus.io/port: "8000"
-    prometheus.io/scrape: "false"
-spec:
-  type: ClusterIP
-  ports:
-  - name: http
-    port: 8554
-    targetPort: 8554
-    protocol: TCP
-  selector:
-    app: frigate
