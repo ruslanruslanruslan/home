@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config
+  namespace: {{ .Release.Namespace }}
+data:
+  config: |
+    streams:
+      elevators: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.111:80
+      vestibule: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.113:80
+      intercom: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.116:80
+      balcony: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.117:80
