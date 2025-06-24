@@ -45,7 +45,7 @@ spec:
             - mountPath: /config
               name: config
           command: [ "cp" ]
-          args: [ "-v", "/config.yml", "/config/config.yml" ]
+          args: [ "-v", "/config.yaml", "/config/config.yaml" ]
       containers:
         - name: frigate
           image: ghcr.io/blakeblackshear/frigate:stable
