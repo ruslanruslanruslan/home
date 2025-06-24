@@ -41,7 +41,7 @@ spec:
           volumeMounts:
             - mountPath: /config.yml
               subPath: config.yml
-              name: configmap
+              name: config-volume
             - mountPath: /config
               name: config
           command: [ "cp" ]
