@@ -57,6 +57,9 @@ spec:
             mountPath: /config
           - mountPath: /media
             name: media
+          resources:
+            requests:
+              cpu: "2"
           livenessProbe:
             httpGet:
               path: /
