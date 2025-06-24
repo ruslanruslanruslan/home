@@ -22,6 +22,16 @@ data:
     audio:
       enabled: True
     cameras:
+      elevators:
+        ffmpeg:
+          inputs:
+            - path: rtsp://go2rtc-rtsp:8554/elevators
+              roles:
+                - record
+                - detect
+                - audio
+        detect:
+          fps: 2
       vestibule:
         ffmpeg:
           inputs:
