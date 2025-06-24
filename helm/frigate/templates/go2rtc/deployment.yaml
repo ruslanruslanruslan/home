@@ -36,7 +36,7 @@ spec:
         imagePullPolicy: Always
         volumeMounts:
         - name: config-volume
-          mountPath: /config/go2rtc.yaml
+          mountPath: /config
         livenessProbe:
           httpGet:
             path: /

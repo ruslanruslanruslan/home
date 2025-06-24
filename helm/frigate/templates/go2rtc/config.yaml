@@ -4,7 +4,7 @@ metadata:
   name: config
   namespace: {{ .Release.Namespace }}
 data:
-  config: |
+  go2rtc.yaml: |
     streams:
       elevators: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.111:80
       vestibule: onvif://homeassistant:aP5n8XdebfKeDn@192.168.2.113:80
