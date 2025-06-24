@@ -30,6 +30,7 @@ data:
         ffmpeg:
           inputs:
             - path: rtsp://go2rtc-rtsp:8554/elevators
+              input_args: preset-rtsp-restream
               roles:
                 - record
                 - detect
@@ -44,6 +45,7 @@ data:
         ffmpeg:
           inputs:
             - path: rtsp://go2rtc-rtsp:8554/vestibule
+              input_args: preset-rtsp-restream
               roles:
                 - record
                 - detect
@@ -53,6 +55,7 @@ data:
         ffmpeg:
           inputs:
             - path: rtsp://go2rtc-rtsp:8554/intercom
+              input_args: preset-rtsp-restream
               roles:
                 - record
                 - detect
@@ -67,6 +70,7 @@ data:
         ffmpeg:
           inputs:
             - path: rtsp://go2rtc-rtsp:8554/balcony
+              input_args: preset-rtsp-restream
               roles:
                 - record
                 - detect
