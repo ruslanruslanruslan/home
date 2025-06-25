@@ -19,6 +19,10 @@ data:
       enabled: True
       retain:
         default: 30
+    review:
+      alerts:
+        labels:
+          - person
     go2rtc:
       streams:
         elevators:
