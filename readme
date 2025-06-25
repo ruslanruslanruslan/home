@@ -6,7 +6,7 @@
 # 5. Install xiaomi-miot and login to mi account, add local devices, filter mop, cooker, 4 power plugs + powerstrip (check local and include filter)
 # 6. Install MQTT (mosquitto.mosquitto 1883 homeassistant FLS3GD8Qc8xJWp) (needed for Qinqpong only)
 # 7. Qinqping Pro AQM add manually (livingroom_air, v2 (should get automatically 582D34006AAA)). Need to be sure that device send data in mqtt using mqtt explorer.
-# 8. Install Frigate http://frigate-endpoint.frigate:5000 no ssl no pass
+# 8. Install Frigate http://frigate-endpoint.frigate:5000 no ssl no pass (not work with pass)
 
 # old. Install ONVIF add all cameras manually
 # old. Generic camera add elevators camera manually and change name additionaly
