@@ -93,3 +93,10 @@ data:
           enabled: True
         detect:
           fps: 3
+        review:
+          alerts:
+            required_zones:
+              - canopy
+        zones:
+          entire_yard:
+            coordinates: 0,1,1,1,1,0.395,0,0.39
