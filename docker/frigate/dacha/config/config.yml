@@ -1,0 +1,23 @@
+mqtt:
+  enabled: False
+record:
+  enabled: True
+  retain:
+    days: 2
+    mode: all
+  alerts:
+    retain:
+      days: 180
+      mode: motion
+  detections:
+    retain:
+      days: 30
+      mode: motion
+snapshots:
+  enabled: True
+  retain:
+    default: 30
+review:
+  alerts:
+    labels:
+      - person
