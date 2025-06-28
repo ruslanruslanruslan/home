@@ -21,3 +21,108 @@ review:
   alerts:
     labels:
       - person
+go2rtc:
+  streams:
+    gateway:
+      - rtsp://homeassistant:aP5n8XdebfKeDn@192.168.3.76:554/Streaming/Channels/101
+    canopy-left:
+      - rtsp://homeassistant:aP5n8XdebfKeDn@192.168.3.68:554/Streaming/Channels/101
+    canopy-main:
+      - rtsp://homeassistant:aP5n8XdebfKeDn@192.168.3.73:554/Streaming/Channels/101
+    court:
+      - rtsp://homeassistant:aP5n8XdebfKeDn@192.168.3.227:554/Streaming/Channels/101
+    garden:
+      - rtsp://homeassistant:aP5n8XdebfKeDn@192.168.3.62:554/Streaming/Channels/101
+    basement:
+      - rtsp://homeassistant:aP5n8XdebfKeDn@192.168.3.17:554/Streaming/Channels/101
+cameras:
+  gateway:
+    ffmpeg:
+      inputs:
+        - path: rtsp://127.0.0.1:8554/gateway
+          input_args: preset-rtsp-restream
+          roles:
+            - record
+            - detect
+            - audio
+      output_args:
+        record: preset-record-generic-audio-copy
+    audio:
+      enabled: True
+    detect:
+      fps: 1
+  canopy-left:
+    ffmpeg:
+      inputs:
+        - path: rtsp://127.0.0.1:8554/canopy-left
+          input_args: preset-rtsp-restream
+          roles:
+            - record
+            - detect
+            - audio
+      output_args:
+        record: preset-record-generic-audio-copy
+    audio:
+      enabled: True
+    detect:
+      fps: 1
+  canopy-main:
+    ffmpeg:
+      inputs:
+        - path: rtsp://127.0.0.1:8554/canopy-main
+          input_args: preset-rtsp-restream
+          roles:
+            - record
+            - detect
+            - audio
+      output_args:
+        record: preset-record-generic-audio-copy
+    audio:
+      enabled: True
+    detect:
+      fps: 1
+  court:
+    ffmpeg:
+      inputs:
+        - path: rtsp://127.0.0.1:8554/court
+          input_args: preset-rtsp-restream
+          roles:
+            - record
+            - detect
+            - audio
+      output_args:
+        record: preset-record-generic-audio-copy
+    audio:
+      enabled: True
+    detect:
+      fps: 1
+  garden:
+    ffmpeg:
+      inputs:
+        - path: rtsp://127.0.0.1:8554/garden
+          input_args: preset-rtsp-restream
+          roles:
+            - record
+            - detect
+            - audio
+      output_args:
+        record: preset-record-generic-audio-copy
+    audio:
+      enabled: True
+    detect:
+      fps: 1
+  basement:
+    ffmpeg:
+      inputs:
+        - path: rtsp://127.0.0.1:8554/basement
+          input_args: preset-rtsp-restream
+          roles:
+            - record
+            - detect
+            - audio
+      output_args:
+        record: preset-record-generic-audio-copy
+    audio:
+      enabled: True
+    detect:
+      fps: 1
