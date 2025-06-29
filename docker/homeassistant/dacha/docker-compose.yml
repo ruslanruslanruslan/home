@@ -1,7 +1,7 @@
 services:
   homeassistant:
     container_name: homeassistant
-    image: "ghcr.io/home-assistant/home-assistant:latest"
+    image: registry.ibragimov.pw/home/homeassistant/dacha:master
     volumes:
       - /docker/home-homeassistant-dacha/config:/config
       - /etc/localtime:/etc/localtime:ro
