@@ -1,0 +1,13 @@
+title: Basement
+views:
+
+  - title: Toilet
+    cards:
+
+      - type: entities
+        entities:
+          - entity: switch.outlet02
+            name: switch
+          - entity: sensor.outlet02_power
+            name: power
+        title: outlet02

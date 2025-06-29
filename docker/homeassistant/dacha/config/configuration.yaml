@@ -5,6 +5,13 @@ logger:
 
 lovelace:
   mode: yaml
+  dashboards:
+    lovelace-basement:
+      mode: yaml
+      title: basement
+      show_in_sidebar: true
+      require_admin: false
+      filename: ui-basement.yaml
 
 homeassistant:
   name: Dacha
@@ -14,3 +21,6 @@ homeassistant:
   time_zone: Europe/Moscow
   currency: RUB
   country: RU
+
+switch:
+  - platform: broadlink
