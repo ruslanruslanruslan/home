@@ -19,7 +19,5 @@ RUN cp -r /tmp/git/zk_teco/custom_components/* /config/custom_components
 RUN git clone https://ruslanruslanruslan:$GITHUB_KEY@github.com/blakeblackshear/frigate-hass-integration.git /tmp/git/advanced-camera-card
 RUN cp -r /tmp/git/advanced-camera-card/custom_components/* /config/custom_components
 
-COPY ./docker/homeassistant/amur /tmp/docker
+COPY ./docker/homeassistant/amur/data /tmp/docker
 RUN cp -r /tmp/docker/* /config
-
-COPY ./application/homeassistant/amur .

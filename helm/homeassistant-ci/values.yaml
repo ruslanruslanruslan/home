@@ -1,7 +1,0 @@
-amur:
-  enabled: true
-  image:
-    repository:
-    pullPolicy: Always
-    name: registry.ibragimov.uk/home/homeassistant/amur:master
-    tag: master

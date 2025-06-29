@@ -1,4 +1,5 @@
 amur:
+  enabled: true
   image:
     pullPolicy: Always
     name: registry.ibragimov.uk/home/homeassistant/amur
