@@ -44,11 +44,6 @@ cameras:
           roles:
             - record
             - detect
-            - audio
-      output_args:
-        record: preset-record-generic-audio-copy
-    audio:
-      enabled: True
     detect:
       fps: 1
   canopy-left:
@@ -89,11 +84,6 @@ cameras:
           roles:
             - record
             - detect
-            - audio
-      output_args:
-        record: preset-record-generic-audio-copy
-    audio:
-      enabled: True
     detect:
       fps: 1
   garden:
@@ -104,11 +94,6 @@ cameras:
           roles:
             - record
             - detect
-            - audio
-      output_args:
-        record: preset-record-generic-audio-copy
-    audio:
-      enabled: True
     detect:
       fps: 1
   basement:
