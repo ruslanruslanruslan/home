@@ -32,16 +32,16 @@ go2rtc:
   streams:
     gateway:
       - rtsp://homeassistant:aP5n8XdebfKeDn@192.168.3.76:554/Streaming/Channels/101
-    canopy-left:
+    canopy_left:
       - rtsp://homeassistant:aP5n8XdebfKeDn@192.168.3.68:554/Streaming/Channels/101
-    canopy-main:
+    canopy_main:
       - rtsp://homeassistant:aP5n8XdebfKeDn@192.168.3.73:554/Streaming/Channels/101
     court:
       - rtsp://homeassistant:aP5n8XdebfKeDn@192.168.3.227:554/Streaming/Channels/101
     garden:
       - rtsp://homeassistant:aP5n8XdebfKeDn@192.168.3.62:554/Streaming/Channels/101
     basement:
-      - rtsp://homeassistant:aP5n8XdebfKeDn@192.168.3.17:554/Streaming/Channels/101
+      - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.3.17:554/Streaming/Channels/101#video=copy#audio=aac
 cameras:
   gateway:
     ffmpeg:
@@ -53,10 +53,10 @@ cameras:
             - detect
     detect:
       fps: 1
-  canopy-left:
+  canopy_left:
     ffmpeg:
       inputs:
-        - path: rtsp://127.0.0.1:8554/canopy-left
+        - path: rtsp://127.0.0.1:8554/canopy_left
           input_args: preset-rtsp-restream
           roles:
             - record
@@ -68,10 +68,10 @@ cameras:
       enabled: True
     detect:
       fps: 1
-  canopy-main:
+  canopy_main:
     ffmpeg:
       inputs:
-        - path: rtsp://127.0.0.1:8554/canopy-main
+        - path: rtsp://127.0.0.1:8554/canopy_main
           input_args: preset-rtsp-restream
           roles:
             - record
