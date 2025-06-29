@@ -33,7 +33,7 @@ go2rtc:
     gateway:
       - rtsp://homeassistant:aP5n8XdebfKeDn@192.168.3.76:554/Streaming/Channels/101
     canopy_left:
-      - rtsp://homeassistant:aP5n8XdebfKeDn@192.168.3.68:554/Streaming/Channels/101
+      - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.3.68:554/Streaming/Channels/101#video=copy#audio=aac
     canopy_main:
       - rtsp://homeassistant:aP5n8XdebfKeDn@192.168.3.73:554/Streaming/Channels/101
     court:
