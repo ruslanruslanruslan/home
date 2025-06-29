@@ -1,0 +1,186 @@
+title: Home
+views:
+
+  - title: Main
+    cards:
+      - type: grid
+        cards:
+          - type: button
+            entity: scene.bright
+            name: Bright
+            show_name: true
+            show_icon: true
+            tap_action:
+              action: call-service
+              service: input_select.select_option
+              target:
+                entity_id:
+                  - input_select.scene_amur
+              data:
+                option: 'bright'
+          - type: button
+            entity: scene.romantic
+            name: Romantic
+            show_name: true
+            show_icon: true
+            tap_action:
+              action: call-service
+              service: input_select.select_option
+              target:
+                entity_id:
+                  - input_select.scene_amur
+              data:
+                option: 'romantic'
+          - type: button
+            entity: scene.work
+            name: Work
+            show_name: true
+            show_icon: true
+            tap_action:
+              action: call-service
+              service: input_select.select_option
+              target:
+                entity_id:
+                  - input_select.scene_amur
+              data:
+                option: 'work'
+          - type: button
+            entity: scene.away
+            name: Away
+            show_name: true
+            show_icon: true
+            tap_action:
+              action: call-service
+              service: input_select.select_option
+              target:
+                entity_id:
+                  - input_select.scene_amur
+              data:
+                option: 'away'
+          - type: button
+            entity: scene.sleep
+            name: Sleep
+            show_name: true
+            show_icon: true
+            tap_action:
+              action: call-service
+              service: input_select.select_option
+              target:
+                entity_id:
+                  - input_select.scene_amur
+              data:
+                option: 'sleep'
+          - type: entity
+            entity: input_select.scene_amur
+            name: scene
+
+      - type: entities
+        entities:
+          - entity: sensor.kitchen_temperature
+            name: outside
+          - entity: sensor.balcony_temperature
+            name: balcony
+          - entity: sensor.bedroom_temperature
+            name: bedroom
+          - entity: sensor.bedroom_temperature_humidity
+            name: humidity
+        title: Temperature
+
+      - type: custom:advanced-camera-card
+        cameras:
+          - camera_entity: camera.elevators
+            live_provider: go2rtc
+
+      - type: custom:advanced-camera-card
+        cameras:
+          - camera_entity: camera.vestibule
+            live_provider: go2rtc
+
+      - type: custom:advanced-camera-card
+        cameras:
+          - camera_entity: camera.intercom
+            live_provider: go2rtc
+
+  - title: Lights
+    cards:
+      - type: entities
+        entities:
+          - entity: light.bedroom_ceiling
+            name: bedroom_ceiling
+          - entity: light.bedroom_ceiling_nightlight
+            name: bedroom_nightlight
+          - entity: light.bedroom_ceiling_ambilight
+            name: bedroom_ambilight
+          - entity: light.bedroom_strip
+            name: bedroom_strip
+          - entity: light.livingroom_ceiling_1
+            name: livingroom_ceiling_1
+          - entity: light.livingroom_ceiling_1_nightlight
+            name: livingroom_nightlight_1
+          - entity: light.livingroom_ceiling_1_ambilight
+            name: livingroom_ambilight_1
+          - entity: light.livingroom_ceiling_2
+            name: livingroom_ceiling_2
+          - entity: light.livingroom_ceiling_2_nightlight
+            name: livingroom_nightlight_2
+          - entity: light.livingroom_ceiling_2_ambilight
+            name: livingroom_ambilight_2
+          - entity: light.livingroom_strip
+            name: livingroom_strip
+          - entity: light.kitchen_lights_light
+            name: kitchen_lights
+          - entity: light.kitchen_chandelier_light
+            name: kitchen_chandelier
+          - entity: switch.kitchen_relay_1_channel_1
+            name: kitchen_strip
+          - entity: light.bathroom_lights_light
+            name: bathroom_lights
+          - entity: light.toilet_lights_light
+            name: toilet_lights
+          - entity: light.walkthrough_lights_light
+            name: walkthrough_lights
+          - entity: light.hallway_lights_light
+            name: hallway_lights
+          - entity: light.hallway_lights_light
+            name: hallway_lights
+        title: Light
+
+
+  - title: Battery
+    cards:
+      - type: entities
+        entities:
+          - entity: sensor.balcony_temperature_battery
+            name: balcony_temperature
+          - entity: sensor.bathroom_motion_1_battery
+            name: bathroom_motion_1
+          - entity: sensor.bedroom_motion_1_battery
+            name: bedroom_motion_1
+          - entity: sensor.bedroom_temperature_battery
+            name: bedroom_temperature
+          - entity: sensor.hallway_motion_1_battery
+            name: hallway_motion_1
+          - entity: sensor.hallway_motion_2_battery
+            name: hallway_motion_2
+          - entity: sensor.walkthrough_motion_1_battery
+            name: walkthrough_motion_1
+          - entity: sensor.hallway_button_battery
+            name: hallway_button
+          - entity: sensor.hallway_vibration_battery
+            name: hallway_vibration
+          - entity: sensor.viomi_v7_2f27_battery_level
+            name: viomi_v7_2f27_battery
+          - entity: sensor.kitchen_motion_1_battery
+            name: kitchen_motion_1
+          - entity: sensor.kitchen_motion_2_battery
+            name: kitchen_motion_2
+          - entity: sensor.kitchen_temperature_battery
+            name: kitchen_temperature
+          - entity: sensor.livingroom_motion_1_battery
+            name: livingroom_motion_1
+          - entity: sensor.livingroom_air_battery
+            name: livingroom_air
+          - entity: sensor.toilet_motion_1_battery
+            name: toilet_motion_1
+          - entity: sensor.bathroom_moisture_battery
+            name: bathroom_moisture

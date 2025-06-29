@@ -1,0 +1,16 @@
+default_config:
+
+logger:
+  default: debug
+
+lovelace:
+  mode: yaml
+
+homeassistant:
+  name: Dacha
+  latitude: 55.7997
+  longitude: 37.7835
+  unit_system: metric
+  time_zone: Europe/Moscow
+  currency: RUB
+  country: RU
