@@ -3,5 +3,5 @@ amur:
   image:
     repository:
     pullPolicy: Always
-    name: registry.ibragimov.pw/home/homeassistant/amur:master
+    name: registry.ibragimov.uk/home/homeassistant/amur:master
     tag: master

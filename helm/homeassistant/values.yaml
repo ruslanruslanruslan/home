@@ -1,5 +1,5 @@
 amur:
   image:
     pullPolicy: Always
-    name: registry.ibragimov.pw/home/homeassistant/amur
+    name: registry.ibragimov.uk/home/homeassistant/amur
     tag: master
