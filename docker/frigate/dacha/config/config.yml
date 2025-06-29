@@ -1,5 +1,12 @@
 mqtt:
   enabled: False
+detectors:
+  ov_0:
+    type: openvino
+    device: CPU
+  ov_1:
+    type: openvino
+    device: CPU
 record:
   enabled: True
   retain:
