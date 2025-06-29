@@ -8,7 +8,7 @@ lovelace:
   resources:
     - url: /local/advanced-camera-card/advanced-camera-card.js
       type: module
-    - url: /local/multiple-entity-row/multiple-entity-row.js
+    - url: /local/multiple-entity-row.js
       type: module
   dashboards:
     lovelace-basement:
