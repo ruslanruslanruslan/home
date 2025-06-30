@@ -9,7 +9,7 @@ services:
       - /etc/localtime:/etc/localtime:ro
       - /run/dbus:/run/dbus:ro
     post_start:
-      - command: ["sh", "-c", "ls /tmp/custom_components"]
+      - command: ["sh", "-c", "mkdir -p /config/custom_components && mv /tmp/custom_components/* /config/custom_components/"]
     restart: unless-stopped
     privileged: true
     ports:
