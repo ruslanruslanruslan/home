@@ -1,4 +1,3 @@
-version: "3.8"
 services:
   homeassistant:
     networks:
@@ -10,7 +9,7 @@ services:
       - /etc/localtime:/etc/localtime:ro
       - /run/dbus:/run/dbus:ro
     post_start:
-      - command: ["sh", "-c", "echo 'helloooooo'"]
+      - command: ["sh", "-c", "ls /tmp/custom_components"]
     restart: unless-stopped
     privileged: true
     ports:
