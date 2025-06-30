@@ -6,7 +6,7 @@ WORKDIR /config
 # RUN apk upgrade
 RUN apk add ffmpeg
 
-RUN mkdir /tmp/config/custom_components
+RUN mkdir -p /tmp/config/custom_components
 RUN git clone https://ruslanruslanruslan:$GITHUB_KEY@github.com/AlexxIT/XiaomiGateway3.git /tmp/git/XiaomiGateway3
 RUN cp -r /tmp/git/XiaomiGateway3/custom_components/* /tmp/config/custom_components
 RUN git clone https://ruslanruslanruslan:$GITHUB_KEY@github.com/al-one/hass-xiaomi-miot.git /tmp/git/hass-xiaomi-miot
