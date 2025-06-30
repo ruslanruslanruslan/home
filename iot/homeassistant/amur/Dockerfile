@@ -19,4 +19,4 @@ RUN cp -r /tmp/git/zk_teco/custom_components/* /config/custom_components
 RUN git clone https://ruslanruslanruslan:$GITHUB_KEY@github.com/blakeblackshear/frigate-hass-integration.git /tmp/git/frigate-hass-integration
 RUN cp -r /tmp/git/frigate-hass-integration/custom_components/* /config/custom_components
 
-COPY ./iot/homeassistant/amur/config/* /config
+COPY ./iot/homeassistant/amur/config/* /config/
