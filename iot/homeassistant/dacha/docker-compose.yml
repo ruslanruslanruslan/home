@@ -3,7 +3,7 @@ services:
     container_name: homeassistant
     image: registry.ibragimov.uk/iot/homeassistant/dacha:master
     volumes:
-      - /docker/home-homeassistant-dacha/config:/config
+      - /docker/iot-homeassistant-dacha/config:/config
       - /etc/localtime:/etc/localtime:ro
       - /run/dbus:/run/dbus:ro
     restart: unless-stopped
