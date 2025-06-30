@@ -75,3 +75,8 @@ views:
         entities:
           - entity: sensor.outlet09_power
             name: power
+
+      - type: custom:advanced-camera-card
+        cameras:
+          - camera_entity: camera.basement
+            live_provider: go2rtc
