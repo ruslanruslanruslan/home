@@ -11,5 +11,5 @@ RUN git clone https://ruslanruslanruslan:$GITHUB_KEY@github.com/AlexxIT/XiaomiGa
 RUN cp -r /tmp/git/XiaomiGateway3/custom_components/* /config/custom_components
 RUN git clone https://ruslanruslanruslan:$GITHUB_KEY@github.com/al-one/hass-xiaomi-miot.git /tmp/git/hass-xiaomi-miot
 RUN cp -r /tmp/git/hass-xiaomi-miot/custom_components/* /config/custom_components
-RUN git clone https://ruslanruslanruslan:$GITHUB_KEY@github.com/blakeblackshear/frigate-hass-integration.git /tmp/git/advanced-camera-card
-RUN cp -r /tmp/git/advanced-camera-card/custom_components/* /config/custom_components
+RUN git clone https://ruslanruslanruslan:$GITHUB_KEY@github.com/blakeblackshear/frigate-hass-integration.git /tmp/git/frigate-hass-integration
+RUN cp -r /tmp/git/frigate-hass-integration/custom_components/* /config/custom_components

@@ -1,3 +1,4 @@
+version: "3.9"
 services:
   homeassistant:
     networks:
@@ -8,6 +9,8 @@ services:
       - /docker/iot-homeassistant-dacha/config:/config
       - /etc/localtime:/etc/localtime:ro
       - /run/dbus:/run/dbus:ro
+    post_start:
+      - command: echo "helooooooo"
     restart: unless-stopped
     privileged: true
     ports:
