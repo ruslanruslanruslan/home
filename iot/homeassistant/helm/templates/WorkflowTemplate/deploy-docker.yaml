@@ -1,37 +1,50 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: docker-homeassistant
-  namespace: homeassistant-ci
+  name: deploy-docker
+  namespace: homeassistant
 spec:
+  serviceAccountName: deployer
+  workflowMetadata:
+    annotations:
+      workflows.argoproj.io/title: '**deploy-docker**-{{`{{ workflow.parameters.service }}`}}'
+      workflows.argoproj.io/description: '`{{`{{ workflow.parameters.env }}`}}`'
   ttlStrategy:
     secondsAfterCompletion: 604800
   entrypoint: wf
   onExit: slack
   arguments:
     parameters:
+    - name: repo
+      value: home
+    - name: project
+      value: iot
+    - name: application
+      value: homeassistant
     - name: service
       enum:
-        - amur
+        - dacha
+        - mati
     - name: env
-      enum:
-        - master
+      value: master
 
   templates:
 
     - name: wf
       steps:
-      - - name: docker
+      - - name: docker-compose
           templateRef:
-            name: docker
+            name: docker-compose
             template: process
             clusterScope: true
           arguments:
             parameters:
+            - name: repo
+              value: "{{`{{ workflow.parameters.repo }}`}}"
             - name: project
-              value: home
+              value: "{{`{{ workflow.parameters.project }}`}}"
             - name: application
-              value: homeassistant
+              value: "{{`{{ workflow.parameters.application }}`}}"
             - name: service
               value: "{{`{{ workflow.parameters.service }}`}}"
             - name: env
