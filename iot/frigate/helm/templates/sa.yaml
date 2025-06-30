@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  namespace: frigate
+  name: deployer
+imagePullSecrets:
+  - name: registry
