@@ -7,7 +7,7 @@ spec:
   serviceAccountName: deployer
   workflowMetadata:
     annotations:
-      workflows.argoproj.io/title: '**deploy-docker-{{`{{ workflow.parameters.application }}`}}**-{{`{{ workflow.parameters.service }}`}}'
+      workflows.argoproj.io/title: '**deploy-docker**-{{`{{ workflow.parameters.service }}`}}'
       workflows.argoproj.io/description: '`{{`{{ workflow.parameters.env }}`}}`'
   ttlStrategy:
     secondsAfterCompletion: 604800
@@ -23,7 +23,6 @@ spec:
       value: frigate
     - name: service
       enum:
-        - amur
         - dacha
         - mati
     - name: env
