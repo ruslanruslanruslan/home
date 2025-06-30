@@ -15,7 +15,7 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /docker/home-frigate-dacha/config:/config
-      - /docker/home-frigate-dacha/storage:/media/frigate
+      - /frigate:/media/frigate
       - type: tmpfs # Optional: 1GB of memory, reduces SSD/SD Card wear
         target: /tmp/cache
         tmpfs:
