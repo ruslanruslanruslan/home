@@ -14,5 +14,5 @@ RUN cp -r /tmp/git/hass-xiaomi-miot/custom_components/* /config/custom_component
 RUN git clone https://ruslanruslanruslan:$GITHUB_KEY@github.com/blakeblackshear/frigate-hass-integration.git /tmp/git/advanced-camera-card
 RUN cp -r /tmp/git/advanced-camera-card/custom_components/* /config/custom_components
 
-COPY ./iot/homeassistant/dacha/data /tmp/docker
+COPY ./iot/homeassistant/dacha/config /tmp/docker
 RUN cp -r /tmp/docker/* /config
