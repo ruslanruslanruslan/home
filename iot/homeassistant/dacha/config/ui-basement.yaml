@@ -4,10 +4,74 @@ views:
   - title: Basement
     cards:
 
+      - entity: switch.outlet01
+        type: custom:multiple-entity-row
+        name: Outlet_01
+        toggle: true
+        entities:
+          - entity: sensor.outlet01_power
+            name: power
+
       - entity: switch.outlet02
         type: custom:multiple-entity-row
         name: Outlet_02
         toggle: true
         entities:
           - entity: sensor.outlet02_power
+            name: power
+
+      - entity: switch.outlet03
+        type: custom:multiple-entity-row
+        name: Outlet_03
+        toggle: true
+        entities:
+          - entity: sensor.outlet03_power
+            name: power
+
+      - entity: switch.outlet04
+        type: custom:multiple-entity-row
+        name: Outlet_04
+        toggle: true
+        entities:
+          - entity: sensor.outlet04_power
+            name: power
+
+      - entity: switch.outlet05
+        type: custom:multiple-entity-row
+        name: Outlet_05
+        toggle: true
+        entities:
+          - entity: sensor.outlet05_power
+            name: power
+
+      - entity: switch.outlet06
+        type: custom:multiple-entity-row
+        name: Outlet_06
+        toggle: true
+        entities:
+          - entity: sensor.outlet06_power
+            name: power
+
+      - entity: switch.outlet07
+        type: custom:multiple-entity-row
+        name: Outlet_07
+        toggle: true
+        entities:
+          - entity: sensor.outlet07_power
+            name: power
+
+      - entity: switch.outlet08
+        type: custom:multiple-entity-row
+        name: Outlet_08
+        toggle: true
+        entities:
+          - entity: sensor.outlet08_power
+            name: power
+
+      - entity: switch.outlet09
+        type: custom:multiple-entity-row
+        name: Outlet_09
+        toggle: true
+        entities:
+          - entity: sensor.outlet09_power
             name: power
