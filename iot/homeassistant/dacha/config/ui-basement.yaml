@@ -4,8 +4,12 @@ views:
   - title: Basement
     cards:
 
-      - type: custom:multiple-entity-row
-        entities:
-          - entity: switch.outlet02
-          - entity: sensor.outlet02_power
-        name: outlet02
+      type: entities
+      entities:
+
+        - entity: switch.outlet02_power
+          type: custom:multiple-entity-row
+          name: outlet02
+          entities:
+            - switch.outlet02
+
