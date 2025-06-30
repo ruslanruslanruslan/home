@@ -2,5 +2,5 @@ amur:
   enabled: true
   image:
     pullPolicy: Always
-    name: registry.ibragimov.uk/home/homeassistant/amur
+    name: registry.ibragimov.uk/iot/homeassistant/amur
     tag: master
