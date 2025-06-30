@@ -1,5 +1,7 @@
 services:
   homeassistant:
+    networks:
+      - iot_network
     container_name: homeassistant
     image: registry.ibragimov.uk/iot/homeassistant/dacha:master
     volumes:
@@ -9,3 +11,7 @@ services:
     restart: unless-stopped
     privileged: true
     network_mode: host
+
+networks:
+  iot_network:
+    driver: bridge

@@ -1,4 +1,4 @@
-add 9 broadlink devices
+1. add 9 broadlink devices
 outlet01: 61
 outlet02: 167
 outlet03: 63
@@ -8,3 +8,5 @@ outlet06: 221
 outlet07: 27
 outlet08: 117
 outlet09: 8
+
+2. Install frigate http://frigate:5000 no ssl no pass (not work with pass)
