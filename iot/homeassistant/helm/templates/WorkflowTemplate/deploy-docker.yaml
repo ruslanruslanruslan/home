@@ -32,6 +32,23 @@ spec:
 
     - name: wf
       steps:
+      - - name: docker
+          templateRef:
+            name: docker
+            template: process
+            clusterScope: true
+          arguments:
+            parameters:
+            - name: repo
+              value: "{{`{{ workflow.parameters.repo }}`}}"
+            - name: project
+              value: "{{`{{ workflow.parameters.project }}`}}"
+            - name: application
+              value: "{{`{{ workflow.parameters.application }}`}}"
+            - name: service
+              value: "{{`{{ workflow.parameters.service }}`}}"
+            - name: env
+              value: "{{`{{ workflow.parameters.env }}`}}"
       - - name: docker-compose
           templateRef:
             name: docker-compose
