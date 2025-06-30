@@ -6,7 +6,9 @@ logger:
 lovelace:
   mode: yaml
   resources:
-    - url: /local/multiple-entity-row.js?v=4.5.1
+    - url: /local/advanced-camera-card/advanced-camera-card.js
+      type: module
+    - url: /local/multiple-entity-row/multiple-entity-row.js?v=4.5.1
       type: module
   dashboards:
     lovelace-basement:
