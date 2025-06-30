@@ -10,7 +10,8 @@ services:
       - /etc/localtime:/etc/localtime:ro
       - /run/dbus:/run/dbus:ro
     post_start:
-      - command: ["echo", "helooooooo"]
+      - command: ["sh", "-c", "echo 'helloooooo'"]
+      - command: ["sh", "-c", "mv -v /tmp/custom_components/* /config/custom_components/"]
     restart: unless-stopped
     privileged: true
     ports:
