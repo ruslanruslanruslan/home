@@ -14,4 +14,5 @@ RUN cp -r /tmp/git/hass-xiaomi-miot/custom_components/* /tmp/config/custom_compo
 RUN git clone https://ruslanruslanruslan:$GITHUB_KEY@github.com/blakeblackshear/frigate-hass-integration.git /tmp/git/frigate-hass-integration
 RUN cp -r /tmp/git/frigate-hass-integration/custom_components/* /tmp/config/custom_components
 
-COPY ./iot/homeassistant/dacha/config/* /tmp/config/
+# will be copied later on deploy
+# COPY ./iot/homeassistant/dacha/config/* /tmp/config/
