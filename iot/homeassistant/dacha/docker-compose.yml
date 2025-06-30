@@ -1,7 +1,7 @@
 services:
   homeassistant:
     networks:
-      - bridge
+      - iot
     container_name: homeassistant
     image: registry.ibragimov.uk/iot/homeassistant/dacha:master
     volumes:
@@ -14,3 +14,8 @@ services:
     privileged: true
     ports:
       - "8123:8123"
+
+networks:
+  iot:
+    external: true
+    driver: bridge

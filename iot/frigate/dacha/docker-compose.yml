@@ -2,7 +2,7 @@ version: "3.9"
 services:
   frigate:
     networks:
-      - bridge
+      - iot
     container_name: frigate
     privileged: true # this may not be necessary for all setups
     restart: unless-stopped
@@ -30,3 +30,8 @@ services:
       - "8555:8555/udp" # WebRTC over udp
     environment:
       FRIGATE_RTSP_PASSWORD: "LuoZVyi2b6NnGL9p"
+
+networks:
+  iot:
+    external: true
+    driver: bridge
