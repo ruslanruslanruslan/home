@@ -6,13 +6,12 @@ WORKDIR /config
 # RUN apk upgrade
 RUN apk add ffmpeg
 
-RUN mkdir /tmp/custom_components
+RUN mkdir /tmp/config/custom_components
 RUN git clone https://ruslanruslanruslan:$GITHUB_KEY@github.com/AlexxIT/XiaomiGateway3.git /tmp/git/XiaomiGateway3
-RUN cp -r /tmp/git/XiaomiGateway3/custom_components/* /tmp/custom_components
+RUN cp -r /tmp/git/XiaomiGateway3/custom_components/* /tmp/config/custom_components
 RUN git clone https://ruslanruslanruslan:$GITHUB_KEY@github.com/al-one/hass-xiaomi-miot.git /tmp/git/hass-xiaomi-miot
-RUN cp -r /tmp/git/hass-xiaomi-miot/custom_components/* /tmp/custom_components
+RUN cp -r /tmp/git/hass-xiaomi-miot/custom_components/* /tmp/config/custom_components
 RUN git clone https://ruslanruslanruslan:$GITHUB_KEY@github.com/blakeblackshear/frigate-hass-integration.git /tmp/git/frigate-hass-integration
-RUN cp -r /tmp/git/frigate-hass-integration/custom_components/* /tmp/custom_components
+RUN cp -r /tmp/git/frigate-hass-integration/custom_components/* /tmp/config/custom_components
 
-COPY ./iot/homeassistant/dacha/config/* /tmp/iot-homeassistant-dacha/config/
-RUN cp -r /tmp/custom_components/* /tmp/iot-homeassistant-dacha/config/custom_components
+COPY ./iot/homeassistant/dacha/config/* /tmp/config/

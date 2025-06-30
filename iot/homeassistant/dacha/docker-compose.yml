@@ -9,7 +9,7 @@ services:
       - /etc/localtime:/etc/localtime:ro
       - /run/dbus:/run/dbus:ro
     post_start:
-      - command: ["sh", "-c", "cp -rf /tmp/iot-homeassistant-dacha/config/* /config"]
+      - command: ["sh", "-c", "cp -rf /tmp/config/* /config"]
     restart: unless-stopped
     privileged: true
     ports:
