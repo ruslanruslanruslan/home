@@ -64,18 +64,23 @@
                         <input name="password" type="password" placeholder="Password" />
                     </label>
 
-                    <input type="submit-vip" value="VIP login" />
+                    <input type="submit" class="submit-vip" value="VIP login" />
 
                 </form>
 
-                <p class="info $(if error)alert$(endif)">Please contact me in <a href="https://m.me/apple.bauzon">messenger</a> to get your VIP credentials.</p>
+                <p class="info"><a href="https://m.me/apple.bauzon" class="important">Get your VIP credentials</a></p>
 
                 $(if trial == 'yes')
-                <a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">
+                <a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)" style="a1">
                     <p class="info $(if error)alert$(endif)"> OR </p>
-                    <input type="submit-trial" value="FREE access" />
+                    <input type="submit" class="submit-trial" value="FREE access" />
 <!--                    <p class="info"> Limited, but rests every hour. </p>-->
                 </a>.
+                $(else)
+                    <p class="info $(if error)alert$(endif)">
+                        Your free access is limited. </br>
+                        Please get VIP access <a href="https://m.me/apple.bauzon" class="important">here</a>.
+                    </p>
                 $(endif)
             </div>
         </div>
