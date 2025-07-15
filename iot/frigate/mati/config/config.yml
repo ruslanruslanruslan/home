@@ -38,7 +38,7 @@ cameras:
   gateway_front:
     ffmpeg:
       inputs:
-        - path: rtsp://127.0.0.1:8554/canopy_left
+        - path: rtsp://127.0.0.1:8554/gateway_front
           input_args: preset-rtsp-restream
           roles:
             - record
