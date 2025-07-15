@@ -33,7 +33,7 @@ review:
 go2rtc:
   streams:
     madam:
-      - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.4.112:554
+      - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.4.112:554?real_stream
 cameras:
   madam:
     ffmpeg:
