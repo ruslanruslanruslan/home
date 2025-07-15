@@ -47,31 +47,27 @@
                     <h1>
                         Welcome to AppleJo Apartment
                     </h1>
-
-
                     <p class="info $(if error)alert$(endif)">
-                        $(if error == "")Please log in to use the internet hotspot service
-
-                        $(if error)$(error)$(endif)
+                        $(if error == "")
+                            Please log in to use the internet hotspot service
+                        $(endif)
+                        $(if error)
+                            $(error)
+                        $(endif)
                     </p>
                     <label>
                         <img class="ico" src="img/user.svg" alt="#" />
                         <input name="username" type="text" value="$(username)" placeholder="Username" />
                     </label>
-
                     <label>
                         <img class="ico" src="img/password.svg" alt="#" />
                         <input name="password" type="password" placeholder="Password" />
                     </label>
-
                     <input type="submit" class="submit-vip" value="VIP login" />
-
                 </form>
-
                 <p class="info">
                     <a href="https://m.me/apple.bauzon" class="important">Get your VIP credentials</a></br>(Facebook: Apple Bauzon)
                 </p>
-
                 $(if trial == 'yes')
                 <a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)" style="a1">
                     <p class="info $(if error)alert$(endif)"> OR </p>
@@ -79,15 +75,14 @@
 <!--                    <p class="info"> Limited, but rests every hour. </p>-->
                 </a>.
                 $(else)
-                    <p class="info $(if error)alert$(endif)">
-                        Your free access is limited. </br>
-                        Please get VIP access <a href="https://m.me/apple.bauzon" class="important">here</a> (Facebook: Apple Bauzon).
-                    </p>
+                <p class="info $(if error)alert$(endif)">
+                    Your free access is limited. </br>
+                    Please get VIP access <a href="https://m.me/apple.bauzon" class="important">here</a> (Facebook: Apple Bauzon).
+                </p>
                 $(endif)
             </div>
         </div>
     </div>
-    $(endif)
 </body>
 
 </html>
