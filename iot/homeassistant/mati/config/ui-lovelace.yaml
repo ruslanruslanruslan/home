@@ -16,12 +16,12 @@ views:
 
       - type: custom:advanced-camera-card
         cameras:
-          - camera_entity: camera.gate-back
+          - camera_entity: camera.gate_back
             live_provider: go2rtc
 
       - type: custom:advanced-camera-card
         cameras:
-          - camera_entity: camera.gate-front
+          - camera_entity: camera.gate_front
             live_provider: go2rtc
 
       - type: custom:advanced-camera-card
