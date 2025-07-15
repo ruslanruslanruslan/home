@@ -33,7 +33,7 @@ review:
 go2rtc:
   streams:
     gateway_front:
-      - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.2.112:554/user=homeassistant_password=aP5n8XdebfKeDn_channel=2_stream=1.sdp?real_stream
+      - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.4.112:554/user=homeassistant_password=aP5n8XdebfKeDn_channel=2_stream=1.sdp?real_stream
 cameras:
   gateway_front:
     ffmpeg:
