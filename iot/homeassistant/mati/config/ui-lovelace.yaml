@@ -1,0 +1,30 @@
+title: Home
+views:
+
+  - title: Main
+    cards:
+
+      - type: custom:advanced-camera-card
+        cameras:
+          - camera_entity: camera.madam
+            live_provider: go2rtc
+
+      - type: custom:advanced-camera-card
+        cameras:
+          - camera_entity: camera.backyard
+            live_provider: go2rtc
+
+      - type: custom:advanced-camera-card
+        cameras:
+          - camera_entity: camera.gate-back
+            live_provider: go2rtc
+
+      - type: custom:advanced-camera-card
+        cameras:
+          - camera_entity: camera.gate-front
+            live_provider: go2rtc
+
+      - type: custom:advanced-camera-card
+        cameras:
+          - camera_entity: camera.stairway
+            live_provider: go2rtc

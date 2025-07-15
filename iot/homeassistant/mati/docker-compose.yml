@@ -1,0 +1,21 @@
+services:
+  homeassistant:
+    networks:
+      - iot
+    container_name: homeassistant
+    image: registry.ibragimov.uk/iot/homeassistant/mati:master
+    volumes:
+      - /docker/iot-homeassistant-mati/config:/config
+      - /etc/localtime:/etc/localtime:ro
+      - /run/dbus:/run/dbus:ro
+    post_start:
+      - command: ["sh", "-c", "cp -rf /tmp/config/* /config"]
+    restart: unless-stopped
+    privileged: true
+    ports:
+      - "8123:8123"
+
+networks:
+  iot:
+    external: true
+    driver: bridge

@@ -1,0 +1,29 @@
+default_config:
+
+logger:
+  default: debug
+
+lovelace:
+  mode: yaml
+  resources:
+    - url: /local/advanced-camera-card/advanced-camera-card.js
+      type: module
+    - url: /local/multiple-entity-row/multiple-entity-row.js?v=4.5.1
+      type: module
+  dashboards:
+    lovelace-storage:
+      mode: yaml
+      title: storage
+      show_in_sidebar: true
+      require_admin: false
+      filename: ui-storage.yaml
+
+#homeassistant:
+#  name: Mati
+#  latitude: 55.7997
+#  longitude: 37.7835
+#  unit_system: metric
+#  time_zone: Europe/Moscow
+#  currency: RUB
+#  country: RU
+
