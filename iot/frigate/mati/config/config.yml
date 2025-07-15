@@ -32,13 +32,13 @@ review:
       - person
 go2rtc:
   streams:
-    gateway_front:
+    madam:
       - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.4.112:554
 cameras:
-  gateway_front:
+  madam:
     ffmpeg:
       inputs:
-        - path: rtsp://127.0.0.1:8554/gateway_front
+        - path: rtsp://127.0.0.1:8554/madam
           input_args: preset-rtsp-restream
           roles:
             - record
