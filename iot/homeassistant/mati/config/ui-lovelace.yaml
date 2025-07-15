@@ -1,7 +1,7 @@
 title: Home
 views:
 
-  - title: Main
+  - title: Cameras
     cards:
 
       - type: custom:advanced-camera-card
@@ -28,3 +28,74 @@ views:
         cameras:
           - camera_entity: camera.stairway
             live_provider: go2rtc
+
+  - title: Storage
+    cards:
+
+      - entity: switch.meter_socket_1
+        type: custom:multiple-entity-row
+        name: Power Meter
+        toggle: true
+        entities:
+          - entity: sensor.meter_current
+            name: current
+          - entity: sensor.meter_power
+            name: power
+          - entity: sensor.meter_voltage
+            name: voltage
+
+      - entity: switch.charge_socket_1
+        type: custom:multiple-entity-row
+        name: Doreco Charge
+        toggle: true
+        entities:
+          - entity: sensor.charge_current
+            name: current
+          - entity: sensor.charge_power
+            name: power
+          - entity: sensor.charge_voltage
+            name: voltage
+
+      - entity: switch.bypass_switch
+        type: custom:multiple-entity-row
+        name: Doreco Bypass
+        toggle: true
+        entities:
+          - entity: sensor.bypass_phase_a_current
+            name: current
+          - entity: sensor.bypass_phase_a_power
+            name: power
+          - entity: sensor.bypass_phase_a_voltage
+            name: voltage
+
+      - entity: switch.solar_switch
+        type: custom:multiple-entity-row
+        name: Solar Power
+        toggle: true
+        entities:
+          - entity: sensor.solar_phase_a_current
+            name: current
+          - entity: sensor.solar_phase_a_power
+            name: power
+          - entity: sensor.solar_phase_a_voltage
+            name: voltage
+
+      - type: entities
+        title: Temperature
+        entities:
+          - entity: sensor.mt15_mt29_air_quality_index
+            name: Index
+          - entity: sensor.mt15_mt29_carbon_dioxide
+            name: Carbon Dioxide
+          - entity: sensor.mt15_mt29_formaldehyde
+            name: Formaldehyde
+          - entity: sensor.mt15_mt29_humidity
+            name: Humidity
+          - entity: sensor.mt15_mt29_pm10
+            name: PM10
+          - entity: sensor.mt15_mt29_pm2_5
+            name: PM2.5
+          - entity: sensor.mt15_mt29_temperature
+            name: Temperature
+          - entity: sensor.mt15_mt29_battery
+            name: Battery

@@ -10,13 +10,6 @@ lovelace:
       type: module
     - url: /local/multiple-entity-row/multiple-entity-row.js?v=4.5.1
       type: module
-  dashboards:
-    lovelace-storage:
-      mode: yaml
-      title: storage
-      show_in_sidebar: true
-      require_admin: false
-      filename: ui-storage.yaml
 
 #homeassistant:
 #  name: Mati
