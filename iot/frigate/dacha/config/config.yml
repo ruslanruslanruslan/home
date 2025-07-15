@@ -1,5 +1,5 @@
-#auth:
-#  reset_admin_password: true
+auth:
+  reset_admin_password: true
 mqtt:
   enabled: False
 #detectors:
