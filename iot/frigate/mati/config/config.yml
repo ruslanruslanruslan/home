@@ -103,6 +103,13 @@ cameras:
       enabled: True
     detect:
       fps: 1
+#    review:
+#      alerts:
+#        required_zones:
+#          - canopy
+#    zones:
+#      canopy:
+#        coordinates: 0,1,1,1,1,0.395,0,0.39
   stairway:
     ffmpeg:
       inputs:
