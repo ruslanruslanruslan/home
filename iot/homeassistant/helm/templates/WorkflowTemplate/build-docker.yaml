@@ -20,7 +20,10 @@ spec:
       - name: application
         value: homeassistant
       - name: service
-        value: amur
+        enum:
+          - amur
+          - dacha
+          - mati
       - name: env
         value: master
 
