@@ -13,7 +13,8 @@ services:
       - "9001:9001"
     volumes:
 #      - ./mosquitto:/etc/mosquitto
-      - /docker/iot-mosquitto-dacha/config:/mosquitto/config
+      - /docker/iot-mosquitto-dacha/config/mosquitto.conf:/mosquitto/config/mosquitto.conf
+      - /docker/iot-mosquitto-dacha/config/passwd:/mosquitto/config/passwd
 
 networks:
   iot:
