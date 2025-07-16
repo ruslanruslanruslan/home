@@ -1,3 +1,3 @@
-1. add tuya (accountid: Bx1BcIW)
+1. add tuya (accountid: Bx1BcIW). Enable entities in meter and charger
 
 2. Install frigate http://frigate:5000 no ssl no pass (not work with pass)
