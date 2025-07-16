@@ -15,7 +15,7 @@ mqtt:
 record:
   enabled: True
   retain:
-    days: 2
+    days: 3
     mode: all
   alerts:
     retain:
