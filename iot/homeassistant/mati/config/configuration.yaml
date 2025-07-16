@@ -11,12 +11,12 @@ lovelace:
     - url: /local/multiple-entity-row/multiple-entity-row.js?v=4.5.1
       type: module
 
-#homeassistant:
-#  name: Mati
-#  latitude: 55.7997
-#  longitude: 37.7835
-#  unit_system: metric
-#  time_zone: Europe/Moscow
-#  currency: RUB
-#  country: RU
+homeassistant:
+  name: Mati
+  latitude: 55.7997
+  longitude: 37.7835
+  unit_system: metric
+  time_zone: Europe/Moscow
+  currency: PHP
+  country: PH
 
