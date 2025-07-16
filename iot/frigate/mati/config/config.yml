@@ -52,9 +52,9 @@ go2rtc:
     gate-front-sub:
       - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.4.115:554/stream2#video=copy#audio=aac
     stairway:
-      - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.4.116:554/stream1#audio=aac#video=h264#rotate=90
+      - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.4.116:554/stream1#audio=aac#video=h264#rotate=270
     stairway-sub:
-      - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.4.116:554/stream2#audio=aac#video=h264#rotate=90
+      - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.4.116:554/stream2#audio=aac#video=h264#rotate=270
 cameras:
   madam:
     ffmpeg:
