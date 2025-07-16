@@ -9,4 +9,6 @@ outlet07: 27
 outlet08: 117
 outlet09: 8
 
-2. Install frigate http://frigate:5000 no ssl no pass (not work with pass)
+2. Add MQTT (mosquitto 1883 homeassistant FLS3GD8Qc8xJWp) (needed for frigate)
+
+3. Install frigate http://frigate:5000 no ssl no pass (not work with pass)
