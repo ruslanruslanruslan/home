@@ -2,6 +2,8 @@ version: "3.7"
 
 services:
   mosquitto:
+    networks:
+      - iot
     image: eclipse-mosquitto
     hostname: mosquitto
     container_name: mosquitto
@@ -12,3 +14,8 @@ services:
     volumes:
 #      - ./mosquitto:/etc/mosquitto
       - /docker/iot-mosquitto-dacha/config:/mosquitto/config
+
+networks:
+  iot:
+    external: true
+    driver: bridge
