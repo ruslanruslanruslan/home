@@ -37,14 +37,24 @@ go2rtc:
   streams:
     madam:
       - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.4.112:554/stream1#video=copy#audio=aac
+    madam-sub:
+      - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.4.112:554/stream2#video=copy#audio=aac
     backyard:
       - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.4.113:554/stream1#video=copy#audio=aac
+    backyard-sub:
+      - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.4.113:554/stream2#video=copy#audio=aac
     gate-back:
       - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.4.114:554/stream1#video=copy#audio=aac
+    gate-back-sub:
+      - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.4.114:554/stream2#video=copy#audio=aac
     gate-front:
       - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.4.115:554/stream1#video=copy#audio=aac
+    gate-front-sub:
+      - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.4.115:554/stream2#video=copy#audio=aac
     stairway:
       - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.4.116:554/stream1#video=copy#audio=aac
+    stairway-sub:
+      - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.4.116:554/stream2#video=copy#audio=aac
 cameras:
   madam:
     ffmpeg:
@@ -53,6 +63,9 @@ cameras:
           input_args: preset-rtsp-restream
           roles:
             - record
+        - path: rtsp://127.0.0.1:8554/madam-sub
+          input_args: preset-rtsp-restream
+          roles:
             - detect
             - audio
       output_args:
@@ -68,6 +81,9 @@ cameras:
           input_args: preset-rtsp-restream
           roles:
             - record
+        - path: rtsp://127.0.0.1:8554/backyard-sub
+          input_args: preset-rtsp-restream
+          roles:
             - detect
             - audio
       output_args:
@@ -83,6 +99,9 @@ cameras:
           input_args: preset-rtsp-restream
           roles:
             - record
+        - path: rtsp://127.0.0.1:8554/gate-back-sub
+          input_args: preset-rtsp-restream
+          roles:
             - detect
             - audio
       output_args:
@@ -98,6 +117,9 @@ cameras:
           input_args: preset-rtsp-restream
           roles:
             - record
+        - path: rtsp://127.0.0.1:8554/gate-front-sub
+          input_args: preset-rtsp-restream
+          roles:
             - detect
             - audio
       output_args:
@@ -120,6 +142,9 @@ cameras:
           input_args: preset-rtsp-restream
           roles:
             - record
+        - path: rtsp://127.0.0.1:8554/stairway-sub
+          input_args: preset-rtsp-restream
+          roles:
             - detect
             - audio
       output_args:
