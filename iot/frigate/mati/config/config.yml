@@ -1,7 +1,10 @@
 #auth:
 #  reset_admin_password: true
 mqtt:
-  enabled: False
+  enabled: True
+  host: mosquitto
+  user: homeassistant
+  password: FLS3GD8Qc8xJWp
 #detectors:
 #  ov_0:
 #    type: openvino
