@@ -43,6 +43,8 @@ views:
             name: power
           - entity: sensor.meter_voltage
             name: voltage
+#          - entity: sensor.meter_cpu_temperature
+#            name: temperature
 
       - entity: switch.charge
         type: custom:multiple-entity-row
