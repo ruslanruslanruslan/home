@@ -7,6 +7,8 @@ WORKDIR /config
 RUN apk add ffmpeg
 
 RUN mkdir -p /tmp/config/custom_components
+RUN git clone https://ruslanruslanruslan:$GITHUB_KEY@github.com/make-all/tuya-local.git /tmp/make-all/tuya-local
+RUN cp -r /tmp/git/tuya-local/custom_components/* /tmp/config/custom_components
 RUN git clone https://ruslanruslanruslan:$GITHUB_KEY@github.com/blakeblackshear/frigate-hass-integration.git /tmp/git/frigate-hass-integration
 RUN cp -r /tmp/git/frigate-hass-integration/custom_components/* /tmp/config/custom_components
 
