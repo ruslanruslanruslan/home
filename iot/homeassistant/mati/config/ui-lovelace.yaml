@@ -32,7 +32,7 @@ views:
   - title: Storage
     cards:
 
-      - entity: switch.meter_socket_1
+      - entity: switch.meter
         type: custom:multiple-entity-row
         name: Power Meter
         toggle: true
@@ -44,7 +44,7 @@ views:
           - entity: sensor.meter_voltage
             name: voltage
 
-      - entity: switch.charge_socket_1
+      - entity: switch.charge
         type: custom:multiple-entity-row
         name: Doreco Charge
         toggle: true
@@ -56,7 +56,7 @@ views:
           - entity: sensor.charge_voltage
             name: voltage
 
-      - entity: switch.bypass_switch
+      - entity: switch.bypass
         type: custom:multiple-entity-row
         name: Doreco Bypass
         toggle: true
@@ -68,7 +68,7 @@ views:
           - entity: sensor.bypass_phase_a_voltage
             name: voltage
 
-      - entity: switch.solar_switch
+      - entity: switch.solar
         type: custom:multiple-entity-row
         name: Solar Power
         toggle: true
@@ -83,19 +83,27 @@ views:
       - type: entities
         title: Temperature
         entities:
-          - entity: sensor.mt15_mt29_air_quality_index
+          - entity: sensor.co2_air_quality
             name: Index
-          - entity: sensor.mt15_mt29_carbon_dioxide
+          - entity: sensor.co2_carbon_dioxide
             name: Carbon Dioxide
-          - entity: sensor.mt15_mt29_formaldehyde
+          - entity: sensor.co2_carbon_dioxide
+            name: Carbon Monoxide
+          - entity: sensor.co2_carbon_monoxide
             name: Formaldehyde
-          - entity: sensor.mt15_mt29_humidity
+          - entity: sensor.co2_humidity
             name: Humidity
-          - entity: sensor.mt15_mt29_pm10
-            name: PM10
-          - entity: sensor.mt15_mt29_pm2_5
-            name: PM2.5
-          - entity: sensor.mt15_mt29_temperature
+          - entity: sensor.co2_pm_0_3
+            name: PM_0.3
+          - entity: sensor.co2_pm1
+            name: PM_1
+          - entity: sensor.co2_pm10
+            name: PM_10
+          - entity: sensor.co2_pm2_5
+            name: PM_2.5
+          - entity: sensor.co2_temperature
             name: Temperature
-          - entity: sensor.mt15_mt29_battery
+          - entity: sensor.co2_volatile_organic_compounds
+            name: Volatile Organic Compounds
+          - entity: sensor.co2_battery
             name: Battery

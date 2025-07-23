@@ -1,4 +1,11 @@
-1. add tuya (accountid: Bx1BcIW). Enable entities in meter and charger
+(old) 1. add tuya (recommended smartlife: BaVWaWj or tuya: Bx1BcIW). Enable entities in meter and charger
+
+1. add tuya-local (recommended smartlife: BaVWaWj or tuya: Bx1BcIW). Default protocol (then auto then highest to lower).
+meter: ]>$l``mHF#l}4rqL 192.168.5.134 3.4
+charge: ps;-rXW`T]bwtj// 192.168.5.131 3.4
+bypass: ???? 192.168.5.133 auto
+solar: NG{09lr=vsPK5R~r 192.168.5.132 3.4
+co2: )&~O]U!mUy:jA49E 192.168.5.135 3.4
 
 2. Add MQTT (mosquitto 1883 homeassistant FLS3GD8Qc8xJWp) (needed for frigate)
 
