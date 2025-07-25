@@ -4,8 +4,15 @@ export SSH_SUDO= &&
 export CI_REGISTRY=registry.ibragimov.uk &&
 export CI_REGISTRY_USER=admin &&
 export CI_REGISTRY_PASSWORD= &&
+
 export TITLE=iot-homeassistant-mati &&
 ssh -T $SSH_USER@$SSH_HOST "mkdir -p /docker/$TITLE" &&
 scp -r iot/homeassistant/mati/. $SSH_USER@$SSH_HOST:/docker/$TITLE/upload &&
+ssh -T $SSH_USER@$SSH_HOST "echo $SSH_SUDO | sudo -S cp -fr /docker/$TITLE/upload/* /docker/$TITLE/" &&
+ssh -T $SSH_USER@$SSH_HOST "cd /docker/$TITLE && docker login $CI_REGISTRY -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD && docker compose -p $TITLE rm -sf && docker compose pull && docker compose -p $TITLE up --detach"
+
+export TITLE=iot-frigate-mati &&
+ssh -T $SSH_USER@$SSH_HOST "mkdir -p /docker/$TITLE" &&
+scp -r iot/frigate/mati/. $SSH_USER@$SSH_HOST:/docker/$TITLE/upload &&
 ssh -T $SSH_USER@$SSH_HOST "echo $SSH_SUDO | sudo -S cp -fr /docker/$TITLE/upload/* /docker/$TITLE/" &&
 ssh -T $SSH_USER@$SSH_HOST "cd /docker/$TITLE && docker login $CI_REGISTRY -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD && docker compose -p $TITLE rm -sf && docker compose pull && docker compose -p $TITLE up --detach"
