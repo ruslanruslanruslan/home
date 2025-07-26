@@ -34,81 +34,81 @@ views:
       - type: entities
         title: Equipment
         entities:
-        - entity: switch.meter
+        - entity: switch.power_meter
           type: custom:multiple-entity-row
           name: Cameras
           toggle: true
           entities:
-            - entity: sensor.meter_current
+            - entity: sensor.power_meter_current
               name: current
-            - entity: sensor.meter_power
+            - entity: sensor.power_meter_power
               name: power
-            - entity: sensor.meter_voltage
+            - entity: sensor.power_meter_voltage
               name: voltage
-  #          - entity: sensor.meter_cpu_temperature
+  #          - entity: sensor.power_meter_cpu_temperature
   #            name: temperature
 
       - type: entities
         title: Solar Station
         entities:
-        - entity: switch.charge
+        - entity: switch.solar_charge
           type: custom:multiple-entity-row
           name: Doreco Charge
           toggle: true
           entities:
-            - entity: sensor.charge_current
+            - entity: sensor.solar_charge_current
               name: current
-            - entity: sensor.charge_power
+            - entity: sensor.solar_charge_power
               name: power
-            - entity: sensor.charge_voltage
+            - entity: sensor.solar_charge_voltage
               name: voltage
-        - entity: switch.bypass
+        - entity: switch.solar_bypass_api
           type: custom:multiple-entity-row
           name: Doreco Bypass
           toggle: true
           entities:
-            - entity: sensor.bypass_current
+            - entity: sensor.solar_bypass_api_current
               name: current
-            - entity: sensor.bypass_power
+            - entity: sensor.solar_bypass_api_power
               name: power
-            - entity: sensor.bypass_voltage
+            - entity: sensor.solar_bypass_api_voltage
               name: voltage
-        - entity: switch.solar
+        - entity: switch.solar_output_api
           type: custom:multiple-entity-row
           name: Solar Output
           toggle: true
           entities:
-            - entity: sensor.solar_current
+            - entity: sensor.solar_output_api_current
               name: current
-            - entity: sensor.solar_power
+            - entity: sensor.solar_output_api_power
               name: power
-            - entity: sensor.solar_voltage
+            - entity: sensor.solar_output_api_voltage
               name: voltage
 
       - type: entities
         title: Air
         entities:
-          - entity: sensor.co2_air_quality
+          - entity: sensor.storage_co2_air_quality
             name: Index
-          - entity: sensor.co2_carbon_dioxide
+          - entity: sensor.storage_co2_carbon_dioxide
             name: Carbon Dioxide
-          - entity: sensor.co2_carbon_dioxide
+          - entity: sensor.storage_co2_carbon_dioxide
             name: Carbon Monoxide
-          - entity: sensor.co2_carbon_monoxide
+          - entity: sensor.storage_co2_carbon_monoxide
             name: Formaldehyde
-          - entity: sensor.co2_humidity
+          - entity: sensor.storage_co2_humidity
             name: Humidity
-          - entity: sensor.co2_pm_0_3
+          - entity: sensor.storage_co2_pm_0_3
             name: PM_0.3
-          - entity: sensor.co2_pm1
+          - entity: sensor.storage_co2_pm1
             name: PM_1
-          - entity: sensor.co2_pm10
+          - entity: sensor.storage_co2_pm10
             name: PM_10
-          - entity: sensor.co2_pm2_5
+          - entity: sensor.storage_co2_pm2_5
             name: PM_2.5
-          - entity: sensor.co2_temperature
+          - entity: sensor.storage_co2_temperature
             name: Temperature
-          - entity: sensor.co2_volatile_organic_compounds
+          - entity: sensor.storage_co2_volatile_organic_compounds
             name: Volatile Organic Compounds
-          - entity: sensor.co2_battery
+          - entity: sensor.storage_co2_battery
             name: Battery
