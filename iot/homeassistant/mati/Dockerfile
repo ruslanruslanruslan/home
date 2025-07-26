@@ -4,7 +4,7 @@ WORKDIR /config
 
 # RUN apk update --no-cache --ignore alpine-baselayout
 # RUN apk upgrade
-RUN apk add ffmpeg
+RUN apk add ffmpegqqqqq
 
 RUN mkdir -p /tmp/config/custom_components
 RUN git clone https://ruslanruslanruslan:$GITHUB_KEY@github.com/al-one/hass-xiaomi-miot.git /tmp/git/hass-xiaomi-miot
