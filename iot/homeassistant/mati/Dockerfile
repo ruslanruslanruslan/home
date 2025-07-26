@@ -7,6 +7,8 @@ WORKDIR /config
 RUN apk add ffmpeg
 
 RUN mkdir -p /tmp/config/custom_components
+RUN git clone https://ruslanruslanruslan:$GITHUB_KEY@github.com/al-one/hass-xiaomi-miot.git /tmp/git/hass-xiaomi-miot
+RUN cp -r /tmp/git/hass-xiaomi-miot/custom_components/* /config/custom_components
 RUN git clone https://ruslanruslanruslan:$GITHUB_KEY@github.com/make-all/tuya-local.git /tmp/git/tuya-local
 RUN cp -r /tmp/git/tuya-local/custom_components/* /tmp/config/custom_components
 RUN git clone https://ruslanruslanruslan:$GITHUB_KEY@github.com/rospogrigio/localtuya.git /tmp/git/localtuya

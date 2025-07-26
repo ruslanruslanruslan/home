@@ -31,59 +31,62 @@ views:
 
   - title: Storage
     cards:
-
-      - entity: switch.meter
-        type: custom:multiple-entity-row
-        name: Power Meter
-        toggle: true
+      - type: entities
+        title: Equipment
         entities:
-          - entity: sensor.meter_current
-            name: current
-          - entity: sensor.meter_power
-            name: power
-          - entity: sensor.meter_voltage
-            name: voltage
-#          - entity: sensor.meter_cpu_temperature
-#            name: temperature
-
-      - entity: switch.charge
-        type: custom:multiple-entity-row
-        name: Doreco Charge
-        toggle: true
-        entities:
-          - entity: sensor.charge_current
-            name: current
-          - entity: sensor.charge_power
-            name: power
-          - entity: sensor.charge_voltage
-            name: voltage
-
-      - entity: switch.bypass
-        type: custom:multiple-entity-row
-        name: Doreco Bypass
-        toggle: true
-        entities:
-          - entity: sensor.bypass_phase_a_current
-            name: current
-          - entity: sensor.bypass_phase_a_power
-            name: power
-          - entity: sensor.bypass_phase_a_voltage
-            name: voltage
-
-      - entity: switch.solar
-        type: custom:multiple-entity-row
-        name: Solar Power
-        toggle: true
-        entities:
-          - entity: sensor.solar_phase_a_current
-            name: current
-          - entity: sensor.solar_phase_a_power
-            name: power
-          - entity: sensor.solar_phase_a_voltage
-            name: voltage
+        - entity: switch.meter
+          type: custom:multiple-entity-row
+          name: Cameras
+          toggle: true
+          entities:
+            - entity: sensor.meter_current
+              name: current
+            - entity: sensor.meter_power
+              name: power
+            - entity: sensor.meter_voltage
+              name: voltage
+  #          - entity: sensor.meter_cpu_temperature
+  #            name: temperature
 
       - type: entities
-        title: Temperature
+        title: Solar Station
+        entities:
+        - entity: switch.charge
+          type: custom:multiple-entity-row
+          name: Doreco Charge
+          toggle: true
+          entities:
+            - entity: sensor.charge_current
+              name: current
+            - entity: sensor.charge_power
+              name: power
+            - entity: sensor.charge_voltage
+              name: voltage
+        - entity: switch.bypass
+          type: custom:multiple-entity-row
+          name: Doreco Bypass
+          toggle: true
+          entities:
+            - entity: sensor.bypass_current
+              name: current
+            - entity: sensor.bypass_power
+              name: power
+            - entity: sensor.bypass_voltage
+              name: voltage
+        - entity: switch.solar
+          type: custom:multiple-entity-row
+          name: Solar Output
+          toggle: true
+          entities:
+            - entity: sensor.solar_current
+              name: current
+            - entity: sensor.solar_power
+              name: power
+            - entity: sensor.solar_voltage
+              name: voltage
+
+      - type: entities
+        title: Air
         entities:
           - entity: sensor.co2_air_quality
             name: Index
