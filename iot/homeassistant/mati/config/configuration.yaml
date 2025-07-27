@@ -7,7 +7,7 @@ default_config:
   webhook:
 
 logger:
-  default: debug
+  default: warning
 
 lovelace:
   mode: yaml
@@ -27,7 +27,9 @@ lovelace:
 template:
   - trigger:
       - platform: webhook
-        webhook_id: speedtest
+        webhook_id: -Q-2r2VOyBx89C6BicNoaRHsQ
+        allowed_methods: POST
+        local_only: false
     sensor:
       - name: "Speedtest Download"
         state: "{{ (trigger.json.download / 1024 / 1024) | round(2) }}"

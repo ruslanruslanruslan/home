@@ -8,7 +8,7 @@ tts:
   - platform: google_translate
 
 logger:
-  default: debug
+  default: warning
 
 lovelace:
   mode: yaml
