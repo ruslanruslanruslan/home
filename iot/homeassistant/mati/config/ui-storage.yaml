@@ -107,19 +107,6 @@ views:
         entities:
           - entity: switch.mikrotik_ether1_port
             type: custom:multiple-entity-row
-            show_state: false
-            name: PLDT Speedtest
-            entities:
-              - entity: sensor.speedtest_download
-                name: Download
-              - entity: sensor.speedtest_upload
-                name: Upload
-              - entity: sensor.speedtest_ping
-                name: Ping
-              - entity: sensor.speedtest_packet_loss
-                name: Loss
-          - entity: switch.mikrotik_ether1_port
-            type: custom:multiple-entity-row
             name: PLDT Usage
             toggle: true
             entities:
