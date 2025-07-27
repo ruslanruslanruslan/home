@@ -53,3 +53,8 @@
       data: { }
       target:
         entity_id: button.solar_bypass_refresh_sensors
+    - action: button.press
+      metadata: { }
+      data: { }
+      target:
+        entity_id: button.solar_output_refresh_sensors
