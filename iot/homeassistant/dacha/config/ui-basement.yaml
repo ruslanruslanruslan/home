@@ -80,3 +80,8 @@ views:
         cameras:
           - camera_entity: camera.basement
             live_provider: go2rtc
+
+      - type: iframe
+        name: Speedtest
+        url: http://192.168.3.189:8081/
+        aspect_ratio: 75%

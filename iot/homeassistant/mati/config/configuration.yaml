@@ -51,7 +51,7 @@ homeassistant:
   latitude: 55.7997
   longitude: 37.7835
   unit_system: metric
-  time_zone: Europe/Moscow
+  time_zone: Asia/Manila
   currency: PHP
   country: PH
 
