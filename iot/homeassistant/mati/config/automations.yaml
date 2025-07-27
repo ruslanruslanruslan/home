@@ -46,7 +46,7 @@
     - trigger: time_pattern
       hours: "*"
       minutes: "*"
-      seconds: /15
+      seconds: /30
   actions:
     - action: button.press
       metadata: { }

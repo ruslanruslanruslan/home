@@ -25,42 +25,51 @@ views:
         entities:
         - entity: sensor.solar_charge_power
           type: custom:multiple-entity-row
+          show_state: false
           name: Doreco Charge
           entities:
-#            - entity: sensor.solar_charge_current
-#              name: current
+            - entity: sensor.solar_charge_current
+              name: current
             - entity: sensor.solar_charge_voltage
-              name: false
+              name: voltage
+            - entity: sensor.solar_charge_power
+              name: power
         - entity: sensor.solar_bypass_power
           type: custom:multiple-entity-row
+          show_state: false
           name: Doreco Bypass
           entities:
-            - icon: mdi:refresh
-#              name: refresh
-              tap_action:
-                action: call-service
-                service: button.press
-                service_data:
-                  entity_id: button.solar_bypass_refresh_sensors
-#            - entity: sensor.solar_bypass_current
-#              name: current
+#            - icon: mdi:refresh
+##              name: refresh
+#              tap_action:
+#                action: call-service
+#                service: button.press
+#                service_data:
+#                  entity_id: button.solar_bypass_refresh_sensors
+            - entity: sensor.solar_bypass_current
+              name: current
             - entity: sensor.solar_bypass_voltage
-              name: false
+              name: voltage
+            - entity: sensor.solar_bypass_power
+              name: power
         - entity: sensor.solar_output_power
           type: custom:multiple-entity-row
+          show_state: false
           name: Solar Output
           entities:
-            - icon: mdi:refresh
-#              name: refresh
-              tap_action:
-                action: call-service
-                service: button.press
-                service_data:
-                  entity_id: button.solar_output_refresh_sensors
-#            - entity: sensor.solar_output_current
-#              name: current
+#            - icon: mdi:refresh
+##              name: refresh
+#              tap_action:
+#                action: call-service
+#                service: button.press
+#                service_data:
+#                  entity_id: button.solar_output_refresh_sensors
+            - entity: sensor.solar_output_current
+              name: current
             - entity: sensor.solar_output_voltage
-              name: false
+              name: voltage
+            - entity: sensor.solar_output_power
+              name: power
 
       - type: entities
         title: Air
@@ -94,6 +103,7 @@ views:
 
       - type: entities
         title: Mikrotik
+        show_header_toggle: false
         entities:
           - entity: switch.mikrotik_ether1_port
             type: custom:multiple-entity-row
@@ -132,6 +142,7 @@ views:
 
       - type: entities
         title: Xiaomi
+        show_header_toggle: false
         entities:
         - entity: light.miwifi_50_88_11_b4_65_90_led
           type: custom:multiple-entity-row
