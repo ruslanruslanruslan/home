@@ -27,5 +27,6 @@ homeassistant:
   currency: PHP
   country: PH
 
+scene: !include scenes.yaml
 automation: !include automations.yaml
 #script: !include scripts.yaml

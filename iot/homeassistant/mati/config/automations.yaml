@@ -17,6 +17,9 @@
           entity_id: switch.solar_bypass
           state: unavailable
   action:
+    - service: "scene.turn_on"
+      target:
+        entity_id: scene.brownout
     - action: persistent_notification.create
       data:
         notification_id: "1000"
@@ -41,15 +44,13 @@
     platform: state
     to: "on"
   condition:
-    - condition: or
-      conditions:
-        - condition: state
-          entity_id: switch.solar_charge
-          state: "on"
-        - condition: state
-          entity_id: switch.solar_bypass
-          state: "on"
+    - condition: state
+      entity_id: scene.brownout
+      state: "on"
   action:
+    - service: "scene.turn_off"
+      target:
+        entity_id: scene.brownout
     - action: persistent_notification.dismiss
       data:
         notification_id: "1000"
