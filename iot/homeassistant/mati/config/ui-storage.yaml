@@ -40,6 +40,7 @@ views:
           toggle: true
           entities:
             - icon: mdi:refresh
+              name: refresh
               tap_action:
                 action: call-service
                 service: button.press
@@ -57,6 +58,7 @@ views:
           toggle: true
           entities:
             - icon: mdi:refresh
+              name: refresh
               tap_action:
                 action: call-service
                 service: button.press
@@ -72,24 +74,26 @@ views:
       - type: entities
         title: Air
         entities:
-          - entity: sensor.storage_co2_air_quality
-            name: Index
-          - entity: sensor.storage_co2_carbon_dioxide
-            name: Carbon Dioxide
-          - entity: sensor.storage_co2_carbon_dioxide
-            name: Carbon Monoxide
-          - entity: sensor.storage_co2_carbon_monoxide
-            name: Formaldehyde
+#          - entity: sensor.storage_co2_carbon_dioxide
+#            name: Carbon Dioxide
+#          - entity: sensor.storage_co2_carbon_dioxide
+#            name: Carbon Monoxide
+#          - entity: sensor.storage_co2_carbon_monoxide
+#            name: Formaldehyde
           - entity: sensor.storage_co2_humidity
             name: Humidity
-          - entity: sensor.storage_co2_pm_0_3
-            name: PM_0.3
-          - entity: sensor.storage_co2_pm1
-            name: PM_1
-          - entity: sensor.storage_co2_pm10
-            name: PM_10
-          - entity: sensor.storage_co2_pm2_5
-            name: PM_2.5
+          - entity: sensor.storage_co2_air_quality
+            type: custom:multiple-entity-row
+            name: Quality
+            entities:
+              - entity: sensor.storage_co2_pm_0_3
+                name: PM03
+              - entity: sensor.storage_co2_pm1
+                name: PM1
+              - entity: sensor.storage_co2_pm2_5
+                name: PM2.5
+              - entity: sensor.storage_co2_pm10
+                name: PM10
           - entity: sensor.storage_co2_temperature
             name: Temperature
           - entity: sensor.storage_co2_volatile_organic_compounds
@@ -98,15 +102,78 @@ views:
             name: Battery
 
       - type: entities
-        title: Network
+        title: Mikrotik
         entities:
+          - entity: switch.mikrotik_ether1_port
+            type: custom:multiple-entity-row
+            name: PLDT
+            toggle: true
+            entities:
+              - entity: sensor.mikrotik_ether1_rx
+                name: RX
+              - entity: sensor.mikrotik_ether1_tx
+                name: TX
           - entity: sensor.mikrotik_hex_cpu_load
+            type: custom:multiple-entity-row
             name: CPU
+            entities:
+              - entity: sensor.mikrotik_hex_board_temperature
+                name: Board
+              - entity: sensor.mikrotik_hex_cpu_temperature
+                name: CPU
           - entity: sensor.mikrotik_hex_memory_usage
             name: RAM
           - entity: sensor.mikrotik_hex_hdd_usage
             name: HDD
-          - entity: sensor.mikrotik_hex_board_temperature
-            name: Board
-          - entity: sensor.mikrotik_hex_cpu_temperature
-            name: CPU
+
+      - type: entities
+        title: Xiaomi
+        entities:
+        - entity: light.miwifi_50_88_11_b4_65_90_led
+          type: custom:multiple-entity-row
+          name: Main
+          toggle: true
+          entities:
+            - entity: sensor.miwifi_50_88_11_b4_65_90_devices
+              name: devices
+            - entity: sensor.miwifi_50_88_11_b4_65_90_memory_usage
+              name: RAM
+            - icon: mdi:refresh
+              name: reboot
+              tap_action:
+                action: call-service
+                service: button.press
+                service_data:
+                  entity_id: button.miwifi_50_88_11_b4_65_90_reboot
+        - entity: light.miwifi_50_88_11_b2_bf_7c_led
+          type: custom:multiple-entity-row
+          name: Justin
+          toggle: true
+          entities:
+            - entity: sensor.miwifi_50_88_11_b2_bf_7c_devices
+              name: devices
+            - entity: sensor.miwifi_50_88_11_b2_bf_7c_memory_usage
+              name: RAM
+            - icon: mdi:refresh
+              name: reboot
+              tap_action:
+                action: call-service
+                service: button.press
+                service_data:
+                  entity_id: button.miwifi_50_88_11_b2_bf_7c_reboot
+        - entity: light.miwifi_50_88_11_b7_11_b0_led
+          type: custom:multiple-entity-row
+          name: Tank
+          toggle: true
+          entities:
+            - entity: sensor.miwifi_50_88_11_b7_11_b0_devices
+              name: devices
+            - entity: sensor.miwifi_50_88_11_b7_11_b0_memory_usage
+              name: RAM
+            - icon: mdi:refresh
+              name: reboot
+              tap_action:
+                action: call-service
+                service: button.press
+                service_data:
+                  entity_id: button.miwifi_50_88_11_b7_11_b0_reboot

@@ -22,3 +22,8 @@
     solar_output | 192.168.5.132 | eb610909d74087f914amty | NG{09lr=vsPK5R~r | 3.4 (refresh sensors!)
 
 4. Add Mikrotik.
+
+5. Add MIWIFI.
+    Main: 192.168.5.11 BA9 SHA256
+    Justin: 192.168.5.12 BA9 SHA1
+    Tank: 192.168.5.13 BA9 SHA1
