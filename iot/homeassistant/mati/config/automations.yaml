@@ -4,7 +4,18 @@
   - entity_id: switch.solar_charge
     platform: state
     to: unavailable
-  condition: []
+  - entity_id: switch.solar_bypass
+    platform: state
+    to: unavailable
+  condition:
+    - condition: and
+      conditions:
+        - condition: state
+          entity_id: switch.solar_charge
+          state: unavailable
+        - condition: state
+          entity_id: switch.solar_bypass
+          state: unavailable
   action:
     - action: persistent_notification.create
       data:
@@ -26,7 +37,18 @@
   - entity_id: switch.solar_charge
     platform: state
     to: "on"
-  condition: []
+  - entity_id: switch.solar_bypass
+    platform: state
+    to: "on"
+  condition:
+    - condition: or
+      conditions:
+        - condition: state
+          entity_id: switch.solar_charge
+          state: "on"
+        - condition: state
+          entity_id: switch.solar_bypass
+          state: "on"
   action:
     - action: persistent_notification.dismiss
       data:
