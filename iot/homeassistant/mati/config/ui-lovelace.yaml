@@ -62,27 +62,27 @@ views:
               name: power
             - entity: sensor.solar_charge_voltage
               name: voltage
-        - entity: switch.solar_bypass_api
+        - entity: switch.solar_bypass
           type: custom:multiple-entity-row
           name: Doreco Bypass
           toggle: true
           entities:
-            - entity: sensor.solar_bypass_api_current
+            - entity: sensor.solar_bypass_current
               name: current
-            - entity: sensor.solar_bypass_api_power
+            - entity: sensor.solar_bypass_power
               name: power
-            - entity: sensor.solar_bypass_api_voltage
+            - entity: sensor.solar_bypass_voltage
               name: voltage
-        - entity: switch.solar_output_api
+        - entity: switch.solar_output
           type: custom:multiple-entity-row
           name: Solar Output
           toggle: true
           entities:
-            - entity: sensor.solar_output_api_current
+            - entity: sensor.solar_output_current
               name: current
-            - entity: sensor.solar_output_api_power
+            - entity: sensor.solar_output_power
               name: power
-            - entity: sensor.solar_output_api_voltage
+            - entity: sensor.solar_output_voltage
               name: voltage
 
       - type: entities
