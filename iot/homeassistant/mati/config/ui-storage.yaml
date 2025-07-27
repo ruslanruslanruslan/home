@@ -97,7 +97,20 @@ views:
         entities:
           - entity: switch.mikrotik_ether1_port
             type: custom:multiple-entity-row
-            name: PLDT
+            show_state: false
+            name: PLDT Speedtest
+            entities:
+              - entity: sensor.speedtest_download
+                name: Download
+              - entity: sensor.speedtest_upload
+                name: Upload
+              - entity: sensor.speedtest_ping
+                name: Ping
+              - entity: sensor.speedtest_packet_loss
+                name: Loss
+          - entity: switch.mikrotik_ether1_port
+            type: custom:multiple-entity-row
+            name: PLDT Usage
             toggle: true
             entities:
               - entity: sensor.mikrotik_ether1_rx
@@ -168,3 +181,8 @@ views:
                 service: button.press
                 service_data:
                   entity_id: button.miwifi_50_88_11_b7_11_b0_reboot
+
+      - type: iframe
+        name: Speedtest
+        url: http://192.168.4.201:8081/
+        aspect_ratio: 75%
