@@ -1,4 +1,10 @@
 default_config:
+  mobile_app:
+  person:
+  automation:
+  script:
+  scene:
+  webhook:
 
 logger:
   default: debug
@@ -26,3 +32,6 @@ homeassistant:
   time_zone: Europe/Moscow
   currency: PHP
   country: PH
+
+automation: !include automations.yaml
+#script: !include scripts.yaml

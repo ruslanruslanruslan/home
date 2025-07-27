@@ -1,0 +1,25 @@
+- alias: brownout_on
+  initial_state: on
+  trigger:
+  - entity_id: switch.solar_charge
+    platform: state
+    to: unavailable
+  condition: []
+  action:
+    - action: persistent_notification.create
+      data:
+        notification_id: "1000"
+        message: "It is power off now in Martinaez!"
+        title: "Brownout!"
+
+- alias: brownout_off
+  initial_state: on
+  trigger:
+  - entity_id: switch.solar_charge
+    platform: state
+    to: on
+  condition: []
+  action:
+    - action: persistent_notification.dismiss
+      data:
+        notification_id: "1000"

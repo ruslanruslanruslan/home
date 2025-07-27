@@ -11,6 +11,9 @@ scp -r iot/homeassistant/mati/. $SSH_USER@$SSH_HOST:/docker/$TITLE/upload &&
 ssh -T $SSH_USER@$SSH_HOST "echo $SSH_SUDO | sudo -S cp -fr /docker/$TITLE/upload/* /docker/$TITLE/" &&
 ssh -T $SSH_USER@$SSH_HOST "cd /docker/$TITLE && docker login $CI_REGISTRY -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD && docker compose pull && docker compose -p $TITLE rm -sf && docker compose -p $TITLE up --detach"
 
+scp -r iot/homeassistant/mati/. $SSH_USER@$SSH_HOST:/docker/$TITLE/upload &&
+ssh -T $SSH_USER@$SSH_HOST "echo $SSH_SUDO | sudo -S cp -fr /docker/$TITLE/upload/* /docker/$TITLE/"
+
 sudo service docker stop
 sudo dockerd --max-concurrent-downloads 1
 sudo service docker restart -d
