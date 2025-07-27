@@ -23,53 +23,44 @@ views:
       - type: entities
         title: Solar Station
         entities:
-        - entity: switch.solar_charge
+        - entity: sensor.solar_charge_power
           type: custom:multiple-entity-row
           name: Doreco Charge
-          toggle: true
           entities:
-            - entity: sensor.solar_charge_current
-              name: current
-            - entity: sensor.solar_charge_power
-              name: power
+#            - entity: sensor.solar_charge_current
+#              name: current
             - entity: sensor.solar_charge_voltage
-              name: voltage
-        - entity: switch.solar_bypass
+              name: false
+        - entity: sensor.solar_bypass_power
           type: custom:multiple-entity-row
           name: Doreco Bypass
-          toggle: true
           entities:
             - icon: mdi:refresh
-              name: refresh
+#              name: refresh
               tap_action:
                 action: call-service
                 service: button.press
                 service_data:
                   entity_id: button.solar_bypass_refresh_sensors
-            - entity: sensor.solar_bypass_current
-              name: current
-            - entity: sensor.solar_bypass_power
-              name: power
+#            - entity: sensor.solar_bypass_current
+#              name: current
             - entity: sensor.solar_bypass_voltage
-              name: voltage
-        - entity: switch.solar_output
+              name: false
+        - entity: sensor.solar_output_power
           type: custom:multiple-entity-row
           name: Solar Output
-          toggle: true
           entities:
             - icon: mdi:refresh
-              name: refresh
+#              name: refresh
               tap_action:
                 action: call-service
                 service: button.press
                 service_data:
                   entity_id: button.solar_output_refresh_sensors
-            - entity: sensor.solar_output_current
-              name: current
-            - entity: sensor.solar_output_power
-              name: power
+#            - entity: sensor.solar_output_current
+#              name: current
             - entity: sensor.solar_output_voltage
-              name: voltage
+              name: false
 
       - type: entities
         title: Air

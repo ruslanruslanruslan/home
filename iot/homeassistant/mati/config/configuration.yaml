@@ -24,6 +24,32 @@ lovelace:
       require_admin: false
       filename: ui-storage.yaml
 
+template:
+  - trigger:
+      - platform: webhook
+        webhook_id: speedtest
+    sensor:
+      - name: "Speedtest Download"
+        state: "{{ (trigger.json.download / 1024 / 1024) | round(2) }}"
+        state_class: measurement
+        unit_of_measurement: "Mbps"
+      - name: "Speedtest Upload"
+        state: "{{ (trigger.json.upload / 1024 / 1024) | round(2) }}"
+        state_class: measurement
+        unit_of_measurement: "Mbps"
+      - name: "Speedtest Ping"
+        state: "{{ trigger.json.ping | round(2) }}"
+        state_class: measurement
+        unit_of_measurement: "ms"
+      - name: "Speedtest Packet Loss"
+        state: "{{ trigger.json.packetLoss }}"
+        state_class: measurement
+        unit_of_measurement: "%"
+      - name: "Speedtest ISP"
+        state: "{{ trigger.json.isp }}"
+      - name: "Speedtest Result URL"
+        state: "{{ trigger.json.speedtest_url }}"
+
 homeassistant:
   name: Mati
   latitude: 55.7997

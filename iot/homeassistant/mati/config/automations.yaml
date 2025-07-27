@@ -9,7 +9,15 @@
     - action: persistent_notification.create
       data:
         notification_id: "1000"
-        message: "It is power off now in Martinaez!"
+        message: "It is power off now in Martinez!"
+        title: "Brownout!"
+    - action: notify.mobile_app_sm_s908e
+      data:
+        message: "It is power off now in Martinez."
+        title: "Brownout!"
+    - action: notify.mobile_app_sm_s938b
+      data:
+        message: "It is power off now in Martinez."
         title: "Brownout!"
 
 - alias: brownout_off
@@ -17,9 +25,17 @@
   trigger:
   - entity_id: switch.solar_charge
     platform: state
-    to: on
+    to: "on"
   condition: []
   action:
     - action: persistent_notification.dismiss
       data:
         notification_id: "1000"
+    - action: notify.mobile_app_sm_s908e
+      data:
+        message: "Doreco came back."
+        title: "Lights ON!"
+    - action: notify.mobile_app_sm_s938b
+      data:
+        message: "Doreco came back."
+        title: "Lights ON!"
