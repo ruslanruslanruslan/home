@@ -17,9 +17,11 @@
           entity_id: switch.solar_bypass
           state: unavailable
   action:
-    - service: "scene.turn_on"
+    - service: "input_select.select_option"
       target:
-        entity_id: scene.brownout
+        entity_id: input_select.scene_mati
+      data:
+        option: 'brownout'
     - action: persistent_notification.create
       data:
         notification_id: "1000"
@@ -45,12 +47,14 @@
     to: "on"
   condition:
     - condition: state
-      entity_id: scene.brownout
-      state: "on"
+      entity_id: input_select.scene_mati
+      state: "brownout"
   action:
-    - service: "scene.turn_off"
+    - service: "input_select.select_option"
       target:
-        entity_id: scene.brownout
+        entity_id: input_select.scene_mati
+      data:
+        option: 'normal'
     - action: persistent_notification.dismiss
       data:
         notification_id: "1000"

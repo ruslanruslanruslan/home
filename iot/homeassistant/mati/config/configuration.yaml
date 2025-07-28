@@ -3,6 +3,13 @@ default_config:
 logger:
   default: warning
 
+input_select:
+  scene_mati:
+    name: Scene Mati
+    options:
+      - 'brownout'
+      - 'normal'
+
 lovelace:
   mode: yaml
   resources:
@@ -27,6 +34,6 @@ homeassistant:
   currency: PHP
   country: PH
 
-scene: !include scenes.yaml
+#scene: !include scenes.yaml
 automation: !include automations.yaml
 #script: !include scripts.yaml
