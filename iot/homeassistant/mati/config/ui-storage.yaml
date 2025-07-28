@@ -13,12 +13,21 @@ views:
           entities:
             - entity: sensor.power_meter_current
               name: current
-            - entity: sensor.power_meter_power
-              name: power
             - entity: sensor.power_meter_voltage
               name: voltage
-  #          - entity: sensor.power_meter_cpu_temperature
-  #            name: temperature
+            - entity: sensor.power_meter_power
+              name: power
+        - entity: switch.outlet_01
+          type: custom:multiple-entity-row
+          name: Fridge
+          toggle: true
+          entities:
+            - entity: sensor.outlet_01_current
+              name: current
+            - entity: sensor.outlet_01_voltage
+              name: voltage
+            - entity: sensor.outlet_01_power
+              name: power
 
       - type: entities
         title: Solar Station
