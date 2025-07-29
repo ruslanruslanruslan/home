@@ -28,6 +28,17 @@ views:
               name: voltage
             - entity: sensor.outlet_01_power
               name: power
+        - entity: switch.outlet_02
+          type: custom:multiple-entity-row
+          name: Rice Cooker
+          toggle: true
+          entities:
+            - entity: sensor.outlet_02_current
+              name: current
+            - entity: sensor.outlet_02_voltage
+              name: voltage
+            - entity: sensor.outlet_02_power
+              name: power
 
       - type: entities
         title: Solar Station
@@ -188,8 +199,3 @@ views:
                 service: button.press
                 service_data:
                   entity_id: button.miwifi_50_88_11_b7_11_b0_reboot
-
-      - type: iframe
-        name: Speedtest
-        url: http://192.168.4.201:8081/
-        aspect_ratio: 75%

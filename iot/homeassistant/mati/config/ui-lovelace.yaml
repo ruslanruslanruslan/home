@@ -28,3 +28,22 @@ views:
         cameras:
           - camera_entity: camera.stairway
             live_provider: go2rtc
+
+      - type: custom:advanced-camera-card
+        cameras:
+          - camera_entity: camera.cam1
+            live_provider: go2rtc
+
+      - type: custom:advanced-camera-card
+        cameras:
+          - camera_entity: camera.cam2
+            live_provider: go2rtc
+
+  - title: Internet
+    cards:
+
+      - type: iframe
+        name: Speedtest
+        url: http://192.168.4.201:8081/
+        aspect_ratio: 100%
+        allow: fullscreen

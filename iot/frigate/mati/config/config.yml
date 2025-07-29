@@ -53,9 +53,53 @@ go2rtc:
       - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.4.115:554/stream2#video=copy#audio=aac
     stairway:
       - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.4.116:554/stream1#video=copy#audio=aac
+    cam1:
+      - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.4.117:554/stream1#video=copy#audio=aac
+    cam1-sub:
+      - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.4.117:554/stream2#video=copy#audio=aac
+    cam2:
+      - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.4.118:554/stream1#video=copy#audio=aac
+    cam2-sub:
+      - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.4.118:554/stream2#video=copy#audio=aac
     stairway-sub:
       - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.4.116:554/stream2#audio=aac#video=h264#rotate=270
 cameras:
+  cam1:
+    ffmpeg:
+      inputs:
+        - path: rtsp://127.0.0.1:8554/cam1
+          input_args: preset-rtsp-restream
+          roles:
+            - record
+        - path: rtsp://127.0.0.1:8554/cam1-sub
+          input_args: preset-rtsp-restream
+          roles:
+            - detect
+            - audio
+      output_args:
+        record: preset-record-generic-audio-copy
+    audio:
+      enabled: True
+    detect:
+      fps: 4
+  cam2:
+    ffmpeg:
+      inputs:
+        - path: rtsp://127.0.0.1:8554/cam2
+          input_args: preset-rtsp-restream
+          roles:
+            - record
+        - path: rtsp://127.0.0.1:8554/cam2-sub
+          input_args: preset-rtsp-restream
+          roles:
+            - detect
+            - audio
+      output_args:
+        record: preset-record-generic-audio-copy
+    audio:
+      enabled: True
+    detect:
+      fps: 4
   madam:
     ffmpeg:
       inputs:
