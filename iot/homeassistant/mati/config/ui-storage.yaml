@@ -43,6 +43,28 @@ views:
       - type: entities
         title: Solar Station
         entities:
+        - entity: sensor.power
+          type: custom:multiple-entity-row
+          show_state: false
+          name: Battery
+          entities:
+            - entity: sensor.battery
+              name: battery
+            - entity: sensor.total_capacity
+              name: capacity
+            - entity: sensor.ntc_temperature
+              name: temperature
+        - entity: sensor.power
+          type: custom:multiple-entity-row
+          show_state: false
+          name: Battery Usage
+          entities:
+            - entity: sensor.current
+              name: current
+            - entity: sensor.voltage
+              name: voltage
+            - entity: sensor.power
+              name: power
         - entity: sensor.solar_charge_power
           type: custom:multiple-entity-row
           show_state: false

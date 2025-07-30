@@ -21,14 +21,15 @@
     storage_co2 | 192.168.5.135 | ebfe647fdd6509dd16j2ab | )&~O]U!mUy:jA49E | 3.4
     solar_bypass | 192.168.5.133 | eb164a5fad121d33eewga2 | t2NkupNFXESA-j~| | 3.4 (refresh sensors!)
     solar_output | 192.168.5.132 | eb610909d74087f914amty | NG{09lr=vsPK5R~r | 3.4 (refresh sensors!)
-    solar_battery | 192.168.5.138 | ebd78de9d78fde0094ndra | JO&k{;zBdF)&gL}- | 3.5
     outlet_01 | 192.168.5.136 | ebfcb9caacb836dafd4ath | [QZxE<A}#eS#?N7n | 3.4
     outlet_02 | 192.168.5.137 | eb6e3a04575d985b7dabzu | qW01_J~9Y#c4GoUV | 3.4
 
+4. (hope will be integrated in p3) Add DT20HBW.
+    solar_battery | 192.168.5.138 | ebd78de9d78fde0094ndra | JO&k{;zBdF)&gL}- | 3.5
 
-4. Add Mikrotik Router. Enable port traffic sensors.
+5. Add Mikrotik Router. Enable port traffic sensors.
 
-5. Add MIWIFI.
+6. Add MIWIFI.
     Main: 192.168.5.11 BA9 SHA256
     Justin: 192.168.5.12 BA9 SHA1
     Tank: 192.168.5.13 BA9 SHA1
