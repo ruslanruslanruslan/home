@@ -80,8 +80,8 @@ cameras:
         record: preset-record-generic-audio-copy
     audio:
       enabled: True
-      listen:
-        - speech
+#      listen:
+#        - speech
     detect:
       fps: 4
   room08:
@@ -100,8 +100,8 @@ cameras:
         record: preset-record-generic-audio-copy
     audio:
       enabled: True
-      listen:
-        - speech
+#      listen:
+#        - speech
     detect:
       fps: 4
   madam:
