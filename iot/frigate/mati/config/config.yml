@@ -1,3 +1,6 @@
+logger:
+  default: debug
+
 #auth:
 #  reset_admin_password: true
 mqtt:
@@ -34,6 +37,8 @@ review:
     labels:
       - person
 go2rtc:
+  log:
+    exec: trace
   streams:
     madam:
       - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.4.112:554/stream1#video=copy#audio=aac
