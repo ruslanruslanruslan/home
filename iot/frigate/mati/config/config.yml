@@ -81,7 +81,6 @@ cameras:
     audio:
       enabled: True
       listen:
-        - scream
         - speech
     detect:
       fps: 4
@@ -102,7 +101,6 @@ cameras:
     audio:
       enabled: True
       listen:
-        - scream
         - speech
     detect:
       fps: 4
