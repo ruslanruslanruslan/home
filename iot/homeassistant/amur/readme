@@ -1,12 +1,13 @@
 # 0. Update advanced-camera-card files from https://github.com/dermotduffy/advanced-camera-card/releases (zip distribution)
 
 # 1. create user in UI
-# 3. Yeelight should import lights automatically
-# 4. Install Gateway3 and import main gateway (fill ip, token, key) and it will import all devices
-# 5. Install xiaomi-miot and login to mi account, add local devices, filter mop, cooker, 4 power plugs + powerstrip (check local and include filter)
-# 6. Install MQTT (mosquitto.mosquitto 1883 homeassistant FLS3GD8Qc8xJWp) (needed for Qinqpong + frigate)
-# 7. Qinqping Pro AQM add manually (livingroom_air, v2 (should get automatically 582D34006AAA)). Need to be sure that device send data in mqtt using mqtt explorer.
-# 8. Install Frigate http://frigate-endpoint.frigate:5000 no ssl no pass (not work with pass)
+    rodion : 7cSNVL2PdptMqH
+# 2. Yeelight should import lights automatically
+# 3. Install Gateway3 and import main gateway (fill ip, token, key) and it will import all devices (192.168.2.217 6f794172766f6a4a45674f6c7032334c VdGkKtZlgeJJc9UN)
+# 4. Install xiaomi-miot and login to mi account, add local devices, filter mop, cooker, 4 power plugs + powerstrip (check local and include filter)
+# 5. Install MQTT (mosquitto.mosquitto 1883 homeassistant FLS3GD8Qc8xJWp) (needed for Qinqpong + frigate)
+# 6. Qinqping Pro AQM add manually (livingroom_air, v2 (should get automatically 582D34006AAA)). Need to be sure that device send data in mqtt using mqtt explorer.
+# 7. Install Frigate http://frigate-endpoint.frigate:5000 no ssl no pass (not work with pass)
 
 # old. Install ONVIF add all cameras manually
 # old. Generic camera add elevators camera manually and change name additionaly
