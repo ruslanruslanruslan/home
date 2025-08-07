@@ -1,7 +1,9 @@
 default_config:
 
 logger:
-  default: warning
+  default: info
+#  logs:
+#    custom_components.miwifi: debug
 
 input_select:
   scene_mati:

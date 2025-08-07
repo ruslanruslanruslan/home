@@ -72,7 +72,7 @@
   triggers:
     - trigger: time_pattern
       hours: "*"
-      minutes: "*"
+      minutes: /5
       seconds: 0
   actions:
     - action: button.press

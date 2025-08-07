@@ -84,9 +84,7 @@ cameras:
       output_args:
         record: preset-record-generic-audio-copy
     audio:
-      enabled: True
-      listen:
-        - speech
+      enabled: False
     detect:
       fps: 1
     review:
@@ -111,9 +109,7 @@ cameras:
       output_args:
         record: preset-record-generic-audio-copy
     audio:
-      enabled: True
-      listen:
-        - speech
+      enabled: False
     detect:
       fps: 1
     review:
