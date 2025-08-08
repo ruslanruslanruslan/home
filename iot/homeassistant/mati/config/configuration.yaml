@@ -37,5 +37,6 @@ homeassistant:
   country: PH
 
 #scene: !include scenes.yaml
-automation: !include automations.yaml
+automation: !include automation.yaml
+template: !include template.yaml
 #script: !include scripts.yaml

@@ -17,6 +17,17 @@ views:
               name: voltage
             - entity: sensor.power_meter_power
               name: power
+        - entity: switch.outlet_03
+          type: custom:multiple-entity-row
+          name: WiFi
+          toggle: true
+          entities:
+            - entity: sensor.outlet_03_current
+              name: current
+            - entity: sensor.outlet_03_voltage
+              name: voltage
+            - entity: sensor.outlet_03_power
+              name: power
         - entity: switch.outlet_01
           type: custom:multiple-entity-row
           name: Fridge
@@ -156,6 +167,15 @@ views:
                 name: RX
               - entity: sensor.mikrotik_ether1_tx
                 name: TX
+          - entity: switch.mikrotik_ether1_port
+            type: custom:multiple-entity-row
+            name: Devices
+            show_state: false
+            entities:
+              - entity: sensor.mikrotik_device_smart
+                name: smart
+              - entity: sensor.mikrotik_device_person
+                name: person
           - entity: sensor.mikrotik_hex_cpu_load
             type: custom:multiple-entity-row
             name: CPU
