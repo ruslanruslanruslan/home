@@ -39,6 +39,11 @@ views:
           - camera_entity: camera.room08
             live_provider: go2rtc
 
+      - type: custom:advanced-camera-card
+        cameras:
+          - camera_entity: camera.justin
+            live_provider: go2rtc
+
   - title: Internet
     cards:
 

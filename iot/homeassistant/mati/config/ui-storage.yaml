@@ -8,7 +8,7 @@ views:
         entities:
         - entity: switch.power_meter
           type: custom:multiple-entity-row
-          name: Cameras
+          name: Meter
           toggle: true
           entities:
             - entity: sensor.power_meter_current
@@ -27,6 +27,28 @@ views:
             - entity: sensor.outlet_03_voltage
               name: voltage
             - entity: sensor.outlet_03_power
+              name: power
+        - entity: switch.outlet_04
+          type: custom:multiple-entity-row
+          name: Cameras
+          toggle: true
+          entities:
+            - entity: sensor.outlet_04_current
+              name: current
+            - entity: sensor.outlet_04_voltage
+              name: voltage
+            - entity: sensor.outlet_04_power
+              name: power
+        - entity: switch.outlet_05
+          type: custom:multiple-entity-row
+          name: Server
+          toggle: true
+          entities:
+            - entity: sensor.outlet_05_current
+              name: current
+            - entity: sensor.outlet_05_voltage
+              name: voltage
+            - entity: sensor.outlet_05_power
               name: power
         - entity: switch.outlet_01
           type: custom:multiple-entity-row

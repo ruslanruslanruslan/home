@@ -21,11 +21,15 @@
     power_meter | 192.168.5.134 | eb1b099930c722c880fyaf | ]>$l``mHF#l}4rqL | 3.4
     solar_charge | 192.168.5.131 | ebdeb25cec68a7814b9kxq | ps;-rXW`T]bwtj// | 3.4
     storage_co2 | 192.168.5.135 | eb56dedbbfb80848dbohgg | S-XJd^uPe[.5a]]g | 3.4
-    solar_bypass | 192.168.5.133 | eb164a5fad121d33eewga2 | t2NkupNFXESA-j~| | 3.4 (refresh sensors!)
+    solar_bypass | 192.168.5.133 | eb164a5fad121d33eewga2 | Gt3F@GAo3>]hW3R. | 3.4 (refresh sensors!)
     solar_output | 192.168.5.132 | eb610909d74087f914amty | 5-3u>G4LRVSHp/hf | 3.4 (refresh sensors!)
     outlet_01 | 192.168.5.136 | ebfcb9caacb836dafd4ath | [QZxE<A}#eS#?N7n | 3.4
     outlet_02 | 192.168.5.137 | eb6e3a04575d985b7dabzu | qW01_J~9Y#c4GoUV | 3.4
-    outlet_03 | 192.168.5.139 | eb17c990f77444dfa3vxuo | YMpA:O|kuC>1-#Y5 | 3.4
+    outlet_03 | 192.168.5.139 | eb17c990f77444dfa3vxuo | YMpA:O|kuC>1-#Y5 | 3.5
+    outlet_04 | 192.168.5.140 | eb4162a8b7d37fa388m27n | jN=)fEb0YS;-<)qg | 3.5
+    outlet_05 | 192.168.5.141 | eb602d8a35ee6060c6tuix | J1)_HqX)K.2t{5r/ | 3.5
+    outlet_06 | 192.168.5.142 | eb4b03f2eba1ca3b4a9d5h | EVB3&4C:~TII^-CH | 3.5
+    outlet_07 | 192.168.5.143 | eb3202f471d662df5fd4tj | ]^Ivv#g~Y_x{s|!V | 3.5
 
 5. (hope will be integrated in p3) Add DT20HBW.
     solar_battery | 192.168.5.138 | ebd78de9d78fde0094ndra | JO&k{;zBdF)&gL}- | 3.5
