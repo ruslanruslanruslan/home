@@ -18,3 +18,12 @@ sensor:
       select('match', 'device_tracker\\.(smart|camera|wifi|server)\\_') | 
       select('is_state', 'home') |
       list | count }}"
+
+  - name: "mikrotik_device_away"
+    icon: mdi:wifi-star
+    state_class: measurement
+    state: "{{ 
+      integration_entities('mikrotik_router') | 
+      select('match', 'device_tracker\\.') | 
+      select('is_state', 'not_home') |
+      list | count }}"

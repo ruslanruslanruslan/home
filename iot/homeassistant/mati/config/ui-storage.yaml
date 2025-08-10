@@ -209,6 +209,8 @@ views:
                 name: smart
               - entity: sensor.mikrotik_device_person
                 name: person
+              - entity: sensor.mikrotik_device_away
+                name: away
           - entity: sensor.mikrotik_hex_cpu_load
             type: custom:multiple-entity-row
             name: CPU
