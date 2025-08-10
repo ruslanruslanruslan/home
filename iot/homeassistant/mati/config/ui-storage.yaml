@@ -98,6 +98,17 @@ views:
               name: voltage
             - entity: sensor.power
               name: power
+        - entity: sensor.power_2
+          type: custom:multiple-entity-row
+          show_state: false
+          name: Solar Usage
+          entities:
+            - entity: sensor.current_2
+              name: current
+            - entity: sensor.voltage_2
+              name: voltage
+            - entity: sensor.power_2
+              name: power
         - entity: sensor.solar_charge_power
           type: custom:multiple-entity-row
           show_state: false

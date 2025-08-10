@@ -32,7 +32,8 @@
     outlet_07 | 192.168.5.143 | eb3202f471d662df5fd4tj | ]^Ivv#g~Y_x{s|!V | 3.5
 
 5. (hope will be integrated in p3) Add DT20HBW.
-    solar_battery | 192.168.5.138 | ebd78de9d78fde0094ndra | JO&k{;zBdF)&gL}- | 3.5
+    solar_battery | 192.168.5.138 | ebd78de9d78fde0094ndra | Zw/)'5uw_cuNTCjT | 3.5
+    solar_panel | 192.168.5.144 | ebb17e4a0238dd4028cx8u | .~)vWZ6h@#v4pMDM | 3.5
 
 6. Add Mikrotik Router. Enable port traffic sensors.
 

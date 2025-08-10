@@ -31,6 +31,11 @@ views:
 
       - type: custom:advanced-camera-card
         cameras:
+          - camera_entity: camera.room01
+            live_provider: go2rtc
+
+      - type: custom:advanced-camera-card
+        cameras:
           - camera_entity: camera.room05
             live_provider: go2rtc
 
@@ -42,6 +47,11 @@ views:
       - type: custom:advanced-camera-card
         cameras:
           - camera_entity: camera.justin
+            live_provider: go2rtc
+
+      - type: custom:advanced-camera-card
+        cameras:
+          - camera_entity: camera.livingroom
             live_provider: go2rtc
 
   - title: Internet
