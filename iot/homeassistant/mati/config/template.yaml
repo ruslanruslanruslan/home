@@ -7,7 +7,7 @@ sensor:
       integration_entities('mikrotik_router') | 
       select('match', 'device_tracker\\.') | 
       reject('match', 'device_tracker\\.(smart|camera|wifi|server)\\_') |
-      select('is_state', 'home') |
+      select('is_state', ['home', 'not_home']) |
       list | count }}"
 
   - name: "mikrotik_device_smart"
@@ -16,7 +16,7 @@ sensor:
     state: "{{ 
       integration_entities('mikrotik_router') | 
       select('match', 'device_tracker\\.(smart|camera|wifi|server)\\_') | 
-      select('is_state', 'home') |
+      select('is_state', ['home', 'not_home']) |
       list | count }}"
 
   - name: "mikrotik_device_away"
