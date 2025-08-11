@@ -67,19 +67,36 @@
         message: "Doreco came back."
         title: "Lights ON!"
 
-- alias: power_refresh
+- alias: solar_bypass_refresh
   initial_state: on
   triggers:
     - trigger: time_pattern
       hours: "*"
-      minutes: /10
-      seconds: 0
+      minutes: "*"
+      seconds: /10
+  condition:
+    - condition: state
+      entity_id: sensor.solar_bypass_power
+      state: "unknown"
   actions:
     - action: button.press
       metadata: { }
       data: { }
       target:
         entity_id: button.solar_bypass_refresh_sensors
+
+- alias: solar_output_refresh
+  initial_state: on
+  triggers:
+    - trigger: time_pattern
+      hours: "*"
+      minutes: "*"
+      seconds: /10
+  condition:
+    - condition: state
+      entity_id: sensor.solar_output_power
+      state: "unknown"
+  actions:
     - action: button.press
       metadata: { }
       data: { }
