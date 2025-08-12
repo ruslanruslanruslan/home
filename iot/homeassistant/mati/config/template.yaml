@@ -3,6 +3,7 @@ sensor:
   - name: "mikrotik_device_person"
     icon: mdi:wifi-star
     state_class: measurement
+    unit_of_measurement: "dvcs"
     state: "{{ 
       integration_entities('mikrotik_router') | 
       select('match', 'device_tracker\\.') | 
@@ -13,15 +14,17 @@ sensor:
   - name: "mikrotik_device_smart"
     icon: mdi:wifi-star
     state_class: measurement
+    unit_of_measurement: "dvcs"
     state: "{{ 
       integration_entities('mikrotik_router') | 
       select('match', 'device_tracker\\.(smart|camera|wifi|server)\\_') | 
-      select('is_state', ['home', 'not_home']) |
+      select('is_state', 'home') |
       list | count }}"
 
   - name: "mikrotik_device_away"
     icon: mdi:wifi-star
     state_class: measurement
+    unit_of_measurement: "dvcs"
     state: "{{ 
       integration_entities('mikrotik_router') | 
       select('match', 'device_tracker\\.') | 

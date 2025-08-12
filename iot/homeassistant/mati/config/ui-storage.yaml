@@ -50,6 +50,28 @@ views:
               name: voltage
             - entity: sensor.outlet_05_power
               name: power
+        - entity: switch.outlet_06
+          type: custom:multiple-entity-row
+          name: Outlet_06
+          toggle: true
+          entities:
+            - entity: sensor.outlet_06_current
+              name: current
+            - entity: sensor.outlet_06_voltage
+              name: voltage
+            - entity: sensor.outlet_06_power
+              name: power
+        - entity: switch.outlet_07
+          type: custom:multiple-entity-row
+          name: Outlet_07
+          toggle: true
+          entities:
+            - entity: sensor.outlet_07_current
+              name: current
+            - entity: sensor.outlet_07_voltage
+              name: voltage
+            - entity: sensor.outlet_07_power
+              name: power
         - entity: switch.outlet_01
           type: custom:multiple-entity-row
           name: Fridge
@@ -63,7 +85,7 @@ views:
               name: power
         - entity: switch.outlet_02
           type: custom:multiple-entity-row
-          name: Rice Cooker
+          name: Charger
           toggle: true
           entities:
             - entity: sensor.outlet_02_current

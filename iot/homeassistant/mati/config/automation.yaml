@@ -102,3 +102,18 @@
       data: { }
       target:
         entity_id: button.solar_output_refresh_sensors
+
+- alias: solar_all_refresh
+  initial_state: on
+  triggers:
+    - trigger: time_pattern
+      hours: "*"
+      minutes: "*"
+      seconds: 0
+  actions:
+    - action: homeassistant.reload_config_entry
+      data:
+        entity_id: switch.solar_bypass
+    - action: homeassistant.reload_config_entry
+      data:
+        entity_id: switch.solar_output

@@ -18,7 +18,7 @@
 4. Add tuya-local (recommended smartlife: BaVWaWj or tuya: Bx1BcIW). Default protocol (then auto then highest to lower).
     For manual: (localkey changes after repairing, need to use https://iot.tuya.com/ or automatic search)
     name | host | deviceid | localkey | protocol
-    power_meter | 192.168.5.134 | eb1b099930c722c880fyaf | ]>$l``mHF#l}4rqL | 3.4
+    power_meter | 192.168.5.134 | eb1b099930c722c880fyaf | K;53^MOpcXt!+XT' | 3.4
     solar_charge | 192.168.5.131 | ebdeb25cec68a7814b9kxq | ps;-rXW`T]bwtj// | 3.4
     storage_co2 | 192.168.5.135 | eb56dedbbfb80848dbohgg | S-XJd^uPe[.5a]]g | 3.4
     solar_bypass | 192.168.5.133 | eb164a5fad121d33eewga2 | Gt3F@GAo3>]hW3R. | 3.4 (refresh sensors!)
@@ -32,10 +32,11 @@
     outlet_07 | 192.168.5.143 | eb3202f471d662df5fd4tj | ]^Ivv#g~Y_x{s|!V | 3.5
 
 5. (hope will be integrated in p3) Add DT20HBW.
-    solar_battery | 192.168.5.138 | ebd78de9d78fde0094ndra | Zw/)'5uw_cuNTCjT | 3.5
-    solar_panel | 192.168.5.144 | ebb17e4a0238dd4028cx8u | .~)vWZ6h@#v4pMDM | 3.5
+    solar_battery | 192.168.5.138 | ebd78de9d78fde0094ndra | ^Dzl]oq#UwOHA~_G | 3.5
+    solar_panel | 192.168.5.144 | ebb17e4a0238dd4028cx8u | z9pV:Br|_e3xN)oR | 3.5
 
-6. Add Mikrotik Router. Enable port traffic sensors.
+6. Add Mikrotik Router. Enable port traffic sensors + network devices.
+    192.168.4.1
 
 7. Add MIWIFI.
     Main: 192.168.5.11 BA9 SHA256
