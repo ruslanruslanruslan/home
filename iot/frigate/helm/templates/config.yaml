@@ -17,11 +17,11 @@ data:
         mode: all
       alerts:
         retain:
-          days: 180
+          days: 30
           mode: motion
       detections:
         retain:
-          days: 30
+          days: 14
           mode: motion
     snapshots:
       enabled: True

@@ -1,4 +1,4 @@
-export SSH_HOST=192.168.4.201 &&
+export SSH_HOST=mati.ibragimov.uk &&
 export SSH_USER=ruslan &&
 export SSH_SUDO= &&
 export CI_REGISTRY=registry.ibragimov.uk &&
