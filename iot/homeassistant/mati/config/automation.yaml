@@ -16,6 +16,12 @@
         - condition: state
           entity_id: switch.solar_bypass
           state: unavailable
+        - condition: state
+          entity_id: switch.outlet_01 #fridge
+          state: unavailable
+        - condition: state
+          entity_id: switch.outlet_02
+          state: unavailable
   action:
     - service: "input_select.select_option"
       target:
@@ -108,8 +114,8 @@
   triggers:
     - trigger: time_pattern
       hours: "*"
-      minutes: "*"
-      seconds: 0
+      minutes: /20
+      seconds: "*"
   actions:
     - action: homeassistant.reload_config_entry
       data:
@@ -117,3 +123,15 @@
     - action: homeassistant.reload_config_entry
       data:
         entity_id: switch.solar_output
+
+#- alias: mikrotik_entity_refresh
+#  initial_state: on
+#  triggers:
+#    - trigger: time_pattern
+#      hours: "*"
+#      minutes: "*"
+#      seconds: 0
+#  actions:
+#    - action: homeassistant.reload_config_entry
+#      data:
+#        entity_id: sensor.mikrotik_hex_captive_portal_clients

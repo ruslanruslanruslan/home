@@ -1,32 +1,12 @@
 title: Home
 views:
 
-  - title: Cameras
+  - title: Public
     cards:
 
       - type: custom:advanced-camera-card
         cameras:
-          - camera_entity: camera.madam
-            live_provider: go2rtc
-
-      - type: custom:advanced-camera-card
-        cameras:
-          - camera_entity: camera.backyard
-            live_provider: go2rtc
-
-      - type: custom:advanced-camera-card
-        cameras:
-          - camera_entity: camera.gate_back
-            live_provider: go2rtc
-
-      - type: custom:advanced-camera-card
-        cameras:
           - camera_entity: camera.gate_front
-            live_provider: go2rtc
-
-      - type: custom:advanced-camera-card
-        cameras:
-          - camera_entity: camera.stairway
             live_provider: go2rtc
 
       - type: custom:advanced-camera-card
@@ -51,8 +31,14 @@ views:
 
       - type: custom:advanced-camera-card
         cameras:
-          - camera_entity: camera.livingroom
+          - camera_entity: camera.backyard
             live_provider: go2rtc
+
+      - type: custom:advanced-camera-card
+        cameras:
+          - camera_entity: camera.stairway
+            live_provider: go2rtc
+
 
   - title: Internet
     cards:
@@ -62,3 +48,36 @@ views:
         url: http://192.168.4.201:8081/
         aspect_ratio: 100%
         allow: fullscreen
+
+
+  - title: AlwaysON
+    cards:
+
+      - type: custom:advanced-camera-card
+        cameras:
+          - camera_entity: camera.gate_back
+            live_provider: go2rtc
+
+      - type: custom:advanced-camera-card
+        cameras:
+          - camera_entity: camera.gate_front
+            live_provider: go2rtc
+
+
+  - title: Private
+    cards:
+
+      - type: custom:advanced-camera-card
+        cameras:
+          - camera_entity: camera.gate_back
+            live_provider: go2rtc
+
+      - type: custom:advanced-camera-card
+        cameras:
+          - camera_entity: camera.madam
+            live_provider: go2rtc
+
+      - type: custom:advanced-camera-card
+        cameras:
+          - camera_entity: camera.livingroom
+            live_provider: go2rtc

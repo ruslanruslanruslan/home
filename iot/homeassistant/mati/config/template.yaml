@@ -2,8 +2,7 @@ sensor:
 
   - name: "mikrotik_device_person"
     icon: mdi:wifi-star
-    state_class: measurement
-    unit_of_measurement: "dvcs"
+    state_class: total
     state: "{{ 
       integration_entities('mikrotik_router') | 
       select('match', 'device_tracker\\.') | 
@@ -13,20 +12,24 @@ sensor:
 
   - name: "mikrotik_device_smart"
     icon: mdi:wifi-star
-    state_class: measurement
-    unit_of_measurement: "dvcs"
+    state_class: total
     state: "{{ 
       integration_entities('mikrotik_router') | 
-      select('match', 'device_tracker\\.(smart|camera|wifi|server)\\_') | 
+      select('match', 'device_tracker\\.(smart|wifi)\\_') | 
       select('is_state', 'home') |
       list | count }}"
 
   - name: "mikrotik_device_away"
     icon: mdi:wifi-star
-    state_class: measurement
-    unit_of_measurement: "dvcs"
+    state_class: total
     state: "{{ 
       integration_entities('mikrotik_router') | 
       select('match', 'device_tracker\\.') | 
       select('is_state', 'not_home') |
       list | count }}"
+
+
+binary_sensor:
+
+  - name: "scene_is_brownout"
+    state: "{{ is_state('input_select.scene_mati', 'brownout') }}"

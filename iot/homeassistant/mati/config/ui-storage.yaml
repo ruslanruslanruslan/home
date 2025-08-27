@@ -233,6 +233,8 @@ views:
                 name: person
               - entity: sensor.mikrotik_device_away
                 name: away
+              - entity: sensor.mikrotik_hex_captive_portal_clients
+                name: captive
           - entity: sensor.mikrotik_hex_cpu_load
             type: custom:multiple-entity-row
             name: CPU
@@ -298,3 +300,10 @@ views:
                 service: button.press
                 service_data:
                   entity_id: button.miwifi_50_88_11_b7_11_b0_reboot
+
+
+      - type: entities
+        title: Other
+        entities:
+          - entity: binary_sensor.scene_is_brownout
+            name: Brownout
