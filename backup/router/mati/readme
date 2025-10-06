@@ -1,0 +1,47 @@
+# === FastTrack Diagnostic & Activation Script ===
+:put "\n=== STEP 1: SYSTEM SETTINGS ===";
+/ip settings print;
+
+:put "\n=== STEP 2: FIREWALL FILTER STATS (FORWARD) ===";
+/ip firewall filter print stats where chain=forward;
+
+:put "\n=== STEP 3: FASTTRACK RULE DETAILS ===";
+/ip firewall filter print detail where action=fasttrack-connection;
+
+:put "\n=== STEP 4: CONNECTION STATES ===";
+/ip firewall filter print detail where connection-state~"established,related";
+
+:put "\n=== STEP 5: HOTSPOT STATUS ===";
+/ip hotspot print;
+:put "\n--- Hotspot chains presence check ---";
+/ip firewall filter print where chain~"hs";
+
+:put "\n=== STEP 6: BRIDGE SETTINGS ===";
+/interface bridge settings print;
+:put "\n--- Bridge ports with HW-offload ---";
+/interface bridge port print where bridge=bridge.private;
+
+:put "\n=== STEP 7: MANGLE & QUEUES ===";
+/ip firewall mangle print detail;
+/queue simple print detail;
+/queue tree print detail;
+
+:put "\n=== STEP 8: SERVICE PORT HELPERS ===";
+/ip firewall service-port print;
+
+:put "\n=== STEP 9: WEB PROXY STATUS ===";
+/ip proxy print;
+
+:put "\n=== STEP 10: CONNTRACK SETTINGS ===";
+/ip firewall connection tracking print;
+
+:put "\n=== STEP 11: OPTIONAL — TEMPORARILY REMOVE HOTSPOT ===";
+/ip hotspot remove [find];
+/ip firewall connection remove [find];
+
+:put "\n=== STEP 12: SPEEDTEST THEN VERIFY FASTTRACK ===";
+/delay 10s;
+/ip settings print;
+/ip firewall connection print count-only where fasttrack-connection=yes;
+/ip firewall filter print stats where chain=forward;
+:put "\n=== END OF FASTTRACK DIAGNOSTIC ===";
