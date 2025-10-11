@@ -5,7 +5,20 @@ logger:
 #  logs:
 #    custom_components.miwifi: debug
 
+# Hide built-in sidebar entries
 map:
+  show_in_sidebar: false
+history:
+  show_in_sidebar: false
+logbook:
+  show_in_sidebar: false
+media_source:
+  show_in_sidebar: false
+energy:
+  show_in_sidebar: false
+todo:
+  show_in_sidebar: false
+shopping_list:
   show_in_sidebar: false
 
 input_select:

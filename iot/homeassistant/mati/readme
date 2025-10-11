@@ -10,6 +10,7 @@
 (old) 6. In speedtest tracker UI in notifications add webhook http://192.168.2.201:8123/api/webhook/-Q-2r2VOyBx89C6BicNoaRHsQ
 1. Add users:
     apple : MPmQWudKx42WZiGr
+    cecilia : eypSd9q8cWJJCJf6
 
 2. Add MQTT (mosquitto 1883 homeassistant FLS3GD8Qc8xJWp) (needed for frigate)
 
