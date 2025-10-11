@@ -12,7 +12,7 @@ spec:
   ttlStrategy:
     secondsAfterCompletion: 604800
   entrypoint: wf
-  onExit: slack
+  onExit: telegram
   arguments:
     parameters:
     - name: repo
@@ -50,10 +50,10 @@ spec:
             - name: env
               value: "{{`{{ workflow.parameters.env }}`}}"
 
-    - name: slack
+    - name: telegram
       steps:
-        - - name: slack
+        - - name: telegram
             templateRef:
-              name: slack
+              name: telegram
               template: send
               clusterScope: true
