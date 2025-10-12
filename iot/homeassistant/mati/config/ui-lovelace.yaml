@@ -62,13 +62,13 @@ views:
 
       - type: iframe
         name: Speedtest
-        url: http://192.168.4.201:8081/embed
+        url: http://192.168.4.201:8081/
         aspect_ratio: 100%
         allow: fullscreen
 
       - type: iframe
         name: Smokeping
-        url: http://192.168.4.201:8082/
+        url: http://192.168.4.201:8082/smokeping/?target=_charts
         aspect_ratio: 100%
         allow: fullscreen
 
