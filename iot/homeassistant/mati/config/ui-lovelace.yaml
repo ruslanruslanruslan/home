@@ -71,3 +71,35 @@ views:
         url: http://192.168.4.201:8082/
         aspect_ratio: 100%
         allow: fullscreen
+
+      - type: entities
+        title: Internet
+        show_header_toggle: false
+        entities:
+          - entity: sensor.mikrotik_ether1_rx
+            type: custom:multiple-entity-row
+            name: PLDT Usage
+            show_state: false
+            entities:
+              - entity: sensor.mikrotik_ether1_rx
+                name: RX
+              - entity: sensor.mikrotik_ether1_tx
+                name: TX
+          - entity: sensor.mikrotik_hex_cpu_load
+            type: custom:multiple-entity-row
+            name: Router Load
+            entities:
+              - entity: sensor.mikrotik_hex_memory_usage
+                name: RAM
+          - entity: light.miwifi_50_88_11_b4_65_90_led
+            type: custom:multiple-entity-row
+            name: Main Wi-Fi
+            toggle: false
+          - entity: light.miwifi_50_88_11_b2_bf_7c_led
+            type: custom:multiple-entity-row
+            name: Justin Wi-Fi
+            toggle: false
+          - entity: light.miwifi_50_88_11_b7_11_b0_led
+            type: custom:multiple-entity-row
+            name: Tank Wi-Fi
+            toggle: false
