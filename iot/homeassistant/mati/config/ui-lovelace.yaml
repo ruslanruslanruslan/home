@@ -62,7 +62,7 @@ views:
 
       - type: iframe
         name: Speedtest
-        url: http://192.168.4.201:8081/
+        url: http://192.168.4.201:8081/embed
         aspect_ratio: 100%
         allow: fullscreen
 
@@ -93,11 +93,11 @@ views:
                 name: RAM
           - entity: light.miwifi_50_88_11_b4_65_90_led
             type: custom:multiple-entity-row
-            name: Main Wi-Fi
+            name: Middle Wi-Fi
             toggle: false
           - entity: light.miwifi_50_88_11_b2_bf_7c_led
             type: custom:multiple-entity-row
-            name: Justin Wi-Fi
+            name: Owner Wi-Fi
             toggle: false
           - entity: light.miwifi_50_88_11_b7_11_b0_led
             type: custom:multiple-entity-row
