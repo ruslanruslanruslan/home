@@ -26,12 +26,16 @@ record:
       mode: motion
   detections:
     retain:
-      days: 7
+      days: 60
       mode: motion
 snapshots:
   enabled: True
   retain:
-    default: 7
+    default: 180
+export:
+  retain:
+    days: 30
+    mode: motion
 review:
   alerts:
     labels:
