@@ -84,6 +84,8 @@ views:
 
       - type: entities
         entities:
+          - entity: vacuum.xiaomi_ov31cn_0c3c_robot_cleaner
+            name: Clean
           - entity: button.xiaomi_ov31cn_0c3c_start_sweep
             name: Start
           - entity: button.xiaomi_ov31cn_0c3c_stop_and_gocharge
