@@ -84,28 +84,26 @@ views:
 
       - type: entities
         entities:
-          - entity: vacuum.xiaomi_vacuum_ov31cn
-            name: clean
           - entity: button.xiaomi_ov31cn_0c3c_start_sweep
-            name: start
+            name: Start
           - entity: button.xiaomi_ov31cn_0c3c_stop_and_gocharge
-            name: stop
+            name: Stop and go Charge
           - entity: button.xiaomi_ov31cn_0c3c_pause_sweeping
-            name: pause
+            name: Pause
           - entity: button.xiaomi_ov31cn_0c3c_continue_sweep
-            name: resume
+            name: Resume
           - entity: select.xiaomi_ov31cn_0c3c_sweep_mop_type
-            name: mode
+            name: Mode
           - entity: select.xiaomi_ov31cn_0c3c_mode
-            name: suction
+            name: Suction
           - entity: select.xiaomi_ov31cn_0c3c_clean_times
-            name: times
+            name: Number of times
           - entity: sensor.xiaomi_ov31cn_0c3c_battery_level
-            name: battery
+            name: Battery level
           - entity: sensor.xiaomi_ov31cn_0c3c_charging_state
-            name: charging
+            name: Charging State
           - entity: sensor.xiaomi_ov31cn_0c3c_mop_life_level
-            name: mop
+            name: Mop Status
         title: Vacuum
 
       - type: entities

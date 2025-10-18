@@ -136,8 +136,6 @@
       state: on
       brightness: 1
       color_temp: 500
-    vacuum.xiaomi_vacuum_ov31cn:
-      state: docked
     light.walkthrough_lights_light:
       state: on
       brightness: 1
@@ -220,8 +218,6 @@
       state: off
       brightness: 255
       color_temp: 100
-    vacuum.xiaomi_vacuum_ov31cn:
-      state: docked
     light.walkthrough_lights_light:
       state: off
       brightness: 255
@@ -291,8 +287,8 @@
       state: open
     light.hallway_lights_light:
       state: off
-    vacuum.xiaomi_vacuum_ov31cn:
-      state: cleaning
+    button.xiaomi_ov31cn_0c3c_start_sweep:
+      state: on
     light.walkthrough_lights_light:
       state: off
     light.bathroom_lights_light:
@@ -367,8 +363,6 @@
       state: off
       brightness: 1
       color_temp: 500
-    vacuum.xiaomi_vacuum_ov31cn:
-      state: docked
     light.walkthrough_lights_light:
       state: off
       brightness: 1
