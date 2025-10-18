@@ -84,24 +84,28 @@ views:
 
       - type: entities
         entities:
-          - entity: vacuum.viomi_v7_2f27_robot_cleaner
+          - entity: vacuum.xiaomi_vacuum_ov31cn
             name: clean
-          - entity: sensor.viomi_v7_2f27_battery_level
+          - entity: button.xiaomi_ov31cn_0c3c_start_sweep
+            name: start
+          - entity: button.xiaomi_ov31cn_0c3c_stop_and_gocharge
+            name: stop
+          - entity: button.xiaomi_ov31cn_0c3c_pause_sweeping
+            name: pause
+          - entity: button.xiaomi_ov31cn_0c3c_continue_sweep
+            name: resume
+          - entity: select.xiaomi_ov31cn_0c3c_sweep_mop_type
+            name: mode
+          - entity: select.xiaomi_ov31cn_0c3c_mode
+            name: suction
+          - entity: select.xiaomi_ov31cn_0c3c_clean_times
+            name: times
+          - entity: sensor.xiaomi_ov31cn_0c3c_battery_level
             name: battery
-          - entity: sensor.viomi_v7_2f27_clean_area
-            name: area
-          - entity: sensor.viomi_v7_2f27_clean_time
-            name: time
-          - entity: sensor.viomi_v7_2f27_hypa_life
-            name: hypa
-          - entity: sensor.viomi_v7_2f27_main_brush_life
-            name: main_brush
-          - entity: sensor.viomi_v7_2f27_mop_life
+          - entity: sensor.xiaomi_ov31cn_0c3c_charging_state
+            name: charging
+          - entity: sensor.xiaomi_ov31cn_0c3c_mop_life_level
             name: mop
-          - entity: sensor.viomi_v7_2f27_side_brush_life
-            name: side_brush
-          - entity: sensor.viomi_v7_2f27_status
-            name: status
         title: Vacuum
 
       - type: entities

@@ -136,7 +136,7 @@
       state: on
       brightness: 1
       color_temp: 500
-    vacuum.viomi_v7_2f27_robot_cleaner:
+    vacuum.xiaomi_vacuum_ov31cn:
       state: docked
     light.walkthrough_lights_light:
       state: on
@@ -220,7 +220,7 @@
       state: off
       brightness: 255
       color_temp: 100
-    vacuum.viomi_v7_2f27_robot_cleaner:
+    vacuum.xiaomi_vacuum_ov31cn:
       state: docked
     light.walkthrough_lights_light:
       state: off
@@ -291,7 +291,7 @@
       state: open
     light.hallway_lights_light:
       state: off
-    vacuum.viomi_v7_2f27_robot_cleaner:
+    vacuum.xiaomi_vacuum_ov31cn:
       state: cleaning
     light.walkthrough_lights_light:
       state: off
@@ -367,7 +367,7 @@
       state: off
       brightness: 1
       color_temp: 500
-    vacuum.viomi_v7_2f27_robot_cleaner:
+    vacuum.xiaomi_vacuum_ov31cn:
       state: docked
     light.walkthrough_lights_light:
       state: off
