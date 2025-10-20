@@ -19,7 +19,7 @@ views:
               name: power
         - entity: switch.outlet_03
           type: custom:multiple-entity-row
-          name: Router
+          name: Router (03)
           toggle: true
           entities:
             - entity: sensor.outlet_03_current
@@ -30,7 +30,7 @@ views:
               name: power
         - entity: switch.outlet_04
           type: custom:multiple-entity-row
-          name: Switch-1000
+          name: Switch-1000 (04)
           toggle: true
           entities:
             - entity: sensor.outlet_04_current
@@ -41,7 +41,7 @@ views:
               name: power
         - entity: switch.outlet_05
           type: custom:multiple-entity-row
-          name: Server
+          name: Server (05)
           toggle: true
           entities:
             - entity: sensor.outlet_05_current
@@ -52,7 +52,7 @@ views:
               name: power
         - entity: switch.outlet_06
           type: custom:multiple-entity-row
-          name: Switch-100
+          name: Switch-100 (06)
           toggle: true
           entities:
             - entity: sensor.outlet_06_current
@@ -63,7 +63,7 @@ views:
               name: power
         - entity: switch.outlet_07
           type: custom:multiple-entity-row
-          name: Lights
+          name: Lights (07)
           toggle: true
           entities:
             - entity: sensor.outlet_07_current
@@ -74,7 +74,7 @@ views:
               name: power
         - entity: switch.outlet_01
           type: custom:multiple-entity-row
-          name: Fridge
+          name: Fridge (01)
           toggle: true
           entities:
             - entity: sensor.outlet_01_current
@@ -85,7 +85,7 @@ views:
               name: power
         - entity: switch.outlet_02
           type: custom:multiple-entity-row
-          name: Charger
+          name: Charger (02)
           toggle: true
           entities:
             - entity: sensor.outlet_02_current
