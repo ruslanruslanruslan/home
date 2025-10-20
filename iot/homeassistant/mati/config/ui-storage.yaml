@@ -19,7 +19,7 @@ views:
               name: power
         - entity: switch.outlet_03
           type: custom:multiple-entity-row
-          name: WiFi
+          name: Router
           toggle: true
           entities:
             - entity: sensor.outlet_03_current
@@ -30,7 +30,7 @@ views:
               name: power
         - entity: switch.outlet_04
           type: custom:multiple-entity-row
-          name: Cameras
+          name: Switch-1000
           toggle: true
           entities:
             - entity: sensor.outlet_04_current
@@ -52,7 +52,7 @@ views:
               name: power
         - entity: switch.outlet_06
           type: custom:multiple-entity-row
-          name: Outlet_06
+          name: Switch-100
           toggle: true
           entities:
             - entity: sensor.outlet_06_current
@@ -63,7 +63,7 @@ views:
               name: power
         - entity: switch.outlet_07
           type: custom:multiple-entity-row
-          name: Outlet_07
+          name: Lights
           toggle: true
           entities:
             - entity: sensor.outlet_07_current
