@@ -35,7 +35,7 @@
 
 5. (hope will be integrated in p3) Add DT20HBW.
     solar_battery | 192.168.5.138 | ebd78de9d78fde0094ndra | ^Dzl]oq#UwOHA~_G | 3.5
-    solar_panel | 192.168.5.144 | ebb17e4a0238dd4028cx8u | z9pV:Br|_e3xN)oR | 3.5
+    solar_panel | 192.168.5.144 | eb6a0f7a7c5400640b2hws | lNb)=)uz~3M-`$k~ | 3.5
 
 6. Add Mikrotik Router. Enable port traffic sensors + network devices + captive portal data.
     192.168.4.1
