@@ -23,7 +23,7 @@ spec:
               - key: kubernetes.io/hostname
                 operator: In
                 values:
-                - kube02
+                - kube03
       volumes:
         - name: storage
           persistentVolumeClaim:
