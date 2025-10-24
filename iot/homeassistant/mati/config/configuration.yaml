@@ -5,12 +5,19 @@ logger:
 #  logs:
 #    custom_components.miwifi: debug
 
+# Recorder configuration for statistics
+recorder:
+  auto_purge: true
+  purge_keep_days: 360
+
+# History - enabled by default
+history:
+
+# Logbook - enabled by default
+logbook:
+
 # Hide built-in sidebar entries
 map:
-  show_in_sidebar: false
-history:
-  show_in_sidebar: false
-logbook:
   show_in_sidebar: false
 media_source:
   show_in_sidebar: false
