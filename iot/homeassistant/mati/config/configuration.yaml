@@ -25,7 +25,6 @@ energy:
   show_in_sidebar: false
 todo:
   - platform: local
-  show_in_sidebar: false
 shopping_list:
   show_in_sidebar: false
 
