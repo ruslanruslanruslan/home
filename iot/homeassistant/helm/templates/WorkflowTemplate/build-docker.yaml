@@ -31,15 +31,26 @@ spec:
 
     - name: docker
       steps:
-        - - name: docker
+
+        - - name: cancel
             templateRef:
-              name: docker
+              name: cancel
+              template: run
+              clusterScope: true
+            arguments:
+              parameters:
+                - name: label-value
+                  value: "{{`{{ workflow.parameters.project }}`}}-{{`{{ workflow.parameters.application }}`}}-{{`{{ workflow.parameters.service }}`}}-{{`{{ workflow.parameters.env }}`}}"
+
+        - - name: docker-build
+            templateRef:
+              name: docker-build
               template: process
               clusterScope: true
             arguments:
               parameters:
                 - name: repo
-                  value: home
+                  value: "{{`{{ workflow.parameters.repo }}`}}"
                 - name: project
                   value: "{{`{{ workflow.parameters.project }}`}}"
                 - name: application
@@ -48,6 +59,18 @@ spec:
                   value: "{{`{{ workflow.parameters.service }}`}}"
                 - name: env
                   value: "{{`{{ workflow.parameters.env }}`}}"
+
+        - - name: docker-move
+            templateRef:
+              name: docker-move
+              template: process
+              clusterScope: true
+            arguments:
+              parameters:
+              - name: path
+                value: "/{{`{{ workflow.parameters.project }}`}}/{{`{{ workflow.parameters.application }}`}}/{{`{{ workflow.parameters.service }}`}}"
+              - name: env
+                value: "{{`{{ workflow.parameters.env }}`}}"
 
     - name: telegram
       steps:
