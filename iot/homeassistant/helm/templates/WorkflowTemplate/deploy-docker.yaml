@@ -77,7 +77,7 @@ spec:
               - name: env
                 value: "{{`{{ workflow.parameters.env }}`}}"
 
-      - - name: docker-compose
+        - - name: docker-compose
           templateRef:
             name: docker-compose
             template: process
