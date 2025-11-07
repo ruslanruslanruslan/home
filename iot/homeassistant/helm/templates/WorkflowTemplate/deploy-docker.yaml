@@ -6,6 +6,8 @@ metadata:
 spec:
   serviceAccountName: deployer
   workflowMetadata:
+    labels:
+      pipelines.ibragimov.uk/build: '{{`{{ workflow.parameters.project }}`}}-{{`{{ workflow.parameters.application }}`}}-{{`{{ workflow.parameters.service }}`}}-{{`{{ workflow.parameters.env }}`}}'
     annotations:
       workflows.argoproj.io/title: '**deploy-docker**-{{`{{ workflow.parameters.service }}`}}'
       workflows.argoproj.io/description: '`{{`{{ workflow.parameters.env }}`}}`'
@@ -27,28 +29,54 @@ spec:
         - mati
     - name: env
       value: master
+    - name: sensor_meta
+      value: "{}"
 
   templates:
 
     - name: wf
       steps:
-      - - name: docker
-          templateRef:
-            name: docker
-            template: process
-            clusterScope: true
-          arguments:
-            parameters:
-            - name: repo
-              value: "{{`{{ workflow.parameters.repo }}`}}"
-            - name: project
-              value: "{{`{{ workflow.parameters.project }}`}}"
-            - name: application
-              value: "{{`{{ workflow.parameters.application }}`}}"
-            - name: service
-              value: "{{`{{ workflow.parameters.service }}`}}"
-            - name: env
-              value: "{{`{{ workflow.parameters.env }}`}}"
+
+        - - name: cancel
+            templateRef:
+              name: cancel
+              template: run
+              clusterScope: true
+            arguments:
+              parameters:
+                - name: label-value
+                  value: "{{`{{ workflow.parameters.project }}`}}-{{`{{ workflow.parameters.application }}`}}-{{`{{ workflow.parameters.service }}`}}-{{`{{ workflow.parameters.env }}`}}"
+
+        - - name: docker-build
+            templateRef:
+              name: docker-build
+              template: process
+              clusterScope: true
+            arguments:
+              parameters:
+                - name: repo
+                  value: "{{`{{ workflow.parameters.repo }}`}}"
+                - name: project
+                  value: "{{`{{ workflow.parameters.project }}`}}"
+                - name: application
+                  value: "{{`{{ workflow.parameters.application }}`}}"
+                - name: service
+                  value: "{{`{{ workflow.parameters.service }}`}}"
+                - name: env
+                  value: "{{`{{ workflow.parameters.env }}`}}"
+
+        - - name: docker-move
+            templateRef:
+              name: docker-move
+              template: process
+              clusterScope: true
+            arguments:
+              parameters:
+              - name: path
+                value: "/{{`{{ workflow.parameters.project }}`}}/{{`{{ workflow.parameters.application }}`}}/{{`{{ workflow.parameters.service }}`}}"
+              - name: env
+                value: "{{`{{ workflow.parameters.env }}`}}"
+
       - - name: docker-compose
           templateRef:
             name: docker-compose
