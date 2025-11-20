@@ -129,7 +129,7 @@ views:
             name: livingroom_strip
           - entity: light.kitchen_lights_light
             name: kitchen_lights
-          - entity: light.kitchen_chandelier_light
+          - entity: light.1991481969963573248_light
             name: kitchen_chandelier
           - entity: switch.kitchen_relay_1_channel_1
             name: kitchen_strip

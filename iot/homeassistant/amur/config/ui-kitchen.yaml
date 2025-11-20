@@ -38,7 +38,7 @@ views:
             name: bulb5
           - entity: light.kitchen_bulb_6_light
             name: bulb6
-          - entity: light.kitchen_chandelier_light
+          - entity: light.1991481969963573248_light
             name: group
         title: chandelier
 
