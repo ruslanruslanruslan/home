@@ -42,7 +42,7 @@ go2rtc:
     balcony:
       - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.2.117:554/Streaming/Channels/101#video=copy#audio=aac
     bedroom:
-      - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.2.118:554/Streaming/Channels/101#video=copy#audio=aac
+      - rtsp://homeassistant:aP5n8XdebfKeDn@192.168.2.118:554/Streaming/Channels/101
 cameras:
   elevators:
     ffmpeg:
@@ -159,10 +159,5 @@ cameras:
           roles:
             - record
             - detect
-            - audio
-      output_args:
-        record: preset-record-generic-audio-copy
-    audio:
-      enabled: true
     detect:
-      fps: 1
+      fps: 2
