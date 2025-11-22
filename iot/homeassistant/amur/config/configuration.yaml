@@ -1,8 +1,5 @@
 default_config:
 
-recorder:
-  db_url: !env_var MYSQL_URL
-
 # Text to speech
 tts:
   - platform: google_translate
