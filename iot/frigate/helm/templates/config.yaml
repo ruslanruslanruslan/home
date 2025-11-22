@@ -11,7 +11,7 @@ data:
       user: homeassistant
       password: FLS3GD8Qc8xJWp
     record:
-      enabled: True
+      enabled: true
       retain:
         days: 2
         mode: all
@@ -24,7 +24,7 @@ data:
           days: 14
           mode: motion
     snapshots:
-      enabled: True
+      enabled: true
       retain:
         default: 30
     review:
@@ -56,99 +56,70 @@ data:
           inputs:
             - path: rtsp://127.0.0.1:8554/elevators
               input_args: preset-rtsp-restream
-              roles:
+              roles: &roles_record_detect_audio
                 - record
                 - detect
                 - audio
-          output_args:
+          output_args: &output_record_audio_copy
             record: preset-record-generic-audio-copy
-        audio:
-          enabled: True
-        detect:
+        audio: &audio_enabled
+          enabled: true
+        detect: &detect_fps_2
           fps: 2
       hallway:
         ffmpeg:
           inputs:
             - path: rtsp://127.0.0.1:8554/hallway
               input_args: preset-rtsp-restream
-              roles:
-                - record
-                - detect
-                - audio
-          output_args:
-            record: preset-record-generic-audio-copy
-        audio:
-          enabled: True
-        detect:
+              roles: *roles_record_detect_audio
+          output_args: *output_record_audio_copy
+        audio: *audio_enabled
+        detect: &detect_fps_1
           fps: 1
       vestibule:
         ffmpeg:
           inputs:
             - path: rtsp://127.0.0.1:8554/vestibule
               input_args: preset-rtsp-restream
-              roles:
+              roles: &roles_record_detect
                 - record
                 - detect
-        detect:
-          fps: 2
+        detect: *detect_fps_2
       livingroom:
         ffmpeg:
           inputs:
             - path: rtsp://127.0.0.1:8554/livingroom
               input_args: preset-rtsp-restream
-              roles:
-                - record
-                - detect
-                - audio
-          output_args:
-            record: preset-record-generic-audio-copy
-        audio:
-          enabled: True
-        detect:
-          fps: 1
+              roles: *roles_record_detect_audio
+          output_args: *output_record_audio_copy
+        audio: *audio_enabled
+        detect: *detect_fps_1
       kitchen:
         ffmpeg:
           inputs:
             - path: rtsp://127.0.0.1:8554/kitchen
               input_args: preset-rtsp-restream
-              roles:
-                - record
-                - detect
-                - audio
-          output_args:
-            record: preset-record-generic-audio-copy
-        audio:
-          enabled: True
-        detect:
-          fps: 1
+              roles: *roles_record_detect_audio
+          output_args: *output_record_audio_copy
+        audio: *audio_enabled
+        detect: *detect_fps_1
       balcony:
         ffmpeg:
           inputs:
             - path: rtsp://127.0.0.1:8554/balcony
               input_args: preset-rtsp-restream
-              roles:
-                - record
-                - detect
-                - audio
-          output_args:
-            record: preset-record-generic-audio-copy
-        audio:
-          enabled: True
-        detect:
-          fps: 1
+              roles: *roles_record_detect_audio
+          output_args: *output_record_audio_copy
+        audio: *audio_enabled
+        detect: *detect_fps_1
       intercom:
         ffmpeg:
           inputs:
             - path: rtsp://127.0.0.1:8554/intercom
               input_args: preset-rtsp-restream
-              roles:
-                - record
-                - detect
-                - audio
-          output_args:
-            record: preset-record-generic-audio-copy
-        audio:
-          enabled: True
+              roles: *roles_record_detect_audio
+          output_args: *output_record_audio_copy
+        audio: *audio_enabled
         detect:
           fps: 3
         review:
@@ -163,13 +134,7 @@ data:
           inputs:
             - path: rtsp://127.0.0.1:8554/bedroom
               input_args: preset-rtsp-restream
-              roles:
-                - record
-                - detect
-                - audio
-          output_args:
-            record: preset-record-generic-audio-copy
-        audio:
-          enabled: True
-        detect:
-          fps: 1
+              roles: *roles_record_detect_audio
+          output_args: *output_record_audio_copy
+        audio: *audio_enabled
+        detect: *detect_fps_1
