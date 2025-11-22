@@ -48,8 +48,6 @@ data:
           - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.2.116:554/Streaming/Channels/101#video=copy#audio=aac
         balcony:
           - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.2.117:554/Streaming/Channels/101#video=copy#audio=aac
-        bedroom:
-          - rtsp://homeassistant:aP5n8XdebfKeDn@192.168.2.118:554/Streaming/Channels/101
     cameras:
       elevators:
         ffmpeg:
@@ -129,12 +127,3 @@ data:
         zones:
           canopy:
             coordinates: 0,1,1,1,1,0.395,0,0.39
-      bedroom:
-        ffmpeg:
-          inputs:
-            - path: rtsp://127.0.0.1:8554/bedroom
-              input_args: preset-rtsp-restream
-              roles: &roles_record_detect
-                - record
-                - detect
-        detect: *detect_fps_2
