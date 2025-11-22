@@ -25,6 +25,7 @@ spec:
       value: homeassistant
     - name: service
       enum:
+        - amur
         - dacha
         - mati
     - name: env
