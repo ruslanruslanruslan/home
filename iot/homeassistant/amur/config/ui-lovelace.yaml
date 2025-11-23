@@ -184,3 +184,46 @@ views:
             name: toilet_motion_1
           - entity: sensor.bathroom_moisture_battery
             name: bathroom_moisture
+
+  - title: Cameras
+    cards:
+
+      - type: custom:advanced-camera-card
+        cameras:
+          - camera_entity: camera.kitchen
+            live_provider: go2rtc
+
+      - type: custom:advanced-camera-card
+        cameras:
+          - camera_entity: camera.bedroom
+            live_provider: go2rtc
+
+      - type: custom:advanced-camera-card
+        cameras:
+          - camera_entity: camera.livingroom
+            live_provider: go2rtc
+
+      - type: custom:advanced-camera-card
+        cameras:
+          - camera_entity: camera.hallway
+            live_provider: go2rtc
+
+      - type: custom:advanced-camera-card
+        cameras:
+          - camera_entity: camera.balcony
+            live_provider: go2rtc
+
+      - type: custom:advanced-camera-card
+        cameras:
+          - camera_entity: camera.elevators
+            live_provider: go2rtc
+
+      - type: custom:advanced-camera-card
+        cameras:
+          - camera_entity: camera.vestibule
+            live_provider: go2rtc
+
+      - type: custom:advanced-camera-card
+        cameras:
+          - camera_entity: camera.intercom
+            live_provider: go2rtc
