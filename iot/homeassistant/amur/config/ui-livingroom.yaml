@@ -50,8 +50,8 @@ views:
             name: pm10
           - entity: sensor.livingroom_air_pm25
             name: pm25
-          - entity: sensor.livingroom_air_tvoc
-            name: tvoc
+          - entity: sensor.livingroom_air_etvoc
+            name: etvoc
           - entity: sensor.livingroom_air_battery
             name: battery
         title: Air

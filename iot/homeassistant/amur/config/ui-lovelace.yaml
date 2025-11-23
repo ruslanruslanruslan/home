@@ -168,8 +168,8 @@ views:
             name: hallway_button
           - entity: sensor.hallway_vibration_battery
             name: hallway_vibration
-          - entity: sensor.viomi_v7_2f27_battery_level
-            name: viomi_v7_2f27_battery
+          - entity: sensor.xiaomi_ov31cn_0c3c_battery_level
+            name: robot_battery
           - entity: sensor.kitchen_motion_1_battery
             name: kitchen_motion_1
           - entity: sensor.kitchen_motion_2_battery
