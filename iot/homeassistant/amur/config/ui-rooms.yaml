@@ -1,161 +1,6 @@
 title: Rooms
 views:
 
-  - title: Kitchen
-    cards:
-
-      - type: entities
-        entities:
-          - entity: sensor.kitchen_kettle_state
-            name: State
-          - entity: binary_sensor.kitchen_kettle_power
-            name: Power
-          - entity: sensor.kitchen_kettle_temperature
-            name: Temperature
-        title: Kettle
-
-      - type: entities
-        entities:
-          - entity: light.kitchen_light_1_light
-            name: point1
-          - entity: light.kitchen_light_2_light
-            name: point2
-          - entity: light.kitchen_lights_light
-            name: group
-        title: Light
-
-      - type: entities
-        entities:
-          - entity: light.kitchen_bulb_1_light
-            name: bulb1
-          - entity: light.kitchen_bulb_2_light
-            name: bulb2
-          - entity: light.kitchen_bulb_3_light
-            name: bulb3
-          - entity: light.kitchen_bulb_4_light
-            name: bulb4
-          - entity: light.kitchen_bulb_5_light
-            name: bulb5
-          - entity: light.kitchen_bulb_6_light
-            name: bulb6
-          - entity: light.1991481969963573248_light
-            name: group
-        title: chandelier
-
-      - type: entities
-        entities:
-          - entity: switch.kitchen_relay_1_channel_1
-            name: Channel1
-          - entity: switch.kitchen_relay_1_channel_2
-            name: Channel2
-          - entity: sensor.kitchen_relay_1_current
-            name: Current
-          - entity: sensor.kitchen_relay_1_energy
-            name: Energy
-          - entity: sensor.kitchen_relay_1_power
-            name: Power
-          - entity: sensor.kitchen_relay_1_voltage
-            name: Voltage
-        title: Ledline
-
-      - type: entities
-        entities:
-          - entity: select.chunmi_press2_f189_start_cook
-            name: cook
-          - entity: button.chunmi_press2_f189_cancel_cooking
-            name: cancel
-          - entity: sensor.chunmi_press2_f189_status
-            name: status
-        title: Cooker
-
-      - type: entities
-        entities:
-          - entity: binary_sensor.kitchen_motion_1_motion
-            name: motion
-          - entity: sensor.kitchen_motion_1_battery
-            name: battery
-          - entity: sensor.kitchen_motion_1_illuminance
-            name: illuminance
-        title: Motion1
-
-      - type: entities
-        entities:
-          - entity: binary_sensor.kitchen_motion_2_motion
-            name: motion
-          - entity: sensor.kitchen_motion_2_battery
-            name: battery
-          - entity: sensor.kitchen_motion_2_illuminance
-            name: illuminance
-        title: Motion2
-
-      - type: entities
-        entities:
-          - entity: sensor.kitchen_temperature
-            name: temperature
-          - entity: sensor.kitchen_temperature_humidity
-            name: humidity
-          - entity: sensor.kitchen_temperature_pressure
-            name: pressure
-          - entity: sensor.kitchen_temperature_battery
-            name: battery
-        title: Temperature
-
-      - type: picture-entity
-        entity: camera.kitchen
-        name: video
-        show_name: false
-        show_state: false
-
-  - title: Bedroom
-    cards:
-
-      - type: entities
-        entities:
-          - entity: light.bedroom_ceiling
-            name: ceiling
-          - entity: light.bedroom_ceiling_nightlight
-            name: nightlight
-          - entity: light.bedroom_ceiling_ambilight
-            name: ambilight
-          - entity: binary_sensor.bedroom_ceiling_nightlight
-            name: nightlight
-          - entity: light.bedroom_strip
-            name: strip
-        title: Light
-
-      - type: entities
-        entities:
-          - entity: cover.bedroom_curtain_motor
-            name: motor
-        title: Curtain
-
-      - type: entities
-        entities:
-          - entity: binary_sensor.bedroom_motion_1_motion
-            name: motion
-          - entity: sensor.bedroom_motion_1_battery
-            name: battery
-          - entity: sensor.bedroom_motion_1_illuminance
-            name: illuminance
-        title: Motion
-
-      - type: entities
-        entities:
-          - entity: sensor.bedroom_temperature
-            name: temperature
-          - entity: sensor.bedroom_temperature_humidity
-            name: humidity
-          - entity: sensor.bedroom_temperature_pressure
-            name: pressure
-          - entity: sensor.bedroom_temperature_battery
-            name: battery
-        title: Temperature
-
-      - type: picture-entity
-        entity: camera.bedroom
-        show_name: false
-        show_state: false
-
   - title: Livingroom
     cards:
 
@@ -289,6 +134,161 @@ views:
 
       - type: picture-entity
         entity: camera.livingroom
+        name: video
+        show_name: false
+        show_state: false
+
+  - title: Bedroom
+    cards:
+
+      - type: entities
+        entities:
+          - entity: light.bedroom_ceiling
+            name: ceiling
+          - entity: light.bedroom_ceiling_nightlight
+            name: nightlight
+          - entity: light.bedroom_ceiling_ambilight
+            name: ambilight
+          - entity: binary_sensor.bedroom_ceiling_nightlight
+            name: nightlight
+          - entity: light.bedroom_strip
+            name: strip
+        title: Light
+
+      - type: entities
+        entities:
+          - entity: cover.bedroom_curtain_motor
+            name: motor
+        title: Curtain
+
+      - type: entities
+        entities:
+          - entity: binary_sensor.bedroom_motion_1_motion
+            name: motion
+          - entity: sensor.bedroom_motion_1_battery
+            name: battery
+          - entity: sensor.bedroom_motion_1_illuminance
+            name: illuminance
+        title: Motion
+
+      - type: entities
+        entities:
+          - entity: sensor.bedroom_temperature
+            name: temperature
+          - entity: sensor.bedroom_temperature_humidity
+            name: humidity
+          - entity: sensor.bedroom_temperature_pressure
+            name: pressure
+          - entity: sensor.bedroom_temperature_battery
+            name: battery
+        title: Temperature
+
+      - type: picture-entity
+        entity: camera.bedroom
+        show_name: false
+        show_state: false
+
+  - title: Kitchen
+    cards:
+
+      - type: entities
+        entities:
+          - entity: sensor.kitchen_kettle_state
+            name: State
+          - entity: binary_sensor.kitchen_kettle_power
+            name: Power
+          - entity: sensor.kitchen_kettle_temperature
+            name: Temperature
+        title: Kettle
+
+      - type: entities
+        entities:
+          - entity: light.kitchen_light_1_light
+            name: point1
+          - entity: light.kitchen_light_2_light
+            name: point2
+          - entity: light.kitchen_lights_light
+            name: group
+        title: Light
+
+      - type: entities
+        entities:
+          - entity: light.kitchen_bulb_1_light
+            name: bulb1
+          - entity: light.kitchen_bulb_2_light
+            name: bulb2
+          - entity: light.kitchen_bulb_3_light
+            name: bulb3
+          - entity: light.kitchen_bulb_4_light
+            name: bulb4
+          - entity: light.kitchen_bulb_5_light
+            name: bulb5
+          - entity: light.kitchen_bulb_6_light
+            name: bulb6
+          - entity: light.1991481969963573248_light
+            name: group
+        title: chandelier
+
+      - type: entities
+        entities:
+          - entity: switch.kitchen_relay_1_channel_1
+            name: Channel1
+          - entity: switch.kitchen_relay_1_channel_2
+            name: Channel2
+          - entity: sensor.kitchen_relay_1_current
+            name: Current
+          - entity: sensor.kitchen_relay_1_energy
+            name: Energy
+          - entity: sensor.kitchen_relay_1_power
+            name: Power
+          - entity: sensor.kitchen_relay_1_voltage
+            name: Voltage
+        title: Ledline
+
+      - type: entities
+        entities:
+          - entity: select.chunmi_press2_f189_start_cook
+            name: cook
+          - entity: button.chunmi_press2_f189_cancel_cooking
+            name: cancel
+          - entity: sensor.chunmi_press2_f189_status
+            name: status
+        title: Cooker
+
+      - type: entities
+        entities:
+          - entity: binary_sensor.kitchen_motion_1_motion
+            name: motion
+          - entity: sensor.kitchen_motion_1_battery
+            name: battery
+          - entity: sensor.kitchen_motion_1_illuminance
+            name: illuminance
+        title: Motion1
+
+      - type: entities
+        entities:
+          - entity: binary_sensor.kitchen_motion_2_motion
+            name: motion
+          - entity: sensor.kitchen_motion_2_battery
+            name: battery
+          - entity: sensor.kitchen_motion_2_illuminance
+            name: illuminance
+        title: Motion2
+
+      - type: entities
+        entities:
+          - entity: sensor.kitchen_temperature
+            name: temperature
+          - entity: sensor.kitchen_temperature_humidity
+            name: humidity
+          - entity: sensor.kitchen_temperature_pressure
+            name: pressure
+          - entity: sensor.kitchen_temperature_battery
+            name: battery
+        title: Temperature
+
+      - type: picture-entity
+        entity: camera.kitchen
         name: video
         show_name: false
         show_state: false
