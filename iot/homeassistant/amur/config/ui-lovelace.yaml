@@ -106,7 +106,7 @@ views:
 
       - type: custom:advanced-camera-card
         cameras:
-          - camera_entity: camera.kitchen
+          - camera_entity: camera.livingroom
             live_provider: go2rtc
 
       - type: custom:advanced-camera-card
@@ -116,7 +116,7 @@ views:
 
       - type: custom:advanced-camera-card
         cameras:
-          - camera_entity: camera.livingroom
+          - camera_entity: camera.kitchen
             live_provider: go2rtc
 
       - type: custom:advanced-camera-card
