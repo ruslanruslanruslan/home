@@ -13,48 +13,12 @@ lovelace:
     - url: /local/advanced-camera-card/advanced-camera-card.js
       type: module
   dashboards:
-    lovelace-bedroom:
+    lovelace-rooms:
       mode: yaml
-      title: bedroom
+      title: Rooms
       show_in_sidebar: true
       require_admin: false
-      filename: ui-bedroom.yaml
-    lovelace-livingroom:
-      mode: yaml
-      title: livingroom
-      show_in_sidebar: true
-      require_admin: false
-      filename: ui-livingroom.yaml
-    lovelace-kitchen:
-      mode: yaml
-      title: kitchen
-      show_in_sidebar: true
-      require_admin: false
-      filename: ui-kitchen.yaml
-    lovelace-hallway:
-      mode: yaml
-      title: hallway
-      show_in_sidebar: true
-      require_admin: false
-      filename: ui-hallway.yaml
-    lovelace-bathroom:
-      mode: yaml
-      title: bathroom
-      show_in_sidebar: true
-      require_admin: false
-      filename: ui-bathroom.yaml
-    lovelace-toilet:
-      mode: yaml
-      title: toilet
-      show_in_sidebar: true
-      require_admin: false
-      filename: ui-toilet.yaml
-    lovelace-balcony:
-      mode: yaml
-      title: balcony
-      show_in_sidebar: true
-      require_admin: false
-      filename: ui-balcony.yaml
+      filename: ui-rooms.yaml
 
 homeassistant:
   name: Amur
