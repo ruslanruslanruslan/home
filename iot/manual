@@ -58,3 +58,232 @@ sudo docker container prune
 sudo docker image prune -a
 sudo docker volume prune
 sudo docker builder prune
+
+
+
+///////////////////////hosts//////////////////////
+sudo tee -a /etc/hosts << 'EOF'
+# ibragimov.uk custom hosts
+0.0.0.0             proc01.ibragimov.uk
+192.168.2.129       kube.ibragimov.uk
+EOF
+
+/////////////////////install proxy/////////////////
+bash <(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)
+xray version
+
+# 1. Создаём пользователя для Xray
+sudo useradd -r -s /bin/false xray 2>/dev/null || true
+
+# 2. Конфиг Xray
+sudo mkdir -p /usr/local/etc/xray && sudo bash -c 'cat > /usr/local/etc/xray/config.json << EOF
+{
+  "log": {
+    "loglevel": "warning"
+  },
+  "inbounds": [
+    {
+      "tag": "transparent",
+      "port": 12345,
+      "protocol": "dokodemo-door",
+      "settings": {
+        "network": "tcp,udp",
+        "followRedirect": true
+      },
+      "sniffing": {
+        "enabled": true,
+        "destOverride": ["http", "tls"]
+      },
+      "streamSettings": {
+        "sockopt": {
+          "tproxy": "tproxy"
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "tag": "proxy",
+      "protocol": "vless",
+      "settings": {
+        "vnext": [
+          {
+            "address": "mati.ibragimov.uk",
+            "port": 443,
+            "users": [
+              {
+                "id": "fa1197a5-c3db-4d61-9f41-030ca60eb2b2",
+                "encryption": "none"
+              }
+            ]
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "mati.ibragimov.uk",
+          "fingerprint": "chrome"
+        },
+        "wsSettings": {
+          "path": "/ws"
+        }
+      }
+    },
+    {
+      "tag": "direct",
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "UseIP"
+      },
+      "streamSettings": {
+        "sockopt": {
+          "mark": 255
+        }
+      }
+    }
+  ],
+  "routing": {
+    "domainStrategy": "IPIfNonMatch",
+    "rules": [
+      {
+        "type": "field",
+        "ip": ["geoip:private"],
+        "outboundTag": "direct"
+      },
+      {
+        "type": "field",
+        "domain": [
+          "domain:claude.com",
+          "domain:claude.ai",
+          "domain:anthropic.com",
+          "domain:chatgpt.com",
+          "domain:openai.com",
+          "domain:jetbrains.ai",
+          "domain:jetbrains.com",
+          "domain:githubcopilot.com",
+          "domain:githubusercontent.com",
+          "domain:githubassets.com",
+          "domain:copilot.github.com",
+          "domain:youtube.com",
+          "domain:googlevideo.com",
+          "domain:linkedin.com",
+          "domain:facebook.com",
+          "domain:instagram.com",
+          "domain:rutracker.org",
+          "domain:alamo.edu",
+          "domain:discord.com",
+          "domain:discordapp.com"
+        ],
+        "outboundTag": "proxy"
+      },
+      {
+        "type": "field",
+        "port": "0-65535",
+        "outboundTag": "direct"
+      }
+    ]
+  }
+}
+EOF'
+
+# 3. Systemd сервис (запуск от пользователя xray с capabilities)
+sudo bash -c 'cat > /etc/systemd/system/xray.service << EOF
+[Unit]
+Description=Xray Service
+After=network.target
+
+[Service]
+User=xray
+CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE CAP_NET_RAW
+AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE CAP_NET_RAW
+NoNewPrivileges=true
+ExecStart=/usr/local/bin/xray run -config /usr/local/etc/xray/config.json
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
+EOF'
+
+# 4. proxy-on.sh (исключает трафик с меткой 255 от Xray)
+sudo bash -c 'cat > /usr/local/bin/proxy-on.sh << "EOF"
+#!/bin/bash
+set -e
+
+# Очистка
+iptables -t mangle -F
+iptables -t mangle -X XRAY 2>/dev/null || true
+iptables -t mangle -X XRAY_MARK 2>/dev/null || true
+ip rule del fwmark 1 table 100 2>/dev/null || true
+ip route del local 0.0.0.0/0 dev lo table 100 2>/dev/null || true
+
+# Маршрутизация для помеченного трафика
+ip rule add fwmark 1 table 100
+ip route add local 0.0.0.0/0 dev lo table 100
+
+# Цепочка для PREROUTING (трафик от других машин)
+iptables -t mangle -N XRAY
+iptables -t mangle -A XRAY -d 127.0.0.0/8 -j RETURN
+iptables -t mangle -A XRAY -d 10.0.0.0/8 -j RETURN
+iptables -t mangle -A XRAY -d 172.16.0.0/12 -j RETURN
+iptables -t mangle -A XRAY -d 192.168.0.0/16 -j RETURN
+iptables -t mangle -A XRAY -d 224.0.0.0/4 -j RETURN
+iptables -t mangle -A XRAY -d 255.255.255.255/32 -j RETURN
+iptables -t mangle -A XRAY -p tcp -j TPROXY --on-port 12345 --tproxy-mark 1
+iptables -t mangle -A XRAY -p udp -j TPROXY --on-port 12345 --tproxy-mark 1
+iptables -t mangle -A PREROUTING -j XRAY
+
+# Цепочка для OUTPUT (локальный трафик)
+iptables -t mangle -N XRAY_MARK
+iptables -t mangle -A XRAY_MARK -d 127.0.0.0/8 -j RETURN
+iptables -t mangle -A XRAY_MARK -d 10.0.0.0/8 -j RETURN
+iptables -t mangle -A XRAY_MARK -d 172.16.0.0/12 -j RETURN
+iptables -t mangle -A XRAY_MARK -d 192.168.0.0/16 -j RETURN
+iptables -t mangle -A XRAY_MARK -d 224.0.0.0/4 -j RETURN
+iptables -t mangle -A XRAY_MARK -d 255.255.255.255/32 -j RETURN
+# Пропускаем трафик от Xray (метка 255)
+iptables -t mangle -A XRAY_MARK -m mark --mark 255 -j RETURN
+iptables -t mangle -A XRAY_MARK -p tcp --sport 22 -j RETURN
+iptables -t mangle -A XRAY_MARK -p tcp -j MARK --set-mark 1
+iptables -t mangle -A XRAY_MARK -p udp -j MARK --set-mark 1
+iptables -t mangle -A OUTPUT -j XRAY_MARK
+
+echo "Прокси включен"
+EOF'
+
+# 5. proxy-off.sh
+sudo bash -c 'cat > /usr/local/bin/proxy-off.sh << "EOF"
+#!/bin/bash
+iptables -t mangle -F
+iptables -t mangle -X XRAY 2>/dev/null || true
+iptables -t mangle -X XRAY_MARK 2>/dev/null || true
+ip rule del fwmark 1 table 100 2>/dev/null || true
+ip route del local 0.0.0.0/0 dev lo table 100 2>/dev/null || true
+echo "Прокси отключен"
+EOF'
+
+# 6. Права и перезапуск
+sudo chmod +x /usr/local/bin/proxy-on.sh /usr/local/bin/proxy-off.sh
+sudo systemctl daemon-reload
+sudo systemctl restart xray
+
+sudo /usr/local/bin/proxy-on.sh
+curl ifconfig.me        # Должен показать твой реальный IP
+curl https://claude.ai  # Должен идти через прокси
+sudo /usr/local/bin/proxy-off.sh
+curl ifconfig.me        # Должен показать твой реальный IP
+curl https://claude.ai  # Должен не проходить
+
+
+
+
+//////////////////////////////Tabby sync//////////////
+# only first initiate!
+# mkdir -p ~/Library/Mobile\ Documents/com~apple~CloudDocs/Tabby
+# mv ~/Library/Application\ Support/tabby/config.yaml ~/Library/Mobile\ Documents/com~apple~CloudDocs/Tabby
+# add new client!
+# rm ~/Library/Application\ Support/tabby/config.yaml
+ln -s ~/Library/Mobile\ Documents/com~apple~CloudDocs/Tabby/config.yaml ~/Library/Application\ Support/tabby/config.yaml
+
