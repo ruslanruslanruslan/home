@@ -3,7 +3,7 @@
 # 1. create user in UI
     rodion : 7cSNVL2PdptMqH
 # 2. Yeelight should import lights automatically
-# 3. Install Gateway3 and import main gateway (fill ip, token, key) and it will import all devices (192.168.2.217 6f794172766f6a4a45674f6c7032334c VdGkKtZlgeJJc9UN)
+# 3. Install Gateway3 and import main gateway (fill ip, token, key) and it will import all devices (192.168.2.217 6f794172766f6a4a45674f6c7032334c/5463376734326d64426f31724971564c VdGkKtZlgeJJc9UN)
 # 4. Install xiaomi-miot and login to mi account, add local devices, filter mop, cooker, 4 power plugs + powerstrip (check local and include filter)
 # 5. Install MQTT (192.168.2.129 30021 homeassistant FLS3GD8Qc8xJWp) (needed for Qinqpong + frigate)
 # 6. Qinqping Pro AQM add manually (livingroom_air, v2 (should get automatically 582D34006AAA)). Need to be sure that device send data in mqtt using mqtt explorer.

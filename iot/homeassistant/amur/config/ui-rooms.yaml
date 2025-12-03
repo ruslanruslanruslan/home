@@ -132,11 +132,10 @@ views:
             name: power
         title: Power_TV
 
-      - type: picture-entity
-        entity: camera.livingroom
-        name: video
-        show_name: false
-        show_state: false
+      - type: custom:advanced-camera-card
+        cameras:
+          - camera_entity: camera.livingroom
+            live_provider: go2rtc
 
   - title: Bedroom
     cards:
@@ -183,10 +182,10 @@ views:
             name: battery
         title: Temperature
 
-      - type: picture-entity
-        entity: camera.bedroom
-        show_name: false
-        show_state: false
+      - type: custom:advanced-camera-card
+        cameras:
+          - camera_entity: camera.bedroom
+            live_provider: go2rtc
 
   - title: Kitchen
     cards:
@@ -287,11 +286,10 @@ views:
             name: battery
         title: Temperature
 
-      - type: picture-entity
-        entity: camera.kitchen
-        name: video
-        show_name: false
-        show_state: false
+      - type: custom:advanced-camera-card
+        cameras:
+          - camera_entity: camera.kitchen
+            live_provider: go2rtc
 
   - title: Hallway
     cards:
@@ -406,11 +404,10 @@ views:
             name: Lock
         title: Lock
 
-      - type: picture-entity
-        entity: camera.hallway
-        name: video
-        show_name: false
-        show_state: false
+      - type: custom:advanced-camera-card
+        cameras:
+          - camera_entity: camera.hallway
+            live_provider: go2rtc
 
       - type: iframe
         name: Speedtest
