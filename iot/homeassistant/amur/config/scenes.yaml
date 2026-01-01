@@ -44,8 +44,8 @@
       brightness: 255
     light.bedroom_strip:
       state: on
-      brightness: 255
-      color_temp: 100
+      brightness: 250
+      color_temp: 99
     cover.bedroom_curtain_motor:
       state: open
     light.hallway_lights_light:
