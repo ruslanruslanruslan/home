@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: deploy-docker
+  name: deploy-docker-iot-frigate
   namespace: frigate
 spec:
   serviceAccountName: deployer
   workflowMetadata:
     annotations:
-      workflows.argoproj.io/title: '**deploy-docker**-{{`{{ workflow.parameters.service }}`}}'
+      workflows.argoproj.io/title: '**deploy-docker-iot-frigate**-{{`{{ workflow.parameters.service }}`}}'
       workflows.argoproj.io/description: '`{{`{{ workflow.parameters.env }}`}}`'
   ttlStrategy:
     secondsAfterCompletion: 604800

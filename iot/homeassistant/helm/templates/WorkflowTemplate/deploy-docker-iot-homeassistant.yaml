@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: WorkflowTemplate
 metadata:
-  name: deploy-docker
+  name: deploy-docker-iot-homeassistant
   namespace: homeassistant
 spec:
   serviceAccountName: deployer
@@ -9,7 +9,7 @@ spec:
     labels:
       pipelines.ibragimov.uk/build: '{{`{{ workflow.parameters.project }}`}}-{{`{{ workflow.parameters.application }}`}}-{{`{{ workflow.parameters.service }}`}}-{{`{{ workflow.parameters.env }}`}}'
     annotations:
-      workflows.argoproj.io/title: '**deploy-docker**-{{`{{ workflow.parameters.service }}`}}'
+      workflows.argoproj.io/title: '**deploy-docker-iot-homeassistant**-{{`{{ workflow.parameters.service }}`}}'
       workflows.argoproj.io/description: '`{{`{{ workflow.parameters.env }}`}}`'
   ttlStrategy:
     secondsAfterCompletion: 604800
