@@ -9,8 +9,6 @@ spec:
     annotations:
       workflows.argoproj.io/title: '**deploy-docker-iot-frigate**-{{`{{ workflow.parameters.service }}`}}'
       workflows.argoproj.io/description: '`{{`{{ workflow.parameters.env }}`}}`'
-  ttlStrategy:
-    secondsAfterCompletion: 604800
   entrypoint: wf
   onExit: telegram
   arguments:
