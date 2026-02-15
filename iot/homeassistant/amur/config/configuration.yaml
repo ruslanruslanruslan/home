@@ -50,11 +50,11 @@ input_select:
 yeelight:
   devices:
     192.168.2.219:
-      name: livingroom_ceiling_1
+      name: livingroom_ceiling_2
       model: ceiling4
       nightlight_switch_type: light
     192.168.2.218:
-      name: livingroom_ceiling_2
+      name: livingroom_ceiling_1
       model: ceiling4
       nightlight_switch_type: light
     192.168.2.232:
