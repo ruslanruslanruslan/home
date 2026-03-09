@@ -21,6 +21,7 @@ spec:
       value: frigate
     - name: service
       enum:
+        - amur
         - dacha
         - mati
     - name: env
