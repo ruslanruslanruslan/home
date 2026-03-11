@@ -4,7 +4,7 @@ metadata:
   name: {{ .Release.Namespace }}-deployment
   namespace: {{ .Release.Namespace }}
 spec:
-  storageClassName: directpv-slow-delete
+  storageClassName: directpv-sata-ssd-raw-delete
   accessModes:
     - ReadWriteOnce
   resources:

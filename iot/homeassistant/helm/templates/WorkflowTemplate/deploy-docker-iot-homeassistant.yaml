@@ -28,8 +28,6 @@ spec:
         - mati
     - name: env
       value: master
-    - name: sensor_meta
-      value: "{}"
 
   templates:
 
