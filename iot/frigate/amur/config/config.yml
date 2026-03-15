@@ -1,6 +1,6 @@
 mqtt:
-  host: mosquitto
-  port: 1883
+  host: 192.168.2.129
+  port: 30021
   user: homeassistant
   password: FLS3GD8Qc8xJWp
 record:
