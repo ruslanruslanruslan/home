@@ -9,11 +9,6 @@ services:
     stop_grace_period: 30s
     image: ghcr.io/blakeblackshear/frigate:stable
     shm_size: "512mb"
-    devices:
-      - /dev/bus/usb:/dev/bus/usb
-      - /dev/apex_0:/dev/apex_0
-      - /dev/video11:/dev/video11
-      - /dev/dri/renderD128:/dev/dri/renderD128
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /docker/iot-frigate-amur/config:/config
