@@ -16,6 +16,11 @@ detectors:
       path: /openvino-model/ssdlite_mobilenet_v2.xml
 detect:
   enabled: true
+model:
+  width: 300
+  height: 300
+  input_tensor: nhwc
+  input_pixel_format: bgr
 record:
   enabled: true
   retain:
