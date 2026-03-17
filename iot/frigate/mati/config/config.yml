@@ -8,13 +8,13 @@ mqtt:
   port: 1883
   user: homeassistant
   password: FLS3GD8Qc8xJWp
-#detectors:
-#  ov_0:
-#    type: openvino
-#    device: CPU
-#  ov_1:
-#    type: openvino
-#    device: CPU
+detectors:
+  ov_0:
+    type: openvino
+    device: CPU
+  ov_1:
+    type: openvino
+    device: CPU
 record:
   enabled: True
   retain:
