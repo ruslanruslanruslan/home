@@ -16,6 +16,8 @@ detectors:
     device: CPU
     model:
       path: /openvino-model/ssdlite_mobilenet_v2.xml
+detect:
+  enabled: True
 record:
   enabled: True
   retain:
