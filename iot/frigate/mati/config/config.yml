@@ -12,18 +12,22 @@ detectors:
   ov_0:
     type: openvino
     device: CPU
-    model_path: /openvino-model/ssdlite_mobilenet_v2.xml
+    model_path: /config/model_cache/yolov8n/yolov8n.xml
   ov_1:
     type: openvino
     device: CPU
-    model_path: /openvino-model/ssdlite_mobilenet_v2.xml
+    model_path: /config/model_cache/yolov8n/yolov8n.xml
 detect:
   enabled: True
 model:
-  width: 300
-  height: 300
-  input_tensor: nhwc
-  input_pixel_format: bgr
+  width: 320
+  height: 320
+  input_tensor: nchw
+  input_pixel_format: rgb
+  input_dtype: float
+  model_type: yolo-generic
+  labelmap:
+    0: person
 record:
   enabled: True
   retain:
