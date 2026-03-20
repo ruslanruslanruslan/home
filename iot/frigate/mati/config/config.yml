@@ -12,13 +12,11 @@ detectors:
   ov_0:
     type: openvino
     device: CPU
-    model:
-      path: /openvino-model/ssdlite_mobilenet_v2.xml
+    model_path: /openvino-model/ssdlite_mobilenet_v2.xml
   ov_1:
     type: openvino
     device: CPU
-    model:
-      path: /openvino-model/ssdlite_mobilenet_v2.xml
+    model_path: /openvino-model/ssdlite_mobilenet_v2.xml
 detect:
   enabled: True
 model:
