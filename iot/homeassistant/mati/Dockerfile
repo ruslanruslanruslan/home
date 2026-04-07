@@ -1,4 +1,4 @@
-FROM homeassistant/home-assistant:latest
+FROM mirror.gcr.io/homeassistant/home-assistant:latest
 
 WORKDIR /config
 
