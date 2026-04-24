@@ -13,10 +13,6 @@ detectors:
     type: openvino
     device: CPU
     model_path: /config/model_cache/yolov8n/yolov8n.xml
-  ov_1:
-    type: openvino
-    device: CPU
-    model_path: /config/model_cache/yolov8n/yolov8n.xml
 detect:
   enabled: true
 model:
@@ -223,7 +219,7 @@ cameras:
     audio:
       enabled: true
     detect:
-      fps: 4
+      fps: 2
   backyard:
     ffmpeg:
       inputs:
@@ -241,7 +237,7 @@ cameras:
     audio:
       enabled: true
     detect:
-      fps: 4
+      fps: 2
   gate-back:
     ffmpeg:
       inputs:
@@ -259,7 +255,7 @@ cameras:
     audio:
       enabled: true
     detect:
-      fps: 4
+      fps: 3
   gate-front:
     ffmpeg:
       inputs:
@@ -277,7 +273,7 @@ cameras:
     audio:
       enabled: true
     detect:
-      fps: 4
+      fps: 3
 #    review:
 #      alerts:
 #        required_zones:

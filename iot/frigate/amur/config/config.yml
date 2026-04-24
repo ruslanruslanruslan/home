@@ -8,10 +8,6 @@ detectors:
     type: openvino
     device: CPU
     model_path: /config/model_cache/yolov8n/yolov8n.xml
-  ov_1:
-    type: openvino
-    device: CPU
-    model_path: /config/model_cache/yolov8n/yolov8n.xml
 detect:
   enabled: true
 model:
