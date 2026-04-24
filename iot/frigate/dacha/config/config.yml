@@ -13,8 +13,8 @@ detectors:
 detect:
   enabled: true
 model:
-  width: 320
-  height: 320
+  width: 256
+  height: 256
   input_tensor: nchw
   input_pixel_format: rgb
   input_dtype: float
