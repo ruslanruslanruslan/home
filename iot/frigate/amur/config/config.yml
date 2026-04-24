@@ -25,9 +25,6 @@ model:
     0: person
 record:
   enabled: true
-  retain:
-    days: 2
-    mode: all
   alerts:
     retain:
       days: 30
@@ -36,6 +33,10 @@ record:
     retain:
       days: 14
       mode: motion
+  continuous:
+    days: 2
+  motion:
+    days: 2
 snapshots:
   enabled: true
   retain:

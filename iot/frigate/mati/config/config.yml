@@ -18,7 +18,7 @@ detectors:
     device: CPU
     model_path: /config/model_cache/yolov8n/yolov8n.xml
 detect:
-  enabled: True
+  enabled: true
 model:
   width: 320
   height: 320
@@ -29,10 +29,7 @@ model:
   labelmap:
     0: person
 record:
-  enabled: True
-  retain:
-    days: 2
-    mode: all
+  enabled: true
   alerts:
     retain:
       days: 180
@@ -41,8 +38,12 @@ record:
     retain:
       days: 30
       mode: motion
+  continuous:
+    days: 2
+  motion:
+    days: 2
 snapshots:
-  enabled: True
+  enabled: true
   retain:
     default: 180
 review:
@@ -109,7 +110,7 @@ cameras:
       output_args:
         record: preset-record-generic-audio-copy
     audio:
-      enabled: False
+      enabled: false
     detect:
       fps: 1
   madam:
@@ -127,7 +128,7 @@ cameras:
       output_args:
         record: preset-record-generic-audio-copy
     audio:
-      enabled: False
+      enabled: false
     detect:
       fps: 1
   room01:
@@ -145,7 +146,7 @@ cameras:
       output_args:
         record: preset-record-generic-audio-copy
     audio:
-      enabled: False
+      enabled: false
     detect:
       fps: 1
   room05:
@@ -163,7 +164,7 @@ cameras:
       output_args:
         record: preset-record-generic-audio-copy
     audio:
-      enabled: False
+      enabled: false
     detect:
       fps: 1
     review:
@@ -188,7 +189,7 @@ cameras:
       output_args:
         record: preset-record-generic-audio-copy
     audio:
-      enabled: False
+      enabled: false
     detect:
       fps: 1
     review:
@@ -220,7 +221,7 @@ cameras:
       output_args:
         record: preset-record-generic-audio-copy
     audio:
-      enabled: True
+      enabled: true
     detect:
       fps: 4
   backyard:
@@ -238,7 +239,7 @@ cameras:
       output_args:
         record: preset-record-generic-audio-copy
     audio:
-      enabled: True
+      enabled: true
     detect:
       fps: 4
   gate-back:
@@ -256,7 +257,7 @@ cameras:
       output_args:
         record: preset-record-generic-audio-copy
     audio:
-      enabled: True
+      enabled: true
     detect:
       fps: 4
   gate-front:
@@ -274,7 +275,7 @@ cameras:
       output_args:
         record: preset-record-generic-audio-copy
     audio:
-      enabled: True
+      enabled: true
     detect:
       fps: 4
 #    review:
@@ -299,6 +300,6 @@ cameras:
       output_args:
         record: preset-record-generic-audio-copy
     audio:
-      enabled: True
+      enabled: true
     detect:
       fps: 1
