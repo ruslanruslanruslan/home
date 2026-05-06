@@ -28,11 +28,11 @@ record:
   enabled: true
   alerts:
     retain:
-      days: 180
+      days: 30
       mode: motion
   detections:
     retain:
-      days: 30
+      days: 14
       mode: motion
   continuous:
     days: 2
@@ -41,7 +41,7 @@ record:
 snapshots:
   enabled: true
   retain:
-    default: 180
+    default: 30
 review:
   alerts:
     labels:
