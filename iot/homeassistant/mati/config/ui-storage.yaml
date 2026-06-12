@@ -1,309 +1,323 @@
 title: Home
 views:
-
-  - title: Storage
-    cards:
-      - type: entities
-        title: Equipment
-        entities:
-        - entity: switch.power_meter
-          type: custom:multiple-entity-row
-          name: Meter
-          toggle: true
-          entities:
-            - entity: sensor.power_meter_current
-              name: current
-            - entity: sensor.power_meter_voltage
-              name: voltage
-            - entity: sensor.power_meter_power
-              name: power
-        - entity: switch.outlet_03
-          type: custom:multiple-entity-row
-          name: Router (03)
-          toggle: true
-          entities:
-            - entity: sensor.outlet_03_current
-              name: current
-            - entity: sensor.outlet_03_voltage
-              name: voltage
-            - entity: sensor.outlet_03_power
-              name: power
-        - entity: switch.outlet_04
-          type: custom:multiple-entity-row
-          name: Switch-1000 (04)
-          toggle: true
-          entities:
-            - entity: sensor.outlet_04_current
-              name: current
-            - entity: sensor.outlet_04_voltage
-              name: voltage
-            - entity: sensor.outlet_04_power
-              name: power
-        - entity: switch.outlet_05
-          type: custom:multiple-entity-row
-          name: Server (05)
-          toggle: true
-          entities:
-            - entity: sensor.outlet_05_current
-              name: current
-            - entity: sensor.outlet_05_voltage
-              name: voltage
-            - entity: sensor.outlet_05_power
-              name: power
-        - entity: switch.outlet_06
-          type: custom:multiple-entity-row
-          name: Switch-100 (06)
-          toggle: true
-          entities:
-            - entity: sensor.outlet_06_current
-              name: current
-            - entity: sensor.outlet_06_voltage
-              name: voltage
-            - entity: sensor.outlet_06_power
-              name: power
-        - entity: switch.outlet_07
-          type: custom:multiple-entity-row
-          name: Lights (07)
-          toggle: true
-          entities:
-            - entity: sensor.outlet_07_current
-              name: current
-            - entity: sensor.outlet_07_voltage
-              name: voltage
-            - entity: sensor.outlet_07_power
-              name: power
-        - entity: switch.outlet_01
-          type: custom:multiple-entity-row
-          name: Fridge (01)
-          toggle: true
-          entities:
-            - entity: sensor.outlet_01_current
-              name: current
-            - entity: sensor.outlet_01_voltage
-              name: voltage
-            - entity: sensor.outlet_01_power
-              name: power
-        - entity: switch.outlet_02
-          type: custom:multiple-entity-row
-          name: Charger (02)
-          toggle: true
-          entities:
-            - entity: sensor.outlet_02_current
-              name: current
-            - entity: sensor.outlet_02_voltage
-              name: voltage
-            - entity: sensor.outlet_02_power
-              name: power
-
-      - type: entities
-        title: Solar Station
-        entities:
-        - entity: sensor.power
-          type: custom:multiple-entity-row
-          show_state: false
-          name: Battery
-          entities:
-            - entity: sensor.battery
-              name: battery
-            - entity: sensor.total_capacity
-              name: capacity
-            - entity: sensor.ntc_temperature
-              name: temperature
-        - entity: sensor.power
-          type: custom:multiple-entity-row
-          show_state: false
-          name: Battery Usage
-          entities:
-            - entity: sensor.current
-              name: current
-            - entity: sensor.voltage
-              name: voltage
-            - entity: sensor.power
-              name: power
-        - entity: sensor.power_2
-          type: custom:multiple-entity-row
-          show_state: false
-          name: Solar Usage
-          entities:
-            - entity: sensor.current_2
-              name: current
-            - entity: sensor.voltage_2
-              name: voltage
-            - entity: sensor.power_2
-              name: power
-        - entity: sensor.solar_charge_power
-          type: custom:multiple-entity-row
-          show_state: false
-          name: Doreco Charge
-          entities:
-            - entity: sensor.solar_charge_current
-              name: current
-            - entity: sensor.solar_charge_voltage
-              name: voltage
-            - entity: sensor.solar_charge_power
-              name: power
-        - entity: sensor.solar_bypass_power
-          type: custom:multiple-entity-row
-          show_state: false
-          name: Doreco Bypass
-          entities:
-#            - icon: mdi:refresh
-##              name: refresh
-#              tap_action:
-#                action: call-service
-#                service: button.press
-#                service_data:
-#                  entity_id: button.solar_bypass_refresh_sensors
-            - entity: sensor.solar_bypass_current
-              name: current
-            - entity: sensor.solar_bypass_voltage
-              name: voltage
-            - entity: sensor.solar_bypass_power
-              name: power
-        - entity: sensor.solar_output_power
-          type: custom:multiple-entity-row
-          show_state: false
-          name: Solar Output
-          entities:
-#            - icon: mdi:refresh
-##              name: refresh
-#              tap_action:
-#                action: call-service
-#                service: button.press
-#                service_data:
-#                  entity_id: button.solar_output_refresh_sensors
-            - entity: sensor.solar_output_current
-              name: current
-            - entity: sensor.solar_output_voltage
-              name: voltage
-            - entity: sensor.solar_output_power
-              name: power
-
-      - type: entities
-        title: Air
-        entities:
-#          - entity: sensor.storage_co2_carbon_dioxide
-#            name: Carbon Dioxide
-#          - entity: sensor.storage_co2_carbon_dioxide
-#            name: Carbon Monoxide
-#          - entity: sensor.storage_co2_carbon_monoxide
-#            name: Formaldehyde
-          - entity: sensor.storage_co2_humidity
-            name: Humidity
-          - entity: sensor.storage_co2_air_quality
-            type: custom:multiple-entity-row
-            name: Quality
+    - title: Storage
+      cards:
+          - type: entities
+            title: Equipment
             entities:
-              - entity: sensor.storage_co2_pm_0_3
-                name: PM03
-              - entity: sensor.storage_co2_pm1
-                name: PM1
-              - entity: sensor.storage_co2_pm2_5
-                name: PM2.5
-              - entity: sensor.storage_co2_pm10
-                name: PM10
-          - entity: sensor.storage_co2_temperature
-            name: Temperature
-          - entity: sensor.storage_co2_volatile_organic_compounds
-            name: Volatile Organic Compounds
-          - entity: sensor.storage_co2_battery
-            name: Battery
+                - entity: switch.power_meter
+                  type: custom:multiple-entity-row
+                  name: Meter
+                  toggle: true
+                  entities:
+                      - entity: sensor.power_meter_current
+                        name: current
+                      - entity: sensor.power_meter_voltage
+                        name: voltage
+                      - entity: sensor.power_meter_power
+                        name: power
+                - entity: switch.outlet_03
+                  type: custom:multiple-entity-row
+                  name: Router (03)
+                  toggle: true
+                  entities:
+                      - entity: sensor.outlet_03_current
+                        name: current
+                      - entity: sensor.outlet_03_voltage
+                        name: voltage
+                      - entity: sensor.outlet_03_power
+                        name: power
+                - entity: switch.outlet_04
+                  type: custom:multiple-entity-row
+                  name: Switch-1000 (04)
+                  toggle: true
+                  entities:
+                      - entity: sensor.outlet_04_current
+                        name: current
+                      - entity: sensor.outlet_04_voltage
+                        name: voltage
+                      - entity: sensor.outlet_04_power
+                        name: power
+                - entity: switch.outlet_05
+                  type: custom:multiple-entity-row
+                  name: Server (05)
+                  toggle: true
+                  entities:
+                      - entity: sensor.outlet_05_current
+                        name: current
+                      - entity: sensor.outlet_05_voltage
+                        name: voltage
+                      - entity: sensor.outlet_05_power
+                        name: power
+                - entity: switch.outlet_06
+                  type: custom:multiple-entity-row
+                  name: Switch-100 (06)
+                  toggle: true
+                  entities:
+                      - entity: sensor.outlet_06_current
+                        name: current
+                      - entity: sensor.outlet_06_voltage
+                        name: voltage
+                      - entity: sensor.outlet_06_power
+                        name: power
+                - entity: switch.outlet_07
+                  type: custom:multiple-entity-row
+                  name: Lights (07)
+                  toggle: true
+                  entities:
+                      - entity: sensor.outlet_07_current
+                        name: current
+                      - entity: sensor.outlet_07_voltage
+                        name: voltage
+                      - entity: sensor.outlet_07_power
+                        name: power
+                - entity: switch.outlet_01
+                  type: custom:multiple-entity-row
+                  name: Fridge (01)
+                  toggle: true
+                  entities:
+                      - entity: sensor.outlet_01_current
+                        name: current
+                      - entity: sensor.outlet_01_voltage
+                        name: voltage
+                      - entity: sensor.outlet_01_power
+                        name: power
+                - entity: switch.outlet_02
+                  type: custom:multiple-entity-row
+                  name: Charger (02)
+                  toggle: true
+                  entities:
+                      - entity: sensor.outlet_02_current
+                        name: current
+                      - entity: sensor.outlet_02_voltage
+                        name: voltage
+                      - entity: sensor.outlet_02_power
+                        name: power
 
-      - type: entities
-        title: Mikrotik
-        show_header_toggle: false
-        entities:
-          - entity: switch.mikrotik_ether1_port
-            type: custom:multiple-entity-row
-            name: PLDT Usage
-            toggle: true
+          - type: entities
+            title: Solar Station
             entities:
-              - entity: sensor.mikrotik_ether1_rx
-                name: RX
-              - entity: sensor.mikrotik_ether1_tx
-                name: TX
-          - entity: switch.mikrotik_ether1_port
-            type: custom:multiple-entity-row
-            name: Devices
-            show_state: false
+                - entity: sensor.power
+                  type: custom:multiple-entity-row
+                  show_state: false
+                  name: Battery
+                  entities:
+                      - entity: sensor.battery
+                        name: battery
+                      - entity: sensor.total_capacity
+                        name: capacity
+                      - entity: sensor.ntc_temperature
+                        name: temperature
+                - entity: sensor.power
+                  type: custom:multiple-entity-row
+                  show_state: false
+                  name: Battery Usage
+                  entities:
+                      - entity: sensor.current
+                        name: current
+                      - entity: sensor.voltage
+                        name: voltage
+                      - entity: sensor.power
+                        name: power
+                - entity: sensor.power_2
+                  type: custom:multiple-entity-row
+                  show_state: false
+                  name: Solar Usage
+                  entities:
+                      - entity: sensor.current_2
+                        name: current
+                      - entity: sensor.voltage_2
+                        name: voltage
+                      - entity: sensor.power_2
+                        name: power
+                - entity: sensor.solar_charge_power
+                  type: custom:multiple-entity-row
+                  show_state: false
+                  name: Doreco Charge
+                  entities:
+                      - entity: sensor.solar_charge_current
+                        name: current
+                      - entity: sensor.solar_charge_voltage
+                        name: voltage
+                      - entity: sensor.solar_charge_power
+                        name: power
+                - entity: sensor.solar_bypass_power
+                  type: custom:multiple-entity-row
+                  show_state: false
+                  name: Doreco Bypass
+                  entities:
+                      #            - icon: mdi:refresh
+                      ##              name: refresh
+                      #              tap_action:
+                      #                action: call-service
+                      #                service: button.press
+                      #                service_data:
+                      #                  entity_id: button.solar_bypass_refresh_sensors
+                      - entity: sensor.solar_bypass_current
+                        name: current
+                      - entity: sensor.solar_bypass_voltage
+                        name: voltage
+                      - entity: sensor.solar_bypass_power
+                        name: power
+                - entity: sensor.solar_output_power
+                  type: custom:multiple-entity-row
+                  show_state: false
+                  name: Solar Output
+                  entities:
+                      #            - icon: mdi:refresh
+                      ##              name: refresh
+                      #              tap_action:
+                      #                action: call-service
+                      #                service: button.press
+                      #                service_data:
+                      #                  entity_id: button.solar_output_refresh_sensors
+                      - entity: sensor.solar_output_current
+                        name: current
+                      - entity: sensor.solar_output_voltage
+                        name: voltage
+                      - entity: sensor.solar_output_power
+                        name: power
+
+          - type: entities
+            title: Air
             entities:
-              - entity: sensor.mikrotik_device_smart
-                name: smart
-              - entity: sensor.mikrotik_device_person
-                name: person
-              - entity: sensor.mikrotik_device_away
-                name: away
-              - entity: sensor.mikrotik_hex_captive_portal_clients
-                name: captive
-          - entity: sensor.mikrotik_hex_cpu_load
-            type: custom:multiple-entity-row
-            name: CPU
+                #          - entity: sensor.storage_co2_carbon_dioxide
+                #            name: Carbon Dioxide
+                #          - entity: sensor.storage_co2_carbon_dioxide
+                #            name: Carbon Monoxide
+                #          - entity: sensor.storage_co2_carbon_monoxide
+                #            name: Formaldehyde
+                - entity: sensor.storage_co2_humidity
+                  name: Humidity
+                - entity: sensor.storage_co2_air_quality
+                  type: custom:multiple-entity-row
+                  name: Quality
+                  entities:
+                      - entity: sensor.storage_co2_pm_0_3
+                        name: PM03
+                      - entity: sensor.storage_co2_pm1
+                        name: PM1
+                      - entity: sensor.storage_co2_pm2_5
+                        name: PM2.5
+                      - entity: sensor.storage_co2_pm10
+                        name: PM10
+                - entity: sensor.storage_co2_temperature
+                  name: Temperature
+                - entity: sensor.storage_co2_volatile_organic_compounds
+                  name: Volatile Organic Compounds
+                - entity: sensor.storage_co2_battery
+                  name: Battery
+
+          - type: entities
+            title: Mikrotik
+            show_header_toggle: false
             entities:
-              - entity: sensor.mikrotik_hex_board_temperature
-                name: Board
-              - entity: sensor.mikrotik_hex_cpu_temperature
-                name: CPU
-          - entity: sensor.mikrotik_hex_memory_usage
-            name: RAM
-          - entity: sensor.mikrotik_hex_hdd_usage
-            name: HDD
+                - entity: switch.mikrotik_ether1_port
+                  type: custom:multiple-entity-row
+                  name: PLDT Usage
+                  toggle: true
+                  entities:
+                      - entity: sensor.mikrotik_ether1_rx
+                        name: RX
+                      - entity: sensor.mikrotik_ether1_tx
+                        name: TX
+                - entity: switch.mikrotik_ether1_port
+                  type: custom:multiple-entity-row
+                  name: Devices
+                  show_state: false
+                  entities:
+                      - entity: sensor.mikrotik_device_smart
+                        name: smart
+                      - entity: sensor.mikrotik_device_person
+                        name: person
+                      - entity: sensor.mikrotik_device_away
+                        name: away
+                      - entity: sensor.mikrotik_hex_captive_portal_clients
+                        name: captive
+                - entity: sensor.mikrotik_hex_cpu_load
+                  type: custom:multiple-entity-row
+                  name: CPU
+                  entities:
+                      - entity: sensor.mikrotik_hex_board_temperature
+                        name: Board
+                      - entity: sensor.mikrotik_hex_cpu_temperature
+                        name: CPU
+                - entity: sensor.mikrotik_hex_memory_usage
+                  name: RAM
+                - entity: sensor.mikrotik_hex_hdd_usage
+                  name: HDD
 
-      - type: entities
-        title: Xiaomi
-        show_header_toggle: false
-        entities:
-        - entity: light.miwifi_50_88_11_b4_65_90_led
-          type: custom:multiple-entity-row
-          name: Main
-          toggle: true
-          entities:
-            - entity: sensor.miwifi_50_88_11_b4_65_90_devices
-              name: devices
-            - entity: sensor.miwifi_50_88_11_b4_65_90_memory_usage
-              name: RAM
-            - icon: mdi:refresh
-              name: reboot
-              tap_action:
-                action: call-service
-                service: button.press
-                service_data:
-                  entity_id: button.miwifi_50_88_11_b4_65_90_reboot
-        - entity: light.miwifi_50_88_11_b2_bf_7c_led
-          type: custom:multiple-entity-row
-          name: Justin
-          toggle: true
-          entities:
-            - entity: sensor.miwifi_50_88_11_b2_bf_7c_devices
-              name: devices
-            - entity: sensor.miwifi_50_88_11_b2_bf_7c_memory_usage
-              name: RAM
-            - icon: mdi:refresh
-              name: reboot
-              tap_action:
-                action: call-service
-                service: button.press
-                service_data:
-                  entity_id: button.miwifi_50_88_11_b2_bf_7c_reboot
-        - entity: light.miwifi_50_88_11_b7_11_b0_led
-          type: custom:multiple-entity-row
-          name: Tank
-          toggle: true
-          entities:
-            - entity: sensor.miwifi_50_88_11_b7_11_b0_devices
-              name: devices
-            - entity: sensor.miwifi_50_88_11_b7_11_b0_memory_usage
-              name: RAM
-            - icon: mdi:refresh
-              name: reboot
-              tap_action:
-                action: call-service
-                service: button.press
-                service_data:
-                  entity_id: button.miwifi_50_88_11_b7_11_b0_reboot
+          - type: entities
+            title: Xiaomi
+            show_header_toggle: false
+            entities:
+                - entity: light.miwifi_50_88_11_b4_65_90_led
+                  type: custom:multiple-entity-row
+                  name: Main
+                  toggle: true
+                  entities:
+                      - entity: sensor.miwifi_50_88_11_b4_65_90_devices
+                        name: devices
+                      - entity: sensor.miwifi_50_88_11_b4_65_90_memory_usage
+                        name: RAM
+                      - icon: mdi:refresh
+                        name: reboot
+                        tap_action:
+                            action: call-service
+                            service: button.press
+                            service_data:
+                                entity_id: button.miwifi_50_88_11_b4_65_90_reboot
+                - entity: light.miwifi_50_88_11_b2_bf_7c_led
+                  type: custom:multiple-entity-row
+                  name: Madam
+                  toggle: true
+                  entities:
+                      - entity: sensor.miwifi_50_88_11_b2_bf_7c_devices
+                        name: devices
+                      - entity: sensor.miwifi_50_88_11_b2_bf_7c_memory_usage
+                        name: RAM
+                      - icon: mdi:refresh
+                        name: reboot
+                        tap_action:
+                            action: call-service
+                            service: button.press
+                            service_data:
+                                entity_id: button.miwifi_50_88_11_b2_bf_7c_reboot
+                - entity: light.miwifi_50_88_11_b7_11_b0_led
+                  type: custom:multiple-entity-row
+                  name: Tank
+                  toggle: true
+                  entities:
+                      - entity: sensor.miwifi_50_88_11_b7_11_b0_devices
+                        name: devices
+                      - entity: sensor.miwifi_50_88_11_b7_11_b0_memory_usage
+                        name: RAM
+                      - icon: mdi:refresh
+                        name: reboot
+                        tap_action:
+                            action: call-service
+                            service: button.press
+                            service_data:
+                                entity_id: button.miwifi_50_88_11_b7_11_b0_reboot
+                - entity: light.miwifi_04_67_61_9f_05_84_led
+                  type: custom:multiple-entity-row
+                  name: Front
+                  toggle: true
+                  entities:
+                      - entity: sensor.miwifi_504_67_61_9f_05_84_devices
+                        name: devices
+                      - entity: sensor.miwifi_04_67_61_9f_05_84_memory_usage
+                        name: RAM
+                      - icon: mdi:refresh
+                        name: reboot
+                        tap_action:
+                            action: call-service
+                            service: button.press
+                            service_data:
+                                entity_id: button.miwifi_04_67_61_9f_05_84_reboot
 
-
-      - type: entities
-        title: Other
-        entities:
-          - entity: binary_sensor.scene_is_brownout
-            name: Brownout
+          - type: entities
+            title: Other
+            entities:
+                - entity: binary_sensor.scene_is_brownout
+                  name: Brownout
