@@ -220,6 +220,9 @@ cameras:
       enabled: true
     detect:
       fps: 1
+    record:
+      retain:
+        days: 1
   backyard:
     ffmpeg:
       inputs:
@@ -255,7 +258,7 @@ cameras:
     audio:
       enabled: true
     detect:
-      fps: 2
+      fps: 1
   gate-front:
     ffmpeg:
       inputs:
@@ -274,6 +277,9 @@ cameras:
       enabled: true
     detect:
       fps: 2
+    record:
+      retain:
+        days: 1
 #    review:
 #      alerts:
 #        required_zones:
