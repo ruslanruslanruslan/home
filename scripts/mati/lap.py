@@ -30,11 +30,11 @@ MESH_LAN = "192.168.5."     # the MikroTik/mesh LAN
 MESH_GW  = "192.168.5.1"    # reachable via phone => repeater, else mobile
 
 COLS = ["time","iface","medium","type","ch","gw","ip","device",
-        "link","rssi","ping_gw","loss","inet","dns"]
+        "link","rssi","txrate","ping_gw","loss","inet","dns"]
 FMT  = ("%-8s %-5s %-6s %-8s %-4s %-13s %-15s %-18s "
-        "%-11s %-5s %-7s %-5s %-5s %-4s")
+        "%-11s %-5s %-7s %-7s %-5s %-5s %-4s")
 HEAD = ("TIME","IFACE","MEDIUM","TYPE","CH","GW","IP","DEVICE",
-        "LINK","RSSI","PING_GW","LOSS","INET","DNS")
+        "LINK","RSSI","TXRATE","PING_GW","LOSS","INET","DNS")
 
 def sh(c): return subprocess.run(["sh","-c",c], capture_output=True, text=True).stdout
 
@@ -61,13 +61,13 @@ def wired_link(iface):
 # system_profiler is slow + jittery (~0.8-3s), so it runs in a background thread
 # and the main loop just reads this cache. Wi-Fi info refreshes ~every poll;
 # the ping/loss cadence is never blocked by it.
-_WIFI = {"band": "--", "rssi": "--", "ch": "--"}
+_WIFI = {"band": "--", "rssi": "--", "ch": "--", "txrate": "--"}
 
 def _read_wifi():
     # nice: yield CPU so this heavy call doesn't slow the main ping loop's forks
     info = sh("nice -n 19 system_profiler SPAirPortDataType -detailLevel basic 2>/dev/null")
     blk = info.split("Current Network Information:")
-    band = ch = rssi = "--"
+    band = ch = rssi = txrate = "--"
     if len(blk) > 1:
         cur = blk[1].split("Other Local")[0]
         m = re.search(r"Channel:\s*([0-9]+)\s*\(([^)]*)\)", cur)
@@ -76,14 +76,16 @@ def _read_wifi():
             band = "5g" if "5GHz" in m.group(2) else ("6g" if "6GHz" in m.group(2) else "2.4g")
         m = re.search(r"Signal / Noise:\s*(-?\d+)", cur)
         if m: rssi = m.group(1)
-    return band, rssi, ch
+        m = re.search(r"Transmit Rate:\s*([0-9]+)", cur)   # negotiated link rate, Mbit/s
+        if m: txrate = m.group(1)
+    return band, rssi, ch, txrate
 
 def wifi_poller():
     # refresh ~every few seconds (system_profiler itself takes ~1-3s); spaced out
     # so it doesn't peg a core and slow the main loop's subprocess calls.
     while True:
-        b, r, c = _read_wifi()
-        _WIFI["band"], _WIFI["rssi"], _WIFI["ch"] = b, r, c
+        b, r, c, tx = _read_wifi()
+        _WIFI["band"], _WIFI["rssi"], _WIFI["ch"], _WIFI["txrate"] = b, r, c, tx
         time.sleep(8)
 
 # ---- probing (local) --------------------------------------------------------
@@ -122,11 +124,11 @@ def main():
         device = DEVNAME or mac
 
         if medium == "wifi":
-            link, rssi, ch = _WIFI["band"], _WIFI["rssi"], _WIFI["ch"]
+            link, rssi, ch, txrate = _WIFI["band"], _WIFI["rssi"], _WIFI["ch"], _WIFI["txrate"]
         elif medium == "wired":
-            link, rssi, ch = wired_link(iface), "--", "--"
+            link, rssi, ch, txrate = wired_link(iface), "--", "--", "--"
         else:
-            link, rssi, ch = "--", "--", "--"
+            link, rssi, ch, txrate = "--", "--", "--", "--"
 
         phone_gw = gw.startswith("10.199.237.") or gw.startswith("172.20.10.")
         mesh_reachable = ping_stats(MESH_GW, 1)[0] is not None if phone_gw else False
@@ -138,7 +140,7 @@ def main():
         dns  = dns_ok()
 
         vals = (t, iface, medium, ty, ch, gw, ip, device,
-                link, rssi, pg, "%d%%" % loss, inet, dns)
+                link, rssi, txrate, pg, "%d%%" % loss, inet, dns)
         f.write(",".join(map(str, vals)) + "\n"); f.flush()
         print(FMT % vals); sys.stdout.flush()
         time.sleep(SECS)
