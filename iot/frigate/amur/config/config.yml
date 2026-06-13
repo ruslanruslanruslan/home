@@ -10,6 +10,7 @@ detectors:
     model_path: /config/model_cache/yolov8n/yolov8n.xml
 detect:
   enabled: true
+  fps: 1
 model:
   width: 256
   height: 256
@@ -31,8 +32,6 @@ record:
       mode: motion
   continuous:
     days: 2
-  motion:
-    days: 2
 snapshots:
   enabled: true
   retain:
@@ -41,6 +40,10 @@ review:
   alerts:
     labels:
       - person
+ffmpeg:
+  input_args: preset-rtsp-restream
+  output_args:
+    record: preset-record-generic-audio-copy
 go2rtc:
   streams:
     elevators:
@@ -65,13 +68,10 @@ cameras:
     ffmpeg:
       inputs:
         - path: rtsp://127.0.0.1:8554/elevators
-          input_args: preset-rtsp-restream
           roles:
             - record
             - detect
             - audio
-      output_args:
-        record: preset-record-generic-audio-copy
     audio:
       enabled: true
     detect:
@@ -80,22 +80,16 @@ cameras:
     ffmpeg:
       inputs:
         - path: rtsp://127.0.0.1:8554/hallway
-          input_args: preset-rtsp-restream
           roles:
             - record
             - detect
             - audio
-      output_args:
-        record: preset-record-generic-audio-copy
     audio:
       enabled: true
-    detect:
-      fps: 1
   vestibule:
     ffmpeg:
       inputs:
         - path: rtsp://127.0.0.1:8554/vestibule
-          input_args: preset-rtsp-restream
           roles:
             - record
             - detect
@@ -105,58 +99,40 @@ cameras:
     ffmpeg:
       inputs:
         - path: rtsp://127.0.0.1:8554/livingroom
-          input_args: preset-rtsp-restream
           roles:
             - record
             - detect
             - audio
-      output_args:
-        record: preset-record-generic-audio-copy
     audio:
       enabled: true
-    detect:
-      fps: 1
   kitchen:
     ffmpeg:
       inputs:
         - path: rtsp://127.0.0.1:8554/kitchen
-          input_args: preset-rtsp-restream
           roles:
             - record
             - detect
             - audio
-      output_args:
-        record: preset-record-generic-audio-copy
     audio:
       enabled: true
-    detect:
-      fps: 1
   balcony:
     ffmpeg:
       inputs:
         - path: rtsp://127.0.0.1:8554/balcony
-          input_args: preset-rtsp-restream
           roles:
             - record
             - detect
             - audio
-      output_args:
-        record: preset-record-generic-audio-copy
     audio:
       enabled: true
-    detect:
-      fps: 1
   intercom:
     ffmpeg:
       inputs:
         - path: rtsp://127.0.0.1:8554/intercom
-          input_args: preset-rtsp-restream
           roles:
             - record
             - detect
             - audio
-      output_args:
-        record: preset-record-generic-audio-copy
     audio:
       enabled: true
     detect:
@@ -172,7 +148,6 @@ cameras:
     ffmpeg:
       inputs:
         - path: rtsp://127.0.0.1:8554/bedroom
-          input_args: preset-rtsp-restream
           roles:
             - record
             - detect
