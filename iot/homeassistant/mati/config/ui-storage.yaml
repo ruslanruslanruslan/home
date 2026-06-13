@@ -251,14 +251,12 @@ views:
             title: Xiaomi
             show_header_toggle: false
             entities:
+                - type: section
+                  label: Main
                 - entity: sensor.miwifi_50_88_11_b4_65_90_devices
                   type: custom:multiple-entity-row
-                  name: Main
+                  name: Clients
                   entities:
-                      - entity: sensor.miwifi_50_88_11_b4_65_90_devices_2_4g
-                        name: 2.4G
-                      - entity: sensor.miwifi_50_88_11_b4_65_90_devices_5g
-                        name: 5G
                       - entity: sensor.miwifi_50_88_11_b4_65_90_memory_usage
                         name: RAM
                       - icon: mdi:refresh
@@ -268,13 +266,23 @@ views:
                             service: button.press
                             service_data:
                                 entity_id: button.miwifi_50_88_11_b4_65_90_reboot
-                - entity: select.miwifi_50_88_11_b4_65_90_wifi_2_4g_channel
-                  name: '↳ Channel 2.4G'
-                - entity: select.miwifi_50_88_11_b4_65_90_wifi_5g_channel
-                  name: '↳ Channel 5G'
+                - entity: sensor.miwifi_50_88_11_b4_65_90_devices_2_4g
+                  type: custom:multiple-entity-row
+                  name: 2.4 GHz
+                  entities:
+                      - entity: select.miwifi_50_88_11_b4_65_90_wifi_2_4g_channel
+                        name: ch
+                - entity: sensor.miwifi_50_88_11_b4_65_90_devices_5g
+                  type: custom:multiple-entity-row
+                  name: 5 GHz
+                  entities:
+                      - entity: select.miwifi_50_88_11_b4_65_90_wifi_5g_channel
+                        name: ch
+                - type: section
+                  label: Front
                 - entity: sensor.miwifi_50_88_11_b2_bf_7c_devices
                   type: custom:multiple-entity-row
-                  name: Front
+                  name: Clients
                   entities:
                       - entity: sensor.miwifi_50_88_11_b2_bf_7c_memory_usage
                         name: RAM
@@ -285,9 +293,23 @@ views:
                             service: button.press
                             service_data:
                                 entity_id: button.miwifi_50_88_11_b2_bf_7c_reboot
+                - entity: sensor.miwifi_50_88_11_b2_bf_7c_devices_2_4g
+                  type: custom:multiple-entity-row
+                  name: 2.4 GHz
+                  entities:
+                      - entity: select.miwifi_50_88_11_b2_bf_7c_wifi_2_4g_channel
+                        name: ch
+                - entity: sensor.miwifi_50_88_11_b2_bf_7c_devices_5g
+                  type: custom:multiple-entity-row
+                  name: 5 GHz
+                  entities:
+                      - entity: select.miwifi_50_88_11_b2_bf_7c_wifi_5g_channel
+                        name: ch
+                - type: section
+                  label: Madam
                 - entity: sensor.miwifi_50_88_11_b7_11_b0_devices
                   type: custom:multiple-entity-row
-                  name: Madam
+                  name: Clients
                   entities:
                       - entity: sensor.miwifi_50_88_11_b7_11_b0_memory_usage
                         name: RAM
@@ -298,9 +320,23 @@ views:
                             service: button.press
                             service_data:
                                 entity_id: button.miwifi_50_88_11_b7_11_b0_reboot
+                - entity: sensor.miwifi_50_88_11_b7_11_b0_devices_2_4g
+                  type: custom:multiple-entity-row
+                  name: 2.4 GHz
+                  entities:
+                      - entity: select.miwifi_50_88_11_b7_11_b0_wifi_2_4g_channel
+                        name: ch
+                - entity: sensor.miwifi_50_88_11_b7_11_b0_devices_5g
+                  type: custom:multiple-entity-row
+                  name: 5 GHz
+                  entities:
+                      - entity: select.miwifi_50_88_11_b7_11_b0_wifi_5g_channel
+                        name: ch
+                - type: section
+                  label: Tank
                 - entity: sensor.miwifi_04_67_61_9f_05_84_devices
                   type: custom:multiple-entity-row
-                  name: Tank
+                  name: Clients
                   entities:
                       - entity: sensor.miwifi_04_67_61_9f_05_84_memory_usage
                         name: RAM
@@ -311,6 +347,18 @@ views:
                             service: button.press
                             service_data:
                                 entity_id: button.miwifi_04_67_61_9f_05_84_reboot
+                - entity: sensor.miwifi_04_67_61_9f_05_84_devices_2_4g
+                  type: custom:multiple-entity-row
+                  name: 2.4 GHz
+                  entities:
+                      - entity: select.miwifi_04_67_61_9f_05_84_wifi_2_4g_channel
+                        name: ch
+                - entity: sensor.miwifi_04_67_61_9f_05_84_devices_5g
+                  type: custom:multiple-entity-row
+                  name: 5 GHz
+                  entities:
+                      - entity: select.miwifi_04_67_61_9f_05_84_wifi_5g_channel
+                        name: ch
 
           - type: entities
             title: Other

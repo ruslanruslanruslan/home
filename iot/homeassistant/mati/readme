@@ -40,7 +40,7 @@
 6. Add Mikrotik Router. Enable port traffic sensors + network devices + captive portal data.
     192.168.4.1
 
-7. Add MIWIFI.
+7. Add MIWIFI. (check forced booting of devices + enable sensors channel 2.4/5)
     Main: 192.168.5.11 BA9 SHA256
     Front: 192.168.5.12 BA9 SHA1
     Madam: 192.168.5.13 BA9 SHA256
