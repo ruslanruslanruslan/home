@@ -117,21 +117,30 @@ def get_token(ip, now):
 def api(ip, tok, ep):
     return json.loads(urllib.request.urlopen("http://%s/cgi-bin/luci/;stok=%s/api/%s" % (ip, tok, ep), timeout=3).read())
 
+def _auth_stale(d):
+    # MiWiFi reports an expired/invalid token INSIDE the JSON body with HTTP 200
+    # ({"code":401,"msg":"Invalid token"}) — NOT as an HTTP 401. A long-running monitor
+    # that only watches for HTTP 401 never notices its token died: it keeps reusing the
+    # dead token forever and the node shows all "--" until the process is restarted.
+    return isinstance(d, dict) and (d.get("code") == 401 or "token" in str(d.get("msg", "")).lower())
+
 def api_auth(ip, ep, now):
-    tok = get_token(ip, now)
-    if not tok: return None
-    try:
-        return api(ip, tok, ep)
-    except urllib.error.HTTPError as e:
-        if e.code == 401:
-            TOKENS.pop(ip, None)
-            tok = get_token(ip, now)
-            if tok:
-                try: return api(ip, tok, ep)
-                except Exception: pass
-        return None
-    except Exception:
-        return None
+    # one reactive re-login, covering BOTH an HTTP 401 and a 401 buried in a 200 body.
+    for first in (True, False):
+        tok = get_token(ip, now)
+        if not tok: return None
+        try:
+            d = api(ip, tok, ep)
+        except urllib.error.HTTPError as e:
+            if e.code == 401 and first:
+                TOKENS.pop(ip, None); continue
+            return None
+        except Exception:
+            return None
+        if _auth_stale(d) and first:
+            TOKENS.pop(ip, None); continue   # token died server-side -> drop & re-login once
+        return d
+    return None
 
 def parse_cfg(d):
     c = {k: "--" for k in CFG_KEYS}; seen = False
