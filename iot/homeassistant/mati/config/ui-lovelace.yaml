@@ -101,5 +101,5 @@ views:
             toggle: false
           - entity: light.miwifi_50_88_11_b7_11_b0_led
             type: custom:multiple-entity-row
-            name: Tank Wi-Fi
+            name: Madam Wi-Fi
             toggle: false

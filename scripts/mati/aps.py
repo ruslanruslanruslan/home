@@ -38,8 +38,8 @@ try:
     from secret import PWD, KEY      # mesh admin creds; secret.py is gitignored, NOT committed
 except ImportError:
     sys.exit("aps.py: create secret.py next to the script (copy secret.py.example) with PWD and KEY")
-APS  = [("192.168.5.11","main"), ("192.168.5.12","madam"),
-        ("192.168.5.13","tank"), ("192.168.5.14","front")]
+APS  = [("192.168.5.11","main"), ("192.168.5.12","front"),
+        ("192.168.5.13","madam"), ("192.168.5.14","tank")]
 CONTROLLER = "192.168.5.11"    # the mesh root; its own role is master by definition
 SLAVE_COOLDOWN = 60
 LOCK_COOLDOWN  = 300   # a "system locked" node needs real quiet time to recover
@@ -82,7 +82,7 @@ def _attempt(ip, algo):
         except Exception: return {"code": e.code}
 
 def login_raw(ip):
-    # firmware differs per node: madam/main use SHA256, tank/front use SHA1. Try the
+    # firmware differs per node: front/main use SHA256, madam/tank use SHA1. Try the
     # node's known algo, else SHA256 then SHA1 on a 401, and cache the one that works.
     algos = [ALGO[ip]] if ip in ALGO else ["sha256", "sha1"]
     d = {}

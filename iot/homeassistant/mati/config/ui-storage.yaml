@@ -269,7 +269,7 @@ views:
                                 entity_id: button.miwifi_50_88_11_b4_65_90_reboot
                 - entity: light.miwifi_50_88_11_b2_bf_7c_led
                   type: custom:multiple-entity-row
-                  name: Madam
+                  name: Front
                   toggle: true
                   entities:
                       - entity: sensor.miwifi_50_88_11_b2_bf_7c_devices
@@ -285,7 +285,7 @@ views:
                                 entity_id: button.miwifi_50_88_11_b2_bf_7c_reboot
                 - entity: light.miwifi_50_88_11_b7_11_b0_led
                   type: custom:multiple-entity-row
-                  name: Tank
+                  name: Madam
                   toggle: true
                   entities:
                       - entity: sensor.miwifi_50_88_11_b7_11_b0_devices
@@ -301,7 +301,7 @@ views:
                                 entity_id: button.miwifi_50_88_11_b7_11_b0_reboot
                 - entity: light.miwifi_04_67_61_9f_05_84_led
                   type: custom:multiple-entity-row
-                  name: Front
+                  name: Tank
                   toggle: true
                   entities:
                       - entity: sensor.miwifi_504_67_61_9f_05_84_devices
