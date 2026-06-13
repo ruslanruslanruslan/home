@@ -221,7 +221,7 @@ cameras:
     detect:
       fps: 1
     record:
-      retain:
+      continuous:
         days: 1
   backyard:
     ffmpeg:
@@ -278,7 +278,7 @@ cameras:
     detect:
       fps: 2
     record:
-      retain:
+      continuous:
         days: 1
 #    review:
 #      alerts:
