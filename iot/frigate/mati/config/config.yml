@@ -15,6 +15,7 @@ detectors:
     model_path: /config/model_cache/yolov8n/yolov8n.xml
 detect:
   enabled: true
+  fps: 1
 model:
   width: 256
   height: 256
@@ -35,8 +36,6 @@ record:
       days: 14
       mode: motion
   continuous:
-    days: 2
-  motion:
     days: 2
 snapshots:
   enabled: true
@@ -90,79 +89,59 @@ go2rtc:
       - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.4.121:554/stream1#video=copy#audio=aac
     madam-sub:
       - ffmpeg:rtsp://homeassistant:aP5n8XdebfKeDn@192.168.4.121:554/stream2#video=copy#audio=aac
+ffmpeg:
+  input_args: preset-rtsp-restream
+  output_args:
+    record: preset-record-generic-audio-copy
 cameras:
   justin:
     ffmpeg:
       inputs:
         - path: rtsp://127.0.0.1:8554/justin
-          input_args: preset-rtsp-restream
           roles:
             - record
         - path: rtsp://127.0.0.1:8554/justin-sub
-          input_args: preset-rtsp-restream
           roles:
             - detect
             - audio
-      output_args:
-        record: preset-record-generic-audio-copy
     audio:
       enabled: false
-    detect:
-      fps: 1
   madam:
     ffmpeg:
       inputs:
         - path: rtsp://127.0.0.1:8554/madam
-          input_args: preset-rtsp-restream
           roles:
             - record
         - path: rtsp://127.0.0.1:8554/madam-sub
-          input_args: preset-rtsp-restream
           roles:
             - detect
             - audio
-      output_args:
-        record: preset-record-generic-audio-copy
     audio:
       enabled: false
-    detect:
-      fps: 1
   room01:
     ffmpeg:
       inputs:
         - path: rtsp://127.0.0.1:8554/room01
-          input_args: preset-rtsp-restream
           roles:
             - record
         - path: rtsp://127.0.0.1:8554/room01-sub
-          input_args: preset-rtsp-restream
           roles:
             - detect
             - audio
-      output_args:
-        record: preset-record-generic-audio-copy
     audio:
       enabled: false
-    detect:
-      fps: 1
   room05:
     ffmpeg:
       inputs:
         - path: rtsp://127.0.0.1:8554/room05
-          input_args: preset-rtsp-restream
           roles:
             - record
         - path: rtsp://127.0.0.1:8554/room05-sub
-          input_args: preset-rtsp-restream
           roles:
             - detect
             - audio
-      output_args:
-        record: preset-record-generic-audio-copy
     audio:
       enabled: false
-    detect:
-      fps: 1
     review:
       alerts:
         required_zones:
@@ -174,20 +153,14 @@ cameras:
     ffmpeg:
       inputs:
         - path: rtsp://127.0.0.1:8554/room08
-          input_args: preset-rtsp-restream
           roles:
             - record
         - path: rtsp://127.0.0.1:8554/room08-sub
-          input_args: preset-rtsp-restream
           roles:
             - detect
             - audio
-      output_args:
-        record: preset-record-generic-audio-copy
     audio:
       enabled: false
-    detect:
-      fps: 1
     review:
       alerts:
         required_zones:
@@ -206,20 +179,14 @@ cameras:
     ffmpeg:
       inputs:
         - path: rtsp://127.0.0.1:8554/livingroom
-          input_args: preset-rtsp-restream
           roles:
             - record
         - path: rtsp://127.0.0.1:8554/livingroom-sub
-          input_args: preset-rtsp-restream
           roles:
             - detect
             - audio
-      output_args:
-        record: preset-record-generic-audio-copy
     audio:
       enabled: true
-    detect:
-      fps: 1
     record:
       continuous:
         days: 1
@@ -227,52 +194,36 @@ cameras:
     ffmpeg:
       inputs:
         - path: rtsp://127.0.0.1:8554/backyard
-          input_args: preset-rtsp-restream
           roles:
             - record
         - path: rtsp://127.0.0.1:8554/backyard-sub
-          input_args: preset-rtsp-restream
           roles:
             - detect
             - audio
-      output_args:
-        record: preset-record-generic-audio-copy
     audio:
       enabled: true
-    detect:
-      fps: 1
   gate-back:
     ffmpeg:
       inputs:
         - path: rtsp://127.0.0.1:8554/gate-back
-          input_args: preset-rtsp-restream
           roles:
             - record
         - path: rtsp://127.0.0.1:8554/gate-back-sub
-          input_args: preset-rtsp-restream
           roles:
             - detect
             - audio
-      output_args:
-        record: preset-record-generic-audio-copy
     audio:
       enabled: true
-    detect:
-      fps: 1
   gate-front:
     ffmpeg:
       inputs:
         - path: rtsp://127.0.0.1:8554/gate-front
-          input_args: preset-rtsp-restream
           roles:
             - record
         - path: rtsp://127.0.0.1:8554/gate-front-sub
-          input_args: preset-rtsp-restream
           roles:
             - detect
             - audio
-      output_args:
-        record: preset-record-generic-audio-copy
     audio:
       enabled: true
     detect:
@@ -291,17 +242,11 @@ cameras:
     ffmpeg:
       inputs:
         - path: rtsp://127.0.0.1:8554/stairway
-          input_args: preset-rtsp-restream
           roles:
             - record
         - path: rtsp://127.0.0.1:8554/stairway-sub
-          input_args: preset-rtsp-restream
           roles:
             - detect
             - audio
-      output_args:
-        record: preset-record-generic-audio-copy
     audio:
       enabled: true
-    detect:
-      fps: 1
