@@ -255,6 +255,22 @@ views:
                   type: custom:multiple-entity-row
                   name: Main
                   entities:
+                      - entity: sensor.miwifi_50_88_11_b4_65_90_memory_usage
+                        name: RAM
+                      - entity: sensor.miwifi_50_88_11_b4_65_90_uptime
+                        name: Uptime
+                      - icon: mdi:refresh
+                        name: reboot
+                        tap_action:
+                            action: call-service
+                            service: button.press
+                            service_data:
+                                entity_id: button.miwifi_50_88_11_b4_65_90_reboot
+                - entity: sensor.miwifi_50_88_11_b4_65_90_devices_2_4g
+                  type: custom:multiple-entity-row
+                  name: Clients
+                  show_state: false
+                  entities:
                       - entity: sensor.miwifi_50_88_11_b4_65_90_devices_2_4g
                         name: 2G
                       - entity: sensor.miwifi_50_88_11_b4_65_90_devices_5g
@@ -263,16 +279,26 @@ views:
                         name: ch2
                       - entity: select.miwifi_50_88_11_b4_65_90_wifi_5g_channel
                         name: ch5
+                - type: divider
+                - entity: sensor.miwifi_50_88_11_b2_bf_7c_devices
+                  type: custom:multiple-entity-row
+                  name: Front
+                  entities:
+                      - entity: sensor.miwifi_50_88_11_b2_bf_7c_memory_usage
+                        name: RAM
+                      - entity: sensor.miwifi_50_88_11_b2_bf_7c_uptime
+                        name: Uptime
                       - icon: mdi:refresh
                         name: reboot
                         tap_action:
                             action: call-service
                             service: button.press
                             service_data:
-                                entity_id: button.miwifi_50_88_11_b4_65_90_reboot
-                - entity: sensor.miwifi_50_88_11_b2_bf_7c_devices
+                                entity_id: button.miwifi_50_88_11_b2_bf_7c_reboot
+                - entity: sensor.miwifi_50_88_11_b2_bf_7c_devices_2_4g
                   type: custom:multiple-entity-row
-                  name: Front
+                  name: Clients
+                  show_state: false
                   entities:
                       - entity: sensor.miwifi_50_88_11_b2_bf_7c_devices_2_4g
                         name: 2G
@@ -282,16 +308,26 @@ views:
                         name: ch2
                       - entity: select.miwifi_50_88_11_b2_bf_7c_wifi_5g_channel
                         name: ch5
+                - type: divider
+                - entity: sensor.miwifi_50_88_11_b7_11_b0_devices
+                  type: custom:multiple-entity-row
+                  name: Madam
+                  entities:
+                      - entity: sensor.miwifi_50_88_11_b7_11_b0_memory_usage
+                        name: RAM
+                      - entity: sensor.miwifi_50_88_11_b7_11_b0_uptime
+                        name: Uptime
                       - icon: mdi:refresh
                         name: reboot
                         tap_action:
                             action: call-service
                             service: button.press
                             service_data:
-                                entity_id: button.miwifi_50_88_11_b2_bf_7c_reboot
-                - entity: sensor.miwifi_50_88_11_b7_11_b0_devices
+                                entity_id: button.miwifi_50_88_11_b7_11_b0_reboot
+                - entity: sensor.miwifi_50_88_11_b7_11_b0_devices_2_4g
                   type: custom:multiple-entity-row
-                  name: Madam
+                  name: Clients
+                  show_state: false
                   entities:
                       - entity: sensor.miwifi_50_88_11_b7_11_b0_devices_2_4g
                         name: 2G
@@ -301,16 +337,26 @@ views:
                         name: ch2
                       - entity: select.miwifi_50_88_11_b7_11_b0_wifi_5g_channel
                         name: ch5
+                - type: divider
+                - entity: sensor.miwifi_04_67_61_9f_05_84_devices
+                  type: custom:multiple-entity-row
+                  name: Tank
+                  entities:
+                      - entity: sensor.miwifi_04_67_61_9f_05_84_memory_usage
+                        name: RAM
+                      - entity: sensor.miwifi_04_67_61_9f_05_84_uptime
+                        name: Uptime
                       - icon: mdi:refresh
                         name: reboot
                         tap_action:
                             action: call-service
                             service: button.press
                             service_data:
-                                entity_id: button.miwifi_50_88_11_b7_11_b0_reboot
-                - entity: sensor.miwifi_04_67_61_9f_05_84_devices
+                                entity_id: button.miwifi_04_67_61_9f_05_84_reboot
+                - entity: sensor.miwifi_04_67_61_9f_05_84_devices_2_4g
                   type: custom:multiple-entity-row
-                  name: Tank
+                  name: Clients
+                  show_state: false
                   entities:
                       - entity: sensor.miwifi_04_67_61_9f_05_84_devices_2_4g
                         name: 2G
@@ -320,13 +366,6 @@ views:
                         name: ch2
                       - entity: select.miwifi_04_67_61_9f_05_84_wifi_5g_channel
                         name: ch5
-                      - icon: mdi:refresh
-                        name: reboot
-                        tap_action:
-                            action: call-service
-                            service: button.press
-                            service_data:
-                                entity_id: button.miwifi_04_67_61_9f_05_84_reboot
 
           - type: entities
             title: Other

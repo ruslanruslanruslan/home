@@ -51,80 +51,34 @@ views:
             icon: mdi:upload
 
   - title: Public
-    type: sections
     path: public
-    sections:
-
-      - type: grid
-        cards:
-          - type: custom:advanced-camera-card
-            cameras:
-              - camera_entity: camera.gate_front
-                live_provider: go2rtc
-            grid_options:
-              columns: 6
-          - type: custom:advanced-camera-card
-            cameras:
-              - camera_entity: camera.room01
-                live_provider: go2rtc
-            grid_options:
-              columns: 6
-          - type: custom:advanced-camera-card
-            cameras:
-              - camera_entity: camera.room05
-                live_provider: go2rtc
-            grid_options:
-              columns: 6
-          - type: custom:advanced-camera-card
-            cameras:
-              - camera_entity: camera.room08
-                live_provider: go2rtc
-            grid_options:
-              columns: 6
-          - type: custom:advanced-camera-card
-            cameras:
-              - camera_entity: camera.justin
-                live_provider: go2rtc
-            grid_options:
-              columns: 6
-          - type: custom:advanced-camera-card
-            cameras:
-              - camera_entity: camera.backyard
-                live_provider: go2rtc
-            grid_options:
-              columns: 6
-          - type: custom:advanced-camera-card
-            cameras:
-              - camera_entity: camera.stairway
-                live_provider: go2rtc
-            grid_options:
-              columns: 6
+    panel: true
+    cards:
+      - type: custom:advanced-camera-card
+        cameras:
+          - camera_entity: camera.gate_front
+          - camera_entity: camera.room01
+          - camera_entity: camera.room05
+          - camera_entity: camera.room08
+          - camera_entity: camera.justin
+          - camera_entity: camera.backyard
+          - camera_entity: camera.stairway
+        live:
+          display:
+            mode: grid
 
   - title: Private
-    type: sections
     path: private
-    sections:
-
-      - type: grid
-        cards:
-          - type: custom:advanced-camera-card
-            cameras:
-              - camera_entity: camera.gate_back
-                live_provider: go2rtc
-            grid_options:
-              columns: 6
-          - type: custom:advanced-camera-card
-            cameras:
-              - camera_entity: camera.madam
-                live_provider: go2rtc
-            grid_options:
-              columns: 6
-          - type: custom:advanced-camera-card
-            cameras:
-              - camera_entity: camera.livingroom
-                live_provider: go2rtc
-            grid_options:
-              columns: 6
+    panel: true
+    cards:
+      - type: custom:advanced-camera-card
+        cameras:
+          - camera_entity: camera.livingroom
+          - camera_entity: camera.gate_back
+          - camera_entity: camera.madam
+        live:
+          display:
+            mode: grid
 
   - title: Internet
     type: sections
