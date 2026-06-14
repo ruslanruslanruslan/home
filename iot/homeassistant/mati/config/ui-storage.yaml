@@ -255,10 +255,12 @@ views:
                   label: Main
                 - entity: sensor.miwifi_50_88_11_b4_65_90_devices
                   type: custom:multiple-entity-row
-                  name: Clients
+                  name: General
                   entities:
                       - entity: sensor.miwifi_50_88_11_b4_65_90_memory_usage
                         name: RAM
+                      - entity: sensor.miwifi_50_88_11_b4_65_90_uptime
+                        name: Uptime
                       - icon: mdi:refresh
                         name: reboot
                         tap_action:
@@ -278,16 +280,16 @@ views:
                   entities:
                       - entity: select.miwifi_50_88_11_b4_65_90_wifi_5g_channel
                         name: ch
-                - entity: sensor.miwifi_50_88_11_b4_65_90_uptime
-                  name: Uptime
                 - type: section
                   label: Front
                 - entity: sensor.miwifi_50_88_11_b2_bf_7c_devices
                   type: custom:multiple-entity-row
-                  name: Clients
+                  name: General
                   entities:
                       - entity: sensor.miwifi_50_88_11_b2_bf_7c_memory_usage
                         name: RAM
+                      - entity: sensor.miwifi_50_88_11_b2_bf_7c_uptime
+                        name: Uptime
                       - icon: mdi:refresh
                         name: reboot
                         tap_action:
@@ -307,16 +309,16 @@ views:
                   entities:
                       - entity: select.miwifi_50_88_11_b2_bf_7c_wifi_5g_channel
                         name: ch
-                - entity: sensor.miwifi_50_88_11_b2_bf_7c_uptime
-                  name: Uptime
                 - type: section
                   label: Madam
                 - entity: sensor.miwifi_50_88_11_b7_11_b0_devices
                   type: custom:multiple-entity-row
-                  name: Clients
+                  name: General
                   entities:
                       - entity: sensor.miwifi_50_88_11_b7_11_b0_memory_usage
                         name: RAM
+                      - entity: sensor.miwifi_50_88_11_b7_11_b0_uptime
+                        name: Uptime
                       - icon: mdi:refresh
                         name: reboot
                         tap_action:
@@ -336,16 +338,16 @@ views:
                   entities:
                       - entity: select.miwifi_50_88_11_b7_11_b0_wifi_5g_channel
                         name: ch
-                - entity: sensor.miwifi_50_88_11_b7_11_b0_uptime
-                  name: Uptime
                 - type: section
                   label: Tank
                 - entity: sensor.miwifi_04_67_61_9f_05_84_devices
                   type: custom:multiple-entity-row
-                  name: Clients
+                  name: General
                   entities:
                       - entity: sensor.miwifi_04_67_61_9f_05_84_memory_usage
                         name: RAM
+                      - entity: sensor.miwifi_04_67_61_9f_05_84_uptime
+                        name: Uptime
                       - icon: mdi:refresh
                         name: reboot
                         tap_action:
@@ -365,8 +367,6 @@ views:
                   entities:
                       - entity: select.miwifi_04_67_61_9f_05_84_wifi_5g_channel
                         name: ch
-                - entity: sensor.miwifi_04_67_61_9f_05_84_uptime
-                  name: Uptime
 
           - type: entities
             title: Other
