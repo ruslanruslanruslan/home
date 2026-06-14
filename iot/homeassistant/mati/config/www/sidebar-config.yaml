@@ -1,0 +1,14 @@
+id: mati-sidebar-1
+order:
+  - item: map
+    hide: true
+  - item: energy
+    hide: true
+  - item: media
+    hide: true
+  - item: history
+    hide: true
+  - item: logbook
+    hide: true
+  - item: miwifi
+    hide: true

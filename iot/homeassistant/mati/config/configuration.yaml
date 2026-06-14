@@ -1,5 +1,9 @@
 default_config:
 
+frontend:
+  extra_module_url:
+    - /local/custom-sidebar/custom-sidebar-plugin.js?v=15.0.0
+
 logger:
   default: info
 #  logs:
@@ -49,7 +53,7 @@ lovelace:
   dashboards:
     lovelace-storage:
       mode: yaml
-      title: storage
+      title: Storage
       show_in_sidebar: true
       require_admin: false
       filename: ui-storage.yaml
