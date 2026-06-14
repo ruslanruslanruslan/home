@@ -1,105 +1,155 @@
 title: Home
 views:
 
+  - title: Home
+    type: sections
+    path: home
+    sections:
+
+      - type: grid
+        cards:
+          - type: custom:mushroom-chips-card
+            alignment: center
+            chips:
+              - type: entity
+                entity: input_select.scene_mati
+                icon: mdi:theater
+              - type: entity
+                entity: sensor.mikrotik_hex_cpu_load
+                icon: mdi:cpu-64-bit
+              - type: entity
+                entity: sensor.mikrotik_hex_memory_usage
+                icon: mdi:memory
+            card_mod:
+              style: |
+                ha-card { border-radius: 18px; }
+
+      - type: grid
+        cards:
+          - type: heading
+            heading: Status
+          - type: custom:mushroom-entity-card
+            entity: input_select.scene_mati
+            name: Scene
+            icon: mdi:theater
+          - type: custom:mushroom-template-card
+            primary: Router
+            secondary: "CPU {{ states('sensor.mikrotik_hex_cpu_load') }}% · RAM {{ states('sensor.mikrotik_hex_memory_usage') }}%"
+            icon: mdi:router-network
+
+      - type: grid
+        cards:
+          - type: heading
+            heading: Traffic
+          - type: custom:mushroom-entity-card
+            entity: sensor.mikrotik_ether1_rx
+            name: RX
+            icon: mdi:download
+          - type: custom:mushroom-entity-card
+            entity: sensor.mikrotik_ether1_tx
+            name: TX
+            icon: mdi:upload
+
   - title: Public
-    cards:
+    type: sections
+    path: public
+    sections:
 
-      - type: custom:advanced-camera-card
-        cameras:
-          - camera_entity: camera.gate_front
-            live_provider: go2rtc
-
-      - type: custom:advanced-camera-card
-        cameras:
-          - camera_entity: camera.room01
-            live_provider: go2rtc
-
-      - type: custom:advanced-camera-card
-        cameras:
-          - camera_entity: camera.room05
-            live_provider: go2rtc
-
-      - type: custom:advanced-camera-card
-        cameras:
-          - camera_entity: camera.room08
-            live_provider: go2rtc
-
-      - type: custom:advanced-camera-card
-        cameras:
-          - camera_entity: camera.justin
-            live_provider: go2rtc
-
-      - type: custom:advanced-camera-card
-        cameras:
-          - camera_entity: camera.backyard
-            live_provider: go2rtc
-
-      - type: custom:advanced-camera-card
-        cameras:
-          - camera_entity: camera.stairway
-            live_provider: go2rtc
+      - type: grid
+        cards:
+          - type: heading
+            heading: Public
+          - type: custom:advanced-camera-card
+            cameras:
+              - camera_entity: camera.gate_front
+                live_provider: go2rtc
+          - type: custom:advanced-camera-card
+            cameras:
+              - camera_entity: camera.room01
+                live_provider: go2rtc
+          - type: custom:advanced-camera-card
+            cameras:
+              - camera_entity: camera.room05
+                live_provider: go2rtc
+          - type: custom:advanced-camera-card
+            cameras:
+              - camera_entity: camera.room08
+                live_provider: go2rtc
+          - type: custom:advanced-camera-card
+            cameras:
+              - camera_entity: camera.justin
+                live_provider: go2rtc
+          - type: custom:advanced-camera-card
+            cameras:
+              - camera_entity: camera.backyard
+                live_provider: go2rtc
+          - type: custom:advanced-camera-card
+            cameras:
+              - camera_entity: camera.stairway
+                live_provider: go2rtc
 
   - title: Private
-    cards:
+    type: sections
+    path: private
+    sections:
 
-      - type: custom:advanced-camera-card
-        cameras:
-          - camera_entity: camera.gate_back
-            live_provider: go2rtc
-
-      - type: custom:advanced-camera-card
-        cameras:
-          - camera_entity: camera.madam
-            live_provider: go2rtc
-
-      - type: custom:advanced-camera-card
-        cameras:
-          - camera_entity: camera.livingroom
-            live_provider: go2rtc
+      - type: grid
+        cards:
+          - type: heading
+            heading: Private
+          - type: custom:advanced-camera-card
+            cameras:
+              - camera_entity: camera.gate_back
+                live_provider: go2rtc
+          - type: custom:advanced-camera-card
+            cameras:
+              - camera_entity: camera.madam
+                live_provider: go2rtc
+          - type: custom:advanced-camera-card
+            cameras:
+              - camera_entity: camera.livingroom
+                live_provider: go2rtc
 
   - title: Internet
-    cards:
+    type: sections
+    path: internet
+    sections:
 
-      - type: iframe
-        name: Speedtest
-        url: http://192.168.4.201:8081/
-        aspect_ratio: 100%
-        allow: fullscreen
+      - type: grid
+        cards:
+          - type: heading
+            heading: Monitoring
+          - type: iframe
+            name: Speedtest
+            url: http://192.168.4.201:8081/
+            aspect_ratio: 100%
+            allow: fullscreen
+          - type: iframe
+            name: Smokeping
+            url: http://192.168.4.201:8082/smokeping/?target=_charts
+            aspect_ratio: 100%
+            allow: fullscreen
 
-      - type: iframe
-        name: Smokeping
-        url: http://192.168.4.201:8082/smokeping/?target=_charts
-        aspect_ratio: 100%
-        allow: fullscreen
-
-      - type: entities
-        title: Internet
-        show_header_toggle: false
-        entities:
-          - entity: sensor.mikrotik_ether1_rx
-            type: custom:multiple-entity-row
-            name: PLDT Usage
-            show_state: false
+      - type: grid
+        cards:
+          - type: heading
+            heading: Network
+          - type: entities
+            title: Internet
+            show_header_toggle: false
             entities:
               - entity: sensor.mikrotik_ether1_rx
-                name: RX
-              - entity: sensor.mikrotik_ether1_tx
-                name: TX
-          - entity: sensor.mikrotik_hex_cpu_load
-            type: custom:multiple-entity-row
-            name: Router Load
-            entities:
-              - entity: sensor.mikrotik_hex_memory_usage
-                name: RAM
-          - entity: light.miwifi_50_88_11_b4_65_90_led
-            type: custom:multiple-entity-row
-            name: Middle Wi-Fi
-            toggle: false
-          - entity: light.miwifi_50_88_11_b2_bf_7c_led
-            type: custom:multiple-entity-row
-            name: Owner Wi-Fi
-            toggle: false
-          - entity: light.miwifi_50_88_11_b7_11_b0_led
-            type: custom:multiple-entity-row
-            name: Madam Wi-Fi
-            toggle: false
+                type: custom:multiple-entity-row
+                name: PLDT Usage
+                show_state: false
+                entities:
+                  - entity: sensor.mikrotik_ether1_rx
+                    name: RX
+                  - entity: sensor.mikrotik_ether1_tx
+                    name: TX
+              - entity: sensor.mikrotik_hex_cpu_load
+                type: custom:multiple-entity-row
+                name: Router Load
+                entities:
+                  - entity: sensor.mikrotik_hex_memory_usage
+                    name: RAM

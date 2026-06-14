@@ -42,6 +42,10 @@ lovelace:
       type: module
     - url: /local/multiple-entity-row/multiple-entity-row.js?v=4.5.1
       type: module
+    - url: /local/mushroom/mushroom.js
+      type: module
+    - url: /local/card-mod/card-mod.js
+      type: module
   dashboards:
     lovelace-storage:
       mode: yaml
