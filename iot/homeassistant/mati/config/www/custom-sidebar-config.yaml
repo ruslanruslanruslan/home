@@ -1,7 +1,4 @@
 order:
-  - item: /home
-    match: href
-    hide: true
   - item: map
     hide: true
   - item: energy
