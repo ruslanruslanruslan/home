@@ -10,7 +10,7 @@ spec:
       workflows.argoproj.io/title: '**deploy-docker-iot-frigate**-{{`{{ workflow.parameters.service }}`}}'
       workflows.argoproj.io/description: '`{{`{{ workflow.parameters.env }}`}}`'
   entrypoint: wf
-  onExit: telegram
+  onExit: notify
   arguments:
     parameters:
     - name: repo
@@ -49,10 +49,10 @@ spec:
             - name: env
               value: "{{`{{ workflow.parameters.env }}`}}"
 
-    - name: telegram
+    - name: notify
       steps:
-        - - name: telegram
+        - - name: notify
             templateRef:
-              name: telegram
+              name: notify
               template: send
               clusterScope: true

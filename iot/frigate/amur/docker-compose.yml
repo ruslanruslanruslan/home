@@ -7,7 +7,7 @@ services:
     privileged: true
     restart: unless-stopped
     stop_grace_period: 30s
-    image: ghcr.io/blakeblackshear/frigate:stable
+    image: ghcr.nju.edu.cn/blakeblackshear/frigate:stable
     shm_size: "512mb"
     volumes:
       - /etc/localtime:/etc/localtime:ro
